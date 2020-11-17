@@ -1,0 +1,22 @@
+#settings for vga
+
+display_rotate=0
+
+disable_splash=1
+disable_overscan=1
+
+hdmi_group=2
+hdmi_mode=9
+hdmi_drive=2
+
+hdmi_ignore_edid=0xa5000080
+
+hdmi_force_hotplug=1
+
+
+gpu_mem=512
+
+dtoverlay=i2c-rtc,mcp7940x
+dtparam=i2c_arm=on
+dtparam=audio=on
+start_x=0

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+
+/opt/screenshot/./screenshot > /media/internal/pir/stillshot.png
+
+   
+
+
+

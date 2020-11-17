@@ -1,0 +1,120 @@
+#!/bin/sh -e
+
+
+#Deploy script for PocketVJ exhibition
+
+test `id -ru` -ne 0 && {
+  exit "error: must run with sudo"
+}
+
+test -z "$1" && {
+  exit "error: must provide pi number"
+}
+
+
+# unit id
+id="$1"
+
+# set hostname
+echo "pocketvj-$id" > /etc/hostname
+sed -i '/127.0.1.1/d' /etc/hosts
+echo "127.0.1.1 pocketvj-$id" >> /etc/hosts
+hostname pocketvj-$id
+
+
+# set motd
+figlet `hostname` > /etc/motd
+
+
+# configure network
+cat <<-EOD > /etc/network/interfaces
+auto lo
+auto eth0
+iface lo inet loopback
+iface eth0 inet static
+address 192.168.2.$id
+netmask 255.255.255.0
+gateway 192.168.2.1
+
+
+allow-hotplug wlan0
+iface wlan0 inet static
+address 2.0.0.$id
+netmask 255.255.255.0
+
+dns-nameservers 8.8.4.4 8.8.8.8
+up iptables-restore < /etc/iptables.ipv4.nat
+
+EOD
+
+#configure static network script
+cat <<-EOD > /var/www/sync/interfaces.static
+auto lo
+auto eth0
+iface lo inet loopback
+iface eth0 inet static
+address 192.168.2.$id
+netmask 255.255.255.0
+gateway 192.168.2.1
+
+
+allow-hotplug wlan0
+iface wlan0 inet static
+address 2.0.0.$id
+netmask 255.255.255.0
+
+dns-nameservers 8.8.4.4 8.8.8.8
+up iptables-restore < /etc/iptables.ipv4.nat
+
+EOD
+
+
+#configure dhcp network script
+cat <<-EOD > /var/www/sync/interfaces.dhcp
+auto lo
+iface lo inet loopback
+iface eth0 inet dhcp
+
+allow-hotplug wlan0
+
+iface wlan0 inet static
+address 2.0.0.$id
+netmask 255.255.255.0
+gateway 2.0.0.1
+network 2.0.0.0
+
+dns-nameservers 8.8.4.4 8.8.8.8
+up iptables-restore < /etc/iptables.ipv4.nat
+
+EOD
+
+
+
+
+#configure HostAPD
+cat <<-EOD > /etc/hostapd/hostapd.conf
+interface=wlan0
+driver=nl80211
+ssid=vj$id
+hw_mode=g
+channel=7
+ieee80211n=1
+wmm_enabled=1
+ht_capab=[HT40][SHORT-GI-20][DSSS_CCK-40]
+macaddr_acl=0
+auth_algs=1
+ignore_broadcast_ssid=0
+wpa=2
+wpa_key_mgmt=WPA-PSK
+wpa_passphrase=pocketexhibition
+rsn_pairwise=CCMP
+
+EOD
+
+
+
+#set time
+sudo hwclock -w
+
+
+# EOF

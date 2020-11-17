@@ -1,0 +1,9 @@
+#!/bin/bash
+
+#this script kills only the midi control function
+
+sudo kill $(pgrep -f 'python /var/www/sync/midi2command.py') > /dev/null 2>&1
+
+
+
+

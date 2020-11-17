@@ -1,0 +1,14 @@
+#!/bin/bash
+
+#LED Blinking 
+/usr/bin/python /var/www/sync/ledblinking.py
+
+#copy autostart to x
+sudo cp /var/www/sync/vncstartup /home/pvj/.config/lxsession/LXDE/autostart
+
+
+
+su -s /bin/bash -c startx pvj&
+
+
+exit 0

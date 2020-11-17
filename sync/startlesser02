@@ -1,0 +1,9 @@
+#!/bin/bash
+
+#kill all running tasks is disabled!!!
+#/var/www/sync/stopall
+
+#play video 02 seamless looped without sync
+
+/usr/bin/omxplayer --loop --no-osd -o both /media/internal/video/02* > /dev/null 2>&1 & echo $! &
+

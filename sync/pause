@@ -1,0 +1,5 @@
+#!/bin/bash
+
+
+sudo /var/www/sync/dbuscontrol.sh pause &
+sudo /var/www/sync/mapperpause

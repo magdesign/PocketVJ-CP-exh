@@ -1,0 +1,20 @@
+#!/bin/bash
+#LED Blinking 
+/usr/bin/python /var/www/sync/ledblinking.py
+
+
+#start script to listen to osc commands on port 9876
+/var/www/sync/osc_start &
+
+#start script to listen to udp on port 5000
+
+sudo /var/www/sync/udp_listener.sh &
+
+
+#start script to listen to artnet/dmx on universe 1
+
+sudo ola_trigger -u 1 /var/www/sync/artnet.conf 
+
+
+
+exit 0

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#LED Blinking 
+/usr/bin/python /var/www/sync/ledblinking.py
+
+
+sleep 4
+/usr/bin/TCPSClient.bin &
+
+
+
+exit 0

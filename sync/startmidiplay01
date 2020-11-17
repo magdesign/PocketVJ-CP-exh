@@ -1,0 +1,9 @@
+#!/bin/bash
+
+#This script starts  midi playing
+
+sudo aplaymidi -p 20:0 /media/internal/midi/miditrack_01.mid &
+
+# > /dev/null 2>&1 & echo $! &
+
+

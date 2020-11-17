@@ -1,0 +1,20 @@
+
+display_rotate=0
+
+disable_splash=1
+hdmi_force_hotplug=1
+disable_overscan=1
+
+# uncomment to increase signal to HDMI
+#config_hdmi_boost=4
+
+
+# for more options see http://elinux.org/RPi_config.txt
+
+
+gpu_mem=512
+
+dtoverlay=i2c-rtc,mcp7940x
+dtparam=i2c_arm=on
+dtparam=audio=on
+start_x=0

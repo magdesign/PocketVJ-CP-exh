@@ -1,0 +1,5 @@
+#!/bin/bash
+
+IP=192.168.2.254
+
+sudo pjlink -p ${IP} power

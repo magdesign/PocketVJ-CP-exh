@@ -1,0 +1,66 @@
+#!/bin/bash
+
+#kill all running tasks exept .mp3 player
+#kill dmx loop file
+sudo rm -rf /tmp/dmxloop
+#kill xserver
+sudo killall -9 /usr/bin/lxsession > /dev/null 2>&1
+#kill Xvfb virtual framebuffer for qlc plus
+sudo pkill Xvfb
+#kill videoplayer
+sudo /var/www/sync/omxkill > /dev/null 2>&1
+#kill mapper
+sudo killall -9 /home/pvj/openFrameworks/addons/ofxPiMapper/example_basic/./bin/example_basic > /dev/null 2>&1
+sudo killall -9 /home/pvj/openFrameworks/addons/ofxPiMapper/example_camera/./bin/example_camera > /dev/null 2>&1
+sudo killall -9 /home/pvj/openFrameworks/addons/ofxPiMapper/example_fbo-sources/./bin/example_fbo-sources > /dev/null 2>&1
+sudo killall -9 /home/pvj/openFrameworks/addons/ofxPiMapper/example_remote-server/./bin/example_remote-server > /dev/null 2>&1
+#kill Syphon
+sudo killall -9 /usr/bin/TCPSClient.bin > /dev/null 2>&1
+#kill clock, audioplayer and imageplayer
+sudo killall -9 tty-clock > /dev/null 2>&1
+#sudo killall -9 mpg321 > /dev/null 2>&1
+sudo killall -9 feh > /dev/null 2>&1
+sudo /var/www/sync/testscreenoff > /dev/null 2>&1
+#kill kenburns imageplayer
+pkill -9 -f Slideshow_3d.py > /dev/null 2>&1
+#kill overlay and softedge
+sudo killall -9 /home/pvj/raspidmx/pngview/./pngview /media/internal/images/overlay.png > /dev/null 2>&1
+sudo killall -9 /home/pvj/raspidmx/pngview/./pngview /media/internal/images/softedge* > /dev/null 2>&1
+#kill fake keyboard:
+sudo killall -9 fsaysuinput > /dev/null 2>&1
+#Kill dmx player/recorder
+sudo killall -9 ola_recorder > /dev/null 2>&1
+#set all dmx to 0 = blackout
+sudo /var/www/sync/setdmxblackout > /dev/null 2>&1
+#kill NDI sender
+sudo killall -9 /home/pvj/NDI_SDK/examples/C++/NDIlib_Send_Video/./NDIlib_Send_Video > /dev/null 2>&1
+#kill NDI finder
+sudo killall -9 /home/pvj/NDI_SDK/examples/C++/NDIlib_Find/./NDIlib_Find > /dev/null 2>&1
+#kill camerafeed
+sudo killall -9  /usr/bin/raspivid > /dev/null 2>&1
+#kill puredata
+sudo killall -9 /usr/bin/pd-extended > /dev/null 2>&1
+#kill python pir only
+sudo kill $(pgrep -f 'python /var/www/sync/startpir1.py') > /dev/null 2>&1
+#kill python random_video_trigger only
+sudo kill $(pgrep -f 'python /var/www/sync/random_video_trigger.py') > /dev/null 2>&1
+#kill midi recorder
+sudo kill $(pgrep 'arecordmidi') > /dev/null 2>&1
+#kill midi player
+sudo kill $(pgrep 'aplaymidi') > /dev/null 2>&1
+#overwrite tty with black to get rid of the clock
+sudo printf "\033c" > /dev/tty1
+#make dmx show files writeable
+sudo chmod 777 -R /media/internal/dmx > /dev/null 2>&1
+#clear log
+sudo rm /var/www/*.log > /dev/null 2>&1
+
+
+
+
+#write to autostart that feh shall start
+sudo cp /var/www/sync/slidestartup /home/pvj/.config/lxsession/LXDE/autostart
+
+#start x as pvj user
+#sudo su -s /bin/bash -c startx pvj &
+sudo su -c startx -s /bin/sh pvj &

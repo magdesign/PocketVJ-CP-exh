@@ -1,0 +1,7 @@
+#!/bin/bash
+
+#kill all running tasks
+#/var/www/sync/stopall
+
+#startdmxplayback
+sudo ola_recorder -i 0 -p /media/internal/dmx/show24 &

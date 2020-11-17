@@ -1,0 +1,9 @@
+#!/bin/bash
+
+#This script starts the midi control function, works only when 1 usb controller is connected
+#otheriwse change the numbering, 1 = the first device
+
+sudo python /var/www/sync/midi2command.py -p 1 /var/www/sync/midicontrol.cfg
+
+
+# > /dev/null 2>&1 & echo $! &

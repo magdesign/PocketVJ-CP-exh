@@ -1,0 +1,6 @@
+#!/bin/bash
+
+grep -q "Receiver" /home/pvj/openFrameworks/addons/ofxPiMapper/example_basic/bin/data/sync_settings.xml; [ $? -eq 0 ] && echo "Receiver" 
+
+grep -q "Sender" /home/pvj/openFrameworks/addons/ofxPiMapper/example_basic/bin/data/sync_settings.xml; [ $? -eq 0 ] && echo "Sender" 
+

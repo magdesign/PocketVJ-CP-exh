@@ -1,0 +1,4 @@
+#!/bin/bash
+#start stillshot overlay
+
+sudo fbi -a -T 1 -noverbose /media/internal/pir/stillshot.png &

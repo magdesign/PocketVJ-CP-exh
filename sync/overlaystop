@@ -1,0 +1,6 @@
+#!/bin/bash
+#stop .png overlay over video
+
+#sudo killall -9 pngview
+
+sudo killall -9 /home/pvj/raspidmx/pngview/./pngview

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+#stop dmx playback and recording
+
+sudo killall -9 ola_recorder &
+

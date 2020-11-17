@@ -1,0 +1,5 @@
+#!/bin/bash
+
+su pvj <<'EOF'
+/var/www/sync/impressf5e
+EOF

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+#kill all running tasks
+#/var/www/sync/stopall
+
+#startdmxplayback01
+sudo ola_recorder --no-verify-playback -i 0 -p /media/internal/dmx/show01 &

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+sed -i 's|<sync_type>Sender</sync_type>|<sync_type>Receiver</sync_type>|g' /home/pvj/openFrameworks/addons/ofxPiMapper/example_basic/bin/data/sync_settings.xml

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+#Script to stop video all player instances only
+
+sudo /var/www/sync/omxkill > /dev/null 2>&1

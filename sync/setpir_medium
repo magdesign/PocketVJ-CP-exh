@@ -1,0 +1,6 @@
+#!/bin/bash
+#setting the sense to medium 20
+
+
+sed -i '/^triggers =/c\triggers = 20 # set how many triggers until action' /var/www/sync/startpir1.py
+sed -i '/^triggers =/c\triggers = 20 # set how many triggers until action' /var/www/sync/startpirtest.py

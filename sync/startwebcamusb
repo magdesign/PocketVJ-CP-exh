@@ -1,0 +1,10 @@
+#!/bin/bash
+#kill all running tasks
+#/var/www/sync/stopall
+
+
+#start webcam server to be accessible on port 8081
+
+sudo service motion start
+
+

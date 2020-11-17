@@ -1,0 +1,12 @@
+#!/bin/bash
+#kill all running tasks
+
+/var/www/sync/stopall
+
+#start loop file from pir folder
+
+/usr/bin/omxplayer-sync -mu -o both /media/internal/pir/loop/*
+
+#start loop file from pir folder without sync, plys only first file in loop
+#/usr/bin/omxplayer --loop /media/internal/pir/loop/*
+

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+
+sudo /var/www/sync/showip_tty > /dev/tty2
+
+
+
+
+

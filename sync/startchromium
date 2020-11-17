@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#kill all running tasks
+/var/www/sync/stopall
+
+sudo rm -f /home/pvj/.xsession
+sudo cp /var/www/sync/lxdeautochromium /home/pvj/.config/lxsession/LXDE/autostart
+
+#start x 
+su -s /bin/bash -c startx pvj &

@@ -1,0 +1,8 @@
+#!/bin/bash
+#LED Blinking 
+/usr/bin/python /var/www/sync/ledblinking.py
+
+
+/var/www/sync/startmaster02 &
+
+exit 0

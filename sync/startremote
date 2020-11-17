@@ -1,0 +1,5 @@
+#!/bin/bash
+
+#start remote connection
+
+sudo openvpn --keepalive 10 60 --config /etc/openvpn/pocketvj.remote.ovpn 

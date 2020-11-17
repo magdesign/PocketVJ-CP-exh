@@ -1,0 +1,12 @@
+#!/bin/bash
+#LED Blinking 
+/usr/bin/python /var/www/sync/ledblinking.py
+
+#start ola
+sudo service olad start
+
+#start midi listener
+/usr/bin/python /var/www/sync/midi2command.py -p 1 /var/www/sync/midicontrol.cfg
+
+
+exit 0

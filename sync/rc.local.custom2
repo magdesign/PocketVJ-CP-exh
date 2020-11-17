@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#LED Blinking 
+/usr/bin/python /var/www/sync/ledblinking.py
+
+
+#enter your custom startup application below this line:
+
+
+exit 0

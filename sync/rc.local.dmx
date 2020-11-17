@@ -1,0 +1,19 @@
+#!/bin/bash
+#LED Blinking 
+/usr/bin/python /var/www/sync/ledblinking.py
+
+#start ola service
+#sudo service olad start &
+
+
+#start videoplayer first, since there is a killall command
+/var/www/sync/startmaster &
+
+sleep 5
+
+#start qlc headless
+sudo xvfb-run /usr/bin/qlcplus -f --web --operate --overscan --open /media/internal/dmx/autostart.qxw
+
+
+
+exit 0

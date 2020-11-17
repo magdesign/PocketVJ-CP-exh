@@ -1,0 +1,15 @@
+#!/bin/bash
+#LED Blinking 
+/usr/bin/python /var/www/sync/ledblinking.py
+
+
+#write to .xsession that fugio shall start
+
+sudo rm /home/pvj/.xsession
+sudo cp /var/www/sync/lxdeautofugio /home/pvj/.config/lxsession/LXDE/autostart
+
+#start x and run fugio
+su -s /bin/bash -c startx pvj &
+
+
+exit 0

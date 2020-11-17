@@ -1,0 +1,38 @@
+#!/bin/bash
+
+# Determine the IP address of the "wlan0" network interface
+export IP=`ip addr show wlan0 | grep -oP '(?<=inet )(\d+\.){3}\d+'`
+
+# Determine the IP address of the "eth0" network interface
+export IPRJ=`ip addr show eth0 | grep -oP '(?<=inet )(\d+\.){3}\d+'`
+
+
+
+# Display the IP address, so people know where to connect
+
+
+echo
+echo
+echo
+echo
+echo
+
+#this command switches to tty2
+sudo chvt 2
+
+figlet -c -t -f banner  $IP:5500
+
+echo
+echo
+echo
+echo
+echo
+
+
+figlet -t -f banner  $IPRJ:5500
+
+sudo chvt 2
+
+
+
+

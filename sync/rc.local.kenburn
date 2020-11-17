@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#LED Blinking 
+/usr/bin/python /var/www/sync/ledblinking.py
+
+
+
+/var/www/sync/startimagekenburn &
+
+
+exit 0

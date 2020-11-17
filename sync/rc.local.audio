@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#LED Blinking 
+/usr/bin/python /var/www/sync/ledblinking.py
+
+
+
+setterm $* | sudo tee /dev/tty0 > /dev/null
+
+/var/www/sync/startaudio &
+
+exit 0

@@ -1,0 +1,20 @@
+#Setting to autodetect screen reso
+
+display_rotate=0
+
+hdmi_force_hotplug=1
+disable_splash=1
+disable_overscan=1
+
+#this setting should force audio to work under hdmi
+hdmi_drive=2
+
+# uncomment to increase signal to HDMI
+#config_hdmi_boost=5
+
+gpu_mem=512
+
+dtoverlay=i2c-rtc,mcp7940x
+dtparam=i2c_arm=on
+dtparam=audio=on
+start_x=0

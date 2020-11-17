@@ -1,0 +1,34 @@
+#!/bin/bash
+
+# Set the delay value in seconds, use 0.1 for smaller numbers
+DELAY=1
+
+#kill all runing tasks to be safe
+/var/www/sync/stopall
+
+#create a file so we know to keep looping
+touch /tmp/dmxloop
+
+#start the loop process
+while [ -f /tmp/dmxloop ]
+do
+
+#for debugging only
+#echo start looping
+  
+#kill omxplayer and dmx player
+  sudo /var/www/sync/omxkill > /dev/null 2>&1
+  sudo killall -9 ola_recorder > /dev/null 2>&1
+
+  #play dmx sequence01 -i 1 means play once, -i 0 loops forever
+  sudo ola_recorder -i 1 -p /media/internal/dmx/show03 > /dev/null &
+
+  #sleep, used to create the dealy
+  sleep ${DELAY}
+
+  #play audio 01
+  /usr/bin/omxplayer -o both /media/internal/audio/03* > /dev/null 2>&1 
+
+done
+
+exit

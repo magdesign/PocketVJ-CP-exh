@@ -1,0 +1,6 @@
+
+0 12 * * *  /var/www/sync/stopall
+0 0 * * *  /var/www/sync/startmaster
+
+
+

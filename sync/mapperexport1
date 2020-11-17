@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#this script exports the mapper settings to /media/internal/mappersettings*.xml
+
+#switch to play mode
+sudo /var/www/sync/mapper1
+
+#save the setting
+sudo /var/www/sync/mappers
+
+#wait a tiny little bit
+sleep 0.2
+
+#copy the setting from basic mapper
+sudo cp /home/pvj/openFrameworks/addons/ofxPiMapper/example_basic/bin/data/ofxpimapper.xml /media/internal/mappersets/mappersetting1.xml
+#sudo cp /home/pvj/openFrameworks/addons/ofxPiMapper/example_fbo-sources/bin/data/ofxpimapper.xml /media/internal/mappersets/mappersetting1.xml

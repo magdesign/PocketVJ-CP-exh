@@ -1,0 +1,23 @@
+#!/bin/bash
+
+
+#LED Blinking 
+/usr/bin/python /var/www/sync/ledblinking.py
+
+
+#enter your custom startup application below this line:
+#kill all running tasks
+
+/var/www/sync/stopall
+
+#write to .xsession that chromium shall start
+#sudo cp /var/www/sync/xsessionchromium /home/pvj/.xsession
+sudo rm /home/pvj/.xsession
+sudo cp /var/www/sync/lxdeautochromium /home/pvj/.config/lxsession/LXDE/autostart
+
+#start x and run chromium
+su -s /bin/bash -c startx pvj &
+
+
+
+exit 0

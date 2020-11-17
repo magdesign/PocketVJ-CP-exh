@@ -1,0 +1,5 @@
+#!/bin/bash
+
+#switch to elFInder as standard filebrowser
+
+sudo sed -i 's#<div class="shortcutsheader"><a href="/eXtplorer/" target="_blank" tooltipster="top" title="Filebrowser" class="w-inline-block"><img src="images/filebrowser_icon.svg" width="30" alt=""></a></div>#<div class="shortcutsheader"><a href="/elFinder/elfinder.src.html" target="_blank" tooltipster="top" title="Filebrowser" class="w-inline-block"><img src="images/filebrowser_icon.svg" width="30" alt=""></a></div>#g' /var/www/index.php

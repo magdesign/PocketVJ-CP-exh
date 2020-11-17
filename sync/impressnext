@@ -1,0 +1,6 @@
+#!/bin/bash
+
+su pvj <<'EOF'
+/var/www/sync/impressnexte
+EOF
+

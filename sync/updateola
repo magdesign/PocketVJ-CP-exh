@@ -1,0 +1,31 @@
+#!/bin/bash
+
+#this block removes all ola components destructively:
+
+sudo service olad stop
+sudo apt-get purge ola -y
+sudo rm -rf /usr/local/bin/ola*
+sudo rm -rf /etc/ola
+sudo rm -rf /usr/share/ola*
+sudo rm -rf /usr/local/share/ola*
+sudo rm -rf /usr/local/bin/ola*
+sudo rm -rf /usr/local/include/ola*
+sudo rm -rf /etc/init.d/olad
+sudo rm -rf /usr/local/lib/libola*
+sudo rm -rf /usr/local/lib/pkgconfig/libola*
+sudo rm -rf /var/lib/ola*
+sudo apt-get clean -y
+sudo apt-get autoclean -y
+
+
+#this block installs the new 0.10.7 version:
+
+yes | sudo dpkg -i /var/www/sync/ola/libola1_0.10.7-1_armhf.deb 
+yes | sudo dpkg -i /var/www/sync/ola/ola_0.10.7-1_armhf.deb
+yes | sudo dpkg -i /var/www/sync/ola/ola-python_0.10.7-1_all.deb
+
+
+echo "updated ola to 10.7"
+
+
+

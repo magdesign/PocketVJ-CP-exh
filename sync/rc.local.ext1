@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#LED Blinking 
+/usr/bin/python /var/www/sync/ledblinking.py
+
+
+/var/www/sync/extension_01.py &
+
+su -s /bin/bash -c startx pvj &
+
+
+exit 0

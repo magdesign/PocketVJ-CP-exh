@@ -17,7 +17,7 @@ do
   sudo killall -9 ola_recorder > /dev/null 2>&1
 
   #play dmx sequence05 -i 1 means play once, -i 0 loops forever
-  sudo ola_recorder -i 1 -p /media/internal/dmx/show05 > /dev/null &
+  sudo ola_recorder --no-verify-playback -i 1 -p /media/internal/dmx/show05 > /dev/null &
 
   #sleep, used to create the dealy
   sleep ${DELAY}

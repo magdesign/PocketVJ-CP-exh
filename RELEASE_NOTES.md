@@ -1,8 +1,9 @@
 # PocketVJ Exhibition / Control Panel 3.x.x
 
-## CP 3.1.8a 17.November 2020<br />
-- test to check if dmx playback starting delay when having a lot of universes is fixed with adding: '--no-verify-playback' , only added on show 01 currently to get feedback from users<br />
+## CP 3.1.8b 17.November 2020<br />
+- fixed dmx playback startup delay which was long when using 10+ universes, fixed with adding: '--no-verify-playback' <br />
 - removed heavy packages for making update smaller in size<br />
+- updated mapper so it starts into sync with autostart, tutorial coming <br />
 
 ## CP 3.1.8 06.November 2020<br />
 

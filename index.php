@@ -49,7 +49,7 @@ Code  below loads custom js for form submission without reload -->
           <a href="https://pocketvj.com/" target="_blank" class="w-inline-block"><img src="images/PVJ_2019.svg" height="50" alt="" class="logo"></a>
         </div>
         <div class="w-clearfix w-col w-col-6">
-          <div class="release">CP 3.1.8a</div>
+          <div class="release">CP 3.1.8b</div>
           <a href="https://github.com/magdesign/PocketVJ-CP-exh/issues" target="_blank" class="link-block w-inline-block w-clearfix"><img src="images/help_1help.png" width="20" height="20" alt="" class="image"></a>
         </div>
       </div>

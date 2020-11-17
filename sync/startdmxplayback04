@@ -4,4 +4,4 @@
 #/var/www/sync/stopall
 
 #startdmxplayback04
-sudo ola_recorder -i 0 -p /media/internal/dmx/show04 &
+sudo ola_recorder --no-verify-playback -i 0 -p /media/internal/dmx/show04 &

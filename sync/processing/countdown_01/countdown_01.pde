@@ -10,7 +10,7 @@ void setup(){
   //make it fullscreen later on with
   //fullScreen(); //fullscreen
   size(800,800); //small view
-  frameRate (60);
+  frameRate (30); //RPi can't handle more than approx. 35fps
 }
 
 void draw(){
@@ -33,7 +33,7 @@ void draw(){
   text(finalhours+":"+finalminutes+":"+finalseconds, (width/2), height/2);
   //////////////////////////////
  // here is the main counter programm:
-  if(frameCount%60==0 && timer>0){//if frameCount is divided by 60 = 1 second
+  if(frameCount%30==0 && timer>0){//if frameCount is divided by 60 = 1 second
    //and also stop timer when we reach 0
    timer=timer-1;
     }

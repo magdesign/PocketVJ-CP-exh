@@ -1,8 +1,8 @@
 **Roadmap / Next Steps:** <p/>
-- due to issue of users having problems updating, make the size of the update smaller, check if there are mp4 files in the mapper zips to remove, its the .git folder!!<p/>
-- check whats wrong with the zip update function, maybe move it to a script which is cp to /tmp and run from there, there seems nothing wrong, I guess the useres are not patient enough <p/>
-- when accessed over the internet, the ola panel is not visible, check how to handle ports with the remote..   <p/>
-- dmx comand to record / stop recording dmx shows  <p/>
+
+- Countdown function: insert time and then display countdown, when finished show image or start video (Processing.org :-) <p/>
+- when accessed over the internet, the ola panel is not visible, check how to handle ports with the remote, currently you can ask for another port link..   <p/>
+- dmx comand to remote record (start / stop recording dmx) directly from light-console  <p/>
 - fix the annoying usb cable mouse issue when using mapper  <p/>
 - set mapper to start with presentation mode to get rid of tearing, currently you have to go to mapping and back to presentation  <p/>
 - help ola to fix the deb building issue! <p/>

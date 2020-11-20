@@ -11,6 +11,7 @@
 <p/> <p/>
 
 - Adding wake on lan feature? <p/>
+- parse output of: "possible resolutions" to human readable lines<p/>
 - add wireless-power off to interfaces ? <p/>
 - Integrate this script for more CPU infos in CP: https://gist.github.com/ecampidoglio/5009512#file-cpustatus-sh <p/>
 - enable disable sync, to support ultra short files <p/>

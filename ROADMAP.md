@@ -3,6 +3,7 @@
 - Countdown function: insert time and then display countdown, when finished show image or start video (Processing.org :-) <p/>
 - when accessed over the internet, the ola panel is not visible, check how to handle ports with the remote, currently you can ask for another port link..   <p/>
 - dmx comand to remote record (start / stop recording dmx) directly from light-console  <p/>
+- playlist feature to play dmx/vido01 and afterwards 02 and so on, tricky bit will be to gather the end of the file...   <p/>
 - fix the annoying usb cable mouse issue when using mapper  <p/>
 - set mapper to start with presentation mode to get rid of tearing, currently you have to go to mapping and back to presentation  <p/>
 - help ola to fix the deb building issue! <p/>

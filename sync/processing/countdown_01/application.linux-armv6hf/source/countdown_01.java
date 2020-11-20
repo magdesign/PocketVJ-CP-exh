@@ -29,8 +29,8 @@ int bgcolor = 0; //for a faster color change
 
 public void setup(){
 
-//fullScreen(); //fullscreen
- //small view
+ //fullscreen
+//size(800,800); //small view
 frameRate (30); //RPi can't handle more than approx. 35fps
 
 //sets the time from the file
@@ -99,7 +99,7 @@ setup();
 
 }
   public void settings() { 
-size(800,800); }
+fullScreen(); }
   static public void main(String[] passedArgs) {
     String[] appletArgs = new String[] { "--present", "--window-color=#666666", "--hide-stop", "countdown_01" };
     if (passedArgs != null) {

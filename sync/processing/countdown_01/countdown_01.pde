@@ -13,8 +13,8 @@ int bgcolor = 0; //for a faster color change
 
 void setup(){
 
-//fullScreen(); //fullscreen
-size(800,800); //small view
+fullScreen(); //fullscreen
+//size(800,800); //small view
 frameRate (30); //RPi can't handle more than approx. 35fps
 
 //sets the time from the file

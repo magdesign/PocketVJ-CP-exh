@@ -13,8 +13,8 @@ int bgcolor = 0; //for a faster color change
 
 void setup(){
 
-fullScreen(); //fullscreen
-//size(800,800); //small view
+//fullScreen(); //fullscreen does not work on rpi due to framedrops
+size(960,540); //small view
 frameRate (30); //RPi can't handle more than approx. 35fps
 
 //sets the time from the file
@@ -48,7 +48,9 @@ String finalhours = nf(((timer/360)%60),2);
 text(finalhours+":"+finalminutes+":"+finalseconds, (width/2), height/2);
 //////////////////////////////
 // the main counter programm:
-if(frameCount%30==0 && timer>0){//if frameCount is divided by 60 = 1 second
+//new with millis
+
+if(((millis()*3/100))%30==0 && timer>0){//if frameCount is divided by 30 = 1 second
 timer=timer-1;
 }
 //and also stop timer when we reach 0
@@ -67,6 +69,9 @@ delay(1);
 exit();
 
 }
+
+//for debugging only
+//println("ms:"+((millis()*3/100))+" fps: "+(frameCount));
 
 }
 

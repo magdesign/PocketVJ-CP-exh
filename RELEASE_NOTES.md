@@ -1,5 +1,17 @@
 # PocketVJ Exhibition / Control Panel 3.x.x
 
+## CP 3.2 unreleased yet 2020  <br />
+- complete rewerite of CP, better look and feel, more organised <br />
+- added countdown which trigger a script when running down (processing.org) <br />
+
+
+
+## Image 4.0.7 unreleased yet 2020 <br />
+- compiled openCV <br />
+- pretrained coffe model of gender detection <br />
+- resized partitions for more system space  <br />
+- larger swap space 1024mb    <br />
+
 ## CP 3.1.8b 17.November 2020<br />
 - fixed dmx playback startup delay which was long when using 10+ universes, fixed with adding: '--no-verify-playback' <br />
 - removed heavy packages for making update smaller in size<br />

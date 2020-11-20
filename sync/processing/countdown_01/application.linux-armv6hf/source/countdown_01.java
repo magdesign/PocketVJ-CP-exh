@@ -29,8 +29,8 @@ int bgcolor = 0; //for a faster color change
 
 public void setup(){
 
- //fullscreen
-//size(800,800); //small view
+//fullScreen(); //fullscreen does not work on rpi due to framedrops
+//size(960,540); //small view
 frameRate (30); //RPi can't handle more than approx. 35fps
 
 //sets the time from the file
@@ -64,7 +64,9 @@ String finalhours = nf(((timer/360)%60),2);
 text(finalhours+":"+finalminutes+":"+finalseconds, (width/2), height/2);
 //////////////////////////////
 // the main counter programm:
-if(frameCount%30==0 && timer>0){//if frameCount is divided by 60 = 1 second
+//new with millis
+
+if(((millis()*3/100))%30==0 && timer>0){//if frameCount is divided by 30 = 1 second
 timer=timer-1;
 }
 //and also stop timer when we reach 0
@@ -84,6 +86,9 @@ exit();
 
 }
 
+//for debugging only
+//println("ms:"+((millis()*3/100))+" fps: "+(frameCount));
+
 }
 
 ///////////////////////////////////
@@ -98,8 +103,6 @@ timer=PApplet.parseInt(txtFile[0]);
 setup();
 
 }
-  public void settings() { 
-fullScreen(); }
   static public void main(String[] passedArgs) {
     String[] appletArgs = new String[] { "--present", "--window-color=#666666", "--hide-stop", "countdown_01" };
     if (passedArgs != null) {

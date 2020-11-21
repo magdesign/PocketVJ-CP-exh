@@ -1,6 +1,8 @@
 **Roadmap / Next Steps:** <p/>
 
 - Countdown function: insert time and then display countdown, when finished show image or start video (Processing.org :-) <p/>
+- rething the video master/slave, make it same as mapper, just to select if sync/master/slave <p/>
+- clean the autostart things concering dmx, add new autostarts <p/>
 - when accessed over the internet, the ola panel is not visible, check how to handle ports with the remote, currently you can ask for another port link..   <p/>
 - dmx comand to remote record (start / stop recording dmx) directly from light-console  <p/>
 - playlist feature to play dmx/vido01 and afterwards 02 and so on, tricky bit will be to gather the end of the file...   <p/>

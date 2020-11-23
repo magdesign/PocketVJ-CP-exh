@@ -1,5 +1,6 @@
 **Roadmap / Next Steps:** <p/>
 
+- sync stop: when in sync mode, send stop from master over network to all slaves  <p/>
 - Countdown function: insert time and then display countdown, when finished show image or start video (Processing.org :-) <p/>
 - rething the video master/slave, make it same as mapper, just to select if sync/master/slave <p/>
 - clean the autostart things concering dmx, add new autostarts <p/>

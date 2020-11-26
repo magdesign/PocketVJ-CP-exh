@@ -57,6 +57,7 @@
 - push the user manual to github and provide it with readthedocs.io, <p/>
 - find an opensource solution to get rid of vimeo (peer tube? alternatives?)<p/>
 - get a bigger and faster server to host most of the services and contribute to a opensource video platform <p/>
+- change webshop to an opensource variant <p/>
 
 **Tests:** <p/>
 

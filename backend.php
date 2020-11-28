@@ -183,6 +183,13 @@ if ($_GET['action'] == 'startmasteronce') {
 
 //#video without sync
 
+
+if ($_GET['action'] == 'startless') {
+	exec("sudo /var/www/sync/startless");
+	$outputtext = "start video without sync";
+}
+
+
 if ($_GET['action'] == 'startless01') {
 	exec("sudo /var/www/sync/startless01");
 	$outputtext = "start video 01";

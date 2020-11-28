@@ -20,7 +20,6 @@ if ($_GET['action'] == 'stop') {
 
 }
 
-// not needed anymore:
 if ($_GET['action'] == 'stopvideo') {
 	$outputtext =  "stop video player only";
 	system ("sudo /var/www/sync/stopvideo > /dev/null 2>&1");
@@ -32,8 +31,19 @@ if ($_GET['action'] == 'getcontent') {
 	$outputtext =  "content from your defined websource downloaded";
 }
 
-//# Video Control Section
+///////////////////
+//# Video Section
+/////////////////////
 
+if ($_GET['action'] == 'setsync_long') {
+	$outputtext =  "set sync script to long videos";
+	system ("sudo cp /var/www/sync/omxplayer-sync-long /usr/bin/omxplayer-sync");
+}
+
+if ($_GET['action'] == 'setsync_short') {
+	$outputtext =  "stet sync script to short videos";
+	system ("sudo cp /var/www/sync/omxplayer-sync-short /usr/bin/omxplayer-sync");
+}
 
 if ($_GET['action'] == 'startmasterwifi') {
 	$outputtext =  "start master over wifi sync, be patient";

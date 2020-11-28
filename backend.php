@@ -24,12 +24,16 @@ if ($_GET['action'] == 'stopvideo') {
 	$outputtext =  "stop video player only";
 	system ("sudo /var/www/sync/stopvideo > /dev/null 2>&1");
 }
-//# Video Control Section
-if ($_GET['action'] == 'getcontent') {
-	system ("sudo /var/www/sync/getcontent");
-	system ("sudo chmod 777 /media/internal/video/*");
-	$outputtext =  "content from your defined websource downloaded";
+
+
+if ($_GET['action'] == 'stopslaves') {
+	$outputtext =  "not coded yet";
+	//system ("sudo /var/www/sync/stopvideo > /dev/null 2>&1");
+	// this will broadcast a stopall command over tcp or udp
 }
+
+
+
 
 ///////////////////
 //# Video Section
@@ -891,11 +895,11 @@ if ($_GET['action'] == 'slave') {
 	system("sudo cp /var/www/sync/rc.local.slave /etc/rc.local");
 }
 
-if ($_GET['action'] == 'extension1') {
-	$outputtext =  "extension1 set to image presenter";
-	system("sudo cp /var/www/sync/xsessionimage /home/pvj/.xsession");
-	system("sudo cp /var/www/sync/rc.local.ext1 /etc/rc.local");
+if ($_GET['action'] == 'slaveonce') {
+	$outputtext =  "slaveonce set";
+	system("sudo cp /var/www/sync/rc.local.slaveonce /etc/rc.local");
 }
+
 
 if ($_GET['action'] == 'usb') {
 	$outputtext =  "usb mode set";
@@ -1673,12 +1677,21 @@ if ($_GET['action'] == 'alsa_out') {
 }
 
 
+// get webcontent
+if ($_GET['action'] == 'getcontent') {
+	system ("sudo /var/www/sync/getcontent");
+	system ("sudo chmod 777 /media/internal/video/*");
+	$outputtext =  "content from your defined websource downloaded";
+}
+
+
 //# filename fixer
 if ($_GET['action'] == 'namefixer') {
 	system("sudo /var/www/sync/./namefixer > /dev/null 2>&1");
         $outputtext =  "fixed all filenames";
 
 }
+
 
 //# conform images to hd
 

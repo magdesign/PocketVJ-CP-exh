@@ -20,6 +20,7 @@ if ($_GET['action'] == 'stop') {
 
 }
 
+// not needed anymore:
 if ($_GET['action'] == 'stopvideo') {
 	$outputtext =  "stop video player only";
 	system ("sudo /var/www/sync/stopvideo > /dev/null 2>&1");
@@ -33,10 +34,6 @@ if ($_GET['action'] == 'getcontent') {
 
 //# Video Control Section
 
-if ($_GET['action'] == 'startseamless') {
-	$outputtext =  "start seamless video loop player";
-	system ("sudo /var/www/sync/startseamless");
-}
 
 if ($_GET['action'] == 'startmasterwifi') {
 	$outputtext =  "start master over wifi sync, be patient";
@@ -46,49 +43,6 @@ if ($_GET['action'] == 'startmasterwifi') {
 if ($_GET['action'] == 'startslavewifi') {
 	$outputtext =  "start slave over wifi sync, be patient";
 	system ("sudo /var/www/sync/startslavewifi");
-}
-
-if ($_GET['action'] == 'setseamlessscript') {
-	$outputtext =  "set to seamless sync-script";
-	system ("sudo /var/www/sync/stopall > /dev/null 2>&1");
-	system ("sudo cp /var/www/sync/omxplayer-sync /usr/bin/omxplayer-sync");
-}
-
-if ($_GET['action'] == 'setgapscript') {
-	system ("sudo /var/www/sync/stopall > /dev/null 2>&1");
-	$outputtext =  "set to gap playlist sync-script";
-	system ("sudo cp /var/www/sync/omxplayer-sync-old /usr/bin/omxplayer-sync");
-}
-
-if ($_GET['action'] == 'setwifiscript') {
-	system ("sudo /var/www/sync/stopall > /dev/null 2>&1");
-	$outputtext =  "increase sync window tolerance for wifi sync";
-	system ("sudo cp /var/www/sync/omxplayer-sync-wifi /usr/bin/omxplayer-sync");
-}
-
-if ($_GET['action'] == 'startseamless01') {
-	$outputtext =  "start seamless video_01 loop";
-	system ("sudo /var/www/sync/startseamless01");
-}
-
-if ($_GET['action'] == 'startseamless02') {
-	$outputtext =  "start seamless video_02 loop";
-	system ("sudo /var/www/sync/startseamless02");
-}
-
-if ($_GET['action'] == 'startseamless03') {
-	$outputtext =  "start seamless video_03 loop";
-	system ("sudo /var/www/sync/startseamless03");
-}
-
-if ($_GET['action'] == 'startseamless04') {
-	$outputtext =  "start seamless video_04 loop";
-	system ("sudo /var/www/sync/startseamless04");
-}
-
-if ($_GET['action'] == 'startseamless05') {
-	$outputtext =  "start seamless video_05 loop";
-	system ("sudo /var/www/sync/startseamless05");
 }
 
 if ($_GET['action'] == 'startmaster') {
@@ -180,15 +134,14 @@ if ($_GET['action'] == 'startmasteronce') {
 	exec("sudo /var/www/sync/startmasterone");
 	$outputtext = "start player as master once";
 }
-
-//#video without sync
-
+///////////////////////
+//# Video without sync
+///////////////////////
 
 if ($_GET['action'] == 'startless') {
 	exec("sudo /var/www/sync/startless");
 	$outputtext = "start video without sync";
 }
-
 
 if ($_GET['action'] == 'startless01') {
 	exec("sudo /var/www/sync/startless01");
@@ -250,6 +203,63 @@ if ($_GET['action'] == 'startless12') {
 	$outputtext = "start video 12";
 }
 
+//////////////////////////
+// Video once without sync
+//////////////////////////
+
+if ($_GET['action'] == 'startlessonce01') {
+	exec("sudo /var/www/sync/startlessonce01");
+	$outputtext = "start video 01 once";
+}
+
+if ($_GET['action'] == 'startlessonce02') {
+	exec("sudo /var/www/sync/startlessonce02");
+	$outputtext = "start video 02 once";
+}
+
+if ($_GET['action'] == 'startlessonce03') {
+	exec("sudo /var/www/sync/startlessonce03");
+	$outputtext = "start video 03 once";
+}
+
+if ($_GET['action'] == 'startlessonce04') {
+	exec("sudo /var/www/sync/startlessonce04");
+	$outputtext = "start video 04 once";
+}
+
+if ($_GET['action'] == 'startlessonce05') {
+	exec("sudo /var/www/sync/startlessonce05");
+	$outputtext = "start video 05 once";
+}
+
+if ($_GET['action'] == 'startlessonce06') {
+	exec("sudo /var/www/sync/startlessonce06");
+	$outputtext = "start video 06 once";
+}
+
+if ($_GET['action'] == 'startlessonce07') {
+	exec("sudo /var/www/sync/startlessonce07");
+	$outputtext = "start video 07 once";
+}
+
+if ($_GET['action'] == 'startlessonce08') {
+	exec("sudo /var/www/sync/startlessonce08");
+	$outputtext = "start video 08 once";
+}
+
+if ($_GET['action'] == 'startlessonce09') {
+	exec("sudo /var/www/sync/startlessonce09");
+	$outputtext = "start video 09 once";
+}
+
+if ($_GET['action'] == 'startlessonce10') {
+	exec("sudo /var/www/sync/startlessonce10");
+	$outputtext = "start video 10 once";
+}
+
+//////////////////////
+// Video once with sync
+////////////////////////
 
 if ($_GET['action'] == 'startmasteronce01') {
 	exec("sudo /var/www/sync/startmasterone01");
@@ -351,6 +361,10 @@ if ($_GET['action'] == 'startmasteronce20') {
 	$outputtext = "start video 20 once";
 }
 
+if ($_GET['action'] == 'startslaveonce') {
+	exec("sudo /var/www/sync/startslaveonce");
+	$outputtext =  "start player as slave once";
+}
 
 if ($_GET['action'] == 'startslave') {
 	exec("sudo /var/www/sync/startslave");
@@ -862,35 +876,9 @@ if ($_GET['action'] == 'autostartloop02') {
 	system("sudo cp /var/www/sync/rc.local.master02 /etc/rc.local");
 }
 
-
 if ($_GET['action'] == 'slave') {
 	$outputtext =  "slave set";
 	system("sudo cp /var/www/sync/rc.local.slave /etc/rc.local");
-}
-
-if ($_GET['action'] == 'seamless') {
-	$outputtext =  "set to seamless player";
-	system("sudo cp /var/www/sync/rc.local.seamless /etc/rc.local");
-}
-
-if ($_GET['action'] == 'streamermaster') {
-	$outputtext = "master with audioserver";
-	system("sudo cp /var/www/sync/rc.local.streamermaster /etc/rc.local");
-}
-
-if ($_GET['action'] == 'streamerslave') {
-	$outputtext =  "slave with audioserver";
-	system("sudo cp /var/www/sync/rc.local.streamerslave /etc/rc.local");
-}
-
-if ($_GET['action'] == 'streamerseamless') {
-	$outputtext =  "seamless with audioserver";
-	system("sudo cp /var/www/sync/rc.local.streamerseamless /etc/rc.local");
-}
-
-if ($_GET['action'] == 'streameraudio') {
-	$outputtext =  "audio with audioserver";
-	system("sudo cp /var/www/sync/rc.local.streameraudio /etc/rc.local");
 }
 
 if ($_GET['action'] == 'extension1') {
@@ -1303,13 +1291,13 @@ if ($_GET['action'] == 'updateall') {
    	system("sudo dpkg -i *.deb /var/cache/apt/archives/libssh-4_0.6.3-4+deb8u2_armhf.deb");
 	//install new omxplayer version:
 	system("sudo cp /var/www/sync/omxplayer_0.3.7-git20170130-62fb580_armhf.deb /var/cache/apt/archives/omxplayer_0.3.7-git20170130-62fb580_armhf.deb");
-  	system("sudo dpkg -i *.deb /var/cache/apt/archives/omxplayer_0.3.7-git20170130-62fb580_armhf.deb");
-  	//old omxplayer version:
-	//system("sudo cp /var/www/sync/omxplayer_0.3.7-git20160923-dfea8c9_armhf.deb /var/cache/apt/archives/omxplayer_0.3.7-git20160923-dfea8c9_armhf.deb");
-	//system("sudo dpkg -i *.deb /var/cache/apt/archives/omxplayer_0.3.7-git20160923-dfea8c9_armhf.deb");
+	system("sudo dpkg -i *.deb /var/cache/apt/archives/omxplayer_0.3.7-git20170130-62fb580_armhf.deb");
+	//copy omxplayer-sync scripts
+	system("sudo cp /var/www/sync/omxplayer-sync /usr/bin/omxplayer-sync");
+	system("sudo cp /var/www/sync/omxplayer-sync-old /usr/bin/omxplayer-sync-old");
+	system ("sudo cp /var/www/sync/omxplayer-sync-wifi /usr/bin/omxplayer-sync-wifi");
 	//cleanup:
 	system("sudo apt-get clean");
-	system("sudo cp /var/www/sync/omxplayer-sync /usr/bin/omxplayer-sync");
 	system("sudo chmod a+x /usr/bin/omxplayer");
 	system("sudo chmod a+x /usr/bin/omxplayer.bin");
 	system("sudo chmod a+x /usr/bin/omxplayer-sync");
@@ -1361,13 +1349,19 @@ if ($_GET['action'] == 'updateall') {
 
 if ($_GET['action'] == 'factoryreset') {
 	$outputtext =  "factory reset system";
+	//stop all
 	system ("sudo /var/www/sync/stopall > /dev/null 2>&1");
+	//copy omxplayer -sync scripts
 	system("sudo cp /var/www/sync/omxplayer-sync /usr/bin/omxplayer-sync");
+	system("sudo cp /var/www/sync/omxplayer-sync-old /usr/bin/omxplayer-sync-old");
+	system ("sudo cp /var/www/sync/omxplayer-sync-wifi /usr/bin/omxplayer-sync-wifi");
+	//reset screen
     system("sudo cp /var/www/sync/defaulthdmi /boot/config.txt");
   	system("sudo cp /var/www/sync/rc.local.master /etc/rc.local");
   	system("sudo cp /var/www/sync/dbuscontrol.sh /usr/bin/dbuscontrol.sh");
  	system("sudo cp /var/www/sync/timer.txt /media/internal/timer.txt");
-  	system("sudo /var/www/sync/./namefixer > /dev/null 2>&1");
+	system("sudo /var/www/sync/./namefixer > /dev/null 2>&1");
+	//fix permissions  
 	system("sudo chmod +rx /usr/bin/dbuscontrol.sh");
 	system("sudo chmod +x /var/www/sync/launchmapper");
 	system("sudo chmod 755 -R /var/www");
@@ -1400,10 +1394,14 @@ if ($_GET['action'] == 'factoryreset') {
 }
 
 // rental reset
-if ($_GET['action'] == 'renthalreset') {
+if ($_GET['action'] == 'rentalreset') {
 	$outputtext =  "renthalreset reset system, removed content!";
+	//stoppall
 	system ("sudo /var/www/sync/stopall > /dev/null 2>&1");
+	//reset sync scripts
 	system("sudo cp /var/www/sync/omxplayer-sync /usr/bin/omxplayer-sync");
+	system("sudo cp /var/www/sync/omxplayer-sync-old /usr/bin/omxplayer-sync-old");
+	system ("sudo cp /var/www/sync/omxplayer-sync-wifi /usr/bin/omxplayer-sync-wifi");
 	// set resolution to auto detect
 	system("sudo cp /var/www/sync/defaulthdmi /boot/config.txt");
 	//set to boot as video master
@@ -1617,8 +1615,6 @@ if ($_GET['action'] == 'connectedtowifi') {
 	$outputtext = wordwrap($preoutputtext, 100, "<br />\n");
 }
 
-
-
 //# Disable Wifi & Bluetooth
 
 if ($_GET['action'] == 'wifidisable') {
@@ -1631,16 +1627,9 @@ if ($_GET['action'] == 'wifienable') {
 	system("sudo cp /var/www/sync/raspi-blacklist.empty /etc/modprobe.d/raspi-blacklist.conf");
 }
 
-
-//# Set Projector Stuff not necessary anymore
-
-if ($_GET['action'] == 'setpjlink') {
-	$outputtext =  "set to PJLINK network control";
-	system("sudo cp /var/www/sync/beamer_on_off_pjlink.sh /var/www/sync/beamer_on_off.sh");
-	system("sudo chmod 755 /var/www/sync/beamer_on_off.sh");
-}
-
-//# Audio Volume
+////////////
+//# Audio//
+///////////
 
 if ($_GET['action'] == 'volume_up') {
 	system("sudo su - pvj -c 'amixer set Master 100%'");
@@ -1652,12 +1641,6 @@ if ($_GET['action'] == 'volume_down') {
 	system("sudo su - pvj -c 'amixer set Master 10%-'");
 	$outputtext =  "<pre>$output</pre>";
 }
-
-
-//////////////////
-//# Audio Output//
-//////////////////
-
 
 if ($_GET['action'] == 'hdmi_out') {
 	system("sudo /var/www/sync/setaudio_hdmi");
@@ -1716,8 +1699,10 @@ if ($_GET['action'] == 'mappingconverter') {
 	system("sudo /var/www/sync/mappingconverter");
 	$outputtext = "convert convert.svg to mappersetting1";
 }
+//////////////
+// Scheduler//
+//////////////
 
-//# Scheduler
 
 if ($_GET['action'] == 'setscheduler') {
 	$outputtext = "autostart into scheduler mode";
@@ -2294,35 +2279,9 @@ if ($_GET['action'] == 'setstatic102') {
 	system("sudo cp /var/www/sync/interfaces.static102 /etc/network/interfaces");
 }
 
-if ($_GET['action'] == 'startmasterstream') {
-	system("sudo /var/www/sync/startmasterstream");
-	$outputtext =  "start video master loop and send audio to server";
-}
-
-if ($_GET['action'] == 'startslavestream') {
-	system("sudo /var/www/sync/startslavestream");
-	$outputtext =  "start video slave loop and send audio to server";
-}
-
-if ($_GET['action'] == 'startseamlessstream') {
-	system("sudo /var/www/sync/startseamlessstream");
-	$outputtext =  "start video seamless and send audio to server";
-}
-
-if ($_GET['action'] == 'startaudiostream') {
-	exec("sudo /var/www/sync/startaudiostream");
-	$outputtext = "start audio streaming player";
-}
-
-if ($_GET['action'] == 'audiostreamstop') {
-	$outputtext =  "stop video master loop and stop audio server";
-	system("sudo /var/www/sync/omxkill");
-	system("sudo pkill gst-launch");
-	system("sudo killall -9 janus");
-	system("sudo modprobe -r snd-aloop");
-}
-
+//////////////////////
 //# TCPSyphon Receiver
+//////////////////////
 
 if ($_GET['action'] == 'tcpsserver') {
 	system("sudo /var/www/sync/tcpsserver");

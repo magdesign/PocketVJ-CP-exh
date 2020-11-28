@@ -6,5 +6,5 @@
 #sleep 3
 
 #start the lesshelper script which will play all files in folder
-/var/www/sync/startlesshelper
+sudo /var/www/sync/startlesshelper
 

@@ -1652,6 +1652,8 @@ if ($_GET['action'] == 'volume_down') {
 	system("sudo su - pvj -c 'amixer set Master 10%-'");
 	$outputtext =  "<pre>$output</pre>";
 }
+
+
 //////////////////
 //# Audio Output//
 //////////////////
@@ -1676,10 +1678,6 @@ if ($_GET['action'] == 'alsa_out') {
 	system("sudo /var/www/sync/setaudio_alsa");
 	$outputtext =  "Audio set to alsa:hw:1,0";
 }
-
-
-
-
 
 
 //# filename fixer

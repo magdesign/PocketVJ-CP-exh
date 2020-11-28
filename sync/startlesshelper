@@ -8,8 +8,10 @@
 # set here the path to the directory containing your videos
 VIDEOPATH="/media/internal/video/" 
 
+PLAYER="omxplayer -o both"
+
 # you can normally leave this alone
-SERVICE="omxplayer -o both"
+SERVICE="omxplayer"
 
 # now for our infinite loop!
 while true; do
@@ -20,7 +22,7 @@ else
         for entry in $VIDEOPATH/*
         do
                 clear
-                omxplayer $entry > /dev/null
+                $PLAYER  $entry > /dev/null
         done
 fi
 done

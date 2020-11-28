@@ -1377,6 +1377,13 @@ if ($_GET['action'] == 'factoryreset') {
 	system("sudo cp /var/www/sync/ola-artnet.conf /etc/ola/ola-artnet.conf");
 	//set slidetime to 5 seconds
 	system("sudo sed -ri 's@<SlideDuration>.+</SlideDuration>@<SlideDuration>5</SlideDuration>@' /home/pvj/openFrameworks/addons/ofxPiMapper/example_fbo-sources/bin/data/magslideshow_settings.xml");
+	//disable ola daemon
+	exec("sudo service olad stop");
+	//check if this is still relevant for stopping
+	exec("sudo update-rc.d olad disable");
+	exec("sudo killall -9 /usr/bin/olad");
+	//disable buttons
+	system("sudo /var/www/sync/stopbuttons");
 	//system("sudo rm -rf /tmp/*");
 	//system("sudo rm -rf /var/log/*");
 	//system("sudo rm -rf /var/tmp/*");

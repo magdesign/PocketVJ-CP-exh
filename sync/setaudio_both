@@ -40,7 +40,7 @@
 	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startaudioslave &
 	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startaudiousb &
 #looped without sync
-	sed -i 's/PLAYER.*/PLAYER="omxplayer -o both"/' /var/www/sync/startlesshelper &
+	sudo sed -ri 's/PLAYER=.*/PLAYER="omxplayer -o both"/' /var/www/sync/startlesshelper &
 	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startless01 &
 	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startless02 &
 	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startless03 &

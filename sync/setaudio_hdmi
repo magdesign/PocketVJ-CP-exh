@@ -36,7 +36,7 @@
 	sudo sed -ri 's/-o [[:graph:]]+/-o hdmi/' /var/www/sync/startmasterone12 &
 	sudo sed -ri 's/-o [[:graph:]]+/-o hdmi/' /var/www/sync/startseamless &
 #looped without sync
-	sed -i 's/PLAYER.*/PLAYER="omxplayer -o hdmi"/' /var/www/sync/startlesshelper &
+	sudo sed -ri 's/PLAYER=.*/PLAYER="omxplayer -o hdmi"/' /var/www/sync/startlesshelper &
 	sudo sed -ri 's/-o [[:graph:]]+/-o hdmi/' /var/www/sync/startless01 &
 	sudo sed -ri 's/-o [[:graph:]]+/-o hdmi/' /var/www/sync/startless02 &
 	sudo sed -ri 's/-o [[:graph:]]+/-o hdmi/' /var/www/sync/startless03 &

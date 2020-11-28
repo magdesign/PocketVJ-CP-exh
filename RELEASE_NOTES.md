@@ -1,7 +1,8 @@
 # PocketVJ Exhibition / Control Panel 3.x.x
 
-## CP 3.2 unreleased yet 2020  <br />
+## CP 4.0.0 unreleased yet 2020  <br />
 - complete rewerite of CP, better look and feel, more organised <br />
+- cleaned up some code  <br />
 - added countdown which trigger a script when running down (processing.org) <br />
 
 

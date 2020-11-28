@@ -1357,6 +1357,13 @@ if ($_GET['action'] == 'updateall') {
 	system("sudo /var/www/sync/iprangeUpdatecall");
 	//remove git history folder
 	system("sudo rm -rf /var/www/.git/ ");
+	//remove webflow junk
+	system("sudo rm -rf /var/www/icons/");
+	system("sudo rm -rf /var/www/fonts/");
+	system("sudo rm -rf /var/www/docs/");
+	system("sudo rm -rf /var/www/css/");
+	system("sudo rm -rf /var/www/images/");
+	system("sudo rm -rf /var/www/js/webflow.js");
 	//Text Output
 	$outputtext =  "Updated everything Controlpanel, Mapper, OMXPLAYER, Timer, Boot";
 }

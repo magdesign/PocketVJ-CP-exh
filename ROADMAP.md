@@ -1,8 +1,12 @@
 **Roadmap / Next Steps:** <p/>
 
+- sync stop: when in sync mode, send stop from master over network to all slaves tcp commands in an optional stopslaves script? <p/>
 - Countdown function: insert time and then display countdown, when finished show image or start video (Processing.org :-) <p/>
+- rethink the video master/slave, make it same as mapper, just to select if sync/master/slave, does omxplayer play severals files without our script?<p/>
+- clean the autostart things concering dmx, add new autostarts <p/>
 - when accessed over the internet, the ola panel is not visible, check how to handle ports with the remote, currently you can ask for another port link..   <p/>
 - dmx comand to remote record (start / stop recording dmx) directly from light-console  <p/>
+- playlist feature to play dmx/vido01 and afterwards 02 and so on, tricky bit will be to gather the end of the file...   <p/>
 - fix the annoying usb cable mouse issue when using mapper  <p/>
 - set mapper to start with presentation mode to get rid of tearing, currently you have to go to mapping and back to presentation  <p/>
 - help ola to fix the deb building issue! <p/>
@@ -10,6 +14,7 @@
 <p/> <p/>
 
 - Adding wake on lan feature? <p/>
+- parse output of: "possible resolutions" to human readable lines<p/>
 - add wireless-power off to interfaces ? <p/>
 - Integrate this script for more CPU infos in CP: https://gist.github.com/ecampidoglio/5009512#file-cpustatus-sh <p/>
 - enable disable sync, to support ultra short files <p/>
@@ -37,21 +42,26 @@
 
 
 **Tutorials/Manual:** <p/>
-
+- remwork all tutorials, make them shorter and faster  <p/>
 - how to use the dmx delay function to sync audio/video with recorded dmx/artnet <p/>
 - how to change the distance of the pir sensor, factory wise set to ~5m and can be changed from ~3 to ~7m<p/>
 - connect usb soundcard for better audio quality<p/>
 - mapper sync<p/>
-- remote mapper<p/>
+- remote mapper ?<p/>
 - create list of OSC/midi commands for website (without code around it)<p/>
-- Video tutorial for connecting knobs (simple number game)<p/>
 - Video tutorial for presenter<p/>
 - Video tutorial for VNC/Linux/remote Mapping/Recording<p/>
 
+**Pipeline/Provider:** <p/>
+- get rid of webflow, since their support is catastrophic and the mess nearly weekly with my pipeline (bootstrap is the new way, already on it)<p/>
+- push the user manual to github and provide it with readthedocs.io, <p/>
+- find an opensource solution to get rid of vimeo (peer tube? alternatives?)<p/>
+- get a bigger and faster server to host most of the services and contribute to a opensource video platform <p/>
+- change webshop to an opensource variant <p/>
 
 **Tests:** <p/>
 
 - test sync script with large files, adjust window if necessary<p/>
 - sync with very short files <p/>
 - test autostart of dmxshow<p/>
-- long term test with mapper sync <p/>
+- push buttons and rtc's as slaves<p/>

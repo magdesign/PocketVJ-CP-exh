@@ -19,6 +19,6 @@ shell_exec("sudo sed -i '/IP=/c IP=$usgab' /var/www/sync/beamerstatus");
 
 
 
-echo " = beamer IP ";
+echo " = Beamer IP ";
 
 ?>

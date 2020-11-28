@@ -17,4 +17,4 @@ sleep 10
 
 #start video as slave with node-omxplayer-sync
 #sudo -H -u pvj bash -c "node /home/pvj/node-omxplayer-sync/omx-sync-wifi.js /media/internal/video/wifisync.mp4"
-su - pvj -c "node /home/pi/node-omxplayer-sync/omx-sync-wifi.js /media/internal/video/wifisync.mp4"
+su - pvj -c "node /home/pvj/node-omxplayer-sync/omx-sync-wifi.js /media/internal/video/wifisync.mp4"

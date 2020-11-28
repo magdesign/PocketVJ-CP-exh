@@ -3,6 +3,10 @@
 #kill dmx loop file
 sudo rm -rf /tmp/dmxloop
 
+#kill omxplayer less loop file, player will be killed later on
+sudo kill $(pgrep 'startlesshelper')  > /dev/null 2>&1
+
+
 #kill xserver
 sudo killall -9 /usr/bin/lxsession > /dev/null 2>&1
 

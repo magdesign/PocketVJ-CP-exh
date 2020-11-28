@@ -1,0 +1,27 @@
+#!/bin/bash
+
+#this is the helper script for start less, since we first
+#need to kill everything and then run this script here
+
+#play all videos in folder without sync
+
+# set here the path to the directory containing your videos
+VIDEOPATH="/media/internal/video/" 
+
+# you can normally leave this alone
+SERVICE="omxplayer -o both"
+
+# now for our infinite loop!
+while true; do
+        if ps ax | grep -v grep | grep $SERVICE > /dev/null
+        then
+        sleep 1;
+else
+        for entry in $VIDEOPATH/*
+        do
+                clear
+                omxplayer $entry > /dev/null
+        done
+fi
+done
+

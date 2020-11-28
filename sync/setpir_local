@@ -1,4 +1,0 @@
-#!/bin/bash
-#setting the audio output for pir script, since i was not able to use this command in php string
-
-sed -i "/^OMXPLAYER = \['omxplayer', '-o',/c\OMXPLAYER = ['omxplayer', '-o', 'local', '--no-osd']"

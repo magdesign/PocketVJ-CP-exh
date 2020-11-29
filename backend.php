@@ -875,7 +875,7 @@ if ($_GET['action'] == 'mount') {
 
 //# Autostart behaviour
 
-if ($_GET['action'] == 'master') {
+if ($_GET['action'] == 'setmaster') {
 	$outputtext = "master set";
 	system("sudo cp /var/www/sync/rc.local.master /etc/rc.local");
 }
@@ -890,12 +890,12 @@ if ($_GET['action'] == 'autostartloop02') {
 	system("sudo cp /var/www/sync/rc.local.master02 /etc/rc.local");
 }
 
-if ($_GET['action'] == 'slave') {
+if ($_GET['action'] == 'setslave') {
 	$outputtext =  "slave set";
 	system("sudo cp /var/www/sync/rc.local.slave /etc/rc.local");
 }
 
-if ($_GET['action'] == 'slaveonce') {
+if ($_GET['action'] == 'setslaveonce') {
 	$outputtext =  "slaveonce set";
 	system("sudo cp /var/www/sync/rc.local.slaveonce /etc/rc.local");
 }
@@ -1240,22 +1240,41 @@ if ($_GET['action'] == 'diskspace') {
     $outputtext = "<pre>$output</pre>";
 }
 
+
+//////////////////
+/// File Handling
+//////////////////
+
+if ($_GET['action'] == 'defaultelfinder') {
+	system ("sudo /var/www/sync/set_elfinder");
+		//this is to disable filebrowser daemon
+	system ("sudo systemctl stop filebrowser.service");
+	system ("sudo systemctl disable filebrowser.service");
+	$outputtext =  "elFinder default";
+}
+
+if ($_GET['action'] == 'defaultextplorer') {
+	system ("sudo /var/www/sync/set_elfinder");
+	//this is to disable filebrowser daemon
+	system ("sudo systemctl stop filebrowser.service");
+	system ("sudo systemctl disable filebrowser.service");
+	$outputtext =  "eXtplorer default";
+}
+
+if ($_GET['action'] == 'defaultfilebrowser') {
+	system ("sudo /var/www/sync/set_filebrowser");
+	$outputtext =  "filebrowser default";
+}
+
+if ($_GET['action'] == 'openfilebrowser') {
+	system ("sudo systemctl start filebrowser.service");
+	$outputtext =  "filebrowser open";
+}
+
+
+
 //# Update & Firmmare Stuff
 
-//#controlpanel via web should be tested and then official released
-if ($_GET['action'] == 'controlpanelweb') {
-	$outputtext =  "update ControlPanel via internet";
-	system ("sudo /var/www/sync/stopall > /dev/null 2>&1");
-	system("sudo wget https://pocketvj.com/downloads/PocketVJ-CP-exh.zip -O /media/internal/PocketVJ-CP-exh.zip");
-	system("sudo unzip /media/internal/PocketVJ-CP-exh.zip -d /media/internal/");
-	system("sudo cp -r /media/internal/PocketVJ-CP-exh/* /var/www/");
-	system("sudo chmod 755 -R /var/www/");
-	system("sudo rm -r /media/internal/PocketVJ-CP-exh.zip");
-	system("sudo rm -r /media/internal/PocketVJ-CP-exh");
-	system("sudo cp /var/www/sync/defaulthdmi /boot/config.txt");
-	system("sudo cp /var/www/sync/timer.txt /media/internal/timer.txt");
-	$outputtext =  "ControlPanel Update";
-}
 
 //#This updates all mapper
 if ($_GET['action'] == 'mapperupdate') {
@@ -1359,6 +1378,12 @@ if ($_GET['action'] == 'updateall') {
 	system("sudo cp /var/www/sync/ola-artnet.conf /etc/ola/ola-artnet.conf");
 	//set ip on network scripts to match pvj current ip
 	system("sudo /var/www/sync/iprangeUpdatecall");
+	//remove filebrowser, if there is one
+	system("sudo rm -rf /var/www/filebrowser");
+	//install filebrowser from zip
+	system("sudo unzip /var/www/sync/filebrowser -d /");
+	//copy filebrowser daemon
+	system("sudo cp /var/www/filebrowser/filebrowser.service /etc/systemd/system/filebrowser.service");
 	//remove git history folder
 	system("sudo rm -rf /var/www/.git/ ");
 	//remove webflow junk
@@ -1418,11 +1443,12 @@ if ($_GET['action'] == 'factoryreset') {
 	//system("sudo apt-get clean");
 	//set ip on network scripts to match pvj current ip
 	system("sudo /var/www/sync/iprangeUpdatecall");
+	
 }
 
 // rental reset
 if ($_GET['action'] == 'rentalreset') {
-	$outputtext =  "renthalreset reset system, removed content!";
+	//$outputtext =  "renthalreset reset system, removed content!";
 	//stoppall
 	system ("sudo /var/www/sync/stopall > /dev/null 2>&1");
 	//reset sync scripts
@@ -1514,7 +1540,10 @@ if ($_GET['action'] == 'rentalreset') {
 	system("sudo sed -ri 's@<SlideDuration>.+</SlideDuration>@<SlideDuration>5</SlideDuration>@' /home/pvj/openFrameworks/addons/ofxPiMapper/example_fbo-sources/bin/data/magslideshow_settings.xml");
 	// stop buttons
 	system("sudo /var/www/sync/stopbuttons");
-
+	////////////////
+	//////to do:
+	// set to default filebrowser!!!
+	$outputtext =  "Rental reset done";
 }
 
 if ($_GET['action'] == 'updatekernel') {

@@ -50,7 +50,7 @@ Code below loads custom js for form submission without reload-->
                 <div class="col"><a class="d-xl-flex justify-content-xl-center action" href="?action=startmaster"><img class="d-xl-flex justify-content-xl-center shortcuts_header" src="assets/img/play_icon.svg" data-toggle="tooltip" title="play video"></a></div>
                 <div class="col"><a class="d-xl-flex justify-content-xl-center action" href="?action=pause"><img class="d-xl-flex justify-content-xl-center shortcuts_header" src="assets/img/pause_icon.svg" data-toggle="tooltip" title="pause"></a></div>
                 <div class="col"><a class="d-xl-flex justify-content-xl-center action" href="?action=fastforward"><img class="d-xl-flex justify-content-xl-center shortcuts_header" src="assets/img/fastforward_icon.svg" data-toggle="tooltip" title="fastforward"></a></div>
-                <div class="col"><a class="d-xl-flex justify-content-xl-center" href="/eXtplorer/" target="_blank"><img class="d-xl-flex justify-content-xl-center shortcuts_header" src="assets/img/filebrowser_icon.svg" data-toggle="tooltip" title="filebrowser"></a></div>
+                <div class="col"><a class="d-xl-flex justify-content-xl-center" target="_blank" href="/eXtplorer/"><img class="d-xl-flex justify-content-xl-center shortcuts_header" src="assets/img/filebrowser_icon.svg" data-toggle="tooltip" title="filebrowser"></a></div>
                 <div class="col"><a class="d-xl-flex justify-content-xl-center action" href="?action=screenshot"><img class="d-xl-flex justify-content-xl-center shortcuts_header" src="assets/img/screenshot_icon.svg" data-toggle="tooltip" title="screenshot"></a></div>
                 <div class="col"><a class="d-xl-flex justify-content-xl-center action" href="?action=testscreen"><img class="d-xl-flex justify-content-xl-center shortcuts_header" src="assets/img/testscreen_icon.svg" data-toggle="tooltip" title="testscreen"></a></div>
                 <div class="col"><a class="d-xl-flex justify-content-xl-center action" href="?action=getresolution"><img class="d-xl-flex justify-content-xl-center shortcuts_header action" src="assets/img/resolution_icon.svg" data-toggle="tooltip" title="get resolution"></a></div>
@@ -121,7 +121,7 @@ Code below loads custom js for form submission without reload-->
                         <div class="col" style="background: #6cc6d9;">
                             <div>
                                 <h2 style="height: 32px;margin-top: 15px;"><img src="assets/img/Video_icon_01.svg">&nbsp;VIDEO</h2>
-                                <div class="col colforbutton"><a class="btn btn-info action" role="button" href="?action=master">Sender/Master</a></div>
+                                <div class="col colforbutton"><a class="btn btn-info action" role="button" href="?action=setmaster">Sender/Master</a></div>
                                 <div class="col colforbutton"><a class="btn btn-info action" role="button" href="?action=autostartloop01">01_* Loop</a></div>
                                 <div class="col colforbutton"><a class="btn btn-info action" role="button" href="?action=autostartloop02">02_* Loop</a></div>
                                 <div class="col colforbutton"><a class="btn btn-info action" role="button" href="?action=setmasterdmx01">Master/dmxShow01</a></div>
@@ -131,8 +131,8 @@ Code below loads custom js for form submission without reload-->
                         <div class="col" style="background: #6cc6d9;">
                             <div>
                                 <h3 style="height: 32px;margin-top: 15px;">&nbsp;</h3>
-                                <div class="col colforbutton"><a class="btn btn-info action" role="button" href="?action=slave">Receiver/Slave</a></div>
-                                <div class="col colforbutton"><a class="btn btn-info action" role="button" href="?action=slaveonce">Receiver/Slave Once</a></div>
+                                <div class="col colforbutton"><a class="btn btn-info action" role="button" href="?action=setslave">Receiver/Slave</a></div>
+                                <div class="col colforbutton"><a class="btn btn-info action" role="button" href="?action=setslaveonce">Receiver/Slave Once</a></div>
                             </div>
                         </div>
                         <div class="col" style="background: #4296d2;">
@@ -297,10 +297,11 @@ Code below loads custom js for form submission without reload-->
                             </div>
                         </div>
                     </div>
-                    <div class="row no-gutters row-cols-1 row-cols-sm-2 row-cols-lg-4" style="margin-right: -15px;margin-left: -15px;background: #ffc800;">
+                    <div class="row no-gutters row-cols-2 row-cols-sm-2 row-cols-lg-4" style="margin-right: -15px;margin-left: -15px;background: #ffc800;">
                         <div class="col">
                             <div>
                                 <h2>BROWSER</h2>
+                                <div class="col colforbutton"><a class="btn btn-dark action" role="button" href="?action=openfilebrowser" target="_blank" onclick="window.open(`//${window.location.hostname}:8060`)">filebrowser</a></div>
                                 <div class="col colforbutton"><a class="btn btn-dark" role="button" href="/elFinder/elfinder.src.html" target="_blank">elFinder</a></div>
                                 <div class="col colforbutton"><a class="btn btn-dark" role="button" href="/eXtplorer/" target="_blank">eXtplorer</a></div>
                                 <div class="col colforbutton">
@@ -310,7 +311,16 @@ Code below loads custom js for form submission without reload-->
                             </div>
                         </div>
                         <div class="col">
-                            <div></div>
+                            <div>
+                                <h2>&nbsp;&nbsp;</h2>
+                                <div class="col colforbutton"><a class="btn btn-dark action" role="button" href="?action=defaultfilebrowser">make default</a></div>
+                                <div class="col colforbutton"><a class="btn btn-dark action" role="button" href="?action=defaultelfinder">make default</a></div>
+                                <div class="col colforbutton"><a class="btn btn-dark action" role="button" href="?action=defaultextplorer">make default</a></div>
+                                <div class="col colforbutton">
+                                    <h3>&nbsp;</h3>
+                                </div>
+                                <div class="col colforbutton" style="height: 68px;"></div>
+                            </div>
                         </div>
                         <div class="col">
                             <h2>TOOLS</h2>
@@ -482,7 +492,7 @@ Code below loads custom js for form submission without reload-->
                     <div class="row no-gutters row-cols-2 row-cols-lg-4" style="margin-right: -15px;margin-left: -15px;background: #6cc6d9;padding-bottom: 20px;">
                         <div class="col">
                             <div>
-                                <h2 data-toggle="tooltip" title="ola is needed for all dmx&amp;artnet functions!">PLAYER</h2>
+                                <h2 data-toggle="tooltip" title="regular video player">PLAYER</h2>
                                 <div class="col colforbutton"><a class="btn btn-primary action" role="button" href="?action=startless">Play All</a></div>
                                 <div class="col colforbutton"><a class="btn btn-primary action" role="button" href="?action=startless01">Loop 01_*</a></div>
                                 <div class="col colforbutton"><a class="btn btn-primary action" role="button" href="?action=startless02">Loop 02_*</a></div>
@@ -514,7 +524,7 @@ Code below loads custom js for form submission without reload-->
                         </div>
                         <div class="col">
                             <div>
-                                <h2 data-toggle="tooltip" title="ola is needed for all dmx&amp;artnet functions!">PLAYER SYNC</h2>
+                                <h2 data-toggle="tooltip" title="for multichannel installations">PLAYER SYNC</h2>
                                 <div class="col colforbutton"><a class="btn btn-primary action" role="button" href="?action=startmaster">Play All</a></div>
                                 <div class="col colforbutton"><a class="btn btn-primary action" role="button" href="?action=startmaster01">Loop 01_*</a></div>
                                 <div class="col colforbutton"><a class="btn btn-primary action" role="button" href="?action=startmaster02">Loop 02_*</a></div>
@@ -530,7 +540,7 @@ Code below loads custom js for form submission without reload-->
                         </div>
                         <div class="col">
                             <div>
-                                <h2 data-toggle="tooltip" title="ola is needed for all dmx&amp;artnet functions!">PLAYER SYNC ONCE</h2>
+                                <h2 data-toggle="tooltip" title="for button trigger sync stuff">PLAYER SYNC ONCE</h2>
                                 <div class="col colforbutton" style="height: 48px;"></div>
                                 <div class="col colforbutton"><a class="btn btn-primary action" role="button" href="?action=startmasteronce01">Once 01_*</a></div>
                                 <div class="col colforbutton"><a class="btn btn-primary action" role="button" href="?action=startmasteronce02">Once 02_*</a></div>
@@ -548,19 +558,19 @@ Code below loads custom js for form submission without reload-->
                     <div class="row no-gutters row-cols-1 row-cols-sm-2 row-cols-lg-4" style="margin-right: -15px;margin-left: -15px;background: #6cc6d9;padding-bottom: 20px;">
                         <div class="col">
                             <div>
-                                <h2 data-toggle="tooltip" title="ola is needed for all dmx&amp;artnet functions!">SYNC WIFI</h2>
-                                <div class="col colforbutton"><a class="btn btn-primary action" role="button" id="dmxbuttoncolor-1" href="?action=startmasterwifi">Wifi Sender</a></div>
+                                <h2 data-toggle="tooltip" title="only works with video named: wifisync.mp4">SYNC WIFI</h2>
+                                <div class="col colforbutton"><a class="btn btn-primary action" role="button" id="dmxbuttoncolor-1" href="?action=startmasterwifi" data-toggle="tooltip" title="make sure you configured the receiver!">Wifi Sender</a></div>
                             </div>
                         </div>
                         <div class="col">
                             <div>
                                 <h3>&nbsp;</h3>
-                                <div class="col colforbutton"><a class="btn btn-primary action" role="button" id="dmxbuttoncolor-3" href="?action=startslavewifi">Wifi Receiver</a></div>
+                                <div class="col colforbutton"><a class="btn btn-primary action" role="button" id="dmxbuttoncolor-3" href="?action=startslavewifi" data-toggle="tooltip" title="set masters wifi name/password in the system settings => &quot;Connect to Wifi&quot;">Wifi Receiver</a></div>
                             </div>
                         </div>
                         <div class="col">
                             <div>
-                                <h2 data-toggle="tooltip" title="ola is needed for all dmx&amp;artnet functions!">MULTICHANNEL</h2>
+                                <h2>MULTICHANNEL</h2>
                                 <div class="col colforbutton"><a class="btn btn-primary action" role="button" href="?action=startslave">Receiver/Slave</a></div>
                                 <div class="col colforbutton" style="height: 48px;"></div>
                                 <div class="col colforbutton"><a class="btn btn-primary action" role="button" href="?action=setsync_long" data-toggle="tooltip" title="use this for long videos to sync proper">set long videos</a></div>
@@ -568,7 +578,7 @@ Code below loads custom js for form submission without reload-->
                         </div>
                         <div class="col">
                             <div>
-                                <h2 data-toggle="tooltip" title="ola is needed for all dmx&amp;artnet functions!">&nbsp;</h2>
+                                <h2>&nbsp;</h2>
                                 <div class="col colforbutton" style="height: 48px;"><a class="btn btn-primary action" role="button" href="?action=startslaveonce">Receiver/Slave Once</a></div>
                                 <div class="col colforbutton"><a class="btn btn-primary action" role="button" href="?action=stopslaves">Stop Slaves</a></div>
                                 <div class="col colforbutton"><a class="btn btn-primary action" role="button" href="?action=setsync_short" data-toggle="tooltip" title="use this of very short videos do not play">set short videos</a></div>
@@ -715,7 +725,7 @@ Code below loads custom js for form submission without reload-->
                             </div>
                         </div>
                     </div>
-                    <div class="row no-gutters row-cols-1 row-cols-sm-2 row-cols-lg-4" style="margin-right: -15px;margin-left: -15px;background: #204b9b;padding-bottom: 20px;">
+                    <div class="row no-gutters row-cols-2 row-cols-sm-2 row-cols-lg-4" style="margin-right: -15px;margin-left: -15px;background: #204b9b;padding-bottom: 20px;">
                         <div class="col">
                             <div>
                                 <h2>MODE</h2>
@@ -757,7 +767,7 @@ Code below loads custom js for form submission without reload-->
                             </div>
                         </div>
                     </div>
-                    <div class="row no-gutters row-cols-1 row-cols-sm-2 row-cols-lg-4" style="margin-right: -15px;margin-left: -15px;background: #204b9b;padding-bottom: 20px;">
+                    <div class="row no-gutters row-cols-2 row-cols-sm-2 row-cols-lg-4" style="margin-right: -15px;margin-left: -15px;background: #204b9b;padding-bottom: 20px;">
                         <div class="col">
                             <div>
                                 <h2>SYNC</h2>
@@ -791,7 +801,6 @@ Code below loads custom js for form submission without reload-->
                             <div>
                                 <h2>FBO</h2>
                                 <div class="col colforbutton" style="height: 48px;"><a class="btn btn-light action" role="button" href="?action=launchmapperremote">Launch</a></div>
-                                <div class="col colforbutton"></div>
                             </div>
                         </div>
                         <div class="col">
@@ -915,7 +924,7 @@ Code below loads custom js for form submission without reload-->
                         <div class="col">
                             <div>
                                 <div class="col colforbutton">
-                                    <h2 data-toggle="tooltip" title="ola is needed for all dmx&amp;artnet functions!">&nbsp; &nbsp;</h2>
+                                    <h2>&nbsp; &nbsp;</h2>
                                 </div>
                                 <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="expansionbutton" href="?action=stopbuttons">Disable</a></div>
                             </div>
@@ -1115,7 +1124,7 @@ Code below loads custom js for form submission without reload-->
                         <div class="col">
                             <div>
                                 <div class="col colforbutton">
-                                    <h2 data-toggle="tooltip" title="ola is needed for all dmx&amp;artnet functions!">&nbsp; &nbsp;</h2>
+                                    <h2>&nbsp; &nbsp;</h2>
                                 </div>
                                 <div class="col colforbutton"></div>
                             </div>
@@ -1335,7 +1344,7 @@ Code below loads custom js for form submission without reload-->
                     <div>
                         <h3>&nbsp;</h3>
                         <div class="col colforbutton"><a class="btn btn-danger" role="button" id="dmxbuttoncolor" href="#" onclick="window.open(`//${window.location.hostname}:9090`)" target="_blank">Open Panel</a></div>
-                        <div class="col colforbutton"><a class="btn btn-danger" role="button" id="dmxbuttoncolor" href="?action=stopoladaemon" onclick="window.open(`//${window.location.hostname}:9090`)" target="_blank">Daemon OFF</a></div>
+                        <div class="col colforbutton"><a class="btn btn-danger" role="button" id="dmxbuttoncolor" href="?action=stopoladaemon">Daemon OFF</a></div>
                     </div>
                 </div>
                 <div class="col">
@@ -1984,70 +1993,69 @@ Code below loads custom js for form submission without reload-->
  
 <script type="text/javascript">
 
- function settime() {
-
-    window.open('time_change.php');
-    document.getElementById('actions_output').innerHTML = ("time set");
-  } 
-
-</script>
-
-<!--
-Code below this line checks if user is online
--->
-<script src="js/offline.min.js"></script>
-<link rel="stylesheet" href="../themes/offline-theme-chrome.css" />
-<link rel="stylesheet" href="../themes/offline-language-english.css" />
-
-<script>
-  var run = function(){
-  var req = new XMLHttpRequest();
-  req.timeout = 5000;
-  req.open('GET', 'http://localhost:8888/walter/0', true);
-  req.send();
-}
-setInterval(run, 3000);
-
-        Offline.options = {
-        requests: false
-        }
-        
-</script>
-
-
-<!--
-Code below is for button actions
--->
-  <script type="text/javascript">
-   $("a.action").on("click", function(event) { 
-       event.preventDefault();
-       $.get( "backend.php" + $(this).attr('href'), function(data) {
-          $("#actions_output").html(data);
-       });
-   });
+    function settime() {
+   
+       window.open('time_change.php');
+       document.getElementById('actions_output').innerHTML = ("time set");
+     } 
+   
    </script>
+   
    <!--
-
-Code  below is for cron / Scheduler generator
- -->
-  <link rel="stylesheet" href="js/gentleSelect/jquery-gentleSelect.css">
-  <link rel="stylesheet" href="js/cron/jquery-cron.css">
-    <script src="js/jquery.min.js"></script>
-  <script src="js/gentleSelect/jquery-gentleSelect-min.js"></script>
-  <script src="js/cron/jquery-cron.js"></script>
-
-  <script type="text/javascript">
-    $(document).ready(function() {
-        $('#example1b').cron({
-            initial: "9 21 * * *",
-            onChange: function() {
-                $('#example1b-val').text($(this).cron("value"));
-            },
-            useGentleSelect: true
-        });
-    });
-    </script>
-
+   Code below this line checks if user is online
+   -->
+   <script src="js/offline.min.js"></script>
+   <link rel="stylesheet" href="../themes/offline-theme-chrome.css" />
+   <link rel="stylesheet" href="../themes/offline-language-english.css" />
+   
+   <script>
+     var run = function(){
+     var req = new XMLHttpRequest();
+     req.timeout = 5000;
+     req.open('GET', 'http://localhost:8888/walter/0', true);
+     req.send();
+   }
+   setInterval(run, 3000);
+   
+           Offline.options = {
+           requests: false
+           }
+           
+   </script>
+   
+   
+   <!--
+   Code below is for button actions
+   -->
+     <script type="text/javascript">
+      $("a.action").on("click", function(event) { 
+          event.preventDefault();
+          $.get( "backend.php" + $(this).attr('href'), function(data) {
+             $("#actions_output").html(data);
+          });
+      });
+      </script>
+      <!--
+   
+   Code  below is for cron / Scheduler generator
+    -->
+     <link rel="stylesheet" href="js/gentleSelect/jquery-gentleSelect.css">
+     <link rel="stylesheet" href="js/cron/jquery-cron.css">
+       <script src="js/jquery.min.js"></script>
+     <script src="js/gentleSelect/jquery-gentleSelect-min.js"></script>
+     <script src="js/cron/jquery-cron.js"></script>
+   
+     <script type="text/javascript">
+       $(document).ready(function() {
+           $('#example1b').cron({
+               initial: "9 21 * * *",
+               onChange: function() {
+                   $('#example1b-val').text($(this).cron("value"));
+               },
+               useGentleSelect: true
+           });
+       });
+       </script>
 
 </body>
 

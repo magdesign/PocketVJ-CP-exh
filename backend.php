@@ -402,10 +402,11 @@ if ($_GET['action'] == 'pause') {
 
 if ($_GET['action'] == 'screenshot') {
 	exec("sudo /var/www/sync/screenshot");
-	$outputtext = "Printscreen saved in /media/internal/images";
+	$outputtext = "printscreen saved in /media/internal/images";
 }
-
-//# Imageplayer
+///////////////////////////////
+// Imageplayer / slideshow
+////////////////////////////////
 
 if ($_GET['action'] == 'stopimage') {
 	$outputtext =  "image player stopped";
@@ -414,7 +415,7 @@ if ($_GET['action'] == 'stopimage') {
 }
 
 if ($_GET['action'] == 'image') {
-	$outputtext =  "start image player";
+	$outputtext =  "start slide show";
 	system("sudo /var/www/sync/startimage > /dev/null &");
 }
 
@@ -429,9 +430,10 @@ if ($_GET['action'] == 'startimagemanual') {
 }
 
 if ($_GET['action'] == 'imagekenburn') {
-	//$outputtext =  "start image player with kenburns effect";
-	$outputtext =  "currently not working, does not display when executed from here";
-	//exec("sudo /var/www/sync/startimagekenburns");
+	system("sudo /var/www/sync/startimagekenburnhelper");
+	//system("sudo su - pvj -c 'sudo /var/www/sync/startimagekenburn'");
+	//shell_exec("sudo /usr/bin/python /home/pvj/pi3d_demos/Slideshow_3d.py > /dev/tty1");
+	$outputtext =  "start slideshow ken burn";
 }
 
 if ($_GET['action'] == 'overlay') {
@@ -876,12 +878,12 @@ if ($_GET['action'] == 'mount') {
 //# Autostart behaviour
 
 if ($_GET['action'] == 'setmaster') {
-	$outputtext = "master set";
+	$outputtext = "set to master video";
 	system("sudo cp /var/www/sync/rc.local.master /etc/rc.local");
 }
 
 if ($_GET['action'] == 'autostartloop01') {
-	$outputtext = "master01 loop set";
+	$outputtext = "set to master01 loop set";
 	system("sudo cp /var/www/sync/rc.local.master01 /etc/rc.local");
 }
 
@@ -891,33 +893,32 @@ if ($_GET['action'] == 'autostartloop02') {
 }
 
 if ($_GET['action'] == 'setslave') {
-	$outputtext =  "slave set";
+	$outputtext =  "set to slave video";
 	system("sudo cp /var/www/sync/rc.local.slave /etc/rc.local");
 }
 
 if ($_GET['action'] == 'setslaveonce') {
-	$outputtext =  "slaveonce set";
+	$outputtext =  "set to slaveonce";
 	system("sudo cp /var/www/sync/rc.local.slaveonce /etc/rc.local");
 }
 
-
-if ($_GET['action'] == 'usb') {
-	$outputtext =  "usb mode set";
+if ($_GET['action'] == 'setmasterusb') {
+	$outputtext =  "set to master usb";
 	system("sudo cp /var/www/sync/rc.local.usb /etc/rc.local");
 }
 
 if ($_GET['action'] == 'setimage') {
-	$outputtext =  "set to image player";
+	$outputtext =  "set to slideshow";
 	system("sudo cp /var/www/sync/rc.local.image /etc/rc.local");
 }
 
 if ($_GET['action'] == 'setimageusb') {
-	$outputtext =  "image player usb mode set";
+	$outputtext =  "set slideshow usb";
 	system("sudo cp /var/www/sync/rc.local.imageusb /etc/rc.local");
 }
 
 if ($_GET['action'] == 'setimagekenburn') {
-	$outputtext =  "autostart image player with kenburns effect";
+	$outputtext =  "set to slideshow kenburns effect";
 	system("sudo cp /var/www/sync/rc.local.kenburn /etc/rc.local");
 }
 
@@ -1856,36 +1857,37 @@ if ($_GET['action'] == 'fixclock') {
 	$outputtext =  "clock fixed";
 }
 
-
-//# Mapper
+//////////////////////
+// Mapping
+/////////////////////
 
 if ($_GET['action'] == 'relaunchmapper') {
-	$outputtext =  "PiMapper relaunched";
-	system("sudo /var/www/sync/relaunchmapper");
+	$outputtext =  "mapper relaunched";
+	system("sudo /var/www/sync/relaunchmapper > /dev/null 2>&1");
 }
 
 if ($_GET['action'] == 'launchmapper') {
-	$outputtext =  "PiMapper launched";
-	system("sudo /var/www/sync/launchmapper");
+	$outputtext =  "mapper launched";
+	system("sudo /var/www/sync/launchmapper > /dev/null 2>&1");
 }
 
 if ($_GET['action'] == 'launchmappercam') {
-	$outputtext =  "PiMapper Cam launched";
-	system("sudo /var/www/sync/launchmappercam");
+	$outputtext =  "mapper cam launched";
+	system("sudo /var/www/sync/launchmappercam > /dev/null 2>&1");
 }
 
 if ($_GET['action'] == 'launchmapperfbo') {
 	$outputtext =  "PiMapper Slideshow launched";
-	system("sudo /var/www/sync/launchmapperfbo");
+	system("sudo /var/www/sync/launchmapperfbo > /dev/null 2>&1");
 }
 
 if ($_GET['action'] == 'launchmapperremote') {
-	$outputtext =  "PiMapper Remote mode (beta)";
-	system("sudo /var/www/sync/launchmapperremote");
+	$outputtext =  "mapper remote(beta), needs an app";
+	system("sudo /var/www/sync/launchmapperremote > /dev/null 2>&1");
 }
 
 if ($_GET['action'] == 'mapperplaymode') {
-	$outputtext =  "Playmode/Presentation";
+	$outputtext =  "presentation mode";
 	system("sudo /var/www/sync/mapper1");
 	system("killall -9 /opt/fsayskeyboard");
 }
@@ -1970,63 +1972,63 @@ if ($_GET['action'] == 'mappergrid') {
 }
 
 if ($_GET['action'] == 'mapperimport1') {
-	$outputtext =  "import mappersetting1.xml";
-	system("sudo /var/www/sync/mapperimport1");
+	$outputtext =  "open mappersetting1.xml";
+	system("sudo /var/www/sync/mapperimport1 > /dev/null 2>&1");
 }
 
 if ($_GET['action'] == 'mapperimport2') {
-	$outputtext =  "import mappersetting2.xml";
-	system("sudo /var/www/sync/mapperimport2");
+	$outputtext =  "open mappersetting2.xml";
+	system("sudo /var/www/sync/mapperimport2 > /dev/null 2>&1");
 }
 
 if ($_GET['action'] == 'mapperimport3') {
-	$outputtext =  "import mappersetting3.xml";
-	system("sudo /var/www/sync/mapperimport3");
+	$outputtext =  "open mappersetting3.xml";
+	system("sudo /var/www/sync/mapperimport3 > /dev/null 2>&1");
 }
 
 if ($_GET['action'] == 'mapperimport4') {
-	$outputtext =  "import mappersetting4.xml";
-	system("sudo /var/www/sync/mapperimport4");
+	$outputtext =  "open mappersetting4.xml";
+	system("sudo /var/www/sync/mapperimport4 > /dev/null 2>&1");
 }
 
 if ($_GET['action'] == 'mapperimport5') {
-	$outputtext =  "import mappersetting5.xml";
-	system("sudo /var/www/sync/mapperimport5");
+	$outputtext =  "open mappersetting5.xml";
+	system("sudo /var/www/sync/mapperimport5 > /dev/null 2>&1");
 }
 
 if ($_GET['action'] == 'mapperimport6') {
-	$outputtext =  "import mappersetting6.xml";
-	system("sudo /var/www/sync/mapperimport6");
+	$outputtext =  "open mappersetting6.xml";
+	system("sudo /var/www/sync/mapperimport6 > /dev/null 2>&1");
 }
 
 
 if ($_GET['action'] == 'mapperexport1') {
-	$outputtext =  "export mappersetting1.xml";
+	$outputtext =  "saved mappersetting1.xml";
 	system("sudo /var/www/sync/mapperexport1");
 }
 
 if ($_GET['action'] == 'mapperexport2') {
-	$outputtext =  "export to mappersetting2.xml";
+	$outputtext =  "saved to mappersetting2.xml";
 	system("sudo /var/www/sync/mapperexport2");
 }
 
 if ($_GET['action'] == 'mapperexport3') {
-	$outputtext =  "export to mappersetting3.xml";
+	$outputtext =  "saved to mappersetting3.xml";
 	system("sudo /var/www/sync/mapperexport3");
 }
 
 if ($_GET['action'] == 'mapperexport4') {
-	$outputtext =  "export to mappersetting4.xml";
+	$outputtext =  "saved to mappersetting4.xml";
 	system("sudo /var/www/sync/mapperexport4");
 }
 
 if ($_GET['action'] == 'mapperexport5') {
-	$outputtext =  "export to mappersetting5.xml";
+	$outputtext =  "saved to mappersetting5.xml";
 	system("sudo /var/www/sync/mapperexport5");
 }
 
 if ($_GET['action'] == 'mapperexport6') {
-	$outputtext =  "export to mappersetting6.xml";
+	$outputtext =  "saved to mappersetting6.xml";
 	system("sudo /var/www/sync/mapperexport6");
 }
 

@@ -1,13 +1,13 @@
 #!/bin/bash
 
 #launchmapper is used when not booted in mapper mode to force mouse just for remote control
-sudo /var/www/sync/stopall &
+sudo /var/www/sync/stopall 
 
 #the two lines are not needed i guess...
 #rm /dev/input/by-id/usb-046a_0023-event-kbd
 #rm /dev/input/by-path/platform-bcm2708_usb-usb-0:1.2.4:1.0-event-kbd
 
-sleep 1
+sleep 0.5
 
 #this simulates the fake mouse
 #creating folders
@@ -31,7 +31,7 @@ ln -s /dev/input/event1 /dev/input/by-id/usb-046a_0023-event-kbd &
 ln -s /dev/input/event1 /dev/input/by-path/platform-bcm2708_usb-usb-0:1.2.4:1.0$
 
 #launch mapper remote
-/home/pvj/openFrameworks/addons/ofxPiMapper/example_remote-server/bin/./example_remote-server -f &
+/home/pvj/openFrameworks/addons/ofxPiMapper/example_remote-server/bin/./example_remote-server -f  > /dev/null 2>&1 &
 
 #/home/pvj/openFrameworks/addons/ofxPiMapper/example_basic/./bin/example_basic -f &
 #/home/pvj/openFrameworks/addons/ofxPiMapper/example/./bin/example -f &

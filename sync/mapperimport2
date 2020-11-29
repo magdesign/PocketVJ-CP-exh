@@ -33,4 +33,5 @@ ln -s /dev/input/event1 /dev/input/by-id/usb-046a_0023-event-kbd
 ln -s /dev/input/event1 /dev/input/by-path/platform-bcm2708_usb-usb-0:1.2.4:1.0-event-kbd
 
 #open the mapper, this is for the basic one
-/home/pvj/openFrameworks/addons/ofxPiMapper/example_basic/./bin/example_basic -f &
+/home/pvj/openFrameworks/addons/ofxPiMapper/example_basic/./bin/example_basic -f  > /dev/null 2>&1 &
+

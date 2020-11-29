@@ -71,7 +71,7 @@ Code below loads custom js for form submission without reload-->
             <ul class="nav nav-tabs nav-fill" role="tablist" style="border-style: none;">
                 <li class="nav-item" role="presentation" style="background: #f29c33;border-radius: 15px;"><a class="nav-link text-center" role="tab" data-toggle="tab" href="#tab-1">&nbsp;<img class="icons" src="assets/img/Autostart_icon.svg"></a></li>
                 <li class="nav-item" role="presentation" style="background: #ffc800;border-radius: 15px;"><a class="nav-link text-center" role="tab" data-toggle="tab" href="#tab-2"><img class="icons" src="assets/img/Filehandling_icon_01.svg"></a></li>
-                <li class="nav-item" role="presentation" style="background:#08be75;border-radius: 15px;"><a class="nav-link text-center" role="tab" data-toggle="tab" href="#tab-3"><img class="icons" src="assets/img/Presenter_icon_02.svg"></a></li>
+                <li class="nav-item" role="presentation" style="background:#08be75;border-radius: 15px;"><a class="nav-link  text-center" role="tab" data-toggle="tab" href="#tab-3"><img class="icons" src="assets/img/Presenter_icon_02.svg"></a></li>
                 <li class="nav-item" role="presentation" style="background:#6cc6d9;border-radius: 15px;"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-4"><img class="icons" src="assets/img/Video_icon_01.svg"></a></li>
                 <li class="nav-item" role="presentation" style="background:#4296d2;border-radius: 15px;"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-5"><img src="assets/img/webcam_icon.svg"></a></li>
                 <li class="nav-item" role="presentation" style="background:#204b9c;border-radius: 15px;"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-6"><img src="assets/img/mapping_icon.svg"></a></li>
@@ -370,6 +370,7 @@ Code below loads custom js for form submission without reload-->
                                 <h3>SLIDE SHOW</h3>
                                 <div class="col colforbutton"><a class="btn btn-success action" role="button" href="?action=startimagemanual">Manual</a></div>
                                 <div class="col colforbutton"><a class="btn btn-success action" role="button" href="?action=image">Slide Show</a></div>
+                                <div class="col colforbutton"><a class="btn btn-success action" role="button" href="?action=imagekenburn">Slide Show KenBurn</a></div>
                                 <div class="col colforbutton"><a class="btn btn-success action" role="button" href="?action=startpdf">Manual *.pdf</a></div>
                                 <div class="col colforbutton">
                                     <h3>&nbsp;</h3>
@@ -383,6 +384,7 @@ Code below loads custom js for form submission without reload-->
                                     <h3>&nbsp;</h3>
                                 </div>
                                 <div class="col colforbutton"><a class="btn btn-success action" role="button" href="?action=imageusb">Slide Show USB</a></div>
+                                <div class="col colforbutton" style="height: 48px;"></div>
                                 <div class="col colforbutton"><a class="btn btn-success action" role="button" href="?action=startpdfusb">Manual *.pdf USB</a></div>
                                 <div class="col colforbutton">
                                     <h3>&nbsp;</h3>
@@ -800,7 +802,7 @@ Code below loads custom js for form submission without reload-->
                         <div class="col">
                             <div>
                                 <h2>FBO</h2>
-                                <div class="col colforbutton" style="height: 48px;"><a class="btn btn-light action" role="button" href="?action=launchmapperremote">Launch</a></div>
+                                <div class="col colforbutton" style="height: 48px;"><a class="btn btn-light action" role="button" href="?action=launchmapperfbo">Launch</a></div>
                             </div>
                         </div>
                         <div class="col">
@@ -1713,7 +1715,7 @@ Code below loads custom js for form submission without reload-->
                     <div>
                         <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="networkbutton" href="?action=passwdenable">Enable</a></div>
                         <div class="col colforbutton">
-                            <form id="cppasswordform" method="post"><input class="form-control" type="text" id="delay-1" name="cppassword" placeholder="Password" style="margin-left: 10px;max-width: 200px;"></form>
+                            <form id="cppasswordform" method="post"><input class="form-control" type="text" id="cppassword" name="cppassword" placeholder="Password" style="margin-left: 10px;max-width: 200px;"></form>
                         </div>
                         <div class="col colforbutton">
                             <h3>&nbsp;</h3>
@@ -1739,7 +1741,7 @@ Code below loads custom js for form submission without reload-->
                             <form id="wifiform" method="post"><input class="form-control" type="text" id="wifiname" name="wifiname" placeholder="Name" style="margin-left: 10px;max-width: 200px;"></form>
                         </div>
                         <div class="col colforbutton">
-                            <form id="cppasswordform-2" method="post"><input class="form-control" type="text" id="wifipassform" name="wifipass" placeholder="Password" style="margin-left: 10px;max-width: 200px;"></form>
+                            <form id="cppasswordform-2" method="post"><input class="form-control" type="text" id="wifipass" name="wifipass" placeholder="Password" style="margin-left: 10px;max-width: 200px;"></form>
                         </div>
                         <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="networkbutton" data-toggle="tooltip" title="test wifi connection" href="?action=wifitest">Test Connection</a></div>
                         <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="networkbutton" data-toggle="tooltip" title="after testing, make it permanent" href="?action=wifipermanent">Make Permanent</a></div>
@@ -1989,6 +1991,7 @@ Code below loads custom js for form submission without reload-->
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 
 
+
 <!-- Code below sets the "Set Time" button function--> 
  
 <script type="text/javascript">
@@ -2056,6 +2059,7 @@ Code below loads custom js for form submission without reload-->
            });
        });
        </script>
+
 
 </body>
 

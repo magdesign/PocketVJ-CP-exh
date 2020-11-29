@@ -55,8 +55,8 @@ Code below loads custom js for form submission without reload-->
                 <div class="col"><a class="d-xl-flex justify-content-xl-center action" href="?action=testscreen"><img class="d-xl-flex justify-content-xl-center shortcuts_header" src="assets/img/testscreen_icon.svg" data-toggle="tooltip" title="testscreen"></a></div>
                 <div class="col"><a class="d-xl-flex justify-content-xl-center action" href="?action=getresolution"><img class="d-xl-flex justify-content-xl-center shortcuts_header action" src="assets/img/resolution_icon.svg" data-toggle="tooltip" title="get resolution"></a></div>
                 <div
-                    class="col"><a class="d-xl-flex justify-content-xl-center action" href="#"><img class="d-xl-flex justify-content-xl-center shortcuts_header" src="assets/img/power_icon.svg" data-toggle="tooltip" title="reboot"></a></div>
-            <div class="col"><a class="d-xl-flex justify-content-xl-center action" href="#"><img class="d-xl-flex justify-content-xl-center shortcuts_header" src="assets/img/power_off_icon.svg" title="shutdown" data-toggle="tooltip"></a></div>
+                    class="col"><a class="d-xl-flex justify-content-xl-center action" href="?action=reboot"><img class="d-xl-flex justify-content-xl-center shortcuts_header" src="assets/img/power_icon.svg" data-toggle="tooltip" title="reboot"></a></div>
+            <div class="col"><a class="d-xl-flex justify-content-xl-center action" href="?action=shutdown"><img class="d-xl-flex justify-content-xl-center shortcuts_header" src="assets/img/power_off_icon.svg" title="shutdown" data-toggle="tooltip"></a></div>
     </div>
     </section>
     <section class="text-center" id="output_window" style="font-weight: 500;color: rgb(20,20,20);"><div style="height:100%; overflow-y: auto; overflow-x: hidden;padding:10px;">
@@ -76,7 +76,7 @@ Code below loads custom js for form submission without reload-->
                 <li class="nav-item" role="presentation" style="background:#4296d2;border-radius: 15px;"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-5"><img src="assets/img/webcam_icon.svg"></a></li>
                 <li class="nav-item" role="presentation" style="background:#204b9c;border-radius: 15px;"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-6"><img src="assets/img/mapping_icon.svg"></a></li>
                 <li class="nav-item" role="presentation" style="background:#574697;border-radius: 15px;"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-7"><img src="assets/img/Expansion_icon.svg"></a></li>
-                <li class="nav-item" role="presentation" style="background:#792b71;border-radius: 15px;"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-8"><img src="assets/img/Scheduler_icon.svg"></a></li>
+                <li class="nav-item" role="presentation" style="background:#792b71;border-radius: 15px;"><a class="nav-link" role="tab" data-toggle="tab" id="schedulerbutton" href="#tab-8"><img src="assets/img/Scheduler_icon.svg"></a></li>
                 <li class="nav-item" role="presentation" style="background:#ad325f;border-radius: 15px;"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-9"><img src="assets/img/dmx_icon.svg"></a></li>
                 <li class="nav-item" role="presentation" style="background: #972c2b;border-radius: 15px;"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-10"><img src="assets/img/Display_icon_01.svg"></a></li>
                 <li class="nav-item" role="presentation" style="background: #e74533;border-radius: 15px;"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-11"><img src="assets/img/network_icon.svg"></a></li>
@@ -1142,28 +1142,28 @@ Code below loads custom js for form submission without reload-->
                         <div class="col">
                             <div>
                                 <h2>CLOCK</h2>
-                                <div class="col colforbutton"><a class="btn btn-warning action" role="button" data-toggle="tooltip" title="check date and time" href="?action=gettime">Check<br></a></div>
-                                <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton-2" data-toggle="tooltip" title="display on screen" href="?action=clockdisplay">Display<br></a></div>
+                                <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="schedulerbutton" data-toggle="tooltip" title="check date and time" href="?action=gettime">Check<br></a></div>
+                                <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="schedulerbutton" data-toggle="tooltip" title="display on screen" href="?action=clockdisplay">Display<br></a></div>
                             </div>
                         </div>
                         <div class="col">
                             <div>
                                 <h3>&nbsp;</h3>
-                                <div class="col colforbutton"><a class="btn btn-warning" role="button" data-toggle="tooltip" title="set date and time from user" onclick="settime();">Set<br></a></div>
+                                <div class="col colforbutton"><a class="btn btn-warning" role="button" id="schedulerbutton" data-toggle="tooltip" title="set date and time from user" onclick="settime();">Set<br></a></div>
                             </div>
                         </div>
                         <div class="col">
                             <div>
                                 <h2>COLOR</h2>
-                                <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton-5" data-toggle="tooltip" title="" href="?action=clockred">Red<br></a></div>
-                                <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton-6" data-toggle="tooltip" title="" href="?action=clockorange">Orange<br></a></div>
+                                <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="schedulerbutton" href="?action=clockred">Red<br></a></div>
+                                <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="schedulerbutton" href="?action=clockorange">Orange<br></a></div>
                             </div>
                         </div>
                         <div class="col">
                             <div>
                                 <h3>&nbsp;</h3>
-                                <div class="col colforbutton" style="height: 48px;"><a class="btn btn-warning action" role="button" id="settingsbutton-7" data-toggle="tooltip" title="" href="?action=clockgreen">Green<br></a></div>
-                                <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton-8" data-toggle="tooltip" title="" href="?action=clockpink">Pink<br></a></div>
+                                <div class="col colforbutton" style="height: 48px;"><a class="btn btn-warning action" role="button" id="schedulerbutton" href="?action=clockgreen">Green<br></a></div>
+                                <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="schedulerbutton" href="?action=clockpink">Pink<br></a></div>
                             </div>
                         </div>
                     </div>
@@ -1171,19 +1171,19 @@ Code below loads custom js for form submission without reload-->
                         <div class="col">
                             <div>
                                 <h2>SCHEDULER</h2>
-                                <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton-9" data-toggle="tooltip" title="check date and time" href="?action=timeron">Enable<br></a></div>
+                                <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="schedulerbutton" data-toggle="tooltip" title="check date and time" href="?action=timeron">Enable<br></a></div>
                             </div>
                         </div>
                         <div class="col">
                             <div>
                                 <h3>&nbsp;</h3>
-                                <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton-11" data-toggle="tooltip" title="set date and time from user" href="?action=timeroff">Disable<br></a></div>
+                                <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="schedulerbutton" data-toggle="tooltip" title="set date and time from user" href="?action=timeroff">Disable<br></a></div>
                             </div>
                         </div>
                         <div class="col">
                             <div>
                                 <h2>&nbsp;TIMETABLE</h2>
-                                <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton-12" data-toggle="tooltip" title="" href="?action=timer">Show<br></a></div>
+                                <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="schedulerbutton" data-toggle="tooltip" title="" href="?action=timer">Show<br></a></div>
                             </div>
                         </div>
                         <div class="col">
@@ -1534,10 +1534,8 @@ Code below loads custom js for form submission without reload-->
                 <div class="col">
                     <div>
                         <h3>&nbsp;</h3>
-                        <div class="col colforbutton"><a class="btn btn-danger action" role="button" href="?action=parser">Possible Resolutions</a></div>
-                        <div class="col colforbutton">
-                            <h3>&nbsp;</h3>
-                        </div>
+                        <div class="col colforbutton"><a class="btn btn-danger action" role="button" href="?action=resolutionquery_dmt">Possible DMT</a></div>
+                        <div class="col colforbutton"><a class="btn btn-danger action" role="button" href="?action=resolutionquery_cea">Possible CEA</a></div>
                         <div class="col colforbutton"></div>
                     </div>
                 </div>
@@ -1982,75 +1980,74 @@ Code below loads custom js for form submission without reload-->
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 
 
-
-
 <!-- Code below sets the "Set Time" button function--> 
  
 <script type="text/javascript">
 
-    function settime() {
-   
-       window.open('time_change.php');
-       document.getElementById('actions_output').innerHTML = ("time set");
-     } 
-   
-   </script>
-   
-   <!--
-   Code below this line checks if user is online
-   -->
-   <script src="js/offline.min.js"></script>
-   <link rel="stylesheet" href="../themes/offline-theme-chrome.css" />
-   <link rel="stylesheet" href="../themes/offline-language-english.css" />
-   
-   <script>
-     var run = function(){
-     var req = new XMLHttpRequest();
-     req.timeout = 5000;
-     req.open('GET', 'http://localhost:8888/walter/0', true);
-     req.send();
-   }
-   setInterval(run, 3000);
-   
-           Offline.options = {
-           requests: false
-           }
-           
-   </script>
-   
-   
-   <!--
-   Code below is for button actions
-   -->
-     <script type="text/javascript">
-      $("a.action").on("click", function(event) { 
-          event.preventDefault();
-          $.get( "backend.php" + $(this).attr('href'), function(data) {
-             $("#actions_output").html(data);
-          });
-      });
-      </script>
-      <!--
-   
-   Code  below is for cron / Scheduler generator
-    -->
-     <link rel="stylesheet" href="js/gentleSelect/jquery-gentleSelect.css">
-     <link rel="stylesheet" href="js/cron/jquery-cron.css">
-       <script src="js/jquery.min.js"></script>
-     <script src="js/gentleSelect/jquery-gentleSelect-min.js"></script>
-     <script src="js/cron/jquery-cron.js"></script>
-   
-     <script type="text/javascript">
-       $(document).ready(function() {
-           $('#example1b').cron({
-               initial: "9 21 * * *",
-               onChange: function() {
-                   $('#example1b-val').text($(this).cron("value"));
-               },
-               useGentleSelect: true
-           });
+ function settime() {
+
+    window.open('time_change.php');
+    document.getElementById('actions_output').innerHTML = ("time set");
+  } 
+
+</script>
+
+<!--
+Code below this line checks if user is online
+-->
+<script src="js/offline.min.js"></script>
+<link rel="stylesheet" href="../themes/offline-theme-chrome.css" />
+<link rel="stylesheet" href="../themes/offline-language-english.css" />
+
+<script>
+  var run = function(){
+  var req = new XMLHttpRequest();
+  req.timeout = 5000;
+  req.open('GET', 'http://localhost:8888/walter/0', true);
+  req.send();
+}
+setInterval(run, 3000);
+
+        Offline.options = {
+        requests: false
+        }
+        
+</script>
+
+
+<!--
+Code below is for button actions
+-->
+  <script type="text/javascript">
+   $("a.action").on("click", function(event) { 
+       event.preventDefault();
+       $.get( "backend.php" + $(this).attr('href'), function(data) {
+          $("#actions_output").html(data);
        });
-       </script>
+   });
+   </script>
+   <!--
+
+Code  below is for cron / Scheduler generator
+ -->
+  <link rel="stylesheet" href="js/gentleSelect/jquery-gentleSelect.css">
+  <link rel="stylesheet" href="js/cron/jquery-cron.css">
+    <script src="js/jquery.min.js"></script>
+  <script src="js/gentleSelect/jquery-gentleSelect-min.js"></script>
+  <script src="js/cron/jquery-cron.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+        $('#example1b').cron({
+            initial: "9 21 * * *",
+            onChange: function() {
+                $('#example1b-val').text($(this).cron("value"));
+            },
+            useGentleSelect: true
+        });
+    });
+    </script>
+
 
 </body>
 

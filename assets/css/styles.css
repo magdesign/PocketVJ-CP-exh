@@ -322,7 +322,21 @@ body {
 }
 
 #expansionbutton:not(:disabled):not(.disabled):active {
-  background: #5f55a1;
+  background: #292929;
+  color: #cccccc;
+}
+
+#schedulerbutton {
+  background: #665ba6;
+  border-color: #665ba6;
+}
+
+#schedulerbutton:hover {
+  background: #4f419c;
+}
+
+#schedulerbutton:not(:disabled):not(.disabled):active {
+  background: #292929;
   color: #cccccc;
 }
 

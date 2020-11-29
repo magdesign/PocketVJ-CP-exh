@@ -2,6 +2,7 @@
 
 ## CP 4.0.0 unreleased yet 2020  <br />
 - complete rewerite of CP, better look and feel, more organised <br />
+- elFInder is now default filebrowser, eXtplorer is too slow and has no progress bar  <br />
 - added new drag'n'drop filebrowser  <br />
 - added much nicer slideshow  <br />
 - added regular videoplayer without sync (to save network traffic <br />

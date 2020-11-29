@@ -1209,17 +1209,23 @@ if ($_GET['action'] == 'getresolution') {
 	$outputtext = wordwrap($preoutputtext, 50, "<br />\n");
 }
 
-if ($_GET['action'] == 'parser') {
-    $output = shell_exec('sudo tvservice -d edid.dat');
-    $output = shell_exec('sudo edidparser edid.dat');
-	$preoutputtext =  "<pre>$output</pre>";
-	$outputtext = wordwrap($preoutputtext, 50, "<br />\n");
+if ($_GET['action'] == 'resolutionquery_dmt') {
+    //$output = shell_exec('sudo tvservice -d edid.dat');
+	//$output = shell_exec('sudo edidparser edid.dat');
+	$output = shell_exec('sudo /opt/vc/bin/tvservice -m DMT');
+	$outputtext = "<pre>$output</pre>";
 }
+
+if ($_GET['action'] == 'resolutionquery_cea') {
+	$output = shell_exec('sudo /opt/vc/bin/tvservice -m CEA');
+	$outputtext = "<pre>$output</pre>";
+}
+
 
 if ($_GET['action'] == 'codecinfo') {
 	$output = shell_exec('mediainfo --Inform="General;%CompleteName%  Format: %Format% Codec: %CodecID%  Bitrate: %OverallBitRate%  " /media/internal/video/*');
 	$preoutputtext =  "<pre>$output</pre>";
-	$outputtext = wordwrap($preoutputtext, 50, "<br />\n");
+	$outputtext = wrap($preoutputtext, 50, "<br />\n");
 }
 
 if ($_GET['action'] == 'movieinfo') {
@@ -1406,6 +1412,8 @@ if ($_GET['action'] == 'factoryreset') {
 	exec("sudo killall -9 /usr/bin/olad");
 	//disable buttons
 	system("sudo /var/www/sync/stopbuttons");
+	//disable camera
+	system("sudo sed -ri 's/^start_x=.+$/start_x=0/' /boot/config.txt");
 	//system("sudo rm -rf /tmp/*");
 	//system("sudo rm -rf /var/log/*");
 	//system("sudo rm -rf /var/tmp/*");
@@ -1772,36 +1780,41 @@ if ($_GET['action'] == 'timer') {
 
 //# Clock Display
 
+
+//if ($_GET['action'] == 'clockdisplay2') {
+	//$outputtext =  "display time onscreen";
+///	system("watch -t -n1 "date +%A%n%x%n%X|figlet -t -c " > /dev/tty1");
+//}
+
 if ($_GET['action'] == 'clockdisplay') {
 	$outputtext =  "display time onscreen";
-	system ("sudo /var/www/sync/stopall");
 	system("sudo /var/www/sync/clockdisplay");
 }
 
 if ($_GET['action'] == 'clockred') {
 	$outputtext =  "clock color red";
-	system ("sudo /var/www/sync/stopall");
+	//system ("sudo /var/www/sync/stopall");
 	system("sudo sed -ri 's/^COLOR=.+$/COLOR=1/' /var/www/sync/clockdisplay");
 	system("sudo /var/www/sync/clockdisplay");
 }
 
 if ($_GET['action'] == 'clockgreen') {
 	$outputtext =  "clock color green";
-	system ("sudo /var/www/sync/stopall");
+	//system ("sudo /var/www/sync/stopall");
 	system("sudo sed -ri 's/^COLOR=.+$/COLOR=2/' /var/www/sync/clockdisplay");
 	system("sudo /var/www/sync/clockdisplay");
 }
 
 if ($_GET['action'] == 'clockorange') {
 	$outputtext =  "clock color orange";
-	system ("sudo /var/www/sync/stopall");
+	//system ("sudo /var/www/sync/stopall");
 	system("sudo sed -ri 's/^COLOR=.+$/COLOR=3/' /var/www/sync/clockdisplay");
 	system("sudo /var/www/sync/clockdisplay");
 }
 
 if ($_GET['action'] == 'clockpink') {
 	$outputtext =  "clock color pink";
-	system ("sudo /var/www/sync/stopall");
+	//system ("sudo /var/www/sync/stopall");
 	system("sudo sed -ri 's/^COLOR=.+$/COLOR=5/' /var/www/sync/clockdisplay");
 	system("sudo /var/www/sync/clockdisplay");
 }
@@ -2337,22 +2350,6 @@ if ($_GET['action'] == 'tcpsserver_topleft') {
 	$outputtext =  "re/start TCPSyphon Receiver topleft";
 }
 
-
-//# NDI Receiver
-
-if ($_GET['action'] == 'ndireceiver') {
-	$output = shell_exec('sudo /home/pvj/NDI_SDK/examples/C++/NDIlib_Find/./NDIlib_Find');
-	$preoutputtext =  "<pre>$output</pre>";
-	$outputtext = "$preoutputtext";
-}
-
-//# NDI sender
-
-if ($_GET['action'] == 'ndisend') {
-	$output = shell_exec('sudo /home/pvj/NDI_SDK/examples/C++/NDIlib_Send_Video/./NDIlib_Send_Video /media/internal/video/* &');
-	$preoutputtext =  "<pre>$output</pre>";
-	$outputtext = "$preoutputtext";
-}
 
 //# Start Screenshare
 

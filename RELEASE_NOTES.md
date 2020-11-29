@@ -3,6 +3,7 @@
 ## CP 4.0.0 unreleased yet 2020  <br />
 - complete rewerite of CP, better look and feel, more organised <br />
 - cleaned up some code  <br />
+- added much nicer slideshow  <br />
 - added countdown which trigger a script when running down (processing.org) <br />
 
 

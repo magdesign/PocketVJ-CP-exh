@@ -1,8 +1,9 @@
-#!/bin/bash
+#!/bin/sh
 
 #kill all running tasks
 /var/www/sync/stopall
 
 
+
 #start ken burns video slide show
-python /home/pvj/pi3d_demos/Slideshow_3d.py 
+/usr/bin/python /home/pvj/pi3d_demos/PictureFrame.py

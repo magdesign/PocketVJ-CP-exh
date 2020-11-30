@@ -430,9 +430,8 @@ if ($_GET['action'] == 'startimagemanual') {
 }
 
 if ($_GET['action'] == 'imagekenburn') {
-	system("sudo /var/www/sync/startimagekenburnhelper");
-	//system("sudo su - pvj -c 'sudo /var/www/sync/startimagekenburn'");
-	//shell_exec("sudo /usr/bin/python /home/pvj/pi3d_demos/Slideshow_3d.py > /dev/tty1");
+	system("sudo /var/www/sync/startimagekenburn");
+	//shell_exec("sudo /usr/bin/python /home/pvj/pi3d_demos/Slideshow_3d.py");
 	$outputtext =  "start slideshow ken burn";
 }
 
@@ -471,19 +470,55 @@ if ($_GET['action'] == 'softedge200v') {
 
 //# Slideshow Time
 
+if ($_GET['action'] == 'slidetime0') {
+	system ("sudo /var/www/sync/stopall > /dev/null 2>&1");
+	//change slide time on old slideshow
+	system("sudo sed -ri 's/^DELAY=.+$/DELAY=0.1/' /var/www/sync/xsessionslideshow");
+	system("sudo sed -ri 's/^DELAY=.+$/DELAY=0.1/' /var/www/sync/xsessionslidesusb");
+	//change slidetime on new slideshow
+	system("sudo sed -ri 's/^time_delay =.+$/time_delay = 1.5/' /home/pvj/pi3d_demos/PictureFrame.py");
+	//change fadetime new slideshow
+	system("sudo sed -ri 's/^fade_time =.+$/fade_time = 1.0/' /home/pvj/pi3d_demos/PictureFrame.py");
+	//enable kenburns on new slideshow
+	system("sudo sed -ri 's/^KENBURNS = .+$/KENBURNS = True/' /home/pvj/pi3d_demos/PictureFrame.py");
+	//start new slidshow again
+	system("sudo /var/www/sync/startimagekenburn  > /dev/null 2>&1");
+	//system("sudo /var/www/sync/startimage > /dev/null &");
+	$outputtext =  "set slideshowtime as fast as possible";
+}
+
+
 if ($_GET['action'] == 'slidetime5') {
 	system ("sudo /var/www/sync/stopall > /dev/null 2>&1");
+	//change slide time on old slideshow
 	system("sudo sed -ri 's/^DELAY=.+$/DELAY=5/' /var/www/sync/xsessionslideshow");
 	system("sudo sed -ri 's/^DELAY=.+$/DELAY=5/' /var/www/sync/xsessionslidesusb");
-	system("sudo /var/www/sync/startimage > /dev/null &");
+	//change slidetime on new slideshow
+	system("sudo sed -ri 's/^time_delay =.+$/time_delay = 5.0/' /home/pvj/pi3d_demos/PictureFrame.py");
+	//change fadetime new slideshow
+	system("sudo sed -ri 's/^fade_time =.+$/fade_time = 2.5/' /home/pvj/pi3d_demos/PictureFrame.py");
+	//enable kenburns on new slideshow
+	system("sudo sed -ri 's/^KENBURNS = .+$/KENBURNS = True/' /home/pvj/pi3d_demos/PictureFrame.py");
+	//start new slidshow again
+	system("sudo /var/www/sync/startimagekenburn > /dev/null 2>&1");
+	//system("sudo /var/www/sync/startimage > /dev/null &");
 	$outputtext =  "set slideshowtime to 5s";
 }
 
 if ($_GET['action'] == 'slidetime10') {
 	system ("sudo /var/www/sync/stopall > /dev/null 2>&1");
+//change slide time on old slideshow
 	system("sudo sed -ri 's/^DELAY=.+$/DELAY=10/' /var/www/sync/xsessionslideshow");
 	system("sudo sed -ri 's/^DELAY=.+$/DELAY=10/' /var/www/sync/xsessionslidesusb");
-	system("sudo /var/www/sync/startimage > /dev/null &");
+	//change slidetime on new slideshow
+	system("sudo sed -ri 's/^time_delay =.+$/time_delay = 10.0/' /home/pvj/pi3d_demos/PictureFrame.py");
+	//change fadetime new slideshow
+	system("sudo sed -ri 's/^fade_time =.+$/fade_time = 3.0/' /home/pvj/pi3d_demos/PictureFrame.py");
+	//enable kenburns on new slideshow
+	system("sudo sed -ri 's/^KENBURNS = .+$/KENBURNS = True/' /home/pvj/pi3d_demos/PictureFrame.py");
+	//start new slidshow again
+	system("sudo /var/www/sync/startimagekenburn > /dev/null 2>&1");
+	//system("sudo /var/www/sync/startimage > /dev/null &");
 	$outputtext =  "set slideshowtime to 10s";
 }
 
@@ -491,7 +526,15 @@ if ($_GET['action'] == 'slidetime15') {
 	system ("sudo /var/www/sync/stopall > /dev/null 2>&1");
 	system("sudo sed -ri 's/^DELAY=.+$/DELAY=15/' /var/www/sync/xsessionslideshow");
 	system("sudo sed -ri 's/^DELAY=.+$/DELAY=15/' /var/www/sync/xsessionslidesusb");
-	system("sudo /var/www/sync/startimage > /dev/null &");
+	//change slidetime on new slideshow
+	system("sudo sed -ri 's/^time_delay =.+$/time_delay = 15.0/' /home/pvj/pi3d_demos/PictureFrame.py");
+	//change fadetime new slideshow
+	system("sudo sed -ri 's/^fade_time =.+$/fade_time = 3.0/' /home/pvj/pi3d_demos/PictureFrame.py");
+	//enable kenburns on new slideshow
+	system("sudo sed -ri 's/^KENBURNS = .+$/KENBURNS = True/' /home/pvj/pi3d_demos/PictureFrame.py");
+	//start new slidshow again
+	system("sudo /var/www/sync/startimagekenburn > /dev/null 2>&1");
+	//system("sudo /var/www/sync/startimage > /dev/null &");
 	$outputtext =  "set slideshowtime to 15s";
 }
 
@@ -499,7 +542,15 @@ if ($_GET['action'] == 'slidetime30') {
 	system ("sudo /var/www/sync/stopall > /dev/null 2>&1");
 	system("sudo sed -ri 's/^DELAY=.+$/DELAY=30/' /var/www/sync/xsessionslideshow");
 	system("sudo sed -ri 's/^DELAY=.+$/DELAY=30/' /var/www/sync/xsessionslidesusb");
-	system("sudo /var/www/sync/startimage > /dev/null &");
+	//change slidetime on new slideshow
+	system("sudo sed -ri 's/^time_delay =.+$/time_delay = 30.0/' /home/pvj/pi3d_demos/PictureFrame.py");
+	//change fadetime new slideshow
+	system("sudo sed -ri 's/^fade_time =.+$/fade_time = 5.0/' /home/pvj/pi3d_demos/PictureFrame.py");
+	//enable kenburns on new slideshow
+	system("sudo sed -ri 's/^KENBURNS = .+$/KENBURNS = True/' /home/pvj/pi3d_demos/PictureFrame.py");
+	//start new slidshow again
+	system("sudo /var/www/sync/startimagekenburn  > /dev/null 2>&1");
+	//system("sudo /var/www/sync/startimage > /dev/null &");
 	$outputtext =  "set slideshowtime to 30s";
 }
 
@@ -507,21 +558,16 @@ if ($_GET['action'] == 'slidetime60') {
 	system ("sudo /var/www/sync/stopall > /dev/null 2>&1");
 	system("sudo sed -ri 's/^DELAY=.+$/DELAY=60/' /var/www/sync/xsessionslideshow");
 	system("sudo sed -ri 's/^DELAY=.+$/DELAY=60/' /var/www/sync/xsessionslidesusb");
-	system("sudo /var/www/sync/startimage > /dev/null &");
+	//change slidetime on new slideshow
+	system("sudo sed -ri 's/^time_delay =.+$/time_delay = 60.0/' /home/pvj/pi3d_demos/PictureFrame.py");
+	//change fadetime new slideshow
+	system("sudo sed -ri 's/^fade_time =.+$/fade_time = 8.0/' /home/pvj/pi3d_demos/PictureFrame.py");
+	//enable kenburns on new slideshow
+	system("sudo sed -ri 's/^KENBURNS = .+$/KENBURNS = True/' /home/pvj/pi3d_demos/PictureFrame.py");
+	//start new slidshow again
+	system("sudo /var/www/sync/startimagekenburn  > /dev/null 2>&1");
+	//system("sudo /var/www/sync/startimage > /dev/null &");	
 	$outputtext =  "set slideshowtime to 60s";
-}
-
-
-
-
-
-
-if ($_GET['action'] == 'slidetime0') {
-	system ("sudo /var/www/sync/stopall > /dev/null 2>&1");
-	system("sudo sed -ri 's/^DELAY=.+$/DELAY=0.1/' /var/www/sync/xsessionslideshow");
-	system("sudo sed -ri 's/^DELAY=.+$/DELAY=0.1/' /var/www/sync/xsessionslidesusb");
-	system("sudo /var/www/sync/startimage > /dev/null &");
-	$outputtext =  "set slideshowtime to 15s";
 }
 
 //# PDF player
@@ -850,29 +896,6 @@ if ($_GET['action'] == 'startmididmxvideoplay01') {
 if ($_GET['action'] == 'startpd') {
 	$outputtext =  "start puredata";
 	system("sudo /var/www/sync/startpd");
-}
-
-//# USB Stick mount
-
-if ($_GET['action'] == 'reboot') {
-	$outputtext =  "rebooting now!";
-	system("sudo reboot");
-}
-
-if ($_GET['action'] == 'shutdown') {
-	$outputtext =  "shutting down";
-	system("sudo poweroff");
-}
-
-if ($_GET['action'] == 'eject') {
-	$outputtext =  "usb stick unmounted";
-	system("sudo umount /dev/sda1");
-	system("sudo umount /dev/sda2");
-}
-
-if ($_GET['action'] == 'mount') {
-	$outputtext =  "usb stick mounted";
-	system("sudo mount /dev/sda2 /media/usb/");
 }
 
 //# Autostart behaviour
@@ -1273,9 +1296,54 @@ if ($_GET['action'] == 'openfilebrowser') {
 }
 
 
+// get webcontent
+if ($_GET['action'] == 'getcontent') {
+	system ("sudo /var/www/sync/getcontent");
+	system ("sudo chmod 777 /media/internal/video/*");
+	$outputtext =  "content from your defined websource downloaded";
+}
 
+//# filename fixer
+if ($_GET['action'] == 'namefixer') {
+	system("sudo /var/www/sync/./namefixer > /dev/null 2>&1");
+        $outputtext =  "fixed all filenames";
+}
+
+//# permission fixer
+if ($_GET['action'] == 'permissionfixer') {
+	system("sudo chmod 777 -R /media");
+	$outputtext =  "fixed permissions";
+}
+
+
+//# USB Stick mount
+
+if ($_GET['action'] == 'reboot') {
+	$outputtext =  "rebooting now!";
+	system("sudo reboot");
+}
+
+if ($_GET['action'] == 'shutdown') {
+	$outputtext =  "shutting down";
+	system("sudo poweroff");
+}
+
+if ($_GET['action'] == 'eject') {
+	$outputtext =  "usb stick unmounted";
+	system("sudo umount /dev/sda1");
+	system("sudo umount /dev/sda2");
+}
+
+if ($_GET['action'] == 'mount') {
+	$outputtext =  "usb stick mounted";
+	system("sudo mount /dev/sda2 /media/usb/");
+}
+
+
+
+//////////////////////////////////
 //# Update & Firmmare Stuff
-
+//////////////////////////////////
 
 //#This updates all mapper
 if ($_GET['action'] == 'mapperupdate') {
@@ -1394,6 +1462,8 @@ if ($_GET['action'] == 'updateall') {
 	system("sudo rm -rf /var/www/css/");
 	system("sudo rm -rf /var/www/images/");
 	system("sudo rm -rf /var/www/js/webflow.js");
+	//fix permissions
+	system("sudo chmod 777 -R /media");
 	//Text Output
 	$outputtext =  "Updated everything Controlpanel, Mapper, OMXPLAYER, Timer, Boot";
 }
@@ -1720,20 +1790,9 @@ if ($_GET['action'] == 'alsa_out') {
 }
 
 
-// get webcontent
-if ($_GET['action'] == 'getcontent') {
-	system ("sudo /var/www/sync/getcontent");
-	system ("sudo chmod 777 /media/internal/video/*");
-	$outputtext =  "content from your defined websource downloaded";
-}
 
 
-//# filename fixer
-if ($_GET['action'] == 'namefixer') {
-	system("sudo /var/www/sync/./namefixer > /dev/null 2>&1");
-        $outputtext =  "fixed all filenames";
 
-}
 
 
 //# conform images to hd
@@ -2320,8 +2379,6 @@ if ($_GET['action'] == 'iprange192') {
 	system("sudo /var/www/sync/iprange192");
 	$outputtext =  "Set RJ45 IP to 192.168.2* ,needs a reboot!";
 }
-
-
 
 //# Change Network to DHCP/Static
 

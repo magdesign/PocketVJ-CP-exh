@@ -31,7 +31,10 @@ sudo killall -9 feh > /dev/null 2>&1
 sudo /var/www/sync/testscreenoff > /dev/null 2>&1
 
 #kill kenburns imageplayer
-pkill -9 -f Slideshow_3d.py > /dev/null 2>&1
+#sudo pkill -9 -f Slideshow_3d.py > /dev/null 2>&1
+sudo pkill -9 -f PictureFrame.py > /dev/null 2>&1
+
+
 
 #kill overlay and softedge
 sudo killall -9 /home/pvj/raspidmx/pngview/./pngview /media/internal/images/overlay.png > /dev/null 2>&1

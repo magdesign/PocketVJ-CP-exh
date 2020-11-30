@@ -50,13 +50,14 @@ Code below loads custom js for form submission without reload-->
                 <div class="col"><a class="d-xl-flex justify-content-xl-center action" href="?action=startmaster"><img class="d-xl-flex justify-content-xl-center shortcuts_header" src="assets/img/play_icon.svg" data-toggle="tooltip" title="play video"></a></div>
                 <div class="col"><a class="d-xl-flex justify-content-xl-center action" href="?action=pause"><img class="d-xl-flex justify-content-xl-center shortcuts_header" src="assets/img/pause_icon.svg" data-toggle="tooltip" title="pause"></a></div>
                 <div class="col"><a class="d-xl-flex justify-content-xl-center action" href="?action=fastforward"><img class="d-xl-flex justify-content-xl-center shortcuts_header" src="assets/img/fastforward_icon.svg" data-toggle="tooltip" title="fastforward"></a></div>
-                <div class="col"><a class="d-xl-flex justify-content-xl-center" target="_blank" href="/eXtplorer/"><img class="d-xl-flex justify-content-xl-center shortcuts_header" src="assets/img/filebrowser_icon.svg" data-toggle="tooltip" title="filebrowser"></a></div>
-                <div class="col"><a class="d-xl-flex justify-content-xl-center action" href="?action=screenshot"><img class="d-xl-flex justify-content-xl-center shortcuts_header" src="assets/img/screenshot_icon.svg" data-toggle="tooltip" title="screenshot"></a></div>
-                <div class="col"><a class="d-xl-flex justify-content-xl-center action" href="?action=testscreen"><img class="d-xl-flex justify-content-xl-center shortcuts_header" src="assets/img/testscreen_icon.svg" data-toggle="tooltip" title="testscreen"></a></div>
-                <div class="col"><a class="d-xl-flex justify-content-xl-center action" href="?action=getresolution"><img class="d-xl-flex justify-content-xl-center shortcuts_header action" src="assets/img/resolution_icon.svg" data-toggle="tooltip" title="get resolution"></a></div>
+                <div class="col"><a class="d-xl-flex justify-content-xl-center" target="_blank" href="/elFinder/elfinder.src.html"><img class="d-xl-flex justify-content-xl-center shortcuts_header" src="assets/img/filebrowser_icon.svg" data-toggle="tooltip" title="filebrowser"></a></div>
                 <div
-                    class="col"><a class="d-xl-flex justify-content-xl-center action" href="?action=reboot"><img class="d-xl-flex justify-content-xl-center shortcuts_header" src="assets/img/power_icon.svg" data-toggle="tooltip" title="reboot"></a></div>
-            <div class="col"><a class="d-xl-flex justify-content-xl-center action" href="?action=shutdown"><img class="d-xl-flex justify-content-xl-center shortcuts_header" src="assets/img/power_off_icon.svg" title="shutdown" data-toggle="tooltip"></a></div>
+                    class="col"><a class="d-xl-flex justify-content-xl-center action" href="?action=screenshot"><img class="d-xl-flex justify-content-xl-center shortcuts_header" src="assets/img/screenshot_icon.svg" data-toggle="tooltip" title="screenshot"></a></div>
+            <div class="col"><a class="d-xl-flex justify-content-xl-center action" href="?action=testscreen"><img class="d-xl-flex justify-content-xl-center shortcuts_header" src="assets/img/testscreen_icon.svg" data-toggle="tooltip" title="testscreen"></a></div>
+            <div class="col"><a class="d-xl-flex justify-content-xl-center action" href="?action=getresolution"><img class="d-xl-flex justify-content-xl-center shortcuts_header action" src="assets/img/resolution_icon.svg" data-toggle="tooltip" title="get resolution"></a></div>
+            <div
+                class="col"><a class="d-xl-flex justify-content-xl-center action" href="?action=reboot"><img class="d-xl-flex justify-content-xl-center shortcuts_header" src="assets/img/power_icon.svg" data-toggle="tooltip" title="reboot"></a></div>
+    <div class="col"><a class="d-xl-flex justify-content-xl-center action" href="?action=shutdown"><img class="d-xl-flex justify-content-xl-center shortcuts_header" src="assets/img/power_off_icon.svg" title="shutdown" data-toggle="tooltip"></a></div>
     </div>
     </section>
     <section class="text-center" id="output_window" style="font-weight: 500;color: rgb(20,20,20);"><div style="height:100%; overflow-y: auto; overflow-x: hidden;padding:10px;">
@@ -71,7 +72,7 @@ Code below loads custom js for form submission without reload-->
             <ul class="nav nav-tabs nav-fill" role="tablist" style="border-style: none;">
                 <li class="nav-item" role="presentation" style="background: #f29c33;border-radius: 15px;"><a class="nav-link text-center" role="tab" data-toggle="tab" href="#tab-1">&nbsp;<img class="icons" src="assets/img/Autostart_icon.svg"></a></li>
                 <li class="nav-item" role="presentation" style="background: #ffc800;border-radius: 15px;"><a class="nav-link text-center" role="tab" data-toggle="tab" href="#tab-2"><img class="icons" src="assets/img/Filehandling_icon_01.svg"></a></li>
-                <li class="nav-item" role="presentation" style="background:#08be75;border-radius: 15px;"><a class="nav-link  text-center" role="tab" data-toggle="tab" href="#tab-3"><img class="icons" src="assets/img/Presenter_icon_02.svg"></a></li>
+                <li class="nav-item" role="presentation" style="background:#08be75;border-radius: 15px;"><a class="nav-link text-center" role="tab" data-toggle="tab" href="#tab-3"><img class="icons" src="assets/img/Presenter_icon_02.svg"></a></li>
                 <li class="nav-item" role="presentation" style="background:#6cc6d9;border-radius: 15px;"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-4"><img class="icons" src="assets/img/Video_icon_01.svg"></a></li>
                 <li class="nav-item" role="presentation" style="background:#4296d2;border-radius: 15px;"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-5"><img src="assets/img/webcam_icon.svg"></a></li>
                 <li class="nav-item" role="presentation" style="background:#204b9c;border-radius: 15px;"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-6"><img src="assets/img/mapping_icon.svg"></a></li>
@@ -102,7 +103,7 @@ Code below loads custom js for form submission without reload-->
                             <div>
                                 <h3 style="height: 32px;">&nbsp;</h3>
                                 <div class="col colforbutton"><a class="btn btn-success action" role="button" href="?action=setimagemanual">Slideshow Manual</a></div>
-                                <div class="col colforbutton"><a class="btn btn-success action" role="button" href="?action=setimagekenburn">Slideshow KenBurn</a></div>
+                                <div class="col colforbutton" style="height: 48px;"></div>
                                 <div class="col colforbutton"><a class="btn btn-success action" role="button" href="?action=setpdf">Pdf Presenter</a></div>
                             </div>
                         </div>
@@ -325,6 +326,7 @@ Code below loads custom js for form submission without reload-->
                         <div class="col">
                             <h2>TOOLS</h2>
                             <div>
+                                <div class="col colforbutton"><a class="btn btn-dark action" role="button" href="?action=permissionfixer" data-toogle="tooltip" title="fixes write access to your files &amp; empty spaces">Permission Fixer</a></div>
                                 <div class="col colforbutton"><a class="btn btn-dark action" role="button" href="?action=namefixer" data-toogle="tooltip" title="removes umlauts &amp; empty spaces">Filename Fixer</a></div>
                                 <div class="col colforbutton"><a class="btn btn-dark action" role="button" href="?action=clean" data-toggle="tooltip" title="removes . __.Trash files">Clean Hidden</a></div>
                                 <div class="col colforbutton"><a class="btn btn-dark action" role="button" href="?action=imageconform" data-toggle="tooltip" title="resize images to max. 1920x1080">Conform Images</a></div>
@@ -369,8 +371,7 @@ Code below loads custom js for form submission without reload-->
                             <div>
                                 <h3>SLIDE SHOW</h3>
                                 <div class="col colforbutton"><a class="btn btn-success action" role="button" href="?action=startimagemanual">Manual</a></div>
-                                <div class="col colforbutton"><a class="btn btn-success action" role="button" href="?action=image">Slide Show</a></div>
-                                <div class="col colforbutton"><a class="btn btn-success action" role="button" href="?action=imagekenburn">Slide Show KenBurn</a></div>
+                                <div class="col colforbutton"><a class="btn btn-success action" role="button" href="?action=imagekenburn">Slide Show</a></div>
                                 <div class="col colforbutton"><a class="btn btn-success action" role="button" href="?action=startpdf">Manual *.pdf</a></div>
                                 <div class="col colforbutton">
                                     <h3>&nbsp;</h3>
@@ -384,7 +385,6 @@ Code below loads custom js for form submission without reload-->
                                     <h3>&nbsp;</h3>
                                 </div>
                                 <div class="col colforbutton"><a class="btn btn-success action" role="button" href="?action=imageusb">Slide Show USB</a></div>
-                                <div class="col colforbutton" style="height: 48px;"></div>
                                 <div class="col colforbutton"><a class="btn btn-success action" role="button" href="?action=startpdfusb">Manual *.pdf USB</a></div>
                                 <div class="col colforbutton">
                                     <h3>&nbsp;</h3>
@@ -1725,7 +1725,7 @@ Code below loads custom js for form submission without reload-->
                 <div class="col">
                     <h3>&nbsp;</h3>
                     <div>
-                        <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="networkbutton" href="?action=passwddisable">Disable</a></div>
+                        <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="networkbutton" href="?action=passwddissable">Disable</a></div>
                         <div class="col colforbutton"><a class="btn btn-warning" role="button" id="submitcpFormData" onclick="SubmitcpFormData();" value="Set CP Password">&lt;&nbsp; Set new Password</a></div>
                         <div class="col colforbutton">
                             <h3>&nbsp;</h3>
@@ -2059,8 +2059,6 @@ Code below loads custom js for form submission without reload-->
            });
        });
        </script>
-
-
 </body>
 
 </html>

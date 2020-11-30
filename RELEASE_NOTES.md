@@ -15,6 +15,7 @@
 - still some bugs: added countdown which trigger a script when running down (processing.org) <br />
 
 ## Image 4.0.7 unreleased yet 2020 <br />
+- add python3-pygame python-pygame python3-tk python-tk <br />
 - compiled openCV <br />
 - pretrained coffe model of gender detection <br />
 - resized partitions for more system space  <br />

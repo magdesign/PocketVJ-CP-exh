@@ -217,7 +217,7 @@ Code below loads custom js for form submission without reload-->
                             <div>
                                 <h2 style="margin-top: 15px;height: 32px;"><img src="assets/img/Display_icon_01.svg">&nbsp;OTHERS</h2>
                                 <div class="col colforbutton"><a class="btn btn-danger action" role="button" href="?action=autostartmidi">Midi Control</a></div>
-                                <div class="col colforbutton"><a class="btn btn-danger action" role="button" href="action=setqlc">QLC+</a></div>
+                                <div class="col colforbutton"><a class="btn btn-danger action" role="button" href="?action=setqlc">QLC+</a></div>
                                 <div class="col colforbutton"><a class="btn btn-danger action" role="button" href="?action=setprocessing">Processing</a></div>
                                 <div class="col colforbutton"><a class="btn btn-danger action" role="button" href="?action=setpd">Puredata</a></div>
                                 <div class="col colforbutton"><a class="btn btn-danger action" role="button" href="?action=setfugio">Fugio</a></div>

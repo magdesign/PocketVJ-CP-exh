@@ -14,7 +14,7 @@ int bgcolor = 0; //for a faster color change
 void setup(){
 
 //fullScreen(); //fullscreen does not work on rpi due to framedrops
-size(960,540); //small view
+size(300,300); //small view
 frameRate (30); //RPi can't handle more than approx. 35fps
 
 //sets the time from the file

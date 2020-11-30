@@ -1,4 +1,4 @@
-# This is the ControlPanel 3.x for PocketVJ Exhibition 4.x
+# This is the ControlPanel for PocketVJ Exhibition only.
 
 ### (not compatible with any other PocketVJ Version!!)
 
@@ -10,7 +10,6 @@ https://vimeo.com/467914288
 Exhibition models from the very first generation (4.0.0) need to be updated like this:
 
 https://vimeo.com/468128933
-
 
 Get tutorials on: https://pocketvj.com
 

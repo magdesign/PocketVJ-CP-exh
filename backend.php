@@ -1445,6 +1445,8 @@ if ($_GET['action'] == 'updateall') {
 	system("sudo rm -rf /home/pvj/.xsession");
 	//copy the artnet conf set to broadcast
 	system("sudo cp /var/www/sync/ola-artnet.conf /etc/ola/ola-artnet.conf");
+	// set audio to jack and hdmi
+	system("sudo /var/www/sync/setaudio_both");
 	//set ip on network scripts to match pvj current ip
 	system("sudo /var/www/sync/iprangeUpdatecall");
 	//remove filebrowser, if there is one
@@ -1508,6 +1510,8 @@ if ($_GET['action'] == 'factoryreset') {
 	system("sudo /var/www/sync/stopbuttons");
 	//disable camera
 	system("sudo sed -ri 's/^start_x=.+$/start_x=0/' /boot/config.txt");
+	//set audio to jack and hdmi
+	system("sudo /var/www/sync/setaudio_both");
 	//system("sudo rm -rf /tmp/*");
 	//system("sudo rm -rf /var/log/*");
 	//system("sudo rm -rf /var/tmp/*");

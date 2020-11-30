@@ -2,10 +2,17 @@
 
 ## CP 4.0.0 unreleased yet 2020  <br />
 - complete rewerite of CP, better look and feel, more organised <br />
-- cleaned up some code  <br />
-- added countdown which trigger a script when running down (processing.org) <br />
-
-
+- elFInder is now default filebrowser, eXtplorer is too slow and has no progress bar  <br />
+- added new drag'n'drop filebrowser  <br />
+- added much nicer slideshow  <br />
+- added regular videoplayer without sync (to save network traffic <br />
+- video sync settings for long and short videos <br />
+- new tab with all network settings  <br />
+- queries for diskspace, resolution, codec are now displayed propper  <br />
+- cleand up mapping tab, removed unused functions   <br />
+- fixed clockdisplay  <br />
+- cleaned up a lot of code  <br />
+- still some bugs: added countdown which trigger a script when running down (processing.org) <br />
 
 ## Image 4.0.7 unreleased yet 2020 <br />
 - compiled openCV <br />

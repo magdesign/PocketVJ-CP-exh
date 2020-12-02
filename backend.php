@@ -32,9 +32,6 @@ if ($_GET['action'] == 'stopslaves') {
 	// this will broadcast a stopall command over tcp or udp
 }
 
-
-
-
 ///////////////////
 //# Video Section
 /////////////////////
@@ -446,28 +443,6 @@ if ($_GET['action'] == 'stopoverlay') {
 	//system("sudo killall -9 /home/pvj/raspidmx/pngview/./pngview");
 }
 
-//# Softedge
-
-if ($_GET['action'] == 'softedge100h') {
-	$outputtext =  "start softedge 100pixel horizontal";
-	system("sudo /var/www/sync/softedge100h");
-}
-
-if ($_GET['action'] == 'softedge200h') {
-	$outputtext =  "start softedge 200pixel horizontal";
-	system("sudo /var/www/sync/softedge200h");
-}
-
-if ($_GET['action'] == 'softedge100v') {
-	$outputtext =  "start softedge 100pixel horizontal";
-	system("sudo /var/www/sync/softedge100v");
-}
-
-if ($_GET['action'] == 'softedge200v') {
-	$outputtext =  "start softedge 200pixel horizontal";
-	system("sudo /var/www/sync/softedge200v");
-}
-
 //# Slideshow Time
 
 if ($_GET['action'] == 'slidetime0') {
@@ -772,7 +747,6 @@ if ($_GET['action'] == 'startdmxplaybackaudio05') {
 	$outputtext = "playback dmx and audio 05_* and loop";
 }
 
-
 //# Stop DMX recorder / player
 
 if ($_GET['action'] == 'stopdmx') {
@@ -784,7 +758,6 @@ if ($_GET['action'] == 'startqlcplus') {
 	$outputtext =  "start QLC+";
 	system("sudo /var/www/sync/startqlcplus");
 }
-
 
 //# DMX change universe
 
@@ -828,9 +801,9 @@ if ($_GET['action'] == 'changedmxuniverseshow5') {
 	system("sudo mv /media/internal/dmx/show05to1 /media/internal/dmx/show05");	
 }
 
-
-
+//////////////////
 //# Midi Control
+/////////////////
 
 if ($_GET['action'] == 'startmidicontrol') {
 	$outputtext =  "start Midi Control";
@@ -886,15 +859,6 @@ if ($_GET['action'] == 'startmididmxaudioplay01') {
 if ($_GET['action'] == 'startmididmxvideoplay01') {
 	$outputtext =  "start midi01/dmx01/video01";
 	system("sudo /var/www/sync/startmididmxvideoplay01");
-}
-
-
-
-//# Puredata stuff
-
-if ($_GET['action'] == 'startpd') {
-	$outputtext =  "start puredata";
-	system("sudo /var/www/sync/startpd");
 }
 
 //# Autostart behaviour
@@ -1084,8 +1048,6 @@ if ($_GET['action'] == 'autostartdmxaud01') {
 	$outputtext = "autostart to DMX01 & Audio 01";
 }
 
-
-
 //# Display IP
 
 if ($_GET['action'] == 'ipwifi') {
@@ -1099,7 +1061,6 @@ if ($_GET['action'] == 'iplan') {
 	$preoutputtext =  "<pre>$output</pre>";
 	$outputtext = wordwrap($preoutputtext, 40, "<br />\n");
 }
-
 
 //# Set Boot.conf resolution
 
@@ -1143,7 +1104,6 @@ if ($_GET['action'] == 'forcevga') {
 	system("sudo cp /var/www/sync/forcevga /boot/config.txt");
 }
 
-
 if ($_GET['action'] == 'force1680') {
 	$outputtext =  "force 1680 x 1050 rgb";
 	system("sudo cp /var/www/sync/force1680 /boot/config.txt");
@@ -1164,7 +1124,6 @@ if ($_GET['action'] == 'analog2') {
 	system("sudo cp /var/www/sync/analog2 /boot/config.txt");
 }
 
-
 if ($_GET['action'] == 'clean') {
 	$outputtext =  "clean hidden files";
 	system("sudo rm -R /media/internal/.[DTf_]*");
@@ -1181,7 +1140,6 @@ if ($_GET['action'] == 'clean') {
 	system("sudo rm -Rf /media/usb/.Spotlight-V100/");
 
 }
-
 
 if ($_GET['action'] == 'screenon') {
 	$outputtext = shell_exec('sudo /opt/vc/bin/tvservice -p');
@@ -1223,7 +1181,6 @@ if ($_GET['action'] == 'flip2') {
 	$outputtext =  "Display Flip Vertically";
 }
 
-
 //# Display Info
 
 if ($_GET['action'] == 'getresolution') {
@@ -1244,8 +1201,6 @@ if ($_GET['action'] == 'resolutionquery_cea') {
 	$outputtext = "<pre>$output</pre>";
 }
 
-
-
 if ($_GET['action'] == 'codecinfo') {
 	$output = shell_exec('mediainfo --Inform="General;%FileName% \n Format: %Format% Codec: %CodecID% Bitrate: %OverallBitRate% \\n \\n" /media/internal/video/*');
 	$outputtext = "<pre>$output</pre>";
@@ -1262,7 +1217,6 @@ if ($_GET['action'] == 'diskspace') {
 	$output = shell_exec('df -h --output=size --output=used --output=avail /media');
     $outputtext = "<pre>$output</pre>";
 }
-
 
 //////////////////
 /// File Handling
@@ -1293,7 +1247,6 @@ if ($_GET['action'] == 'openfilebrowser') {
 	system ("sudo systemctl start filebrowser.service");
 	$outputtext =  "filebrowser open";
 }
-
 
 // get webcontent
 if ($_GET['action'] == 'getcontent') {
@@ -1680,36 +1633,8 @@ if ($_GET['action'] == 'wifidown') {
 //# Wifi Connect/Test
 
 if ($_GET['action'] == 'wifitest') {
-	//stop all stuff to be able to display ip
-	system("sudo /var/www/sync/stopall");
-	//stop dhcp server, muesi ds? gloubs nid
-	//system("sudo systemctl stop hostapd.service");
-	//copy dhcpcd conf file for priority?
-	//system("sudo cp /var/www/sync/interfaceswifitest /etc/network/interfaces");
-	//start dhcp server, muesi ds? gloubs nid
-	//system("sudo systemctl start hostapd.service");
-	//Next few lines enable remote access
-	system('sudo cp /var/www/sync/passwdenable /etc/lighttpd/lighttpd.conf');
-	system("sudo service lighttpd restart");
-	//enable tunneling service so its also active  after reboot
-	system("sudo systemctl enable openvpn");
-	system("sudo systemctl start openvpn");
-	//# switch shortcut in index to elFinder
-	system("sudo /var/www/sync/set_elfinder");
-	//take wifi down
-	system("sudo ifdown wlan0");
-	//take RJ45 down
-	system("sudo ifconfig eth0 down");
- 	//take loopback down
-	system("sudo ifdown lo");
-	system("sleep 3");
-	//bring lo up again
-	system("sudo ifup lo");
-	//wifi temprary with the password
-	system("sudo ifup -i /var/www/sync/interfaceswifitest -a");
-	//print ip address
-	system("sleep 90");
-	system("sudo /var/www/sync/showip_tty2");
+	//run it in a script for cleaner code
+	system("sudo /var/www/sync/wifitest");
 	$outputtext =  "test wifi connecting";
 }
 
@@ -2505,7 +2430,6 @@ if ($_GET['action'] == 'stopwebserver'){
 }
 
 
-
 //# OSC receiver
 
 if ($_GET['action'] == 'oscreceiver') {
@@ -2569,8 +2493,6 @@ if ($_GET['action'] == 'stopwebcamusb') {
 	$outputtext =  "stop usb webcam server";
 	system("sudo /var/www/sync/stopwebcamusb");
 }
-
-
 
 
 //# enable camera in boot.config

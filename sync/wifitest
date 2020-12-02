@@ -1,0 +1,36 @@
+#!/bin/bash
+#test wifi connections
+
+#kill all running tasks
+/var/www/sync/stopall  > /dev/null 2>&1
+
+if [ -f /etc/openvpn/pocketvj.remote.conf ] && [ "$(md5sum < /proc/device-tree/hat/product)" = "33e26e96aeb252a3e1374ca44ad684a2  -" ]
+        
+    then
+
+	sudo cp /var/www/sync/passwdenable /etc/lighttpd/lighttpd.conf
+	sudo service lighttpd restart
+	sudo systemctl enable openvpn
+	sudo systemctl start openvpn
+	# switch shortcut in index to elFinder
+	sudo /var/www/sync/set_elfinder
+	#take wifi down
+	sudo ifdown wlan0
+	#take RJ45 down
+	sudo ifconfig eth0 down
+ 	#take loopback down
+	sudo ifdown lo
+	sleep 3
+	#bring lo up again
+	sudo ifup lo
+	#wifi temprary with the password
+	sudo ifup -i /var/www/sync/interfaceswifitest -a
+	#print ip address
+	sleep 90
+	sudo /var/www/sync/showip_tty2
+    echo "connected to wifi"
+
+else
+  echo "this is not PocketVJ Exhibtion, aborting"
+  exit 0
+fi

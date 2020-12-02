@@ -1271,16 +1271,16 @@ if ($_GET['action'] == 'diskspace') {
 if ($_GET['action'] == 'defaultelfinder') {
 	system ("sudo /var/www/sync/set_elfinder");
 		//this is to disable filebrowser daemon
-	system ("sudo systemctl stop filebrowser.service");
-	system ("sudo systemctl disable filebrowser.service");
+	//system ("sudo systemctl stop filebrowser.service");
+	//system ("sudo systemctl disable filebrowser.service");
 	$outputtext =  "elFinder default";
 }
 
 if ($_GET['action'] == 'defaultextplorer') {
-	system ("sudo /var/www/sync/set_elfinder");
+	system ("sudo /var/www/sync/set_extplorer");
 	//this is to disable filebrowser daemon
-	system ("sudo systemctl stop filebrowser.service");
-	system ("sudo systemctl disable filebrowser.service");
+	//system ("sudo systemctl stop filebrowser.service");
+	//system ("sudo systemctl disable filebrowser.service");
 	$outputtext =  "eXtplorer default";
 }
 

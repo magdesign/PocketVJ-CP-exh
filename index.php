@@ -50,7 +50,7 @@ Code below loads custom js for form submission without reload-->
                 <div class="col"><a class="d-xl-flex justify-content-xl-center action" href="?action=startmaster"><img class="d-xl-flex justify-content-xl-center shortcuts_header" src="assets/img/play_icon.svg" data-toggle="tooltip" title="play video"></a></div>
                 <div class="col"><a class="d-xl-flex justify-content-xl-center action" href="?action=pause"><img class="d-xl-flex justify-content-xl-center shortcuts_header" src="assets/img/pause_icon.svg" data-toggle="tooltip" title="pause"></a></div>
                 <div class="col"><a class="d-xl-flex justify-content-xl-center action" href="?action=fastforward"><img class="d-xl-flex justify-content-xl-center shortcuts_header" src="assets/img/fastforward_icon.svg" data-toggle="tooltip" title="fastforward"></a></div>
-                <div class="col"><a class="d-xl-flex justify-content-xl-center" target="_blank" href="/elFinder/elfinder.src.html"><img class="d-xl-flex justify-content-xl-center shortcuts_header" src="assets/img/filebrowser_icon.svg" data-toggle="tooltip" title="filebrowser"></a></div>
+                <div class="col"><a class="d-xl-flex justify-content-xl-center" target="_blank" href="/eXtplorer/" onclick=""><img class="d-xl-flex justify-content-xl-center shortcuts_header" src="assets/img/filebrowser_icon.svg" data-toggle="tooltip" title="filebrowser"></a></div>
                 <div
                     class="col"><a class="d-xl-flex justify-content-xl-center action" href="?action=screenshot"><img class="d-xl-flex justify-content-xl-center shortcuts_header" src="assets/img/screenshot_icon.svg" data-toggle="tooltip" title="screenshot"></a></div>
             <div class="col"><a class="d-xl-flex justify-content-xl-center action" href="?action=testscreen"><img class="d-xl-flex justify-content-xl-center shortcuts_header" src="assets/img/testscreen_icon.svg" data-toggle="tooltip" title="testscreen"></a></div>
@@ -219,7 +219,6 @@ Code below loads custom js for form submission without reload-->
                                 <div class="col colforbutton"><a class="btn btn-danger action" role="button" href="?action=autostartmidi">Midi Control</a></div>
                                 <div class="col colforbutton"><a class="btn btn-danger action" role="button" href="?action=setqlc">QLC+</a></div>
                                 <div class="col colforbutton"><a class="btn btn-danger action" role="button" href="?action=setprocessing">Processing</a></div>
-                                <div class="col colforbutton"><a class="btn btn-danger action" role="button" href="?action=setpd">Puredata</a></div>
                                 <div class="col colforbutton"><a class="btn btn-danger action" role="button" href="?action=setfugio">Fugio</a></div>
                             </div>
                         </div>
@@ -302,8 +301,8 @@ Code below loads custom js for form submission without reload-->
                         <div class="col">
                             <div>
                                 <h2>BROWSER</h2>
-                                <div class="col colforbutton"><a class="btn btn-dark action" role="button" href="?action=openfilebrowser" target="_blank" onclick="window.open(`//${window.location.hostname}:8060`)">filebrowser</a></div>
-                                <div class="col colforbutton"><a class="btn btn-dark" role="button" href="/elFinder/elfinder.src.html" target="_blank">elFinder</a></div>
+                                <div class="col colforbutton"><a class="btn btn-dark action" role="button" href="?action=openfilebrowser" target="_blank" onclick="window.open(`//${window.location.hostname}:8060`)" data-toggle="tooltip" title="slim and slick filebrowser">filebrowser</a></div>
+                                <div class="col colforbutton"><a class="btn btn-dark" role="button" href="/elFinder/elfinder.src.html" target="_blank" data-toggle="tooltip" title="has 2GB file limit">elFinder</a></div>
                                 <div class="col colforbutton"><a class="btn btn-dark" role="button" href="/eXtplorer/" target="_blank">eXtplorer</a></div>
                                 <div class="col colforbutton">
                                     <h3>&nbsp;</h3>
@@ -326,7 +325,7 @@ Code below loads custom js for form submission without reload-->
                         <div class="col">
                             <h2>TOOLS</h2>
                             <div>
-                                <div class="col colforbutton"><a class="btn btn-dark action" role="button" href="?action=permissionfixer" data-toogle="tooltip" title="fixes write access to your files &amp; empty spaces">Permission Fixer</a></div>
+                                <div class="col colforbutton"><a class="btn btn-dark action" role="button" href="?action=permissionfixer" data-toogle="tooltip" title="fixes write access to your files">Permission Fixer</a></div>
                                 <div class="col colforbutton"><a class="btn btn-dark action" role="button" href="?action=namefixer" data-toogle="tooltip" title="removes umlauts &amp; empty spaces">Filename Fixer</a></div>
                                 <div class="col colforbutton"><a class="btn btn-dark action" role="button" href="?action=clean" data-toggle="tooltip" title="removes . __.Trash files">Clean Hidden</a></div>
                                 <div class="col colforbutton"><a class="btn btn-dark action" role="button" href="?action=imageconform" data-toggle="tooltip" title="resize images to max. 1920x1080">Conform Images</a></div>
@@ -735,6 +734,9 @@ Code below loads custom js for form submission without reload-->
                                 <div class="col colforbutton" style="height: 48px;"></div>
                                 <div class="col colforbutton" style="height: 48px;"></div>
                                 <div class="col colforbutton" style="height: 48px;"></div>
+                                <div class="col colforbutton" style="height: 48px;"></div>
+                                <div class="col colforbutton" style="height: 48px;"></div>
+                                <div class="col colforbutton" style="height: 48px;"></div>
                                 <div class="col colforbutton" style="height: 48px;"><a class="btn btn-light action" role="button" href="?action=mappermediaselect">Media Selection</a></div>
                                 <div class="col colforbutton"><a class="btn btn-light action" role="button" href="?action=mappertexturemode">TEXTURE</a></div>
                                 <div class="col colforbutton"><a class="btn btn-light action" role="button" href="?action=mapperplaymode">PRESENT</a></div>
@@ -747,6 +749,9 @@ Code below loads custom js for form submission without reload-->
                                 <div class="col colforbutton"><a class="btn btn-light action" role="button" href="?action=mappertriangl">Add Triangle</a></div>
                                 <div class="col colforbutton"><a class="btn btn-light action" role="button" href="?action=mappercircle">Add Circle</a></div>
                                 <div class="col colforbutton"><a class="btn btn-light action" role="button" href="?action=mapperdelete">Delete</a></div>
+                                <div class="col colforbutton" style="height: 48px;"></div>
+                                <div class="col colforbutton" style="height: 48px;"></div>
+                                <div class="col colforbutton" style="height: 48px;"></div>
                                 <div class="col colforbutton"><a class="btn btn-light action" role="button" href="?action=mappermediaselectth">Media Stepper</a></div>
                             </div>
                         </div>
@@ -756,7 +761,10 @@ Code below loads custom js for form submission without reload-->
                                 <div class="col colforbutton"><a class="btn btn-light action" role="button" href="?action=mapperfullscreen">Fullscreen</a></div>
                                 <div class="col colforbutton"><a class="btn btn-light action" role="button" href="?action=mapperedgeblend">Edge Blend</a></div>
                                 <div class="col colforbutton"><a class="btn btn-light action" role="button" href="?action=mapperprev">Prev Surface</a></div>
+                                <div class="col colforbutton"><a class="btn btn-light action" role="button" href="?action=mapperprevvertex">Prev Vertex</a></div>
                                 <div class="col colforbutton"><a class="btn btn-light action" role="button" href="?action=mapperlayerup">Layer Up</a></div>
+                                <div class="col colforbutton"><a class="btn btn-light action" role="button" href="?action=mapperup">Move Up</a></div>
+                                <div class="col colforbutton"><a class="btn btn-light action" role="button" href="?action=mapperleft">Move Left</a></div>
                             </div>
                         </div>
                         <div class="col">
@@ -765,7 +773,10 @@ Code below loads custom js for form submission without reload-->
                                 <div class="col colforbutton"><a class="btn btn-light action" role="button">UNDO</a></div>
                                 <div class="col colforbutton"><a class="btn btn-light action" role="button">Panel</a></div>
                                 <div class="col colforbutton"><a class="btn btn-light action" role="button" href="?action=mappernext">Next Surface</a></div>
+                                <div class="col colforbutton"><a class="btn btn-light action" role="button" href="?action=mappernextvertex">Next Vertex</a></div>
                                 <div class="col colforbutton"><a class="btn btn-light action" role="button" href="?action=mapperlayerdown">Layer Down</a></div>
+                                <div class="col colforbutton"><a class="btn btn-light action" role="button" href="?action=mapperdown">Move Down</a></div>
+                                <div class="col colforbutton"><a class="btn btn-light action" role="button" href="?action=mapperright">Move Right</a></div>
                             </div>
                         </div>
                     </div>
@@ -1664,7 +1675,7 @@ Code below loads custom js for form submission without reload-->
                     <div>
                         <h2>INFO</h2>
                         <div class="col colforbutton"><a class="btn btn-dark action" role="button" id="networkbutton" data-toggle="tooltip" title="show wifi ip" href="?action=ipwifi">Wifi IP</a></div>
-                        <div class="col colforbutton"><a class="btn btn-danger action" role="button" id="networkbutton" data-toggle="tooltip" title="show wifi networks in range" href="?action=showwifi">Available Wifi's</a></div>
+                        <div class="col colforbutton"><a class="btn btn-danger action" role="button" id="networkbutton" data-toggle="tooltip" title="show wifi networks in range, takes a few seconds" href="?action=showwifi">Available Wifi's</a></div>
                     </div>
                 </div>
                 <div class="col">
@@ -1989,7 +2000,6 @@ Code below loads custom js for form submission without reload-->
     </footer>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-
 
 
 <!-- Code below sets the "Set Time" button function--> 

@@ -1,25 +1,21 @@
 **Roadmap / Next Steps:** <p/>
 
+- pass omxplayer error to CP when set to alsa but no usb soundcard is connected <p/>
+- make stop script faster <p/>
 - sync stop: when in sync mode, send stop from master over network to all slaves tcp commands in an optional stopslaves script? <p/>
-- Countdown function: insert time and then display countdown, when finished show image or start video (Processing.org :-) <p/>
 - rethink the video master/slave, make it same as mapper, just to select if sync/master/slave, does omxplayer play severals files without our script?<p/>
-- clean the autostart things concering dmx, add new autostarts <p/>
 - when accessed over the internet, the ola panel is not visible, check how to handle ports with the remote, currently you can ask for another port link..   <p/>
 - dmx comand to remote record (start / stop recording dmx) directly from light-console  <p/>
-- playlist feature to play dmx/vido01 and afterwards 02 and so on, tricky bit will be to gather the end of the file...   <p/>
+- playlist feature to play dmx/video01 and afterwards 02 and so on, tricky bit will be to gather the end of the file...   <p/>
 - fix the annoying usb cable mouse issue when using mapper  <p/>
-- set mapper to start with presentation mode to get rid of tearing, currently you have to go to mapping and back to presentation  <p/>
-- help ola to fix the deb building issue! <p/>
+- add pygame to update as offline package, for countdown <p/>
+- add set time for countdown function and also trigger master on time = 0 <p/>
 
 <p/> <p/>
 
 - Adding wake on lan feature? <p/>
-- parse output of: "possible resolutions" to human readable lines<p/>
 - add wireless-power off to interfaces ? <p/>
 - Integrate this script for more CPU infos in CP: https://gist.github.com/ecampidoglio/5009512#file-cpustatus-sh <p/>
-- enable disable sync, to support ultra short files <p/>
-- rename master/slave to sender/receiver or driver/driven or something politcally correct  <p/>
-- fade video or at least seamless play a list of videos <p/>
 - Fix the ArtNet Universe limit, which is currently 4 (if this is even possible?, maybe an usb to rj45 adaptor with a second ip?) <p/>
 - Add gender recognition based on openCV to trigger gender based content <p/>
 - Add scripts to trigger content based on humidity/temperature <p/>

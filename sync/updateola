@@ -1,31 +1,31 @@
 #!/bin/bash
 
-#this block removes all ola components destructively:
-
-sudo service olad stop
-sudo apt-get purge ola -y
-sudo rm -rf /usr/local/bin/ola*
-sudo rm -rf /etc/ola
-sudo rm -rf /usr/share/ola*
-sudo rm -rf /usr/local/share/ola*
-sudo rm -rf /usr/local/bin/ola*
-sudo rm -rf /usr/local/include/ola*
-sudo rm -rf /etc/init.d/olad
-sudo rm -rf /usr/local/lib/libola*
-sudo rm -rf /usr/local/lib/pkgconfig/libola*
-sudo rm -rf /var/lib/ola*
-sudo apt-get clean -y
-sudo apt-get autoclean -y
-
-
-#this block installs the new 0.10.7 version:
-
-yes | sudo dpkg -i /var/www/sync/ola/libola1_0.10.7-1_armhf.deb 
-yes | sudo dpkg -i /var/www/sync/ola/ola_0.10.7-1_armhf.deb
-yes | sudo dpkg -i /var/www/sync/ola/ola-python_0.10.7-1_all.deb
-
-
-echo "updated ola to 10.7"
-
+if [ -f /etc/openvpn/pocketvj.remote.conf ] && [ "$(md5sum < /proc/device-tree/hat/product)" = "33e26e96aeb252a3e1374ca44ad684a2  -" ]
+then
+  echo "start installing..."
+        sudo service olad stop
+        sudo apt-get purge ola -y
+        sudo rm -rf /usr/local/bin/ola*
+        sudo rm -rf /etc/ola
+        sudo rm -rf /usr/share/ola*
+        sudo rm -rf /usr/local/share/ola*
+        sudo rm -rf /usr/local/bin/ola*
+        sudo rm -rf /usr/local/include/ola*
+        sudo rm -rf /etc/init.d/olad
+        sudo rm -rf /usr/local/lib/libola*
+        sudo rm -rf /usr/local/lib/pkgconfig/libola*
+        sudo rm -rf /var/lib/ola*
+        sudo apt-get clean -y
+        sudo apt-get autoclean -y
+        #install:
+        yes | sudo dpkg -i /var/www/sync/ola/libola1_0.10.7-1_armhf.deb 
+        #force yes to all promts:
+        DEBIAN_FRONTEND="noninteractive" apt-get -y --allow-unauthenticated --force-yes -o DPkg::Options::="--force-overwrite" -o DPkg::Options::="--force-confdef" install -f  /var/www/sync/ola/ola_0.10.7-1_armhf.deb
+        yes | sudo dpkg -i /var/www/sync/ola/ola-python_0.10.7-1_all.deb
+        echo "updated ola to 10.7"
+else
+  echo "this is not PocketVJ Exhibtion, aborting"
+  exit 0
+fi
 
 

@@ -663,59 +663,58 @@ if ($_GET['action'] == 'stopoladaemon') {
 	exec("sudo update-rc.d olad disable");
 	$outputtext = "disabled OLA Daemon";
 }
+////////
+//# DMX 
+////////
 
-//# DMX recorder
 if ($_GET['action'] == 'startdmxrecord01') {
-	$outputtext = "recording dmx input universe 1-20";
-	system("sudo ola_recorder -u 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 -r /media/internal/dmx/show01 > /dev/null &");
-	
-}
+	system("sudo /var/www/sync/startdmxrecord01 > /dev/null &");
+	$outputtext = "recording 01";
+	}
 
 if ($_GET['action'] == 'startdmxrecord02') {
-	exec("sudo ola_recorder -u 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 -r /media/internal/dmx/show02 > /dev/null &");
-	$outputtext = "recording dmx input universe 1-20";
-}
+	system("sudo /var/www/sync/startdmxrecord02 > /dev/null &");
+	$outputtext = "recording 02";
+	}
 
 if ($_GET['action'] == 'startdmxrecord03') {
-	exec("sudo ola_recorder -u 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 -r /media/internal/dmx/show03 > /dev/null &");
-	$outputtext = "recording dmx input universe 1-20";
-}
+	system("sudo /var/www/sync/startdmxrecord03 > /dev/null &");
+	$outputtext = "recording 03";
+	}
 
 if ($_GET['action'] == 'startdmxrecord04') {
-	exec("sudo ola_recorder -u 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 -r /media/internal/dmx/show04 > /dev/null &");
-	$outputtext = "recording dmx input universe 1-20";
-}
+	system("sudo /var/www/sync/startdmxrecord04 > /dev/null &");
+	$outputtext = "recording 04";
+	}
 
 if ($_GET['action'] == 'startdmxrecord05') {
-	exec("sudo ola_recorder -u 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 -r /media/internal/dmx/show05 > /dev/null &");
-	$outputtext = "recording dmx input universe 1-20";
-}
-
-//# DMX player
+	system("sudo /var/www/sync/startdmxrecord05 > /dev/null &");
+	$outputtext = "recording 05";
+	}
 
 if ($_GET['action'] == 'startdmxplayback01') {
-	exec("sudo ola_recorder -i 0 -p /media/internal/dmx/show01 > /dev/null &");
-	$outputtext = "playback dmx show01 universe 1-20";
+	exec("sudo /var/www/sync/startplayback01 > /dev/null &");
+	$outputtext = "playback show01";
 }
 
 if ($_GET['action'] == 'startdmxplayback02') {
-	exec("sudo ola_recorder -i 0 -p /media/internal/dmx/show02 > /dev/null &");
-	$outputtext = "playback dmx show02 universe 1-20";
+	exec("sudo /var/www/sync/startplayback02 > /dev/null &");
+	$outputtext = "playback show02";
 }
 
 if ($_GET['action'] == 'startdmxplayback03') {
-	exec("sudo ola_recorder -i 0 -p /media/internal/dmx/show03 > /dev/null &");
-	$outputtext = "playback dmx show03 universe 1-20";
+	exec("sudo /var/www/sync/startplayback03 > /dev/null &");
+	$outputtext = "playback show03";
 }
 
 if ($_GET['action'] == 'startdmxplayback04') {
-	exec("sudo ola_recorder -i 0 -p /media/internal/dmx/show04 > /dev/null &");
-	$outputtext = "playback dmx show04 universe 1-20";
+	exec("sudo /var/www/sync/startplayback04 > /dev/null &");
+	$outputtext = "playback show04";
 }
 
-if ($_GET['action'] == 'startdmxplayback05') {
-	exec("sudo ola_recorder -i 0 -p /media/internal/dmx/show05 > /dev/null &");
-	$outputtext = "playback dmx show05 universe 1-20";
+if ($_GET['action'] == 'startdmxplayback04') {
+	exec("sudo /var/www/sync/startplayback04 > /dev/null &");
+	$outputtext = "playback show04";
 }
 
 //# DMX and video player
@@ -1630,8 +1629,8 @@ if ($_GET['action'] == 'updatekernel') {
 
 if ($_GET['action'] == 'updateola') {
 	system ("sudo /var/www/sync/stopall > /dev/null 2>&1");
-	system("sudo /var/www/sync/updateola");
-	$outputtext =  "Updates ola";
+	$outputtext = system("sudo /var/www/sync/updateola");
+	//$outputtext =  "Updates ola";
 }
 
 //# Set Wifi Channel

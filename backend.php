@@ -2245,7 +2245,7 @@ if ($_GET['action'] == 'impresslast') {
 }
 
 if ($_GET['action'] == 'impressrelaunch') {
-	$outputtext =  "Relaunch Impress";
+	$outputtext =  "Launch Impress";
 	system("sudo /var/www/sync/startimpress");
 }
 

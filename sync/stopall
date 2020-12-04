@@ -4,59 +4,57 @@
 sudo rm -rf /tmp/dmxloop &
 
 #kill omxplayer less loop file, player will be killed later on
-sudo kill $(pgrep 'startlesshelper')  > /dev/null &
+sudo kill $(pgrep 'startlesshelper')  > /dev/null 2>&1 &
 
 #kill xserver
-sudo killall -9 /usr/bin/lxsession > /dev/null &
+sudo killall -9 /usr/bin/lxsession > /dev/null 2>&1 &
 
 #kill Xvfb virtual framebuffer for qlc plus
 sudo pkill Xvfb
 
 #kill videoplayer
-sudo /var/www/sync/omxkill > /dev/null &
+sudo /var/www/sync/omxkill > /dev/null 2>&1 &
 
 #kill mapper
-sudo killall -9 /home/pvj/openFrameworks/addons/ofxPiMapper/example_basic/./bin/example_basic > /dev/null &
-sudo killall -9 /home/pvj/openFrameworks/addons/ofxPiMapper/example_camera/./bin/example_camera > /dev/null &
-sudo killall -9 /home/pvj/openFrameworks/addons/ofxPiMapper/example_fbo-sources/./bin/example_fbo-sources > /dev/null &
-sudo killall -9 /home/pvj/openFrameworks/addons/ofxPiMapper/example_remote-server/./bin/example_remote-server > /dev/null &
+sudo killall -9 /home/pvj/openFrameworks/addons/ofxPiMapper/example_basic/./bin/example_basic > /dev/null 2>&1 &
+sudo killall -9 /home/pvj/openFrameworks/addons/ofxPiMapper/example_camera/./bin/example_camera > /dev/null 2>&1 &
+sudo killall -9 /home/pvj/openFrameworks/addons/ofxPiMapper/example_fbo-sources/./bin/example_fbo-sources > /dev/null 2>&1 &
+sudo killall -9 /home/pvj/openFrameworks/addons/ofxPiMapper/example_remote-server/./bin/example_remote-server > /dev/null 2>&1 &
 
 #kill Syphon
-sudo killall -9 /usr/bin/TCPSClient.bin > /dev/null &
+sudo killall -9 /usr/bin/TCPSClient.bin > /dev/null 2>&1 &
 
 #kill clock, audioplayer and imageplayer
-sudo killall -9 tty-clock > /dev/null &
-sudo killall -9 mpg321 > /dev/null &
-sudo killall -9 feh > /dev/null &
-sudo /var/www/sync/testscreenoff > /dev/null &
+sudo killall -9 tty-clock > /dev/null 2>&1 &
+sudo killall -9 mpg321 > /dev/null 2>&1 &
+sudo killall -9 feh > /dev/null 2>&1 &
+sudo /var/www/sync/testscreenoff > /dev/null 2>&1 &
 
 #kill kenburns imageplayer
 #sudo pkill -9 -f Slideshow_3d.py > /dev/null 2>&1
-sudo pkill -9 -f PictureFrame.py > /dev/null &
-
-
+sudo pkill -9 -f PictureFrame.py > /dev/null 2>&1 &
 
 #kill overlay and softedge
-sudo killall -9 /home/pvj/raspidmx/pngview/./pngview /media/internal/images/overlay.png > /dev/null &
-sudo killall -9 /home/pvj/raspidmx/pngview/./pngview /media/internal/images/softedge* > /dev/null &
+sudo killall -9 /home/pvj/raspidmx/pngview/./pngview /media/internal/images/overlay.png > /dev/null 2>&1 &
+sudo killall -9 /home/pvj/raspidmx/pngview/./pngview /media/internal/images/softedge* > /dev/null 2>&1 &
 
 #kill fake keyboard:
-sudo killall -9 fsaysuinput > /dev/null &
+sudo killall -9 fsaysuinput > /dev/null 2>&1 &
 
 #Kill dmx player/recorder
-sudo killall -9 ola_recorder > /dev/null &
+sudo killall -9 ola_recorder > /dev/null 2>&1 &
 
 #set all dmx to 0 = blackout
-sudo /var/www/sync/setdmxblackout > /dev/null &
+sudo /var/www/sync/setdmxblackout > /dev/null 2>&1 &
 
 #kill camerafeed
-sudo killall -9  /usr/bin/raspivid > /dev/null &
+sudo killall -9  /usr/bin/raspivid > /dev/null 2>&1 &
 
 #kill puredata
-sudo killall -9 /usr/bin/pd-extended > /dev/null &
+sudo killall -9 /usr/bin/pd-extended > /dev/null 2>&1 &
 
 #kill python pir only
-sudo kill $(pgrep -f 'python /var/www/sync/startpir1.py') > /dev/null &
+sudo kill $(pgrep -f 'python /var/www/sync/startpir1.py') > /dev/null 2>&1 &
 
 #kill python buttons only, this would kill it everytime, default is commented out!
 #sudo kill $(pgrep -f 'python3 /var/www/sync/startbuttons.py') > /dev/null &
@@ -65,10 +63,10 @@ sudo kill $(pgrep -f 'python /var/www/sync/startpir1.py') > /dev/null &
 sudo kill $(pgrep -f 'python /var/www/sync/random_video_trigger.py') > /dev/null &
 
 #kill midi recorder
-sudo kill $(pgrep 'arecordmidi') > /dev/null &
+sudo kill $(pgrep 'arecordmidi') > /dev/null 2>&1 &
 
 #kill midi player
-sudo kill $(pgrep 'aplaymidi') > /dev/null &
+sudo kill $(pgrep 'aplaymidi') > /dev/null 2>&1 &
 
 #kill all python scripts
 # this destroyes also usefull things like midi2command
@@ -81,13 +79,15 @@ sudo kill $(pgrep 'aplaymidi') > /dev/null &
 #sudo /var/www/sync/clearscreen.sh > /dev/null &
 
 #overwrite tty with black to get rid of the clock
-sudo printf "\033c" > /dev/tty1 &
+sudo printf "\033c" > /dev/tty1 2>&1 &
 
 #make dmx show files writeable
-sudo chmod 777 -R /media/internal/dmx > /dev/null &
+sudo chmod 777 -R /media/internal/dmx > /dev/null 2>&1 &
 
 #clear log
-sudo rm /var/www/*.log > /dev/null &
+sudo rm /var/www/*.log > /dev/null 2>&1 &
 
 #without sleep things would kill themself
-sleep 0.5
+sleep 1
+
+exit

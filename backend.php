@@ -17,7 +17,6 @@ if ($_GET['action'] == 'fastforward') {
 if ($_GET['action'] == 'stop') {
 	$outputtext =  "all players stopped";
 	system ("sudo /var/www/sync/stopall > /dev/null 2>&1");
-
 }
 
 if ($_GET['action'] == 'stopvideo') {
@@ -145,6 +144,13 @@ if ($_GET['action'] == 'startmasteronce') {
 	exec("sudo /var/www/sync/startmasterone");
 	$outputtext = "start player as master once";
 }
+
+if ($_GET['action'] == 'stopslaves') {
+	$outputtext =  "stop to all slaves sent";
+	system ("sudo /var/www/sync/stopslaves > /dev/null 2>&1");
+}
+
+
 ///////////////////////
 //# Video without sync
 ///////////////////////
@@ -2605,6 +2611,7 @@ if ($_GET['action'] == 'stopbuttons') {
 	system("sudo /var/www/sync/stopbuttons");
 	$outputtext =  "stop buttons";
 }
+
 
 
 echo $outputtext;

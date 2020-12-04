@@ -1357,7 +1357,7 @@ Code below loads custom js for form submission without reload-->
                     <div>
                         <h3>&nbsp;</h3>
                         <div class="col colforbutton"><a class="btn btn-danger" role="button" id="dmxbuttoncolor" href="#" onclick="window.open(`//${window.location.hostname}:9090`)" target="_blank">Open Panel</a></div>
-                        <div class="col colforbutton"><a class="btn btn-danger" role="button" id="dmxbuttoncolor" href="?action=stopoladaemon">Daemon OFF</a></div>
+                        <div class="col colforbutton"><a class="btn btn-danger action" role="button" id="dmxbuttoncolor" href="?action=stopoladaemon">Daemon OFF</a></div>
                     </div>
                 </div>
                 <div class="col">

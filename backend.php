@@ -619,7 +619,10 @@ if ($_GET['action'] == 'testtoneleft') {
 	$outputtext = "sinus testtone left";
 }
 
+///////////////////////////////
 //# DMX OLA stuff
+////////////////////////////////
+
 
 if ($_GET['action'] == 'startola') {
 	//exec("sudo /etc/init.d/olad start");

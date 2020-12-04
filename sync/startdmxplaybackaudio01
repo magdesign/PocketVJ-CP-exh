@@ -4,7 +4,7 @@
 DELAY=1
 
 #kill all runing tasks to be safe
-/var/www/sync/stopall
+/var/www/sync/stopall > /dev/null 2>&1
 
 #create a file so we know to keep looping
 touch /tmp/dmxloop

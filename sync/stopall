@@ -10,7 +10,7 @@ sudo kill $(pgrep 'startlesshelper')  > /dev/null 2>&1 &
 sudo killall -9 /usr/bin/lxsession > /dev/null 2>&1 &
 
 #kill Xvfb virtual framebuffer for qlc plus
-sudo pkill Xvfb
+sudo pkill Xvfb > /dev/null 2>&1 &
 
 #kill videoplayer
 sudo /var/www/sync/omxkill > /dev/null 2>&1 &

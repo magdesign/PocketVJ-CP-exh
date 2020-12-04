@@ -424,18 +424,19 @@ if ($_GET['action'] == 'image') {
 
 if ($_GET['action'] == 'imageusb') {
 	$outputtext =  "start image player from usb";
-	system("sudo /var/www/sync/startimageusb");
+	system("sudo /var/www/sync/startimageusb > /dev/null &");
 }
 
 if ($_GET['action'] == 'startimagemanual') {
 	$outputtext =  "start image player manual";
-	system("sudo /var/www/sync/startimagemanual");
+	system("sudo /var/www/sync/startimagemanual > /dev/null & ");
 }
 
 if ($_GET['action'] == 'imagekenburn') {
-	system("sudo /var/www/sync/startimagekenburn");
-	//shell_exec("sudo /usr/bin/python /home/pvj/pi3d_demos/Slideshow_3d.py");
 	$outputtext =  "start slideshow ken burn";
+	system("sudo /var/www/sync/startimagekenburn > /dev/null & ");
+	//shell_exec("sudo /usr/bin/python /home/pvj/pi3d_demos/Slideshow_3d.py");
+	
 }
 
 if ($_GET['action'] == 'overlay') {

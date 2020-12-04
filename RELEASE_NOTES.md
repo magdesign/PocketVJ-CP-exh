@@ -15,7 +15,7 @@
 - fixed clockdisplay  <br />
 - cleaned up a lot of code  <br />
 
-## Image 4.0.7 unreleased yet 2020 <br />
+## Image 4.0.7 02.Dezember 2020 <br />
 - add python3-pygame python-pygame python3-tk python-tk <br />
 - compiled openCV <br />
 - pretrained coffe model of gender detection <br />

@@ -38,7 +38,7 @@ Code below loads custom js for form submission without reload-->
                 <div class="col d-flex justify-content-end">
                     <div class="row">
                         <div class="col">
-                            <p class="text-center" id="version_text" style="font-weight: normal;padding-top: 12px;color: rgb(0,0,0);">CP 4.0.0<br><a href="https://github.com/magdesign/PocketVJ-CP-exh/issues" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help.svg" style="text-align: right;padding: 8px;max-width: 60%;"></a><br><br></p>
+                            <p class="text-center" id="version_text" style="font-weight: normal;padding-top: 12px;color: rgb(0,0,0);">CP 4.0.0a<br><a href="https://github.com/magdesign/PocketVJ-CP-exh/issues" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help.svg" style="text-align: right;padding: 8px;max-width: 60%;"></a><br><br></p>
                         </div>
                     </div>
                 </div>
@@ -618,7 +618,7 @@ Code below loads custom js for form submission without reload-->
                             <div>
                                 <h2>CAMERA USB</h2>
                                 <div class="col colforbutton"><a class="btn btn-primary action" role="button" href="?action=startwebcamusb" data-toggle="tooltip" title="webcam">Webcam ON<br></a></div>
-                                <div class="col colforbutton"><a class="btn btn-primary" role="button" href="#" data-toggle="tooltip" title="show webcam" onclick="window.open(`//${window.location.hostname}:8081`)" target="_blank">Show<br></a></div>
+                                <div class="col colforbutton"><a class="btn btn-primary" role="button" data-toggle="tooltip" title="show webcam" onclick="window.open(`//${window.location.hostname}:8081`)" target="_blank">Show<br></a></div>
                                 <div class="col colforbutton">
                                     <h3>&nbsp;</h3>
                                 </div>
@@ -1356,7 +1356,7 @@ Code below loads custom js for form submission without reload-->
                 <div class="col">
                     <div>
                         <h3>&nbsp;</h3>
-                        <div class="col colforbutton"><a class="btn btn-danger" role="button" id="dmxbuttoncolor" href="#" onclick="window.open(`//${window.location.hostname}:9090`)" target="_blank">Open Panel</a></div>
+                        <div class="col colforbutton"><a class="btn btn-danger" role="button" id="dmxbuttoncolor" onclick="window.open(`//${window.location.hostname}:9090`)" target="_blank">Open Panel</a></div>
                         <div class="col colforbutton"><a class="btn btn-danger action" role="button" id="dmxbuttoncolor" href="?action=stopoladaemon">Daemon OFF</a></div>
                     </div>
                 </div>
@@ -1516,7 +1516,7 @@ Code below loads custom js for form submission without reload-->
                 <div class="col">
                     <div>
                         <h3>&nbsp;</h3>
-                        <div class="col colforbutton"><a class="btn btn-danger" role="button" id="dmxbuttoncolor" data-toggle="tooltip" titel="opens qlc+ webpanel" href="#" target="_blank" onclick="window.open(`//${window.location.hostname}:9999`)">Open Panel</a></div>
+                        <div class="col colforbutton"><a class="btn btn-danger" role="button" id="dmxbuttoncolor" data-toggle="tooltip" titel="opens qlc+ webpanel" target="_blank" onclick="window.open(`//${window.location.hostname}:9999`)">Open Panel</a></div>
                         <div class="col colforbutton" style="height: 68px;"></div>
                     </div>
                 </div>
@@ -1950,7 +1950,7 @@ Code below loads custom js for form submission without reload-->
             <div class="col">
                 <div>
                     <h2>ACCESS</h2>
-                    <div class="col colforbutton"><a class="btn btn-warning" role="button" id="settingsbutton" data-toggle="tooltip" title="" href="#" onclick="window.open(`//${window.location.hostname}:4222`)" target="_blank">Terminal<br></a></div>
+                    <div class="col colforbutton"><a class="btn btn-warning" role="button" id="settingsbutton" data-toggle="tooltip" title="" onclick="window.open(`//${window.location.hostname}:4222`)" target="_blank">Terminal<br></a></div>
                     <div class="col colforbutton">
                         <h3>&nbsp;</h3>
                     </div>

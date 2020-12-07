@@ -3,7 +3,7 @@
 
 ## CP 4.0.0a 04.Dezember 2020  <br />
 - fixed link to port to open ola panel  <br />
-
+- added startaudio to arnetcontrol  <br />
 
 ## CP 4.0.0 04.Dezember 2020  <br />
 

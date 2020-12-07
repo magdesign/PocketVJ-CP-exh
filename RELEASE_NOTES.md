@@ -1,6 +1,6 @@
 # PocketVJ Exhibition / Control Panel 3.x.x
 
-## CP 4.0.0 02.Dezember 2020  <br />
+## CP 4.0.0 04.Dezember 2020  <br />
 
 - faster stop command, now every task is 1s faster!!  <br />
 - complete rewerite of CP, better look and feel, more organised <br />
@@ -14,6 +14,7 @@
 - cleand up mapping tab  <br />
 - fixed clockdisplay  <br />
 - cleaned up a lot of code  <br />
+- dmx blackout on universe 0 -30  <br />
 
 ## Image 4.0.7 02.Dezember 2020 <br />
 - add python3-pygame python-pygame python3-tk python-tk <br />

@@ -1,5 +1,10 @@
 # PocketVJ Exhibition / Control Panel 3.x.x
 
+
+## CP 4.0.0a 04.Dezember 2020  <br />
+- fixed link to port to open ola panel  <br />
+
+
 ## CP 4.0.0 04.Dezember 2020  <br />
 
 - faster stop command, now every task is 1s faster!!  <br />

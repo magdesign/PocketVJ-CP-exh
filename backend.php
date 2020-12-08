@@ -677,28 +677,30 @@ if ($_GET['action'] == 'startdmxrecord05') {
 	$outputtext = "recording 05";
 	}
 
+//// dmx Playback
+
 if ($_GET['action'] == 'startdmxplayback01') {
-	exec("sudo /var/www/sync/startplayback01 > /dev/null &");
+	exec("sudo /var/www/sync/startdmxplayback01 > /dev/null &");
 	$outputtext = "playback show01";
 }
 
 if ($_GET['action'] == 'startdmxplayback02') {
-	exec("sudo /var/www/sync/startplayback02 > /dev/null &");
+	exec("sudo /var/www/sync/startdmxplayback02 > /dev/null &");
 	$outputtext = "playback show02";
 }
 
 if ($_GET['action'] == 'startdmxplayback03') {
-	exec("sudo /var/www/sync/startplayback03 > /dev/null &");
+	exec("sudo /var/www/sync/startdmxplayback03 > /dev/null &");
 	$outputtext = "playback show03";
 }
 
 if ($_GET['action'] == 'startdmxplayback04') {
-	exec("sudo /var/www/sync/startplayback04 > /dev/null &");
+	exec("sudo /var/www/sync/startdmxplayback04 > /dev/null &");
 	$outputtext = "playback show04";
 }
 
 if ($_GET['action'] == 'startdmxplayback04') {
-	exec("sudo /var/www/sync/startplayback04 > /dev/null &");
+	exec("sudo /var/www/sync/startdmxplayback04 > /dev/null &");
 	$outputtext = "playback show04";
 }
 

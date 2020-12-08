@@ -1,5 +1,7 @@
 # PocketVJ Exhibition / Control Panel 3.x.x
 
+CP 4.0.0b 08. December 2020
+- fixed typo to start dmx show only  <br />
 
 ## CP 4.0.0a 04.Dezember 2020  <br />
 - fixed link to port to open ola panel  <br />

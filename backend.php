@@ -707,55 +707,55 @@ if ($_GET['action'] == 'startdmxplayback04') {
 //# DMX and video player
 
 if ($_GET['action'] == 'startdmxplaybackvid01') {
-	exec("sudo /var/www/sync/startdmxplaybackvid01");
+	exec("sudo /var/www/sync/startdmxplaybackvid01 > /dev/null &");
 	$outputtext = "playback dmx01 and video 01_* in loop";
 	}
 
 if ($_GET['action'] == 'startdmxplaybackvid02') {
-	exec("sudo /var/www/sync/startdmxplaybackvid02");
+	exec("sudo /var/www/sync/startdmxplaybackvid02 > /dev/null &");
 	$outputtext = "playback dmx02 and video 02_* in loop";
 	}
 
 
 if ($_GET['action'] == 'startdmxplaybackvid03') {
-	exec("sudo /var/www/sync/startdmxplaybackvid03");
+	exec("sudo /var/www/sync/startdmxplaybackvid03 > /dev/null &");
 	$outputtext = "playback dmx03 and video 03_* in loop";
 	}
 
 if ($_GET['action'] == 'startdmxplaybackvid04') {
-	exec("sudo /var/www/sync/startdmxplaybackvid04");
+	exec("sudo /var/www/sync/startdmxplaybackvid04 > /dev/null &");
 	$outputtext = "playback dmx04 and video 04_* in loop";
 	}
 	
 if ($_GET['action'] == 'startdmxplaybackvid05') {
-	exec("sudo /var/www/sync/startdmxplaybackvid05");
+	exec("sudo /var/www/sync/startdmxplaybackvid05 > /dev/null &");
 	$outputtext = "playback dmx05 and video 05_* in loop";
 	}
 			
 //# DMX with audio player
 
 if ($_GET['action'] == 'startdmxplaybackaudio01') {
-	exec("sudo /var/www/sync/startdmxplaybackaudio01");
+	exec("sudo /var/www/sync/startdmxplaybackaudio01 > /dev/null &");
 	$outputtext = "playback dmx and audio 01_* and loop";
 }
 
 if ($_GET['action'] == 'startdmxplaybackaudio02') {
-	exec("sudo /var/www/sync/startdmxplaybackaudio02");
+	exec("sudo /var/www/sync/startdmxplaybackaudio02 > /dev/null &");
 	$outputtext = "playback dmx and audio 02_* and loop";
 }
 
 if ($_GET['action'] == 'startdmxplaybackaudio03') {
-	exec("sudo /var/www/sync/startdmxplaybackaudio03");
+	exec("sudo /var/www/sync/startdmxplaybackaudio03 > /dev/null &");
 	$outputtext = "playback dmx and audio 03_* and loop";
 }
 
 if ($_GET['action'] == 'startdmxplaybackaudio04') {
-	exec("sudo /var/www/sync/startdmxplaybackaudio04");
+	exec("sudo /var/www/sync/startdmxplaybackaudio04 > /dev/null &");
 	$outputtext = "playback dmx and audio 04_* and loop";
 }
 
 if ($_GET['action'] == 'startdmxplaybackaudio05') {
-	exec("sudo /var/www/sync/startdmxplaybackaudio05");
+	exec("sudo /var/www/sync/startdmxplaybackaudio05 > /dev/null &");
 	$outputtext = "playback dmx and audio 05_* and loop";
 }
 

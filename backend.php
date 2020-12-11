@@ -156,7 +156,7 @@ if ($_GET['action'] == 'stopslaves') {
 ///////////////////////
 
 if ($_GET['action'] == 'startless') {
-	exec("sudo /var/www/sync/startless");
+	exec("sudo /var/www/sync/startless > /dev/null 2>&1");
 	$outputtext = "start video without sync";
 }
 

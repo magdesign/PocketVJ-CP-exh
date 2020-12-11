@@ -3,7 +3,7 @@
 
 ## CP 4.0.0b 11. December 2020
 - fixed startless output message in CP <br />
-- fixed output message for SHow0x/Video/Audio start <br />
+- fixed output message for Show0x/Video/Audio start <br />
 
 ## CP 4.0.0b 08. December 2020
 - fixed typo to start dmx show only  <br />

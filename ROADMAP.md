@@ -1,17 +1,16 @@
 **Roadmap / Next Steps:** <p/>
-
+- test the stop slaves script  <p/>
+- add start master and slaves to buttons  <p/>
+- test if RTC's are slaves, Exhibtion push button, all players start  <p/>
 - pass omxplayer error to CP when set to alsa but no usb soundcard is connected <p/>
-- make stop script faster <p/>
-- sync stop: when in sync mode, send stop from master over network to all slaves tcp commands in an optional stopslaves script? <p/>
-- rethink the video master/slave, make it same as mapper, just to select if sync/master/slave, does omxplayer play severals files without our script?<p/>
 - when accessed over the internet, the ola panel is not visible, check how to handle ports with the remote, currently you can ask for another port link..   <p/>
-- dmx comand to remote record (start / stop recording dmx) directly from light-console  <p/>
-- playlist feature to play dmx/video01 and afterwards 02 and so on, tricky bit will be to gather the end of the file...   <p/>
+- dmx comand to remote record (start / stop recording dmx) directly from light-console, on universe 50? <p/>
+- playlist feature to play dmx/video01 and afterwards 02 and so on, tricky bit will be to gather the end of the file audio or dmx end counts?...   <p/>
 - fix the annoying usb cable mouse issue when using mapper  <p/>
 - add pygame to update as offline package, for countdown <p/>
 - add set time for countdown function and also trigger master on time = 0 <p/>
 
-<p/> <p/>
+<p/> just some ideas: <p/>
 
 - Adding wake on lan feature? <p/>
 - add wireless-power off to interfaces ? <p/>
@@ -49,15 +48,10 @@
 - Video tutorial for VNC/Linux/remote Mapping/Recording<p/>
 
 **Pipeline/Provider:** <p/>
-- get rid of webflow, since their support is catastrophic and the mess nearly weekly with my pipeline (bootstrap is the new way, already on it)<p/>
 - push the user manual to github and provide it with readthedocs.io, <p/>
-- find an opensource solution to get rid of vimeo (peer tube? alternatives?)<p/>
-- get a bigger and faster server to host most of the services and contribute to a opensource video platform <p/>
+- find an opensource solution to get rid of vimeo (peer tube? avideo?)<p/>
 - change webshop to an opensource variant <p/>
 
-**Tests:** <p/>
-
-- test sync script with large files, adjust window if necessary<p/>
-- sync with very short files <p/>
+**Test:** <p/>
 - test autostart of dmxshow<p/>
 - push buttons and rtc's as slaves<p/>

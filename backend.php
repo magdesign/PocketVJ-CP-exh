@@ -1366,11 +1366,13 @@ if ($_GET['action'] == 'updateall') {
 	system("sudo cp /var/www/sync/omxplayer-sync /usr/bin/omxplayer-sync");
 	system("sudo cp /var/www/sync/omxplayer-sync-old /usr/bin/omxplayer-sync-old");
 	system ("sudo cp /var/www/sync/omxplayer-sync-wifi /usr/bin/omxplayer-sync-wifi");
-	//cleanup:
-	system("sudo apt-get clean");
+	// permissions for the sync scripts
 	system("sudo chmod a+x /usr/bin/omxplayer");
 	system("sudo chmod a+x /usr/bin/omxplayer.bin");
 	system("sudo chmod a+x /usr/bin/omxplayer-sync");
+	system("sudo chmod a+x /usr/bin/omxplayer-sync-old");
+	//cleanup:
+	system("sudo apt-get clean");	
 	//Update Interfaceswifi
 	system("sudo cp /var/www/sync/interfaceswifi /etc/network/interfaceswifi");
 	//Update Boot config

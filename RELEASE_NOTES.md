@@ -1,6 +1,11 @@
 # PocketVJ Exhibition / Control Panel 3.x.x
 
 
+## CP 4.0.1 15. December 2020
+
+- added startonce 01 to buttons, so you can use receicers/slaves together with buttons <br />
+- fixed update procedure for the slve/reciver once (needs 2x update all) <br />
+
 ## CP 4.0.0b 11. December 2020
 - fixed startless output message in CP <br />
 - fixed output message for Show0x/Video/Audio start <br />

@@ -38,7 +38,7 @@ Code below loads custom js for form submission without reload-->
                 <div class="col d-flex justify-content-end">
                     <div class="row">
                         <div class="col">
-                            <p class="text-center" id="version_text" style="font-weight: normal;padding-top: 12px;color: rgb(0,0,0);">CP 4.0.0c<br><a href="https://github.com/magdesign/PocketVJ-CP-exh/issues" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help.svg" style="text-align: right;padding: 8px;max-width: 60%;"></a><br><br></p>
+                            <p class="text-center" id="version_text" style="font-weight: normal;padding-top: 12px;color: rgb(0,0,0);">CP 4.0.1<br><a href="https://github.com/magdesign/PocketVJ-CP-exh/issues" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help.svg" style="text-align: right;padding: 8px;max-width: 60%;"></a><br><br></p>
                         </div>
                     </div>
                 </div>
@@ -417,7 +417,7 @@ Code below loads custom js for form submission without reload-->
                         <div class="col">
                             <div>
                                 <h3>OVERLAY</h3>
-                                <div class="col colforbutton"><a class="btn btn-success action" role="button" href="?action=overlay">Overlay</a></div>
+                                <div class="col colforbutton"><a class="btn btn-success action" role="button" href="?action=overlay" data-toggle="tooltip" title="/images/overlay.png over everything">Overlay</a></div>
                                 <div class="col colforbutton">
                                     <h3>&nbsp;</h3>
                                 </div>
@@ -582,7 +582,7 @@ Code below loads custom js for form submission without reload-->
                                 <h2>&nbsp;</h2>
                                 <div class="col colforbutton" style="height: 48px;"><a class="btn btn-primary action" role="button" href="?action=startslaveonce">Receiver/Slave Once</a></div>
                                 <div class="col colforbutton"><a class="btn btn-primary action" role="button" href="?action=stopslaves">Stop Slaves</a></div>
-                                <div class="col colforbutton"><a class="btn btn-primary action" role="button" href="?action=setsync_short" data-toggle="tooltip" title="use this of very short videos do not play">set short videos</a></div>
+                                <div class="col colforbutton"><a class="btn btn-primary action" role="button" href="?action=setsync_short" data-toggle="tooltip" title="use this if very short videos do not play">set short videos</a></div>
                             </div>
                         </div>
                     </div>
@@ -973,6 +973,11 @@ Code below loads custom js for form submission without reload-->
                                     </form>
                                 </div>
                                 <div class="col colforbutton" style="height: 24px;">
+                                    <form id="cpbutton1form-10" method="post" style="margin-left: 12px;">
+                                        <div class="form-check"><input class="form-check-input" type="radio" id="cpbutton-1" method="post" name="cpbutton1" onclick="SubmitBTNFormData();" value="startmasterone01"><label class="form-check-label" for="formCheck-1">startvideo once 01_*</label></div>
+                                    </form>
+                                </div>
+                                <div class="col colforbutton" style="height: 24px;">
                                     <form id="cpbutton1form-3" method="post" style="margin-left: 12px;">
                                         <div class="form-check"><input class="form-check-input" type="radio" id="cpbutton1" method="post" name="cpbutton1" onclick="SubmitBTNFormData();" value="startmaster01"><label class="form-check-label" for="formCheck-1">startvideo 02_*</label></div>
                                     </form>
@@ -1028,6 +1033,11 @@ Code below loads custom js for form submission without reload-->
                                     </form>
                                 </div>
                                 <div class="col colforbutton" style="height: 24px;">
+                                    <form id="cpbutton2form-10" method="post" style="margin-left: 10px;">
+                                        <div class="form-check"><input class="form-check-input" type="radio" id="cpbutton-2" method="post" name="cpbutton2" onclick="SubmitBTN2FormData2();" value="startmasterone01"><label class="form-check-label" for="formCheck-1">startvideo once 01_*</label></div>
+                                    </form>
+                                </div>
+                                <div class="col colforbutton" style="height: 24px;">
                                     <form id="cpbutton2form-3" method="post" style="margin-left: 10px;">
                                         <div class="form-check"><input class="form-check-input" type="radio" id="cpbutton2" method="post" name="cpbutton2" onclick="SubmitBTN2FormData2();" value="startmaster02"><label class="form-check-label" for="formCheck-1">startvideo 02_*</label></div>
                                     </form>
@@ -1080,6 +1090,11 @@ Code below loads custom js for form submission without reload-->
                                 <div class="col colforbutton" style="height: 24px;">
                                     <form id="cpbutton3form-2" method="post" style="margin-left: 10px;">
                                         <div class="form-check"><input class="form-check-input" type="radio" id="cpbutton3" method="post" name="cpbutton3" onclick="SubmitBTN3FormData3();" value="startmaster01"><label class="form-check-label" for="formCheck-1">startvideo 01_*</label></div>
+                                    </form>
+                                </div>
+                                <div class="col colforbutton" style="height: 24px;">
+                                    <form id="cpbutton3form-10" method="post" style="margin-left: 10px;">
+                                        <div class="form-check"><input class="form-check-input" type="radio" id="cpbutton-3" method="post" name="cpbutton3" onclick="SubmitBTN3FormData3();" value="startmasterone01"><label class="form-check-label" for="formCheck-1">startvideo once 01_*</label></div>
                                     </form>
                                 </div>
                                 <div class="col colforbutton" style="height: 24px;">
@@ -1372,15 +1387,15 @@ Code below loads custom js for form submission without reload-->
                     <div>
                         <h2>DMX&nbsp;Recorder</h2>
                         <div class="col colforbutton" style="height: 78px;"><a class="btn btn-primary action" role="button" data-toggle="tooltip" title="stop dmx recording" href="?action=stopdmx">Stop Recording</a></div>
-                        <div class="col colforbutton"><a class="btn btn-danger action" role="button" data-toggle="tooltip" title="record on all 20 universes" href="?action=startdmxrecord01">&nbsp;REC Show01</a></div>
+                        <div class="col colforbutton"><a class="btn btn-danger action" role="button" data-toggle="tooltip" title="record universe 0-30" href="?action=startdmxrecord01">&nbsp;REC Show01</a></div>
                         <div class="col d-none d-lg-flex colforbutton" style="height: 68px;"></div>
-                        <div class="col colforbutton"><a class="btn btn-danger action" role="button" data-toggle="tooltip" title="record on all 20 universes" href="?action=startdmxrecord02">&nbsp;REC Show02</a></div>
+                        <div class="col colforbutton"><a class="btn btn-danger action" role="button" data-toggle="tooltip" title="record universe 0-20" href="?action=startdmxrecord02">&nbsp;REC Show02</a></div>
                         <div class="col d-none d-lg-flex colforbutton" style="height: 68px;"></div>
-                        <div class="col colforbutton"><a class="btn btn-danger action" role="button" data-toggle="tooltip" title="record on all 20 universes" href="?action=startdmxrecord03">&nbsp;REC Show03</a></div>
+                        <div class="col colforbutton"><a class="btn btn-danger action" role="button" data-toggle="tooltip" title="record universe 0-20" href="?action=startdmxrecord03">&nbsp;REC Show03</a></div>
                         <div class="col d-none d-lg-flex colforbutton" style="height: 68px;"></div>
-                        <div class="col colforbutton"><a class="btn btn-danger action" role="button" data-toggle="tooltip" title="record on all 20 universes" href="?action=startdmxrecord04">&nbsp;REC Show04</a></div>
+                        <div class="col colforbutton"><a class="btn btn-danger action" role="button" data-toggle="tooltip" title="record universe 0-20" href="?action=startdmxrecord04">&nbsp;REC Show04</a></div>
                         <div class="col d-none d-lg-flex colforbutton" style="height: 68px;"></div>
-                        <div class="col colforbutton"><a class="btn btn-danger action" role="button" data-toggle="tooltip" title="record on all 20 universes" href="?action=startdmxrecord05">&nbsp;REC Show05</a></div>
+                        <div class="col colforbutton"><a class="btn btn-danger action" role="button" data-toggle="tooltip" title="record universe 0-20" href="?action=startdmxrecord05">&nbsp;REC Show05</a></div>
                         <div class="col d-none d-lg-flex colforbutton" style="height: 68px;"></div>
                     </div>
                 </div>
@@ -1950,7 +1965,7 @@ Code below loads custom js for form submission without reload-->
             <div class="col">
                 <div>
                     <h2>ACCESS</h2>
-                    <div class="col colforbutton"><a class="btn btn-warning" role="button" id="settingsbutton" data-toggle="tooltip" title="" onclick="window.open(`//${window.location.hostname}:4222`)" target="_blank">Terminal<br></a></div>
+                    <div class="col colforbutton"><a class="btn btn-warning" role="button" id="settingsbutton" onclick="window.open(`//${window.location.hostname}:4222`)" target="_blank">Terminal<br></a></div>
                     <div class="col colforbutton">
                         <h3>&nbsp;</h3>
                     </div>
@@ -2000,7 +2015,6 @@ Code below loads custom js for form submission without reload-->
     </footer>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-
 
 <!-- Code below sets the "Set Time" button function--> 
  
@@ -2069,6 +2083,8 @@ Code below loads custom js for form submission without reload-->
            });
        });
        </script>
+
+
 </body>
 
 </html>

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#LED Blinking 
+/usr/bin/python /var/www/sync/ledblinking.py
+
+#start into countdown
+
+/var/www/sync/startcountdown &
+
+exit 0

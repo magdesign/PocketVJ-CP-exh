@@ -84,8 +84,11 @@ sudo kill $(pgrep 'aplaymidi') > /dev/null 2>&1 &
 #overwrite screen with all black, tri to avoid in future
 #sudo /var/www/sync/clearscreen.sh > /dev/null &
 
-#overwrite tty with black to get rid of the clock
+#overwrite tty1 -tty3 with black to get rid of the clock
 sudo printf "\033c" > /dev/tty1 2>&1 &
+sudo printf "\033c" > /dev/tty2 2>&1 &
+sudo printf "\033c" > /dev/tty3 2>&1 &
+
 
 #make dmx show files writeable
 sudo chmod 777 -R /media/internal/dmx > /dev/null 2>&1 &

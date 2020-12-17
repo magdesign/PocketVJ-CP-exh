@@ -1060,6 +1060,13 @@ if ($_GET['action'] == 'autostartdmxaud01') {
 	$outputtext = "autostart to DMX01 & Audio 01";
 }
 
+
+if ($_GET['action'] == 'autostartcountdown') {
+	system("sudo cp /var/www/sync/rc.local.countdown /etc/rc.local");
+	$outputtext = "autostart to countdown";
+}
+
+
 //# Display IP
 
 if ($_GET['action'] == 'ipwifi') {
@@ -1806,6 +1813,17 @@ if ($_GET['action'] == 'timer') {
 	$preoutputtext =  "<pre>$output</pre>";
 	$outputtext = wordwrap($preoutputtext, 120, "<br />\n");
 }
+
+//////
+// Countdown
+////////
+
+if ($_GET['action'] == 'startcountdown') {
+	$outputtext =  "Countdown started";
+	//system("sudo /var/www/sync/stopall > /dev/null 2>&1");
+	system("sudo /var/www/sync/startcountdown");
+}
+
 
 //# Clock Display
 

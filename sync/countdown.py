@@ -30,10 +30,10 @@ now = 0
 stopdsding = 1
 
 #define my custom time value:
-timevalue = 6
+timevalue = 700
 
 #define what shoud be trigger when countdown is over
-triggervalue = "/var/www/sync/testscreen"
+triggervalue = "/var/www/sync/startmaster"
 
 
 #hide mouse
@@ -80,7 +80,7 @@ try:
          pygame.display.update()
          os.system(triggervalue)
          #now = 0
-         print ("exiting now")
+         #print ("exiting now")
 
       # quit
       for event in pygame.event.get():

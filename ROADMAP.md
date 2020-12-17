@@ -1,6 +1,7 @@
 **Roadmap / Next Steps:** <p/>
 
-- pass omxplayer error to CP when set to alsa but no usb soundcard is connected <p/>
+- pass omxplayer error to CP when set to alsa but no usb soundcard is connected !!! <p/>
+- limit IP input to IP adresses only, no text etc. how do I do that??  <p/>
 - when accessed over the internet, the ola panel is not visible, check how to handle ports with the remote, currently you can ask via mail for another port link..   <p/>
 - dmx comand to remote record (start / stop recording dmx) directly from light-console, on universe 50? <p/>
 - playlist feature to play dmx/video01 and afterwards 02 and so on, tricky bit will be to gather the end of the file audio or dmx end counts?...   <p/>

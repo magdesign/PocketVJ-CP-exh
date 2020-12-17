@@ -30,6 +30,12 @@ sudo killall -9 mpg321 > /dev/null 2>&1 &
 sudo killall -9 feh > /dev/null 2>&1 &
 sudo /var/www/sync/testscreenoff > /dev/null 2>&1 &
 
+#kill countdown
+
+#sudo kill $(pgrep 'countdown.py') > /dev/null 2>&1 &
+sudo kill $(pgrep -f '/usr/bin/python3 /var/www/sync/countdown.py') > /dev/null 2>&1 &
+
+
 #kill kenburns imageplayer
 #sudo pkill -9 -f Slideshow_3d.py > /dev/null 2>&1
 sudo pkill -9 -f PictureFrame.py > /dev/null 2>&1 &

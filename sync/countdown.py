@@ -3,10 +3,12 @@
 import pygame, sys
 import time
 from pygame.locals import *
+import os
 
 # set display
 whiteColor = pygame.Color(255,255,255)
 greyColor = pygame.Color(0,0,0)
+
 
 pygame.init()
 font = 200
@@ -23,18 +25,29 @@ windowSurfaceObj.blit(msgSurfaceObj, msgRectobj)
 pygame.display.update()
 now = 0
 
-jadsisch = 5
-voumann = 10
+
+#when set to 1 it will start, set to 0 countdown will stop
 stopdsding = 1
+
+#define my custom time value:
+timevalue = 6
+
+#define what shoud be trigger when countdown is over
+triggervalue = "/var/www/sync/testscreen"
+
+
+#hide mouse
+pygame.mouse.set_cursor((8,8),(0,0),(0,0,0,0,0,0,0,0),(0,0,0,0,0,0,0,0))
+
 try:
    run = 0
    
    while now >= 0 :
       # check for start
-      if jadsisch == 5 or run == 1:
+      if stopdsding == 1 or run == 1:
          if run == 0:
-             if voumann == 10:
-                 start_time = 300
+             #print (timevalue)
+             start_time = (timevalue)
 
              start = time.time()
          now = start_time - (time.time() - start)
@@ -58,13 +71,17 @@ try:
       if stopdsding == 0 or now <= 0:
          run = 0
          msg = "00:00:00:000"
+         print (("function = ") + (triggervalue))
          pygame.draw.rect(windowSurfaceObj,greyColor,Rect(0,0,width,height))
          msgSurfaceObj = fontObj.render(msg, False,whiteColor)
          msgRectobj = msgSurfaceObj.get_rect()
          msgRectobj.topleft =(2,0)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
          windowSurfaceObj.blit(msgSurfaceObj, msgRectobj)
          pygame.display.update()
-         now = 0
+         os.system(triggervalue)
+         #now = 0
+         print ("exiting now")
+
       # quit
       for event in pygame.event.get():
          if event.type == QUIT or event.type == MOUSEBUTTONUP or event.type == KEYDOWN:
@@ -75,3 +92,4 @@ except KeyboardInterrupt:
   print ("  Quit")
   pygame.quit()
   sys.exit()
+

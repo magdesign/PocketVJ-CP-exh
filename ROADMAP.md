@@ -32,11 +32,10 @@
 
 
 **Tutorials/Manual:** <p/>
-- rework all tutorials, make them shorter and faster, upload them to tutorials.pocketvj.com  <p/>
-- how to use the dmx delay function to sync audio/video with recorded dmx/artnet <p/>
+
 - how to change the distance of the pir sensor, factory wise set to ~5m and can be changed from ~3 to ~7m<p/>
-- connect usb soundcard for better audio quality<p/>
-- mapper sync<p/>
+- video connect usb soundcard for better audio quality<p/>
+- video mapper syn c<p/>
 - remote mapper with webcam, is this possible?<p/>
 - create list of OSC/midi commands for website (without code around it)<p/>
 - Video tutorial for presenter, how to create a simple menu card of a restaurant<p/>

@@ -3,6 +3,7 @@
 ## CP 4.0.2 17. December 2020 <br />
 
 - added countdown function (needs image version 4.0.7 !! older need python3-pygame python-pygame to be installed <br />
+- limited time inputs to numbers only <br />
 
 ## User Manual 16. December 2020 <br />
 

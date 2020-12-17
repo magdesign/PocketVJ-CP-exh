@@ -1241,7 +1241,9 @@ Code below loads custom js for form submission without reload-->
                             <div>
                                 <h2>SCHEDULER</h2>
                                 <div class="col colforbutton">
-                                    <div class="d-xl-flex align-items-xl-center" id="crondisplay" style="height: 60px;color: rgb(0,0,0);background: #ffffff;border-radius: 5px;margin: 10px;padding-left: 15px;padding-top: 15px;"><!-- this displays the cron plugin -->
+                                    <div class="d-xl-flex align-items-xl-center" id="crondisplay" style="height: 60px;color: rgb(0,0,0);background: #ffffff;border-radius: 5px;margin: 10px;padding-left: 15px;padding-top: 15px;">
+                                    
+                                    <!-- this displays the cron plugin -->
 
 <div class='crontab'>
     <div id='example1b'></div>
@@ -1378,14 +1380,13 @@ Code below loads custom js for form submission without reload-->
             </div>
             <div class="col">
                 <div>
-                    <h2>&nbsp;TIMETABLE</h2>
-                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="schedulerbutton" data-toggle="tooltip" title="" href="?action=timer">Show<br></a></div>
+                    
                 </div>
             </div>
             <div class="col">
                 <div>
                     <h3>&nbsp;</h3>
-                    <div class="col colforbutton" style="height: 48px;"></div>
+               
                 </div>
             </div>
         </div>

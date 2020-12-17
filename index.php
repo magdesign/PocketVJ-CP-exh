@@ -1364,7 +1364,7 @@ Code below loads custom js for form submission without reload-->
                 <div>
                     <h2>COUNTDOWN</h2>
                     <div class="col colforbutton">
-                        <form id="countdownform" method="post"><input class="form-control" type="text" id="countdown" name="countdown" placeholder="60" style="margin-left: 10px;max-width: 200px;"></form>
+                        <form id="countdownform" method="post"><input class="form-control" type="number" id="countdown" name="countdown" placeholder="60" style="margin-left: 10px;max-width: 200px;"></form>
                     </div>
                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="schedulerbutton-4" data-toggle="tooltip" title="start countdown" href="?action=startcountdown">Start<br></a></div>
                 </div>
@@ -1460,7 +1460,7 @@ Code below loads custom js for form submission without reload-->
                     <h2>DMX&nbsp;PLAYER</h2>
                     <div>
                         <div class="col colforbutton" style="height: 78px;">
-                            <form id="submitdelayform" method="post"><input class="form-control" type="text" id="delay" name="delay" placeholder="1.0" style="margin-left: 10px;max-width: 200px;"></form>
+                            <form id="submitdelayform" method="post"><input class="form-control" type="number" step="0.01" id="delay" name="delay" placeholder="1.0" style="margin-left: 10px;max-width: 200px;"></form>
                         </div>
                         <div class="col colforbutton"><a class="btn btn-secondary action" role="button" id="dmxbuttoncolor" data-toggle="tooltip" title="play show only" href="?action=startdmxplayback01">&nbsp; &nbsp; &nbsp; &nbsp;Show01&nbsp; &nbsp; &nbsp; &nbsp;</a></div>
                         <div class="col colforbutton"

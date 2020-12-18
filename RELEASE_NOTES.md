@@ -1,5 +1,9 @@
 # PocketVJ Exhibition / Control Panel 3.x.x
 
+## CP 4.0.2a 18. December 2020 <br />
+
+- fixed missleading rj45 ip when reverting from dhcp  <br />
+
 ## CP 4.0.2 17. December 2020 <br />
 
 - added countdown function (needs image version 4.0.7 !! older need python3-pygame python-pygame to be installed <br />

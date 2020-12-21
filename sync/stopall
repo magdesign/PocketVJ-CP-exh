@@ -35,6 +35,9 @@ sudo /var/www/sync/testscreenoff > /dev/null 2>&1 &
 #sudo kill $(pgrep 'countdown.py') > /dev/null 2>&1 &
 sudo kill $(pgrep -f '/usr/bin/python3 /var/www/sync/countdown.py') > /dev/null 2>&1 &
 
+#kill webcam lifefeed
+sudo kill $(pgrep -f '/usr/bin/python /var/www/sync/camerastream.py') > /dev/null 2>&1 &
+
 
 #kill kenburns imageplayer
 #sudo pkill -9 -f Slideshow_3d.py > /dev/null 2>&1

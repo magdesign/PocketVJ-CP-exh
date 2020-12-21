@@ -2534,6 +2534,12 @@ if ($_GET['action'] == 'stopwebcamusb') {
 	system("sudo /var/www/sync/stopwebcamusb");
 }
 
+if ($_GET['action'] == 'onscreenwebcamusb') {
+	$outputtext =  "show webcam on screen/display";
+	system("sudo /usr/bin/python /var/www/sync/camerastream.py");
+}
+
+
 
 //# enable camera in boot.config
 

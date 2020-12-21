@@ -1594,7 +1594,15 @@ if ($_GET['action'] == 'rentalreset') {
 	$outputtext =  "Rental reset done";
 }
 
-if ($_GET['action'] == 'updatekernel') {
+
+if ($_GET['action'] == 'installpygame') {
+	$outputtext =  "Install pygame";
+	system("sudo apt-get install -f /var/www/sync/debs/python3-pygame_1.9.3+dfsg-2_armhf.deb");
+	system("sudo apt-get install -f /var/www/sync/debs/python-pygame_1.9.3+dfsg-2_armhf.deb");
+	$outputtext = "installed pygame";
+}
+
+} ($_GET['action'] == 'updatekernel') {
 	$outputtext =  "Kernel to RT Kernel, untested yet!";
 	system("sudo cp /var/www/sync/raspberrypi4-linux-4.19.65-rt24-v7l+-usb-lowlatency.tar.gz /raspberrypi4-linux-4.19.65-rt24-v7l+-usb-lowlatency.tar.gz");
 	system("sudo tar -xzf /raspberrypi4-linux-4.19.65-rt24-v7l+-usb-lowlatency.tar.gz");

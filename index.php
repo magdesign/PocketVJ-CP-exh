@@ -44,7 +44,7 @@ Code below loads custom js for form submission without reload-->
                 <div class="col d-flex justify-content-end">
                     <div class="row">
                         <div class="col">
-                            <p class="text-center" id="version_text" style="font-weight: normal;padding-top: 12px;color: rgb(0,0,0);">CP 4.0.2a<br><a href="https://github.com/magdesign/PocketVJ-CP-exh/issues" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help.svg" style="text-align: right;padding: 8px;max-width: 60%;"></a><br><br></p>
+                            <p class="text-center" id="version_text" style="font-weight: normal;padding-top: 12px;color: rgb(0,0,0);">CP 4.0.3<br><a href="https://github.com/magdesign/PocketVJ-CP-exh/issues" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help.svg" style="text-align: right;padding: 8px;max-width: 60%;"></a><br><br></p>
                         </div>
                     </div>
                 </div>
@@ -623,8 +623,9 @@ Code below loads custom js for form submission without reload-->
                         <div class="col">
                             <div>
                                 <h2>CAMERA USB</h2>
-                                <div class="col colforbutton"><a class="btn btn-primary action" role="button" href="?action=startwebcamusb" data-toggle="tooltip" title="webcam">Webcam ON<br></a></div>
-                                <div class="col colforbutton"><a class="btn btn-primary" role="button" data-toggle="tooltip" title="show webcam" onclick="window.open(`//${window.location.hostname}:8081`)" target="_blank">Show<br></a></div>
+                                <div class="col colforbutton"><a class="btn btn-primary action" role="button" data-toggle="tooltip" title="show webcam on screen" href="?action=onscreenwebcamusb">Show on Screen<br></a></div>
+                                <div class="col colforbutton"><a class="btn btn-primary action" role="button" href="?action=startwebcamusb" data-toggle="tooltip" title="turn remote webcam on">Webcam ON<br></a></div>
+                                <div class="col colforbutton"><a class="btn btn-primary" role="button" data-toggle="tooltip" title="show remote webcam" onclick="window.open(`//${window.location.hostname}:8081`)" target="_blank">Show :8081<br></a></div>
                                 <div class="col colforbutton">
                                     <h3>&nbsp;</h3>
                                 </div>
@@ -633,7 +634,8 @@ Code below loads custom js for form submission without reload-->
                         <div class="col">
                             <div>
                                 <h3>&nbsp;</h3>
-                                <div class="col colforbutton"><a class="btn btn-primary action" role="button" href="?action=stopwebcamusb" data-toggle="tooltip" title="webcam">Webcam OFF<br></a></div>
+                                <div class="col colforbutton" style="height: 48px;"></div>
+                                <div class="col colforbutton"><a class="btn btn-primary action" role="button" href="?action=stopwebcamusb" data-toggle="tooltip" title="turn remote webcam off">Webcam OFF<br></a></div>
                             </div>
                         </div>
                         <div class="col">
@@ -1241,9 +1243,7 @@ Code below loads custom js for form submission without reload-->
                             <div>
                                 <h2>SCHEDULER</h2>
                                 <div class="col colforbutton">
-                                    <div class="d-xl-flex align-items-xl-center" id="crondisplay" style="height: 60px;color: rgb(0,0,0);background: #ffffff;border-radius: 5px;margin: 10px;padding-left: 15px;padding-top: 15px;">
-                                    
-                                    <!-- this displays the cron plugin -->
+                                    <div class="d-xl-flex align-items-xl-center" id="crondisplay" style="height: 60px;color: rgb(0,0,0);background: #ffffff;border-radius: 5px;margin: 10px;padding-left: 15px;padding-top: 15px;"><!-- this displays the cron plugin -->
 
 <div class='crontab'>
     <div id='example1b'></div>
@@ -1379,14 +1379,12 @@ Code below loads custom js for form submission without reload-->
                 </div>
             </div>
             <div class="col">
-                <div>
-                    
-                </div>
+                <div></div>
             </div>
             <div class="col">
                 <div>
                     <h3>&nbsp;</h3>
-               
+                    <div class="col colforbutton" style="height: 48px;"></div>
                 </div>
             </div>
         </div>
@@ -1461,7 +1459,7 @@ Code below loads custom js for form submission without reload-->
                     <h2>DMX&nbsp;PLAYER</h2>
                     <div>
                         <div class="col colforbutton" style="height: 78px;">
-                            <form id="submitdelayform" method="post"><input class="form-control" type="number" step="0.01" id="delay" name="delay" placeholder="1.0" style="margin-left: 10px;max-width: 200px;"></form>
+                            <form id="submitdelayform" method="post"><input class="form-control" type="number" id="delay" name="delay" placeholder="1.0" step="0.01" style="margin-left: 10px;max-width: 200px;"></form>
                         </div>
                         <div class="col colforbutton"><a class="btn btn-secondary action" role="button" id="dmxbuttoncolor" data-toggle="tooltip" title="play show only" href="?action=startdmxplayback01">&nbsp; &nbsp; &nbsp; &nbsp;Show01&nbsp; &nbsp; &nbsp; &nbsp;</a></div>
                         <div class="col colforbutton"
@@ -1967,6 +1965,7 @@ Code below loads custom js for form submission without reload-->
                     <h2>FIRMWARE</h2>
                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="" href="?action=updateall">Update Everything<br></a></div>
                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="" href="?action=updateola">Update OLA<br></a></div>
+                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="install pygame for countdown" href="?action=installpygame">install pygame<br></a></div>
                     <div class="col colforbutton">
                         <h3>&nbsp;</h3>
                     </div>
@@ -2052,12 +2051,6 @@ Code below loads custom js for form submission without reload-->
     </footer>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
- <!--  remove the 2x "active" words for the tabs-->
-
- <!--  insert this code before the </body> tag-->
-
-
-
 
 <!-- Code below sets the "Set Time" button function--> 
  
@@ -2121,8 +2114,6 @@ setInterval(run, 3000);
         });
     });
     </script>
-
-
 
 </body>
 

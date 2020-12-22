@@ -1,9 +1,10 @@
 # PocketVJ Exhibition / Control Panel 3.x.x
 
-## CP 4.0.3 (not released yet) 21. December 2020 <br />
+## CP 4.0.3 22. December 2020 <br />
 
 - added "webcam on screen" display <br />
 - added "install pygame" for countdown and webcam  <br />
+- alsatester to workaround when people hit play but no usb soundcard was present, now automatically switches to hdmi/jack audio and plays, only on "Play All" from CP<br /> 
 
 ## CP 4.0.2a 18. December 2020 <br />
 

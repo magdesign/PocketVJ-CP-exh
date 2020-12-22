@@ -1,35 +1,46 @@
 #!/bin/bash
 
-# to control if an usb soundcard is present, if not, tell the user that we will not play
 
+########################################################################
+# it checks if usb alsa is present,if not, switches to both and play   #
+# is a wrapper for startmaster since a lot of errors where due missing #
+# usb devie while it was set to usb                                    #
+########################################################################
 
-# this checks if hardware side is an usb card present
-
-#if cat /proc/asound/cards | grep -q 'USB'
-#then
-#  echo "sound card is present, play"
-     
-#else
-#  echo "usdb not presetn witch soundcard to jack or hdmi"
- 
-#fi
-#exit 0
-
-
-
-# this checks if omxplayer is set to alsa/usb
-
-if cat /var/www/sync/startmaster | grep -q 'alsa'
+if  cat /var/www/sync/startmaster | grep -q 'alsa' && cat /proc/asound/cards | grep -q 'USB' 
 then
-  echo "alsa USB"
+  echo "audio usb all good"
+  /var/www/sync/startmaster
+  exit 0
+
+elif  cat /var/www/sync/startmaster | grep -q 'local'
+then
+  echo "play its local"
+  /var/www/sync/startmaster
+  exit 0
+
+elif  cat /var/www/sync/startmaster | grep -q 'hdmi'
+then 
+  echo "play its hdmi"
+  /var/www/sync/startmaster
+  exit 0
+
+elif  cat /var/www/sync/startmaster | grep -q 'both'
+then 
+  echo "play its both"
+  /var/www/sync/startmaster
+  exit 0
+
 else
-  echo "jack/hdmi"
+ echo "no usb found, revert all to hdmi and play"
+ /var/www/sync/setaudio_both &
+ sleep 1
+ echo "play"
+ /var/www/sync/startmaster
+ exit 0
+
 fi
 
 
 
 
-# now we need somehow to combine this to:
-# if omxplayer is set to alsa and usb is present = play
-# if omxplayer is set to alsa and usb is not present trow an error message and exit
-# if omxplyer is not set to alsa, just play

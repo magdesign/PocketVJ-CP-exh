@@ -5,6 +5,49 @@
 /var/www/sync/stopall
 #sleep 3
 
+########################################################################
+# it checks if usb alsa is present,if not, switches to both and play   #
+# is a wrapper for startmaster since a lot of errors where due missing #
+# usb devie while it was set to usb                                    #
+########################################################################
+
+if  cat /var/www/sync/startmaster | grep -q 'alsa' && cat /proc/asound/cards | grep -q 'USB' 
+then
+  echo "audio usb all good"
+  sudo /var/www/sync/startlesshelper > /dev/null 2>&1 & echo $! &
+  exit 0
+
+elif  cat /var/www/sync/startmaster | grep -q 'local'
+then
+  echo "play its local"
+  sudo /var/www/sync/startlesshelper > /dev/null 2>&1 & echo $! &
+  exit 0
+
+elif  cat /var/www/sync/startmaster | grep -q 'hdmi'
+then 
+  echo "play its hdmi"
+  sudo /var/www/sync/startlesshelper > /dev/null 2>&1 & echo $! &
+  exit 0
+
+elif  cat /var/www/sync/startmaster | grep -q 'both'
+then 
+  echo "play its both"
+  sudo /var/www/sync/startlesshelper > /dev/null 2>&1 & echo $! &
+  exit 0
+
+else
+ echo "no usb found, revert all to hdmi and play"
+ /var/www/sync/setaudio_both &
+ sleep 1
+ echo "play"
+ sudo /var/www/sync/startlesshelper > /dev/null 2>&1 & echo $! &
+ exit 0
+
+fi
+
+
+
+
 #start the lesshelper script which will play all files in folder
-sudo /var/www/sync/startlesshelper > /dev/null 2>&1 & echo $! &
+#sudo /var/www/sync/startlesshelper > /dev/null 2>&1 & echo $! &
 

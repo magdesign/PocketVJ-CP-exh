@@ -50,7 +50,8 @@ if ($_GET['action'] == 'startslavewifi') {
 }
 
 if ($_GET['action'] == 'startmaster') {
-	exec("sudo /var/www/sync/startmaster");
+	#exec("sudo /var/www/sync/startmaster");
+	exec("sudo /var/www/sync/alsatester");
 	$outputtext = "start player as master";
 }
 

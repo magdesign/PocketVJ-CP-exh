@@ -5,6 +5,7 @@
 - added "webcam on screen" display <br />
 - added "install pygame" for countdown and webcam  <br />
 - alsatester to workaround when people hit play but no usb soundcard was present, now automatically switches to hdmi/jack audio and plays, only on "Play All" from CP<br /> 
+- moved *.deb files from /sync folder to /sync/debs folder <br />
 
 ## CP 4.0.2a 18. December 2020 <br />
 

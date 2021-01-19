@@ -25,6 +25,7 @@
 - Complete authors file, will this ever happen, there are soooo many people involved<p/>
 - read color from video and create dmx fixture for it: https://github.com/MadSciLabs/ofxDmxUtils  <p/>
 - parse dmx sequences from "*cough* from the garage" software to playback on PocketVJ (similar to mapping converter, can someone send me an exported file?)<p/>
+- install remote sounding tools for bands, so they can make quarantine music together: https://github.com/corrados/jamulus 
 <p/>
 
 

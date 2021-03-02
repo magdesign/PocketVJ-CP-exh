@@ -2,7 +2,6 @@
 
 
 - add "Set Projector Password" field  <p/>
-- fix "Projector Status" query  <p/>
 - remove old projector scripts <p/>
 - make a button to check for [undervoltage](https://raspberrypi.stackexchange.com/questions/60593/how-raspbian-detects-under-voltage): 
 

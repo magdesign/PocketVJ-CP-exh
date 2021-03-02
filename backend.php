@@ -1440,6 +1440,11 @@ if ($_GET['action'] == 'updateall') {
 	system("sudo rm -rf /var/www/sync/omxplayer_0.3.7-git20160923-dfea8c9_armhf.deb");	
 	//fix permissions
 	system("sudo chmod 777 -R /media");
+	//fix the pjlink to new version
+	//create folder if not already present
+	system("mkdir /home/pvj/.local/share/pjlink");
+	//copy standard pjlink config file:
+	system("cp /var/www/sync/pjlink.conf /home/pvj/.local/share/pjlink/pjlink.conf");
 	//Text Output
 	$outputtext =  "Updated everything Controlpanel, Mapper, OMXPLAYER, Timer, Boot";
 }
@@ -1492,7 +1497,11 @@ if ($_GET['action'] == 'factoryreset') {
 	//system("sudo apt-get clean");
 	//set ip on network scripts to match pvj current ip
 	system("sudo /var/www/sync/iprangeUpdatecall");
-	
+	//fix the pjlink to new version
+	//create folder if not already present
+	system("mkdir /home/pvj/.local/share/pjlink");
+	//copy standard pjlink config file:
+	system("cp /var/www/sync/pjlink.conf /home/pvj/.local/share/pjlink/pjlink.conf");
 }
 
 // rental reset
@@ -1589,9 +1598,15 @@ if ($_GET['action'] == 'rentalreset') {
 	system("sudo sed -ri 's@<SlideDuration>.+</SlideDuration>@<SlideDuration>5</SlideDuration>@' /home/pvj/openFrameworks/addons/ofxPiMapper/example_fbo-sources/bin/data/magslideshow_settings.xml");
 	// stop buttons
 	system("sudo /var/www/sync/stopbuttons");
+	//fix the pjlink to new version
+	//create folder if not already present
+	system("mkdir /home/pvj/.local/share/pjlink");
+	//copy standard pjlink config file:
+	system("cp /var/www/sync/pjlink.conf /home/pvj/.local/share/pjlink/pjlink.conf");
 	////////////////
 	//////to do:
 	// set to default filebrowser!!!
+	
 	$outputtext =  "Rental reset done";
 }
 

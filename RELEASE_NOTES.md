@@ -3,6 +3,7 @@
 ## CP 4.0.3a 02. March 2021 <br />
 
 - fixed link for "Projector Interface", it was not opening  <br />
+- fixed pjlink for projectors with passwords, see manual  <br />
 
 ## CP 4.0.3 22. December 2020 <br />
 

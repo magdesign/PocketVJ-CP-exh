@@ -1,3 +1,5 @@
 #!/bin/bash
 
-sudo /var/www/sync/beamer_on_off.sh --off
+#sudo /var/www/sync/beamer_on_off.sh --off
+sudo su - pvj -c "/usr/local/bin/pjlink power off"
+

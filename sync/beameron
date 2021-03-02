@@ -1,3 +1,7 @@
 #!/bin/bash
 
-sudo /var/www/sync/beamer_on_off.sh --on
+#sudo /var/www/sync/beamer_on_off.sh --on
+#sudo su -c /usr/local/bin/pjlink power on -s /bin/sh pvj &
+sudo su - pvj -c "/usr/local/bin/pjlink power on"
+
+

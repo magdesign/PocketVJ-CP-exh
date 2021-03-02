@@ -4,6 +4,7 @@
 
 - fixed link for "Projector Interface", it was not opening  <br />
 - fixed pjlink for projectors with passwords, see manual  <br />
+- "VNC ON" Button is fixed and working  <br />
 
 ## CP 4.0.3 22. December 2020 <br />
 

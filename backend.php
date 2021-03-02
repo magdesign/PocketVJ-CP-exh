@@ -2422,7 +2422,7 @@ if ($_GET['action'] == 'tcpsserver_topleft') {
 
 //# Start Screenshare
 
-if ($_GET['action'] == 'startscreenshare') {
+if ($_GET['action'] == 'startscreensharing') {
 	$outputtext =  "start screenshare";
 	system("sudo /var/www/sync/stopall");
 	// show IP on tty2

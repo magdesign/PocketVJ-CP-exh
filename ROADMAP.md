@@ -1,9 +1,7 @@
 **Roadmap / Next Steps:** <p/>
 
 
-- add "Set Projector Password" field  <p/>
 - remove old projector scripts <p/>
-- make a button to check for [undervoltage](https://raspberrypi.stackexchange.com/questions/60593/how-raspbian-detects-under-voltage): 
 
 - limit IP input to IP adresses only, no text etc. how do I do that??  <p/>
 - when accessed over the internet, the ola panel is not visible, check how to handle ports with the remote, currently you can ask via mail for another port link..   <p/>

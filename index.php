@@ -15,6 +15,9 @@ Code below loads custom js for form submission without reload-->
 <!--Code  below is for beamer IP infos-->
 <script src="js/submitbeamerip.js"></script>
 
+<!--Code  below is for beamer password -->
+<script src="js/submitbeamerpass.js"></script>
+
 <!--Code  below is for countdown set-->
 <script src="js/submitcountdown.js"></script>
 
@@ -44,7 +47,7 @@ Code below loads custom js for form submission without reload-->
                 <div class="col d-flex justify-content-end">
                     <div class="row">
                         <div class="col">
-                            <p class="text-center" id="version_text" style="font-weight: normal;padding-top: 12px;color: rgb(0,0,0);">CP 4.0.3a<br><a href="https://github.com/magdesign/PocketVJ-CP-exh/issues" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help.svg" style="text-align: right;padding: 8px;max-width: 60%;"></a><br></p>
+                            <p class="text-center" id="version_text" style="font-weight: normal;padding-top: 12px;color: rgb(0,0,0);">CP 4.0.4<br><a href="https://github.com/magdesign/PocketVJ-CP-exh/issues" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help.svg" style="text-align: right;padding: 8px;max-width: 60%;"></a><br></p>
                         </div>
                     </div>
                 </div>
@@ -1666,7 +1669,7 @@ Code below loads custom js for form submission without reload-->
                                         <form id="beameripform" method="post"><input class="form-control" type="text" id="beamerip" name="beamerip" placeholder="192.168.2.254" style="margin-left: 10px;max-width: 200px;"></form>
                                     </div>
                                     <div class="col colforbutton">
-                                        <h2>&nbsp;</h2>
+                                        <form id="beamerpassform" method="post"><input class="form-control" type="text" id="beamerpass" name="beamerpass" placeholder="empty for no password" style="margin-left: 10px;max-width: 200px;"></form>
                                     </div>
                                 </div>
                             </div>
@@ -1676,6 +1679,7 @@ Code below loads custom js for form submission without reload-->
                                     <div class="col colforbutton"><a class="btn btn-danger action" role="button" href="?action=beameroff" data-toggle="tooltip" title="Beamer OFF">OFF</a></div>
                                     <div class="col colforbutton"><a class="btn btn-danger" role="button" href="http://192.168.2.254" target="_blank" data-toggle="tooltip" title="opens control interface of projector">Interface</a></div>
                                     <div class="col colforbutton"><a class="btn btn-danger" role="button" id="submitbeameripFormData" onclick="SubmitbeameripFormData();" value="Set IP" data-toggle="tooltip" title="make sure to stay in same range as pvj rj45">Set IP</a></div>
+                                    <div class="col colforbutton"><a class="btn btn-danger" role="button" id="submitbeamerpassFormData" onclick="SubmitbeamerpassFormData();" value="Set beamerpass" data-toggle="tooltip" title="set password for beamer">Set Password</a></div>
                                 </div>
                             </div>
                             <div class="col">
@@ -1884,7 +1888,6 @@ Code below loads custom js for form submission without reload-->
                                 <div>
                                     <h2>INFO</h2>
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="" href="?action=buildversion">PVJ Version<br></a></div>
-                                    <div class="col colforbutton"></div>
                                 </div>
                             </div>
                             <div class="col">
@@ -1892,7 +1895,6 @@ Code below loads custom js for form submission without reload-->
                                     <div class="col colforbutton">
                                         <h3>&nbsp;</h3><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="" href="?action=oladversion">OLA Version<br></a>
                                     </div>
-                                    <div class="col colforbutton"></div>
                                 </div>
                             </div>
                             <div class="col">
@@ -1900,7 +1902,7 @@ Code below loads custom js for form submission without reload-->
                                     <div class="col colforbutton">
                                         <h2>&nbsp;&nbsp;</h2><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="" href="?action=gettemp">CPU Temperature<br></a>
                                     </div>
-                                    <div class="col colforbutton"></div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="" href="?action=powersupply">Powersupply<br></a></div>
                                 </div>
                             </div>
                             <div class="col">
@@ -2034,6 +2036,8 @@ Code below loads custom js for form submission without reload-->
     </footer>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+
 <!-- Code below sets the "Set Time" button function--> 
  
 <script type="text/javascript">

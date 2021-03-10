@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#check if powersupply gives enough current
+
+if sudo /opt/vc/bin/vcgencmd get_throttled = "throttled=0x0"
+    then
+    echo "==> POWER IS GOOD!"
+else
+echo "==> POWER IS NOT GOOD!"
+fi
+
+exit 0

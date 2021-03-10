@@ -1,5 +1,11 @@
 # PocketVJ Exhibition / Control Panel 3.x.x
 
+## CP 4.0.4 10. March 2021 <br />
+
+- added powersupply check, since some powersupplys do no provide enough current <br />
+- added field to set beamer password  <br />
+
+
 ## CP 4.0.3a 02. March 2021 <br />
 
 - fixed link for "Projector Interface", it was not opening  <br />

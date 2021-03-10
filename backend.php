@@ -1499,9 +1499,9 @@ if ($_GET['action'] == 'factoryreset') {
 	system("sudo /var/www/sync/iprangeUpdatecall");
 	//fix the pjlink to new version
 	//create folder if not already present
-	system("mkdir /home/pvj/.local/share/pjlink");
+	system("sudo mkdir /home/pvj/.local/share/pjlink");
 	//copy standard pjlink config file:
-	system("cp /var/www/sync/pjlink.conf /home/pvj/.local/share/pjlink/pjlink.conf");
+	system("sudo cp /var/www/sync/pjlink.conf /home/pvj/.local/share/pjlink/pjlink.conf");
 }
 
 // rental reset
@@ -2459,6 +2459,11 @@ if ($_GET['action'] == 'buildversion') {
 if ($_GET['action'] == 'oladversion') {
 	$outputtext = shell_exec('/usr/bin/olad --version');
 }
+
+if ($_GET['action'] == 'powersupply') {
+	$outputtext = shell_exec('/var/www/sync/powersupply');
+}
+
 
 
 

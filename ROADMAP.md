@@ -1,6 +1,6 @@
 **Roadmap / Next Steps:** <p/>
 
-
+- try the mapper mouse fix by [BjarneJensen](https://github.com/magdesign/PocketVJ-CP-v3/issues/92#issuecomment-787531172) and add it <p/>
 - remove old projector scripts <p/>
 
 - limit IP input to IP adresses only, no text etc. how do I do that??  <p/>

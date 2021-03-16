@@ -2,7 +2,8 @@
 
 - try the mapper mouse fix by [BjarneJensen](https://github.com/magdesign/PocketVJ-CP-v3/issues/92#issuecomment-787531172) and add it <p/>
 - remove old projector scripts <p/>
-
+- when leaving VNC mode, presenter is not working correctly, fix this!
+- add a brightness function to make the hdmi output brighter or darker.
 - limit IP input to IP adresses only, no text etc. how do I do that??  <p/>
 - when accessed over the internet, the ola panel is not visible, check how to handle ports with the remote, currently you can ask via mail for another port link..   <p/>
 - dmx comand to remote record (start / stop recording dmx) directly from light-console, on universe 50? <p/>

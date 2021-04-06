@@ -3,7 +3,7 @@
 - try the mapper mouse fix by [BjarneJensen](https://github.com/magdesign/PocketVJ-CP-v3/issues/92#issuecomment-787531172) and add it <p/>
 - remove old projector scripts <p/>
 - add bluetooth audio tethering to connect boomboxes  <p/>
-- function to emulate modern bluetooth LE remotes HID over Gatt to remotely turn on/off projectors  <p/>
+- function to emulate modern bluetooth LE remotes [HID over Gatt](https://stackoverflow.com/questions/54745576/detecting-the-buttons-on-a-bluetooth-remote-hid-over-gatt) to remotely turn on/off projectors  <p/>
 - screenrecorder to make draft reordings of vnc sessions (if there is enough performance)  <p/>
 - when leaving VNC mode, presenter is not working correctly, fix this! <p/>
 - add a brightness function to make the hdmi output [brighter or darker](https://discourse.osmc.tv/t/change-hdmi-monitor-brightness-aka-backlight-from-osmc-kodi/71892/8) <p/>

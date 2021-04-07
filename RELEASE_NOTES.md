@@ -1,5 +1,10 @@
 # PocketVJ Exhibition / Control Panel 3.x.x
 
+
+## CP 4.0.4a 07. April 2021 <br />
+
+- powersupply check now outputs the correct value <br />
+
 ## CP 4.0.4 10. March 2021 <br />
 
 - added powersupply check, since some powersupplys do no provide enough current <br />

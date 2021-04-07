@@ -2461,7 +2461,7 @@ if ($_GET['action'] == 'oladversion') {
 }
 
 if ($_GET['action'] == 'powersupply') {
-	$outputtext = shell_exec('/var/www/sync/powersupply');
+	$outputtext = shell_exec('/var/www/sync/powersupply | grep Power');
 }
 
 

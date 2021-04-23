@@ -1,6 +1,6 @@
 **Roadmap / Next Steps:** <p/>
 
-- try the mapper mouse fix by [BjarneJensen](https://github.com/magdesign/PocketVJ-CP-v3/issues/92#issuecomment-787531172) and add it <p/>
+
 - remove old projector scripts <p/>
 - add bluetooth audio tethering to connect boomboxes (its more complicated than I thought) <p/>
 - function to emulate modern bluetooth LE remotes [HID over Gatt](https://stackoverflow.com/questions/54745576/detecting-the-buttons-on-a-bluetooth-remote-hid-over-gatt) to remotely turn on/off projectors  <p/>
@@ -39,6 +39,7 @@
 
 **Tutorials/Manual:** <p/>
 
+- rewrite mapper section since mapping without mouse and over remote is working now! <p/>
 - how to change the distance of the pir sensor, factory wise set to ~5m and can be changed from ~3 to ~7m<p/>
 - video connect usb soundcard for better audio quality<p/>
 - video mapper syn c<p/>
@@ -54,3 +55,5 @@
 **Test:** <p/>
 - test autostart of dmxshow<p/>
 
+
+by magdesign 2021

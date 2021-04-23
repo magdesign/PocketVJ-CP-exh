@@ -1,6 +1,11 @@
 # PocketVJ Exhibition / Control Panel 3.x.x
 
 
+## CP 4.0.5 23. April 2021 <br />
+
+- fixed the issue that mapper was not controllable without mouse, now you are able to control it from CP ;-), massive thanks to [BjarneJensen](https://github.com/BjarneJensen)!<br />
+- added a dialog when clicking power down, to ask if user really is sure to do so <br />
+
 ## CP 4.0.4a 07. April 2021 <br />
 
 - powersupply check now outputs the correct value <br />

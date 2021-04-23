@@ -9,6 +9,7 @@ sudo /var/www/sync/stopall
 
 sleep 0.5
 
+#copy setting
 sudo cp /media/internal/mappersets/mappersetting1.xml /home/pvj/openFrameworks/addons/ofxPiMapper/example_basic/bin/data/ofxpimapper.xml
 sudo cp /media/internal/mappersets/mappersetting1.xml /home/pvj/openFrameworks/addons/ofxPiMapper/example_camera/bin/data/ofxpimapper.xml
 sudo cp /media/internal/mappersets/mappersetting1.xml /home/pvj/openFrameworks/addons/ofxPiMapper/example_fbo-sources/bin/data/ofxpimapper.xml

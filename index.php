@@ -47,7 +47,7 @@ Code below loads custom js for form submission without reload-->
                 <div class="col d-flex justify-content-end">
                     <div class="row">
                         <div class="col">
-                            <p class="text-center" id="version_text" style="font-weight: normal;padding-top: 12px;color: rgb(0,0,0);">CP 4.0.4a<br><a href="https://github.com/magdesign/PocketVJ-CP-exh/issues" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help.svg" style="text-align: right;padding: 8px;max-width: 60%;"></a><br></p>
+                            <p class="text-center" id="version_text" style="font-weight: normal;padding-top: 12px;color: rgb(0,0,0);">CP 4.0.5<br><a href="https://github.com/magdesign/PocketVJ-CP-exh/issues" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help.svg" style="text-align: right;padding: 8px;max-width: 60%;"></a><br></p>
                         </div>
                     </div>
                 </div>
@@ -64,7 +64,7 @@ Code below loads custom js for form submission without reload-->
                 <div class="col"><a class="d-xl-flex justify-content-xl-center action" href="?action=testscreen"><img class="d-xl-flex justify-content-xl-center shortcuts_header" src="assets/img/testscreen_icon.svg" data-toggle="tooltip" title="testscreen"></a></div>
                 <div class="col"><a class="d-xl-flex justify-content-xl-center action" href="?action=getresolution"><img class="d-xl-flex justify-content-xl-center shortcuts_header action" src="assets/img/resolution_icon.svg" data-toggle="tooltip" title="get resolution"></a></div>
                 <div class="col"><a class="d-xl-flex justify-content-xl-center action" href="?action=reboot"><img class="d-xl-flex justify-content-xl-center shortcuts_header" src="assets/img/power_icon.svg" data-toggle="tooltip" title="reboot"></a></div>
-                <div class="col"><a class="d-xl-flex justify-content-xl-center action" href="?action=shutdown"><img class="d-xl-flex justify-content-xl-center shortcuts_header" src="assets/img/power_off_icon.svg" title="shutdown" data-toggle="tooltip"></a></div>
+                <div class="col"><a class="d-xl-flex justify-content-xl-center action" style="text-align: center;"><img class="d-xl-flex justify-content-xl-center shortcuts_header" src="assets/img/power_off_icon.svg" title="shutdown" data-toggle="modal" data-target="#modal-1" type="button"></a></div>
             </div>
         </section>
         <section class="text-center" id="output_window" style="font-weight: 500;color: rgb(20,20,20);height: 111px;"><div style="height:100%; overflow-y: auto; overflow-x: hidden;padding:10px;">
@@ -2028,6 +2028,16 @@ Code below loads custom js for form submission without reload-->
                 </div>
             </div>
         </section>
+        <div class="modal fade" role="dialog" tabindex="-1" id="modal-1">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <p style="color: var(--red);text-align: center;font-weight: 800;"><br><br>Really powering down??</p><a class="d-xl-flex justify-content-xl-center action" href="?action=shutdown" style="text-align: center;"><img class="d-xl-flex justify-content-xl-center shortcuts_header" src="assets/img/power_off_icon.svg" title="shutdown" data-toggle="tooltip" data-bs-toggle="modal" data-bs-target="#modal-1" type="button"></a>
+                    <div class="modal-body">
+                        <p>The content of your modal.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <footer id="footer" style="height: 200px;">
         <div class="container" style="background: #e0e0e0;border-radius: 15px;">
@@ -2036,71 +2046,68 @@ Code below loads custom js for form submission without reload-->
     </footer>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-
-
 <!-- Code below sets the "Set Time" button function--> 
  
 <script type="text/javascript">
-    function settime() {
-       window.open('time_change.php');
-       document.getElementById('actions_output').innerHTML = ("time set");
-     } 
-   </script>
-   
-   
-   <!--Code below this line checks if user is online-->
-   
-   <script src="js/offline.min.js"></script>
-   <link rel="stylesheet" href="../themes/offline-theme-chrome.css" />
-   <link rel="stylesheet" href="../themes/offline-language-english.css" />
-   
-   <script>
-     var run = function(){
-     var req = new XMLHttpRequest();
-     req.timeout = 5000;
-     req.open('GET', 'http://localhost:8888/walter/0', true);
-     req.send();
-   }
-   setInterval(run, 3000);
-   
-           Offline.options = {
-           requests: false
-           }
-           
-   </script>
-   
-   
-   <!--Code below is for button actions-->
-   
-     <script type="text/javascript">
-      $("a.action").on("click", function(event) { 
-          event.preventDefault();
-          $.get( "backend.php" + $(this).attr('href'), function(data) {
-             $("#actions_output").html(data);
-          });
-      });
-      </script>
-   
-   
-      <!--Code  below is for cron / Scheduler generator -->
-   
-     <link rel="stylesheet" href="js/gentleSelect/jquery-gentleSelect.css">
-     <link rel="stylesheet" href="js/cron/jquery-cron.css">
-       <script src="js/jquery.min.js"></script>
-     <script src="js/gentleSelect/jquery-gentleSelect-min.js"></script>
-     <script src="js/cron/jquery-cron.js"></script>
-     <script type="text/javascript">
-       $(document).ready(function() {
-           $('#example1b').cron({
-               initial: "9 21 * * *",
-               onChange: function() {
-                   $('#example1b-val').text($(this).cron("value"));
-               },
-               useGentleSelect: true
-           });
-       });
-       </script>
+ function settime() {
+    window.open('time_change.php');
+    document.getElementById('actions_output').innerHTML = ("time set");
+  } 
+</script>
 
+
+<!--Code below this line checks if user is online-->
+
+<script src="js/offline.min.js"></script>
+<link rel="stylesheet" href="../themes/offline-theme-chrome.css" />
+<link rel="stylesheet" href="../themes/offline-language-english.css" />
+
+<script>
+  var run = function(){
+  var req = new XMLHttpRequest();
+  req.timeout = 5000;
+  req.open('GET', 'http://localhost:8888/walter/0', true);
+  req.send();
+}
+setInterval(run, 3000);
+
+        Offline.options = {
+        requests: false
+        }
+        
+</script>
+
+
+<!--Code below is for button actions-->
+
+  <script type="text/javascript">
+   $("a.action").on("click", function(event) { 
+       event.preventDefault();
+       $.get( "backend.php" + $(this).attr('href'), function(data) {
+          $("#actions_output").html(data);
+       });
+   });
+   </script>
+
+
+   <!--Code  below is for cron / Scheduler generator -->
+
+  <link rel="stylesheet" href="js/gentleSelect/jquery-gentleSelect.css">
+  <link rel="stylesheet" href="js/cron/jquery-cron.css">
+    <script src="js/jquery.min.js"></script>
+  <script src="js/gentleSelect/jquery-gentleSelect-min.js"></script>
+  <script src="js/cron/jquery-cron.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+        $('#example1b').cron({
+            initial: "9 21 * * *",
+            onChange: function() {
+                $('#example1b-val').text($(this).cron("value"));
+            },
+            useGentleSelect: true
+        });
+    });
+    </script>
 
 
 </body>

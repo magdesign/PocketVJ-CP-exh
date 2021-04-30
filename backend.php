@@ -1617,11 +1617,25 @@ if ($_GET['action'] == 'installpygame') {
 	$outputtext = "installed pygame";
 }
 
+if ($_GET['action'] == 'installbluetooth') {
+	$outputtext =  "Install bluetooth support";
+	system("sudo apt-get install -y /var/www/sync/debs/rfkill_0.5-1_armhf.deb");
+	system("sudo apt-get install -y /var/www/sync/debs/raspberrypi-sys-mods_20181127_armhf.deb");
+	system("sudo apt-get install -y /var/www/sync/debs/bluez-firmware_1.2-3+rpt7_all.deb");
+	system("sudo apt-get install -y /var/www/sync/debs/pi-bluetooth_0.1.10_all.deb");
+	$outputtext = "installed bluetooth";
+}
+
 if ($_GET['action'] == 'updatekernel') {
 	$outputtext =  "Kernel to RT Kernel, untested yet!";
 	system("sudo cp /var/www/sync/raspberrypi4-linux-4.19.65-rt24-v7l+-usb-lowlatency.tar.gz /raspberrypi4-linux-4.19.65-rt24-v7l+-usb-lowlatency.tar.gz");
 	system("sudo tar -xzf /raspberrypi4-linux-4.19.65-rt24-v7l+-usb-lowlatency.tar.gz");
 	system("sudo reboot");
+
+	//$outputtext =  "Update Kernel to 5.x";
+	//system("sudo cp /var/www/sync/raspberrypi4-linux-4.19.65-rt24-v7l+-usb-lowlatency.tar.gz /raspberrypi4-linux-4.19.65-rt24-v7l+-usb-lowlatency.tar.gz");
+	//system("sudo tar -xzf /raspberrypi4-linux-4.19.65-rt24-v7l+-usb-lowlatency.tar.gz");
+	//system("sudo reboot");
 }
 
 if ($_GET['action'] == 'updateola') {
@@ -1715,7 +1729,7 @@ if ($_GET['action'] == 'connectedtowifi') {
 }
 
 //# Disable Wifi & Bluetooth
-
+//this needs rework, new we have dt overlays to handle this
 if ($_GET['action'] == 'wifidisable') {
 	$outputtext =  "wifi&bluetooth permanent off";
 	system("sudo cp /var/www/sync/raspi-blacklist.conf /etc/modprobe.d/raspi-blacklist.conf");
@@ -1761,13 +1775,36 @@ if ($_GET['action'] == 'alsa_out') {
 	$outputtext =  "Audio set to alsa:hw:1,0";
 }
 
+if ($_GET['action'] == 'bluetooth_out') {
+	system("sudo /var/www/sync/setaudio_bluetooth");
+	$outputtext =  "Audio set to bluetooth";
+}
+
+////////////////////////////////////
+//# Audio Bluetooth connection kit//
+///////////////////////////////////
+
+if ($_GET['action'] == 'bluetooth_scan') {
+	//$output = shell_exec('sudo hcitool scan');
+	$outputtext = shell_exec('/var/www/sync/bluetooth_scan.sh');
+	//this is used to bring output with linebreaks ;)
+    //$outputtext = "<pre>$output</pre>";
+}
+
+if ($_GET['action'] == 'bluetooth_pair') {
+	$output = shell_exec('/var/www/sync/bluetooth_pair.sh');
+    $outputtext = "<pre>$output</pre>";
+}
 
 
 
 
 
 
+
+///////////////////////////////////
 //# conform images to hd
+///////////////////////////////////
 
 if ($_GET['action'] == 'imageconform') {
 	system("sudo /var/www/sync/stopall > /dev/null 2>&1");
@@ -2460,12 +2497,13 @@ if ($_GET['action'] == 'oladversion') {
 	$outputtext = shell_exec('/usr/bin/olad --version');
 }
 
+if ($_GET['action'] == 'kernelversion') {
+	$outputtext = shell_exec('sudo uname -r');
+}
+
 if ($_GET['action'] == 'powersupply') {
 	$outputtext = shell_exec('/var/www/sync/powersupply | grep Power');
 }
-
-
-
 
 //# Webserver
 
@@ -2672,8 +2710,6 @@ if ($_GET['action'] == 'stopbuttons') {
 	system("sudo /var/www/sync/stopbuttons");
 	$outputtext =  "stop buttons";
 }
-
-
 
 echo $outputtext;
 ?>

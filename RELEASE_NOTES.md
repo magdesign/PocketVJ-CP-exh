@@ -1,5 +1,12 @@
 # PocketVJ Exhibition / Control Panel 3.x.x
 
+## CP 4.0.6 not released yet 2021 <br />
+
+- added install bluetooth button<br />
+- added all debs to install bluetooth functions<br />
+- added scan/connect/pair scripts (but they lage sometimes, not finished yet)<br />
+- function to ask for kernel version <br />
+- final fix on powersuppyly script  <br />
 
 ## CP 4.0.5 23. April 2021 <br />
 

@@ -47,7 +47,7 @@ Code below loads custom js for form submission without reload-->
                 <div class="col d-flex justify-content-end">
                     <div class="row">
                         <div class="col">
-                            <p class="text-center" id="version_text" style="font-weight: normal;padding-top: 12px;color: rgb(0,0,0);">CP 4.0.5<br><a href="https://github.com/magdesign/PocketVJ-CP-exh/issues" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help.svg" style="text-align: right;padding: 8px;max-width: 60%;"></a><br></p>
+                            <p class="text-center" id="version_text" style="font-weight: normal;padding-top: 12px;color: rgb(0,0,0);">CP 4.0.6<br><a href="https://github.com/magdesign/PocketVJ-CP-exh/issues" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help.svg" style="text-align: right;padding: 8px;max-width: 60%;"></a><br></p>
                         </div>
                     </div>
                 </div>
@@ -1888,6 +1888,7 @@ Code below loads custom js for form submission without reload-->
                                 <div>
                                     <h2>INFO</h2>
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="" href="?action=buildversion">PVJ Version<br></a></div>
+                                    <div class="col colforbutton"></div>
                                 </div>
                             </div>
                             <div class="col">
@@ -1895,6 +1896,7 @@ Code below loads custom js for form submission without reload-->
                                     <div class="col colforbutton">
                                         <h3>&nbsp;</h3><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="" href="?action=oladversion">OLA Version<br></a>
                                     </div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="" href="?action=kernelversion">Kernel Version<br></a></div>
                                 </div>
                             </div>
                             <div class="col">
@@ -1917,14 +1919,16 @@ Code below loads custom js for form submission without reload-->
                                 <div>
                                     <h2>AUDIO OUTPUT</h2>
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="set audio output to hdmi" href="?action=hdmi_out">HDMI<br></a></div>
-                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="" href="?action=both_out">HDMI&amp;Jack<br></a></div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="audio to both" href="?action=both_out">HDMI&amp;Jack<br></a></div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="audio to bluetooth (pair first!!!)" href="?action=bluetooth_out">Bluetooth<br></a></div>
                                 </div>
                             </div>
                             <div class="col">
                                 <div>
                                     <h3>&nbsp;</h3>
-                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="" href="?action=jack_out">Jack<br></a></div>
-                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="" href="?action=alsa_out">USB/Alsa<br></a></div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="audio to minijack" href="?action=jack_out">Jack<br></a></div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="audio to usb soundcard if available" href="?action=alsa_out">USB/Alsa<br></a></div>
+                                    <div class="col colforbutton"></div>
                                 </div>
                             </div>
                             <div class="col">
@@ -1947,10 +1951,35 @@ Code below loads custom js for form submission without reload-->
                         <div class="row no-gutters row-cols-2 row-cols-lg-4" style="margin-right: -15px;margin-left: -15px;background: #f86800;">
                             <div class="col">
                                 <div>
+                                    <h2>AUDIO Bluetooth</h2>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="scan for bluetooth devices" href="?action=bluetooth_scan">scan<br></a></div>
+                                    <div class="col colforbutton"></div>
+                                    <div class="col colforbutton"></div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div>
+                                    <h3>&nbsp;</h3>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="no working yet" href="">disconnect<br></a></div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="pair to scanned device" href="?action=bluetooth_pair">connect/pair<br></a></div>
+                                    <div class="col colforbutton"></div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div></div>
+                            </div>
+                            <div class="col">
+                                <div></div>
+                            </div>
+                        </div>
+                        <div class="row no-gutters row-cols-2 row-cols-lg-4" style="margin-right: -15px;margin-left: -15px;background: #f86800;">
+                            <div class="col">
+                                <div>
                                     <h2>FIRMWARE</h2>
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="" href="?action=updateall">Update Everything<br></a></div>
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="" href="?action=updateola">Update OLA<br></a></div>
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="install pygame for countdown" href="?action=installpygame">install pygame<br></a></div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="install pygame for countdown" href="?action=installbluetooth">install bluetooth<br></a></div>
                                     <div class="col colforbutton">
                                         <h3>&nbsp;</h3>
                                     </div>
@@ -1964,6 +1993,7 @@ Code below loads custom js for form submission without reload-->
                                     <div class="col colforbutton">
                                         <h3>&nbsp;</h3>
                                     </div>
+                                    <div class="col colforbutton"></div>
                                 </div>
                             </div>
                             <div class="col">
@@ -1971,6 +2001,9 @@ Code below loads custom js for form submission without reload-->
                                     <h2>&nbsp;UPDATE MAPPER</h2>
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="" href="?action=mapperupdate">Mapper<br></a></div>
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="" href="?action=mapperupdatehdmi">Mapper HDMI<br></a></div>
+                                    <div class="col colforbutton">
+                                        <h3>&nbsp;</h3>
+                                    </div>
                                     <div class="col colforbutton">
                                         <h3>&nbsp;</h3>
                                     </div>
@@ -2006,7 +2039,7 @@ Code below loads custom js for form submission without reload-->
                             <div class="col">
                                 <div>
                                     <h2>&nbsp;ALPHA STUFF</h2>
-                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="untested, do not click!" href="?action=updatekernel">switch to RT kernel<br></a></div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="untested, do not click!" href="?action=updatekernel">update rt kernel<br></a></div>
                                     <div class="col colforbutton"></div>
                                     <div class="col colforbutton">
                                         <h3>&nbsp;</h3>
@@ -2046,6 +2079,7 @@ Code below loads custom js for form submission without reload-->
     </footer>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
 <!-- Code below sets the "Set Time" button function--> 
  
 <script type="text/javascript">
@@ -2108,7 +2142,6 @@ setInterval(run, 3000);
         });
     });
     </script>
-
 
 </body>
 

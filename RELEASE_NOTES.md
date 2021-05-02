@@ -1,5 +1,14 @@
 # PocketVJ Exhibition / Control Panel 3.x.x
 
+
+## Image 4.0.8 unreleased 2021 <br />
+
+- sudo apt install ir-keytable
+- reinstalled lirc with patched version
+- fixed /etc/lirc/lirc_options.conf:
+- (screenrecorder?)
+- new kernel ?
+
 ## CP 4.0.6 not released yet 2021 <br />
 
 - added install bluetooth button<br />

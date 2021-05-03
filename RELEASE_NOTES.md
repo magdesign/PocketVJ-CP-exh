@@ -1,21 +1,24 @@
 # PocketVJ Exhibition / Control Panel 3.x.x
 
 
-## Image 4.0.8 unreleased 2021 <br />
 
-- sudo apt install ir-keytable
-- reinstalled lirc with patched version
-- fixed /etc/lirc/lirc_options.conf:
-- (screenrecorder?)
-- new kernel ?
 
-## CP 4.0.6 not released yet 2021 <br />
+## CP 4.0.6 03. Mai 2021 <br />
 
 - added install bluetooth button<br />
 - added all debs to install bluetooth functions<br />
-- added scan/connect/pair scripts (but they lage sometimes, not finished yet)<br />
+- to do: added scan/connect/pair scripts (but they lage sometimes)<br />
 - function to ask for kernel version <br />
 - final fix on powersuppyly script  <br />
+- todo: added option in all boot/config.txt to enable IR sender<br />
+- added buttons to turn on off projectors over ir, see manual <br />
+
+## Image 4.0.8 03.Mai 2021 <br />
+
+- sudo apt install ir-keytable<br />
+- reinstalled lirc with patched version<br />
+- fixed /etc/lirc/lirc_options.conf:<br />
+- all this can also be done on older images, see user manual<br />
 
 ## CP 4.0.5 23. April 2021 <br />
 

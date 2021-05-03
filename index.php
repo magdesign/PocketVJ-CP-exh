@@ -1699,6 +1699,40 @@ Code below loads custom js for form submission without reload-->
                                 </div>
                             </div>
                         </div>
+                        <div class="row no-gutters row-cols-2 row-cols-lg-4" style="margin-right: -15px;margin-left: -15px;background: #972c2c;">
+                            <div class="col">
+                                <div>
+                                    <h2>PROJECTOR IR</h2>
+                                    <div class="col colforbutton"><a class="btn btn-danger action" role="button" href="?action=beameronir" data-toggle="tooltip" title="Beamer ON IR">ON</a></div>
+                                    <div class="col colforbutton">
+                                        <p>read the user manual for this!<br><br></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div>
+                                    <h3>&nbsp;</h3>
+                                    <div class="col colforbutton"><a class="btn btn-danger action" role="button" href="?action=beameroffir" data-toggle="tooltip" title="Beamer OFF IR">OFF</a></div>
+                                    <div class="col colforbutton">
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <h2>&nbsp;</h2>
+                                <div>
+                                    <div class="col colforbutton"></div>
+                                    <div class="col colforbutton"></div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <h3>&nbsp;</h3>
+                                <div>
+                                    <div class="col colforbutton"></div>
+                                    <div class="col colforbutton"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="tab-pane" role="tabpanel" id="tab-11">
                         <div class="row">
@@ -1960,7 +1994,7 @@ Code below loads custom js for form submission without reload-->
                             <div class="col">
                                 <div>
                                     <h3>&nbsp;</h3>
-                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="no working yet" href="">disconnect<br></a></div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="not working yet" href="">disconnect<br></a></div>
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="pair to scanned device" href="?action=bluetooth_pair">connect/pair<br></a></div>
                                     <div class="col colforbutton"></div>
                                 </div>
@@ -2142,6 +2176,7 @@ setInterval(run, 3000);
         });
     });
     </script>
+
 
 </body>
 

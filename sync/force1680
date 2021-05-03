@@ -21,3 +21,7 @@ dtoverlay=i2c-rtc,mcp7940x
 dtparam=i2c_arm=on
 dtparam=audio=on
 start_x=0
+
+#enable IR sender on
+#dtoverlay=gpio-ir,gpio_pin=18
+#dtoverlay=gpio-ir-tx,gpio_pin=4

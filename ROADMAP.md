@@ -2,18 +2,14 @@
 
 
 - remove old projector scripts <p/>
-- add bluetooth audio tethering to connect boomboxes (its more complicated than I thought) <p/>
-- function to emulate modern bluetooth LE remotes [HID over Gatt](https://stackoverflow.com/questions/54745576/detecting-the-buttons-on-a-bluetooth-remote-hid-over-gatt) to remotely turn on/off projectors  <p/>
-- screenrecorder to make draft reordings of vnc sessions (if there is enough performance)  <p/>
+- add bluetooth audio tethering to connect boomboxes (scan works, connect is wip) <p/>
 - when leaving VNC mode, presenter is not working correctly, fix this! <p/>
-- add a brightness function to make the hdmi output [brighter or darker](https://discourse.osmc.tv/t/change-hdmi-monitor-brightness-aka-backlight-from-osmc-kodi/71892/8) <p/>
 - function to directly drive LED stripes via [PWM](https://tutorials-raspberrypi.com/connect-control-raspberry-pi-ws2812-rgb-led-strips/) from the expansion board
 - limit IP input to IP adresses only, no text etc. how do I do that??  <p/>
 - when accessed over the internet, the ola panel is not visible, check how to handle ports with the remote, currently you can ask via mail for another port link..   <p/>
 - dmx comand to remote record (start / stop recording dmx) directly from light-console, on universe 50? <p/>
 - playlist feature to play dmx/video01 and afterwards 02 and so on, tricky bit will be to gather the end of the file audio or dmx end counts?...   <p/>
-- fix the annoying usb cable mouse issue when using mapper  <p/>
-- add pygame to update as offline package under system settings, for countdown <p/>
+- add pygame to update as offline package under system settings, for countdown, package is already there, only button is missing <p/>
 
 <p/> just some ideas: <p/>
 
@@ -32,7 +28,7 @@
 - Complete authors file, will this ever happen, there are soooo many people involved<p/>
 - read color from video and create dmx fixture for it: https://github.com/MadSciLabs/ofxDmxUtils  <p/>
 - parse dmx sequences from "*cough* from the garage" software to playback on PocketVJ (similar to mapping converter, can someone send me an exported file?)<p/>
-- install remote sounding tools for bands, so they can make quarantine music together: https://github.com/corrados/jamulus 
+
 <p/>
 
 
@@ -42,15 +38,16 @@
 - rewrite mapper section since mapping without mouse and over remote is working now! <p/>
 - how to change the distance of the pir sensor, factory wise set to ~5m and can be changed from ~3 to ~7m<p/>
 - video connect usb soundcard for better audio quality<p/>
-- video mapper syn c<p/>
-- remote mapper with webcam, is this possible?<p/>
+- video mapper sync<p/>
+- remote mapper with webcam, is this possible?, I guess yes, but need to try<p/>
 - create list of OSC/midi commands for website (without code around it)<p/>
 - Video tutorial for presenter, how to create a simple menu card of a restaurant<p/>
 - Video tutorial for VNC/Linux/remote Mapping/Recording using VNC&hdmi recorder<p/>
 
-**Pipeline/Provider:** <p/>
+**Pipeline/Provider/Freedom:** <p/>
 
 - change webshop to an opensource variant, any suggestions? <p/>
+- create my own gitea server to move away from github?<p/>
 
 **Test:** <p/>
 - test autostart of dmxshow<p/>

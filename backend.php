@@ -2387,6 +2387,17 @@ if ($_GET['action'] == 'beamerstatus') {
 	$outputtext = "$preoutputtext";
 }
 
+if ($_GET['action'] == 'beameronir') {
+	$outputtext =  "Projector ON via IR";
+	system("sudo /var/www/sync/beameronir");
+}
+
+if ($_GET['action'] == 'beameroffir') {
+	$outputtext =  "Projector OFF via IR";
+	system("sudo /var/www/sync/beameroffir");
+}
+
+
 
 //# Change Network universe from 192.168.2.* to 10.0.0.*
 
@@ -2478,8 +2489,7 @@ if ($_GET['action'] == 'gettemp') {
 
 if ($_GET['action'] == 'getgpu') {
 	$output = shell_exec('sudo vcdbg reloc');
-	$preoutputtext =  "<pre>$output</pre>";
-	$outputtext = "$preoutputtext";
+	$outputtext = "<pre>$output</pre>";
 }
 
 if ($_GET['action'] == 'cpuusage') {

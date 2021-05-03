@@ -37,8 +37,8 @@
 
 - rewrite mapper section since mapping without mouse and over remote is working now! <p/>
 - how to change the distance of the pir sensor, factory wise set to ~5m and can be changed from ~3 to ~7m<p/>
-- video connect usb soundcard for better audio quality<p/>
-- video mapper sync<p/>
+- Video connect usb soundcard for better audio quality<p/>
+- Video tutorial for mapper sync<p/>
 - remote mapper with webcam, is this possible?, I guess yes, but need to try<p/>
 - create list of OSC/midi commands for website (without code around it)<p/>
 - Video tutorial for presenter, how to create a simple menu card of a restaurant<p/>

@@ -9,17 +9,17 @@
 - when accessed over the internet, the ola panel is not visible, check how to handle ports with the remote, currently you can ask via mail for another port link..   <p/>
 - dmx comand to remote record (start / stop recording dmx) directly from light-console, on universe 50? <p/>
 - playlist feature to play dmx/video01 and afterwards 02 and so on, tricky bit will be to gather the end of the file audio or dmx end counts?...   <p/>
-- add pygame to update as offline package under system settings, for countdown, package is already there, only button is missing <p/>
+
 
 <p/> just some ideas: <p/>
 
-- Adding wake on lan feature? <p/>
-- add wireless-power off to interfaces ? <p/>
-- Integrate this script for more CPU infos in CP: https://gist.github.com/ecampidoglio/5009512#file-cpustatus-sh <p/>
 - Add gender recognition based on openCV to trigger gender based content <p/>
 - Add scripts to trigger content based on humidity/temperature <p/>
 - Add Buttons to trigger dmxshow together with videoplayer sync (already works with osc/scheduler, sync might cause a lot of webtraffic) <p/>
 - slideshow with different times of images depending on number in file-name of image  <p/>
+- Adding wake on lan feature? <p/>
+- add wireless-power off to interfaces ? <p/>
+- Integrate this script for more CPU infos in CP: https://gist.github.com/ecampidoglio/5009512#file-cpustatus-sh <p/>
 - play images and videos after each other, depending on filename or with an ofx timeline, do we really need that?  <p/>
 - System alive ping, which sends out an email every 5 minutes to tell that beamer&pocketvj is alive, alarm function. <p/>
 - AES67 Support, is it possible (https://github.com/dewiweb/ALSA-RAVENNA-AES67-Driver) Edit: Dante USB-dongles are supported <p/>

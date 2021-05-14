@@ -2,3 +2,10 @@
 
 
 sudo irsend SEND_ONCE laserbeamer KEY_POWER
+
+# following lines are used to select the input, uncomment if not needed
+
+sleep 30
+
+sudo irsend SEND_ONCE laserbeamer KEY_MEDIA
+

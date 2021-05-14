@@ -1,11 +1,13 @@
 #!/bin/bash
 
+#remember: if you are copying another protocal from /var/www/sync/remotes/
+#to /etc/lirc/lircd.conf
+#you might also change the name of the remote e.g. laserbeamer, minibeamer, infocus
+
 
 sudo irsend SEND_ONCE laserbeamer KEY_POWER
 
 # following lines are used to select the input, uncomment if not needed
-
 sleep 30
-
 sudo irsend SEND_ONCE laserbeamer KEY_MEDIA
 

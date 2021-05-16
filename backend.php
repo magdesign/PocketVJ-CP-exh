@@ -1797,11 +1797,6 @@ if ($_GET['action'] == 'bluetooth_pair') {
 }
 
 
-
-
-
-
-
 ///////////////////////////////////
 //# conform images to hd
 ///////////////////////////////////
@@ -2679,6 +2674,12 @@ if ($_GET['action'] == 'startpir1') {
 	system("sudo python /var/www/sync/startpir1.py");
 	$outputtext =  "starting the pir1 function";
 }
+
+//starts the pir test, not able to pipe the output yet
+//if ($_GET['action'] == 'startpir1') {
+//	system("sudo /var/www/sync/stopall &");
+//	$outputtext = shell_exec('sudo python /var/www/sync/startpirtest.py &');
+//}
 
 
 if ($_GET['action'] == 'pirhigh') {

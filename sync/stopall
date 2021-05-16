@@ -92,6 +92,9 @@ sudo printf "\033c" > /dev/tty1 2>&1 &
 sudo printf "\033c" > /dev/tty2 2>&1 &
 sudo printf "\033c" > /dev/tty3 2>&1 &
 
+#overwrite screen to black, also fbi
+dd if=/dev/zero of=/dev/fb0 > /dev/null 2>&1
+dd if=/dev/zero of=/dev/fb0 > /dev/null 2>&1
 
 #make dmx show files writeable
 sudo chmod 777 -R /media/internal/dmx > /dev/null 2>&1 &

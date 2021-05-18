@@ -2671,7 +2671,7 @@ if ($_GET['action'] == 'startloopfile') {
 if ($_GET['action'] == 'startpir1') {
 	system("sudo /var/www/sync/stopall &");
 	system("sudo fbi -T 1 -a -noverbose /media/internal/pir/stillshot.png &");
-	system("sudo python /var/www/sync/startpir1.py");
+	system("sudo python /var/www/sync/startpir1.py > /dev/null 2>&1 &");
 	$outputtext =  "starting the pir1 function";
 }
 

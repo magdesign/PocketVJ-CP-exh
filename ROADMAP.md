@@ -3,13 +3,17 @@
 
 - remove old projector scripts <p/>
 - add bluetooth audio tethering to connect boomboxes (scan works, connect is wip) <p/>
+- do some more bluetooth features  <p/>
 - when leaving VNC mode, presenter is not working correctly, fix this! <p/>
 - function to directly drive LED stripes via [PWM](https://tutorials-raspberrypi.com/connect-control-raspberry-pi-ws2812-rgb-led-strips/) from the expansion board
 - limit IP input to IP adresses only, no text etc. how do I do that??  <p/>
 - when accessed over the internet, the ola panel is not visible, check how to handle ports with the remote, currently you can ask via mail for another port link..   <p/>
 - dmx comand to remote record (start / stop recording dmx) directly from light-console, on universe 50? <p/>
 - playlist feature to play dmx/video01 and afterwards 02 and so on, tricky bit will be to gather the end of the file audio or dmx end counts?...   <p/>
-
+- CP => remove set to 1 and make function to flip all OLA inputs to OLA outputs  <p/>
+- OLA => is dmx thru working so we can see the show while recording<p/>
+- rework the whole artnet.conf file, to pack several function into one channel, also make the remote universe to universe 51<p/>
+- measure power consumption and provide data in usermanual<p/>
 
 <p/> just some ideas: <p/>
 

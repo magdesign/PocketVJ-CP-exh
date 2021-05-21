@@ -1619,10 +1619,15 @@ if ($_GET['action'] == 'installpygame') {
 
 if ($_GET['action'] == 'installbluetooth') {
 	$outputtext =  "Install bluetooth support";
+	system ("sudo /var/www/sync/stopall > /dev/null 2>&1");
 	system("sudo apt-get install -y /var/www/sync/debs/rfkill_0.5-1_armhf.deb");
 	system("sudo apt-get install -y /var/www/sync/debs/raspberrypi-sys-mods_20181127_armhf.deb");
 	system("sudo apt-get install -y /var/www/sync/debs/bluez-firmware_1.2-3+rpt7_all.deb");
 	system("sudo apt-get install -y /var/www/sync/debs/pi-bluetooth_0.1.10_all.deb");
+	system("sudo apt-get install -y /var/www/sync/debs/libbluetooth3_5.43-2+rpt2+deb9u2_armhf.deb");
+	system("sudo apt-get install -y /var/www/sync/debs/libbluetooth-dev_5.43-2+rpt2+deb9u2_armhf.deb");
+	system("sudo pip3 install /var/www/sync/debs/beacontools-2.1.0-py2.py3-none-any.whl /var/www/sync/debs/ahocorapy-1.6.1-py2.py3-none-any.whl /var/www/sync/debs/construct-2.10.54-py3-none-any.whl /var/www/sync/debs/future-0.18.2-py3-none-any.whl");
+	system("sudo pip3 install /var/www/sync/debs/PyBluez-0.23-cp35-cp35m-linux_armv7l.whl");
 	$outputtext = "installed bluetooth";
 }
 
@@ -1786,7 +1791,7 @@ if ($_GET['action'] == 'bluetooth_out') {
 
 if ($_GET['action'] == 'bluetooth_scan') {
 	//$output = shell_exec('sudo hcitool scan');
-	$outputtext = shell_exec('/var/www/sync/bluetooth_scan.sh');
+	$outputtext = shell_exec('sudo /var/www/sync/bluetooth_scan.sh');
 	//this is used to bring output with linebreaks ;)
     //$outputtext = "<pre>$output</pre>";
 }

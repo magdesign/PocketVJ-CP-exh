@@ -1,6 +1,11 @@
 # PocketVJ Exhibition / Control Panel 3.x.x
 
 
+
+## CP 4.0.7 not released yet<br />
+
+- added bluetooth dependencies <br />
+
 ## CP 4.0.6a 16. Mai 2021 <br />
 
 - fixed "stop" to clear screen to full black<br />

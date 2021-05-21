@@ -1606,8 +1606,7 @@ if ($_GET['action'] == 'rentalreset') {
 	////////////////
 	//////to do:
 	// set to default filebrowser!!!
-	
-	$outputtext =  "Rental reset done";
+		$outputtext =  "Rental reset done";
 }
 
 if ($_GET['action'] == 'installpygame') {
@@ -1628,6 +1627,7 @@ if ($_GET['action'] == 'installbluetooth') {
 	system("sudo apt-get install -y /var/www/sync/debs/libbluetooth-dev_5.43-2+rpt2+deb9u2_armhf.deb");
 	system("sudo pip3 install /var/www/sync/debs/beacontools-2.1.0-py2.py3-none-any.whl /var/www/sync/debs/ahocorapy-1.6.1-py2.py3-none-any.whl /var/www/sync/debs/construct-2.10.54-py3-none-any.whl /var/www/sync/debs/future-0.18.2-py3-none-any.whl");
 	system("sudo pip3 install /var/www/sync/debs/PyBluez-0.23-cp35-cp35m-linux_armv7l.whl");
+	system("sudo pip3 install /var/www/sync/debs/enum34-1.1.10-py3-none-any.whl /var/www/sync/debs/PyBeacon-0.3.0.0-py2.py3-none-any.whl");
 	$outputtext = "installed bluetooth";
 }
 

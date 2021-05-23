@@ -1,6 +1,20 @@
-**Roadmap / Next Steps:** <p/>
+# **Roadmap / Next Steps:** 
 
+## Currently in the pipeline: 
 
+- upgrading omxplayer <p/>
+- fade videos while playing to black and from black <p/>
+- make the alpha value for videos accessable via dmx/osc/udp <p/>
+- rework the whole artnet.conf file, to pack several function into one channel, also make the remote universe to universe 51<p/>
+- bluetooth features: connecting boombox 
+- bluetooth beacon, trigger stuff when namespace of an Eddstyone beacon is found <p/>
+- update cp with all the new features: fade alpha of video, update omxplayer, show omxplayer version <p/>
+- measure power consumption (video mode, dmx mode, mapping mode, sheduler mode) and provide data in usermanual <p/>
+- also provide rough meassurements in usermanual <p/>
+
+## Next to come:
+
+- move, rotate, scale images interactive => I do this via dmx/artnet <p/>
 - remove old projector scripts <p/>
 - add bluetooth audio tethering to connect boomboxes (scan works, connect is wip) <p/>
 - do some more bluetooth features  <p/>
@@ -12,11 +26,11 @@
 - playlist feature to play dmx/video01 and afterwards 02 and so on, tricky bit will be to gather the end of the file audio or dmx end counts?...   <p/>
 - CP => remove set to 1 and make function to flip all OLA inputs to OLA outputs  <p/>
 - OLA => is dmx thru working so we can see the show while recording<p/>
-- rework the whole artnet.conf file, to pack several function into one channel, also make the remote universe to universe 51<p/>
-- measure power consumption and provide data in usermanual<p/>
+- parse dmx sequences from "*cough* from the garage" software to playback on PocketVJ (similar to mapping converter, can someone send me an exported file?)<p/>
 
-<p/> just some ideas: <p/>
+## Just some ideas:
 
+- slideshow with different times of images depending on number in file-name of image  <p/>
 - Add gender recognition based on openCV to trigger gender based content <p/>
 - Add scripts to trigger content based on humidity/temperature <p/>
 - Add Buttons to trigger dmxshow together with videoplayer sync (already works with osc/scheduler, sync might cause a lot of webtraffic) <p/>
@@ -31,13 +45,12 @@
 - Automount and connect to usb lte modems for remote internet, tricky since each brand is different<p/>
 - Complete authors file, will this ever happen, there are soooo many people involved<p/>
 - read color from video and create dmx fixture for it: https://github.com/MadSciLabs/ofxDmxUtils  <p/>
-- parse dmx sequences from "*cough* from the garage" software to playback on PocketVJ (similar to mapping converter, can someone send me an exported file?)<p/>
+
 
 <p/>
 
 
-
-**Tutorials/Manual:** <p/>
+## **Tutorials/Manual:**
 
 - rewrite mapper section since mapping without mouse and over remote is working now! <p/>
 - Video connect usb soundcard for better audio quality<p/>
@@ -47,13 +60,16 @@
 - Video tutorial for presenter, how to create a simple menu card of a restaurant<p/>
 - Video tutorial for VNC/Linux/remote Mapping/Recording using VNC&hdmi recorder<p/>
 
-**Pipeline/Provider/Freedom:** <p/>
+### **Pipeline/Provider/Freedom:**
 
 - change webshop to an opensource variant, any suggestions? <p/>
 - create my own gitea server to move away from github?<p/>
 
-**Test:** <p/>
+### **Test:**
+- test if new omxplayer still syncs well<p/>
+- test syncing 1 exhibition with 2 rtcs, what happens when master is changing file? push buttons? <p/>
 - test autostart of dmxshow<p/>
+
 
 
 by magdesign 2021

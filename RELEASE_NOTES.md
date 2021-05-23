@@ -5,6 +5,9 @@
 ## CP 4.0.7 not released yet<br />
 
 - added bluetooth dependencies <br />
+- added new omxplayer (needs 2x updateall function to be installed) <br />
+- show omxplayer version in CP<br />
+- fading videos <br />
 
 ## CP 4.0.6a 16. Mai 2021 <br />
 

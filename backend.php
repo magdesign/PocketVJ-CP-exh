@@ -1405,6 +1405,9 @@ if ($_GET['action'] == 'updateall') {
 	//Set to PJlink
 	system("sudo cp /var/www/sync/beamer_on_off_pjlink.sh /var/www/sync/beamer_on_off.sh");
 	system("sudo chmod 755 /var/www/sync/beamer_on_off.sh");
+	//Update raspidmx png
+	system("sudo rm -rf /home/pvj/raspidmx");
+	system("sudo unzip /var/www/sync/debs/raspidmx.zip -d /");
 	//Update mappingconverter
 	system("sudo rm -rf /home/pvj/openFrameworks/apps/myApps/mapping-converter2");
 	system("sudo unzip /var/www/sync/mappingconverter.zip -d /home/pvj/openFrameworks/apps/myApps/");

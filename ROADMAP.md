@@ -2,15 +2,14 @@
 
 ## Currently in the pipeline: 
 
-- upgrading omxplayer <p/>
-- fade videos while playing to black and from black <p/>
-- make the alpha value for videos accessable via dmx/osc/udp <p/>
-- rework the whole artnet.conf file, to pack several function into one channel, also make the remote universe to universe 51<p/>
+- upgrading omxplayer also on recent images<p/>
 - bluetooth features: connecting boombox 
 - bluetooth beacon, trigger stuff when namespace of an Eddstyone beacon is found <p/>
 - update cp with all the new features: fade alpha of video, update omxplayer, show omxplayer version <p/>
 - measure power consumption (video mode, dmx mode, mapping mode, sheduler mode) and provide data in usermanual <p/>
 - also provide rough meassurements in usermanual <p/>
+- update usermanual with the new dmx control things <p/>
+
 
 ## Next to come:
 

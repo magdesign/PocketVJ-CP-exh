@@ -47,7 +47,7 @@ Code below loads custom js for form submission without reload-->
                 <div class="col d-flex justify-content-end">
                     <div class="row">
                         <div class="col">
-                            <p class="text-center" id="version_text" style="font-weight: normal;padding-top: 12px;color: rgb(0,0,0);">CP 4.0.6a<br><a href="https://github.com/magdesign/PocketVJ-CP-exh/issues" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help.svg" style="text-align: right;padding: 8px;max-width: 60%;"></a><br></p>
+                            <p class="text-center" id="version_text" style="font-weight: normal;padding-top: 12px;color: rgb(0,0,0);">CP 4.0.7<br><a href="https://github.com/magdesign/PocketVJ-CP-exh/issues" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help.svg" style="text-align: right;padding: 8px;max-width: 60%;"></a><br></p>
                         </div>
                     </div>
                 </div>
@@ -590,6 +590,20 @@ Code below loads custom js for form submission without reload-->
                                     <div class="col colforbutton" style="height: 48px;"><a class="btn btn-primary action" role="button" href="?action=startslaveonce">Receiver/Slave Once</a></div>
                                     <div class="col colforbutton"><a class="btn btn-primary action" role="button" href="?action=stopslaves">Stop Slaves</a></div>
                                     <div class="col colforbutton"><a class="btn btn-primary action" role="button" href="?action=setsync_short" data-toggle="tooltip" title="use this if very short videos do not play">set short videos</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row no-gutters row-cols-1 row-cols-sm-2 row-cols-lg-4" style="margin-right: -15px;margin-left: -15px;background: #6cc6d9;padding-bottom: 20px;">
+                            <div class="col">
+                                <div>
+                                    <h2 data-toggle="tooltip" title="only works with video named: wifisync.mp4">FADING</h2>
+                                    <div class="col colforbutton"><a class="btn btn-primary action" role="button" id="dmxbuttoncolor-1" href="?action=videofadeout" data-toggle="tooltip" title="fade video to black (still playing!)">Fade out</a></div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div>
+                                    <h3>&nbsp;</h3>
+                                    <div class="col colforbutton"><a class="btn btn-primary action" role="button" id="dmxbuttoncolor-3" href="?action=videofadein" data-toggle="tooltip" title="fade video from black in to full visible">Fade in</a></div>
                                 </div>
                             </div>
                         </div>
@@ -1405,8 +1419,10 @@ Code below loads custom js for form submission without reload-->
                                     <div class="col colforbutton"><a class="btn btn-danger action" role="button" id="dmxbuttoncolor" href="?action=stopoladaemon">Daemon OFF</a></div>
                                 </div>
                             </div>
-                            <div class="col">
-                                <div></div>
+                            <div>
+                                <h3 data-toggle="tooltip" title="listens on universe 15 for remote commands" style="color: rgb(255,255,255);">DMX REMOTE&nbsp;</h3>
+                                <div class="col colforbutton"><a class="btn btn-danger action" role="button" id="dmxbuttoncolor" href="?action=dmxremoteon">DMX Remote ON</a></div>
+                                <div class="col colforbutton"><a class="btn btn-danger action" role="button" id="dmxbuttoncolor" href="?action=dmxremoteoff">DMX Remote OFF</a></div>
                             </div>
                             <div class="col">
                                 <div></div>
@@ -1417,15 +1433,15 @@ Code below loads custom js for form submission without reload-->
                                 <div>
                                     <h2>DMX&nbsp;RECORDER</h2>
                                     <div class="col colforbutton" style="height: 78px;"><a class="btn btn-primary action" role="button" data-toggle="tooltip" title="stop dmx recording" href="?action=stopdmx">Stop Recording</a></div>
-                                    <div class="col colforbutton"><a class="btn btn-danger action" role="button" data-toggle="tooltip" title="record universe 0-30" href="?action=startdmxrecord01">&nbsp;REC Show01</a></div>
+                                    <div class="col colforbutton"><a class="btn btn-danger action" role="button" data-toggle="tooltip" title="record universe 0-14" href="?action=startdmxrecord01">&nbsp;REC Show01</a></div>
                                     <div class="col d-none d-lg-flex colforbutton" style="height: 68px;"></div>
-                                    <div class="col colforbutton"><a class="btn btn-danger action" role="button" data-toggle="tooltip" title="record universe 0-20" href="?action=startdmxrecord02">&nbsp;REC Show02</a></div>
+                                    <div class="col colforbutton"><a class="btn btn-danger action" role="button" data-toggle="tooltip" title="record universe 0-14" href="?action=startdmxrecord02">&nbsp;REC Show02</a></div>
                                     <div class="col d-none d-lg-flex colforbutton" style="height: 68px;"></div>
-                                    <div class="col colforbutton"><a class="btn btn-danger action" role="button" data-toggle="tooltip" title="record universe 0-20" href="?action=startdmxrecord03">&nbsp;REC Show03</a></div>
+                                    <div class="col colforbutton"><a class="btn btn-danger action" role="button" data-toggle="tooltip" title="record universe 0-14" href="?action=startdmxrecord03">&nbsp;REC Show03</a></div>
                                     <div class="col d-none d-lg-flex colforbutton" style="height: 68px;"></div>
-                                    <div class="col colforbutton"><a class="btn btn-danger action" role="button" data-toggle="tooltip" title="record universe 0-20" href="?action=startdmxrecord04">&nbsp;REC Show04</a></div>
+                                    <div class="col colforbutton"><a class="btn btn-danger action" role="button" data-toggle="tooltip" title="record universe 0-14" href="?action=startdmxrecord04">&nbsp;REC Show04</a></div>
                                     <div class="col d-none d-lg-flex colforbutton" style="height: 68px;"></div>
-                                    <div class="col colforbutton"><a class="btn btn-danger action" role="button" data-toggle="tooltip" title="record universe 0-20" href="?action=startdmxrecord05">&nbsp;REC Show05</a></div>
+                                    <div class="col colforbutton"><a class="btn btn-danger action" role="button" data-toggle="tooltip" title="record universe 0-14" href="?action=startdmxrecord05">&nbsp;REC Show05</a></div>
                                     <div class="col d-none d-lg-flex colforbutton" style="height: 68px;"></div>
                                 </div>
                             </div>
@@ -1922,23 +1938,24 @@ Code below loads custom js for form submission without reload-->
                                 <div>
                                     <h2>INFO</h2>
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="" href="?action=buildversion">PVJ Version<br></a></div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="show omxplayer version" href="?action=omxversion">omx Version<br></a></div>
                                     <div class="col colforbutton"></div>
                                 </div>
                             </div>
                             <div class="col">
                                 <div>
                                     <div class="col colforbutton">
-                                        <h3>&nbsp;</h3><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="" href="?action=oladversion">OLA Version<br></a>
+                                        <h3>&nbsp;</h3><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="show olad version" href="?action=oladversion">OLA Version<br></a>
                                     </div>
-                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="" href="?action=kernelversion">Kernel Version<br></a></div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="show kernel version" href="?action=kernelversion">Kernel Version<br></a></div>
                                 </div>
                             </div>
                             <div class="col">
                                 <div>
                                     <div class="col colforbutton">
-                                        <h2>&nbsp;&nbsp;</h2><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="" href="?action=gettemp">CPU Temperature<br></a>
+                                        <h2>&nbsp;&nbsp;</h2><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="show cpu temperature" href="?action=gettemp">CPU Temperature<br></a>
                                     </div>
-                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="" href="?action=powersupply">Powersupply<br></a></div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="check if powersupply is good" href="?action=powersupply">Powersupply<br></a></div>
                                 </div>
                             </div>
                             <div class="col">
@@ -2013,7 +2030,7 @@ Code below loads custom js for form submission without reload-->
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="" href="?action=updateall">Update Everything<br></a></div>
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="" href="?action=updateola">Update OLA<br></a></div>
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="install pygame for countdown" href="?action=installpygame">install pygame<br></a></div>
-                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="install pygame for countdown" href="?action=installbluetooth">install bluetooth<br></a></div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="install bluetooth" href="?action=installbluetooth">install bluetooth<br></a></div>
                                     <div class="col colforbutton">
                                         <h3>&nbsp;</h3>
                                     </div>
@@ -2114,68 +2131,70 @@ Code below loads custom js for form submission without reload-->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 
+
+
 <!-- Code below sets the "Set Time" button function--> 
  
 <script type="text/javascript">
- function settime() {
-    window.open('time_change.php');
-    document.getElementById('actions_output').innerHTML = ("time set");
-  } 
-</script>
-
-
-<!--Code below this line checks if user is online-->
-
-<script src="js/offline.min.js"></script>
-<link rel="stylesheet" href="../themes/offline-theme-chrome.css" />
-<link rel="stylesheet" href="../themes/offline-language-english.css" />
-
-<script>
-  var run = function(){
-  var req = new XMLHttpRequest();
-  req.timeout = 5000;
-  req.open('GET', 'http://localhost:8888/walter/0', true);
-  req.send();
-}
-setInterval(run, 3000);
-
-        Offline.options = {
-        requests: false
-        }
-        
-</script>
-
-
-<!--Code below is for button actions-->
-
-  <script type="text/javascript">
-   $("a.action").on("click", function(event) { 
-       event.preventDefault();
-       $.get( "backend.php" + $(this).attr('href'), function(data) {
-          $("#actions_output").html(data);
-       });
-   });
+    function settime() {
+       window.open('time_change.php');
+       document.getElementById('actions_output').innerHTML = ("time set");
+     } 
    </script>
-
-
-   <!--Code  below is for cron / Scheduler generator -->
-
-  <link rel="stylesheet" href="js/gentleSelect/jquery-gentleSelect.css">
-  <link rel="stylesheet" href="js/cron/jquery-cron.css">
-    <script src="js/jquery.min.js"></script>
-  <script src="js/gentleSelect/jquery-gentleSelect-min.js"></script>
-  <script src="js/cron/jquery-cron.js"></script>
-  <script type="text/javascript">
-    $(document).ready(function() {
-        $('#example1b').cron({
-            initial: "9 21 * * *",
-            onChange: function() {
-                $('#example1b-val').text($(this).cron("value"));
-            },
-            useGentleSelect: true
-        });
-    });
-    </script>
+   
+   
+   <!--Code below this line checks if user is online-->
+   
+   <script src="js/offline.min.js"></script>
+   <link rel="stylesheet" href="../themes/offline-theme-chrome.css" />
+   <link rel="stylesheet" href="../themes/offline-language-english.css" />
+   
+   <script>
+     var run = function(){
+     var req = new XMLHttpRequest();
+     req.timeout = 5000;
+     req.open('GET', 'http://localhost:8888/walter/0', true);
+     req.send();
+   }
+   setInterval(run, 3000);
+   
+           Offline.options = {
+           requests: false
+           }
+           
+   </script>
+   
+   
+   <!--Code below is for button actions-->
+   
+     <script type="text/javascript">
+      $("a.action").on("click", function(event) { 
+          event.preventDefault();
+          $.get( "backend.php" + $(this).attr('href'), function(data) {
+             $("#actions_output").html(data);
+          });
+      });
+      </script>
+   
+   
+      <!--Code  below is for cron / Scheduler generator -->
+   
+     <link rel="stylesheet" href="js/gentleSelect/jquery-gentleSelect.css">
+     <link rel="stylesheet" href="js/cron/jquery-cron.css">
+       <script src="js/jquery.min.js"></script>
+     <script src="js/gentleSelect/jquery-gentleSelect-min.js"></script>
+     <script src="js/cron/jquery-cron.js"></script>
+     <script type="text/javascript">
+       $(document).ready(function() {
+           $('#example1b').cron({
+               initial: "9 21 * * *",
+               onChange: function() {
+                   $('#example1b-val').text($(this).cron("value"));
+               },
+               useGentleSelect: true
+           });
+       });
+       </script>
 
 
 </body>

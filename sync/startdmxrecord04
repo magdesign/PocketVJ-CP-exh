@@ -4,7 +4,7 @@
 if [ -f /etc/openvpn/pocketvj.remote.conf ] && [ "$(md5sum < /proc/device-tree/hat/product)" = "33e26e96aeb252a3e1374ca44ad684a2  -" ]
         
         then
-        sudo ola_recorder -u 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 -r /media/internal/dmx/show04 &
+        sudo ola_recorder -u 1,2,3,4,5,6,7,8,9,10,11,12,13,14 -r /media/internal/dmx/show04 &
         echo "recording"
 else
   echo "this is not PocketVJ Exhibtion, aborting"

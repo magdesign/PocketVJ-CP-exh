@@ -1,7 +1,20 @@
 #!/bin/bash
+#startdmx playback
+
 
 #kill all running tasks
-#/var/www/sync/stopall
+/var/www/sync/stopall > /dev/null 2>&1
 
-#startdmxplayback09
-sudo ola_recorder --no-verify-playback -i 0 -p /media/internal/dmx/show09 &
+if [ -f /etc/openvpn/pocketvj.remote.conf ] && [ "$(md5sum < /proc/device-tree/hat/product)" = "33e26e96aeb252a3e1374ca44ad684a2  -" ]
+        
+        then
+        # loops forever
+        sudo ola_recorder --no-verify-playback -i 0 -p /media/internal/dmx/show09 &
+        echo "playback show09"
+else
+  echo "this is not PocketVJ Exhibtion, aborting"
+  exit 0
+fi
+
+
+

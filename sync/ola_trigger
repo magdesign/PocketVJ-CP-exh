@@ -1,0 +1,7 @@
+#!/bin/bash
+
+#this start the dmx/artnet listener
+
+sudo ola_trigger -u 15 /var/www/sync/artnet.conf
+
+exit 0

@@ -3,8 +3,7 @@
 
 # run osc control with node.js as pi user
 
-
 node /home/pvj/osc/osc_control.js &
-# node ~/www/sync/osc_control.js &
+# node /var/www/sync/osc_control.js &
 
 exit 0

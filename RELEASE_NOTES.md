@@ -2,12 +2,18 @@
 
 
 
-## CP 4.0.7 not released yet<br />
+## CP 4.0.7 24. Mai 2021 yet<br />
+
+**This updated needs 2x updateall function to be fully installed!**
 
 - added bluetooth dependencies <br />
-- added new omxplayer (needs 2x updateall function to be installed) <br />
-- show omxplayer version in CP<br />
-- fading videos <br />
+- added new omxplayer  <br />
+- added "show omxplayer version" button in CP<br />
+- added "fade in" and "fade out" button in video section <br />
+- changed dmx remote control, to be able to remotely start record dmx and other functions<br />
+- limit universes to 0-14 for recording, universe 15 is the remote control universe<br />
+- added DMX remote control On/Off button<br />
+- fading videos via dmx/artnet, see [artnet.conf](https://github.com/magdesign/PocketVJ-CP-exh/blob/master/sync/artnet.conf)<br />
 
 ## CP 4.0.6a 16. Mai 2021 <br />
 

@@ -9,7 +9,7 @@ if [ -f /etc/openvpn/pocketvj.remote.conf ] && [ "$(md5sum < /proc/device-tree/h
         
         then
         sudo ola_recorder --no-verify-playback -i 0 -p /media/internal/dmx/show05 &
-        echo "playback show01"
+        echo "playback show05"
 else
   echo "this is not PocketVJ Exhibtion, aborting"
   exit 0

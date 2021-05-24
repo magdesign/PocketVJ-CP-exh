@@ -1,0 +1,7 @@
+#!/bin/bash
+
+#stop the ola recorder
+
+sudo killall -9 ola_recorder
+
+

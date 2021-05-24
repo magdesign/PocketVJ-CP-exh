@@ -402,6 +402,21 @@ if ($_GET['action'] == 'screenshot') {
 	exec("sudo /var/www/sync/screenshot");
 	$outputtext = "printscreen saved in /media/internal/images";
 }
+//////////////////////
+// Video fader
+////////////////////////
+
+if ($_GET['action'] == 'videofadeout') {
+	exec("sudo /var/www/sync/fadeOUTscript");
+	$outputtext = "Fade video to black (still playing)";
+}
+
+if ($_GET['action'] == 'videofadein') {
+	exec("sudo /var/www/sync/fadeINscript");
+	$outputtext = "Fade video In (still playing)";
+}
+
+
 ///////////////////////////////
 // Imageplayer / slideshow
 ////////////////////////////////
@@ -643,6 +658,19 @@ if ($_GET['action'] == 'stopoladaemon') {
 	exec("sudo update-rc.d olad disable");
 	$outputtext = "disabled OLA Daemon";
 }
+
+if ($_GET['action'] == 'dmxremoteon') {
+	exec("sudo /var/www/sync/ola_trigger > /dev/null 2>&1 & echo $!");
+	$outputtext = "DMX remote on Universe 15, configure in OLA!";
+}
+
+if ($_GET['action'] == 'dmxremoteoff') {
+	exec("sudo killall -9 ola_trigger > /dev/null 2>&1 & echo $!");
+	$outputtext = "stopped DMX remote on Universe 15";
+}
+
+
+
 ////////
 //# DMX 
 ////////
@@ -1358,11 +1386,11 @@ if ($_GET['action'] == 'updateall') {
 	system("rm -f /usr/bin/dbuscontrol.sh");
 	system("sudo apt-get clean");
 	// install omxplayer dependencies
-  	system("sudo dpkg -i *.deb /var/www/sync/debs/python3-dbus_1.2.0-2+b1_armhf.deb");
-   	system("sudo dpkg -i *.deb /var/www/sync/debs/libssh-4_0.6.3-4+deb8u2_armhf.deb");
+  	system("sudo dpkg -i /var/www/sync/debs/python3-dbus_1.2.0-2+b1_armhf.deb");
+   	system("sudo dpkg -i /var/www/sync/debs/libssh-4_0.6.3-4+deb8u2_armhf.deb");
 	//install new omxplayer version:
-	//system("sudo dpkg -i *.deb /var/www/sync/debs/omxplayer_0.3.7-git20170130-62fb580_armhf.deb");
-	system("sudo dpkg -i *.deb /var/www/sync/debs/omxplayer_20180910_7f3faf6_stretch_armhf.deb");
+	//system("sudo dpkg -i /var/www/sync/debs/omxplayer_0.3.7-git20170130-62fb580_armhf.deb");
+	system("sudo dpkg -i /var/www/sync/debs/omxplayer_20180910_7f3faf6_stretch_armhf.deb");
 	//copy omxplayer-sync scripts
 	system("sudo cp /var/www/sync/omxplayer-sync /usr/bin/omxplayer-sync");
 	system("sudo cp /var/www/sync/omxplayer-sync-old /usr/bin/omxplayer-sync-old");
@@ -2506,6 +2534,10 @@ if ($_GET['action'] == 'buildversion') {
 
 if ($_GET['action'] == 'oladversion') {
 	$outputtext = shell_exec('/usr/bin/olad --version');
+}
+
+if ($_GET['action'] == 'omxversion') {
+	$outputtext = shell_exec('/usr/bin/omxplayer --version');
 }
 
 if ($_GET['action'] == 'kernelversion') {

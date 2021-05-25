@@ -9,7 +9,7 @@
 - measure power consumption (video mode, dmx mode, mapping mode, sheduler mode) and provide data in usermanual <p/>
 - also provide rough meassurements in usermanual <p/>
 - update usermanual with the new dmx control things <p/>
-
+- check with htop how much cpu the bluetooth scanning is eating <p/>
 
 ## Next to come:
 

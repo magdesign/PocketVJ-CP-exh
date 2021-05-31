@@ -7,6 +7,17 @@ function SubmitBTNFormData() {
          function(data) {
                $('#actions_output').html(data);
                $('#cpbutton1form')[0].reset();
+               $('#cpbutton1form-1')[0].reset();
+               $('#cpbutton1form-2')[0].reset();
+               $('#cpbutton1form-3')[0].reset();
+               $('#cpbutton1form-4')[0].reset();
+               $('#cpbutton1form-5')[0].reset();
+               $('#cpbutton1form-6')[0].reset();
+               $('#cpbutton1form-7')[0].reset();
+               $('#cpbutton1form-8')[0].reset();
+               $('#cpbutton1form-9')[0].reset();    
+               $('#cpbutton1form-10')[0].reset();          
+              
          });
 }
 

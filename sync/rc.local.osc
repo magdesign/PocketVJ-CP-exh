@@ -11,7 +11,7 @@
 sudo /var/www/sync/udp_listener.sh &
 
 
-#start script to listen to artnet/dmx on universe 1
+#start script to listen to artnet/dmx on universe 15
 
 sudo /var/www/sync/ola_trigger
 

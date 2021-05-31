@@ -19,7 +19,7 @@ shell_exec("sudo sed -i '/IP=/c IP=$usgab' /var/www/sync/beamerstatus");
 #u hie neu o im pjlink config file:
 shell_exec("sudo sed -i '/host =/c host = $usgab' /home/pvj/.local/share/pjlink/pjlink.conf");
 
-
+//hie isch no naice wenns ds o gd i placeholder im index.php schribt => id="beamerip" name="beamerip" placeholder="192.168.2.254"
 echo " = Beamer IP ";
 
 ?>

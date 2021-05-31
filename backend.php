@@ -1038,6 +1038,12 @@ if ($_GET['action'] == 'setosc') {
 	system("sudo cp /var/www/sync/rc.local.osc /etc/rc.local");
 }
 
+if ($_GET['action'] == 'setbeacon') {
+	$outputtext = "autostart to BLuetooth Becon, can only be stopped from Expansion setting!";
+	system("sudo cp /var/www/sync/rc.local.beacon /etc/rc.local");
+}
+
+
 if ($_GET['action'] == 'setbutton1') {
 	$outputtext = "autostart to button script";
 	system("sudo cp /var/www/sync/rc.local.button /etc/rc.local");
@@ -1067,6 +1073,7 @@ if ($_GET['action'] == 'setpir1') {
 	system("sudo cp /var/www/sync/rc.local.pir /etc/rc.local");
 	$outputtext = "autostart to PIR Motion";
 }
+
 
 if ($_GET['action'] == 'autostartdmx01') {
 	system("sudo cp /var/www/sync/rc.local.dmx01 /etc/rc.local");
@@ -2759,6 +2766,35 @@ if ($_GET['action'] == 'stopbuttons') {
 	system("sudo /var/www/sync/stopbuttons");
 	$outputtext =  "stop buttons";
 }
+
+//# Extension Beacon commands
+
+if ($_GET['action'] == 'startbeacon') {
+	system("sudo /var/www/sync/stopall &");
+	system("sudo fbi -T 1 -a -noverbose /media/internal/pir/stillshot.png &");
+	system("sudo python3 /var/www/sync/bluetooth_beacon.py	> /dev/null 2>&1 &");
+	$outputtext =  "start beacon listener";
+}
+
+if ($_GET['action'] == 'stopbeacon') {
+	system("sudo /var/www/sync/stopbeacon");
+	$outputtext =  "stop beacon listener";
+}
+
+if ($_GET['action'] == 'beacon1name') {
+	$outputtext = shell_exec('cat /var/www/sync/bluetooth_beacon.py | grep beacon1=');
+}
+
+if ($_GET['action'] == 'beacon2name') {
+	$outputtext = shell_exec('cat /var/www/sync/bluetooth_beacon.py | grep beacon2=');
+}
+
+if ($_GET['action'] == 'beacon3name') {
+	$outputtext = shell_exec('cat /var/www/sync/bluetooth_beacon.py | grep beacon3=');
+}
+
+
+
 
 echo $outputtext;
 ?>

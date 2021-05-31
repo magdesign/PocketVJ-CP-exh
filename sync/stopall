@@ -38,6 +38,8 @@ sudo kill $(pgrep -f '/usr/bin/python3 /var/www/sync/countdown.py') > /dev/null 
 #kill webcam lifefeed
 sudo kill $(pgrep -f '/usr/bin/python /var/www/sync/camerastream.py') > /dev/null 2>&1 &
 
+#kill beacon
+#sudo kill $(pgrep -f 'python3 /var/www/sync/bluetooth_beacon.py') > /dev/null 2>&1 &
 
 #kill kenburns imageplayer
 #sudo pkill -9 -f Slideshow_3d.py > /dev/null 2>&1

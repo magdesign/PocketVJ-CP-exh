@@ -1,0 +1,6 @@
+#!/bin/bash
+
+#kill beacon
+sudo kill $(pgrep -f 'python3 /var/www/sync/bluetooth_beacon.py') > /dev/null 2>&1 &
+
+exit

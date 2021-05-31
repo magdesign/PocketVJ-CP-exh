@@ -1,8 +1,13 @@
 # PocketVJ Exhibition / Control Panel 3.x.x
 
+## CP 4.1.0 31. Mai 2021 <br />
 
+- support for beacons  <br />
+- beacon triggers  <br />
+- still to do: testing, manual, videotutorial, website promo  <br />
+- fixed button function selection, radio buttons hanged  <br />
 
-## CP 4.0.7 24. Mai 2021 yet<br />
+## CP 4.0.7 24. Mai 2021 <br />
 
 **This updated needs 2x updateall function to be fully installed!**
 

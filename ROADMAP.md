@@ -3,13 +3,11 @@
 ## Currently in the pipeline: 
 
 - upgrading omxplayer also on recent images<p/>
-- bluetooth features: connecting boombox 
-- bluetooth beacon, trigger stuff when namespace of an Eddstyone beacon is found <p/>
-- update cp with all the new features: fade alpha of video, update omxplayer, show omxplayer version <p/>
+- bluetooth features: connecting boombox, finish this!! <p/>
+- bluetooth beacon, find soution for retrigger, re-scan <p/>
 - measure power consumption (video mode, dmx mode, mapping mode, sheduler mode) and provide data in usermanual <p/>
 - also provide rough meassurements in usermanual <p/>
-- update usermanual with the new dmx control things <p/>
-- check with htop how much cpu the bluetooth scanning is eating <p/>
+- update usermanual with the new dmx control things, beacon things <p/>
 
 ## Next to come:
 

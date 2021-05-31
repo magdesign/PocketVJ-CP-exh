@@ -7,7 +7,11 @@
 - bluetooth beacon, find soution for retrigger, re-scan <p/>
 - measure power consumption (video mode, dmx mode, mapping mode, sheduler mode) and provide data in usermanual <p/>
 - also provide rough meassurements in usermanual <p/>
-- update usermanual with the new dmx control things, beacon things <p/>
+- update usermanual with the new dmx control things, beacon things
+- install tensorflow on next image verison <p/>
+- add gender and or facemask detection via webcam  <p/>
+- create a low power setting which disables quite a few services like lirc, hdmi output, webserver, wifi? <p/>
+
 
 ## Next to come:
 

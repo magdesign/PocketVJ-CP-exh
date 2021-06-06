@@ -2,20 +2,20 @@
 
 ## Currently in the pipeline: 
 
-- upgrading omxplayer also on recent images<p/>
+- mapper => when selecting mapper preset 1-4, open fake keyboard so mouseless mapping is working same as when autostart<p/>
+- upgrading resp. downgrading omxplayer also on recent images, option to install 2019 or 2018 build<p/>
 - bluetooth features: connecting boombox, finish this!! <p/>
 - bluetooth beacon, find soution for retrigger, re-scan <p/>
 - measure power consumption (video mode, dmx mode, mapping mode, sheduler mode) and provide data in usermanual <p/>
 - also provide rough meassurements in usermanual <p/>
 - update usermanual with the new dmx control things, beacon things
-- install tensorflow on next image verison <p/>
-- add gender and or facemask detection via webcam  <p/>
+- add gender and or facemask detection via webcam, test the new script  <p/>
 - create a low power setting which disables quite a few services like lirc, hdmi output, webserver, wifi? <p/>
 
 
 ## Next to come:
 
-- move, rotate, scale images interactive => I do this via dmx/artnet <p/>
+- move, rotate, scale images interactive => I do this via dmx/artnet => png gobo player<p/>
 - remove old projector scripts <p/>
 - add bluetooth audio tethering to connect boomboxes (scan works, connect is wip) <p/>
 - do some more bluetooth features  <p/>

@@ -1,5 +1,11 @@
 # PocketVJ Exhibition / Control Panel 3.x.x
 
+
+## CP 4.1.0a 06. June 2021 <br />
+
+- fixed stopall and dmxblackout commands so the dmx remote is working propperly and does not kill itself in a loop<br />
+- prevented dmx remote on to run more than once instance<br />
+
 ## CP 4.1.0 31. Mai 2021 <br />
 
 - support for beacons  <br />

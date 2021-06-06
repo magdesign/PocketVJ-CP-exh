@@ -660,6 +660,7 @@ if ($_GET['action'] == 'stopoladaemon') {
 }
 
 if ($_GET['action'] == 'dmxremoteon') {
+	exec("sudo killall -9 ola_trigger > /dev/null 2>&1 & echo $!");
 	exec("sudo /var/www/sync/ola_trigger > /dev/null 2>&1 & echo $!");
 	$outputtext = "DMX remote on Universe 15, configure in OLA!";
 }

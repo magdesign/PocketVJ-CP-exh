@@ -10,7 +10,8 @@
 - also provide rough meassurements in usermanual <p/>
 - update usermanual with the new dmx control things, beacon things
 - add gender and or facemask detection via webcam, test the new script  <p/>
-- create a low power setting which disables quite a few services like lirc, hdmi output, webserver, wifi? <p/>
+- create a low power setting which disables quite a few services like lirc, samba, shellinabox,  hdmi output (/usr/bin/tvservice -o), [disable leds](https://www.jeffgeerling.com/blogs/jeff-geerling/controlling-pwr-act-leds-raspberry-pi), [usb ports & leds](https://learn.pi-supply.com/make/how-to-save-power-on-your-raspberry-pi/#disable-on-board-leds) webserver&php, avai, [wifi](https://pimylifeup.com/raspberry-pi-disable-wifi/) <p/>
+- change temp soft limit from 60° to 70° with adding: temp_soft_limit = 70 to boot/config.txt <p/>
 
 
 ## Next to come:
@@ -46,7 +47,7 @@
 - Automount and connect to usb lte modems for remote internet, tricky since each brand is different<p/>
 - Complete authors file, will this ever happen, there are soooo many people involved<p/>
 - read color from video and create dmx fixture for it: https://github.com/MadSciLabs/ofxDmxUtils  <p/>
-
+- heating beamercases with [stressing the cpu](https://raw.githubusercontent.com/ssvb/cpuburn-arm/master/cpuburn-a53.S)<p/>
 
 <p/>
 

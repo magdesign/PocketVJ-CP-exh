@@ -27,3 +27,11 @@ start_x=0
 #dtoverlay=gpio-ir,gpio_pin=18
 #dtoverlay=gpio-ir-tx,gpio_pin=4
 
+#disable green onboard led
+dtparam=act_led_trigger=none
+dtparam=act_led_activelow=off
+
+#disable red onboard led
+dtparam=pwr_led_trigger=none
+dtparam=pwr_led_activelow=off
+

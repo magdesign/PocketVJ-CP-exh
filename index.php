@@ -55,7 +55,7 @@ Code below loads custom js for form submission without reload-->
                 <div class="col d-flex justify-content-end">
                     <div class="row">
                         <div class="col">
-                            <p class="text-center" id="version_text" style="font-weight: normal;padding-top: 12px;color: rgb(0,0,0);">CP 4.1.0a<br><a href="https://github.com/magdesign/PocketVJ-CP-exh/issues" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help.svg" style="text-align: right;padding: 8px;max-width: 60%;"></a><br></p>
+                            <p class="text-center" id="version_text" style="font-weight: normal;padding-top: 12px;color: rgb(0,0,0);">CP 4.1.0b<br><a href="https://github.com/magdesign/PocketVJ-CP-exh/issues" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help.svg" style="text-align: right;padding: 8px;max-width: 60%;"></a><br></p>
                         </div>
                     </div>
                 </div>

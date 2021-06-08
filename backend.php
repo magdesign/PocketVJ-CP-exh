@@ -1394,8 +1394,9 @@ if ($_GET['action'] == 'updateall') {
 	system("rm -f /usr/bin/dbuscontrol.sh");
 	system("sudo apt-get clean");
 	// install omxplayer dependencies
-  	system("sudo dpkg -i /var/www/sync/debs/python3-dbus_1.2.0-2+b1_armhf.deb");
-   	system("sudo dpkg -i /var/www/sync/debs/libssh-4_0.6.3-4+deb8u2_armhf.deb");
+  	//system("sudo dpkg -i /var/www/sync/debs/python3-dbus_1.2.0-2+b1_armhf.deb");
+	system("sudo dpkg -i /var/www/sync/debs/python3-dbus_1.2.4-1_armhf.deb");
+	system("sudo dpkg -i /var/www/sync/debs/libssh-4_0.6.3-4+deb8u2_armhf.deb");
 	//install new omxplayer version:
 	//system("sudo dpkg -i /var/www/sync/debs/omxplayer_20190607+gitf06235c-1_armhf.deb");
 	system("sudo dpkg -i /var/www/sync/debs/omxplayer_20180910_7f3faf6_stretch_armhf.deb");
@@ -1818,8 +1819,8 @@ if ($_GET['action'] == 'alsa_out') {
 }
 
 if ($_GET['action'] == 'bluetooth_out') {
-	system("sudo /var/www/sync/setaudio_bluetooth");
-	$outputtext =  "Audio set to bluetooth";
+	//system("sudo /var/www/sync/setaudio_bluetooth");
+	$outputtext =  "WIP, not ready yet...Audio set to bluetooth";
 }
 
 ////////////////////////////////////

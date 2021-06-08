@@ -1,9 +1,14 @@
 # PocketVJ Exhibition / Control Panel 3.x.x
 
 
+## CP 4.1.0b 08. June 2021 <br />
+
+**This updated needs 2x updateall function to be fully installed!**
+- fixed python dbus version which caused trouble that videoplayer did not start anymore<br />
+
 ## CP 4.1.0a 06. June 2021 <br />
 
-- fixed stopall and dmxblackout commands so the dmx remote is working propperly and does not kill itself in a loop<br />
+- fixed stopall and dmxblackout commands so the dmx remote is working propperly and does not kill itself in a loop
 - prevented dmx remote on to run more than once instance<br />
 
 ## CP 4.1.0 31. Mai 2021 <br />

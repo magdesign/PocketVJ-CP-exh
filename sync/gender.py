@@ -1,4 +1,8 @@
-# origin: https://gist.github.com/magdesign/06434a4412b6f378199f4e40731fc238
+#made for pocketvj exhibition
+# still a few issues: 1. opens too many windows, 2.is very laggy
+#run it like this:
+#python3 gender.py --image_source=webcam --pygame_display=yes --opencv_display=yes --delay=1 --haar_path=/home/pvj/opencv/opencv-3.4.1/data/haarcascades/haarcascade_frontalface_alt.xml
+
 
 import pygame
 import pygame.camera
@@ -9,6 +13,11 @@ import imutils
 import cv2
 import numpy as np
 import argparse
+
+# http://www.pygame.org/wiki/HeadlessNoWindowsNeeded
+# https://stackoverflow.com/questions/10466590/hiding-pygame-display  (Chris Jeong's answer)
+#import os
+#os.environ["SDL_VIDEODRIVER"] = "dummy"
 
 # allow the camera to warmup
 time.sleep(0.1)
@@ -31,7 +40,29 @@ def getargs():
     parser.add_argument('--image_source',help='defines source of images for face recognition',
                         type=str,required=True,default='webcam',choices=['webcam','nachiket']
                        )
+    parser.add_argument('--haar_path',help='defines absolute path of haarcascade_frontalface_alt.xml including filename',
+                        type=str,required=False,default=None
+                       )
+    parser.add_argument('--pygame_display',help='turn on or off the pygame display',type=str,required=False,default='yes',
+                        choices=['yes','no']
+                       )
+
+    parser.add_argument('--opencv_display',help='turn on or off the opencv display',type=str,required=False,default='yes',
+                        choices=['yes','no']
+                       )
+
+    parser.add_argument('--delay',help='specify time delay between refreshing frames (millisecs)',required=False,default=1,type=int)
+                        
+
+    
     args = parser.parse_args()
+
+    # process args
+    if (args.haar_path == 'None'):
+        args.haar_path = None
+
+    assert (args.delay>0),'--delay should be integer > 0, you specified {}'.format(args.delay)
+        
     return args
 
  
@@ -65,7 +96,7 @@ def image_nachiket():
         yield image
 
 
-def image_generator(device=DEVICE,size=SIZE,filename=FILENAME):
+def image_generator(device=DEVICE,size=SIZE,filename=FILENAME,pygame_display='yes'):
     '''
     A generator function which scans device and yields images
     '''
@@ -84,15 +115,18 @@ def image_generator(device=DEVICE,size=SIZE,filename=FILENAME):
         # gets RGB image - need to convert RGB to BGR for cv2
         # https://www.pygame.org/docs/ref/camera.html#pygame.camera.Camera.get_image        
         screen = camera.get_image(screen)
-        # blit means to draw objects in the screen buffer to display        
-        # display.blit(screen,(0,0))
-        # update the display 
-        # pygame.display.flip()
+        if pygame_display == 'yes':
+            # blit means to draw objects in the screen buffer to display        
+            display.blit(screen,(0,0))
+            # update the display 
+            pygame.display.flip()
+            
         # https://stackoverflow.com/questions/34673424/how-to-get-numpy-array-of-rgb-colors-from-pygame-surface
         s3d=pygame.surfarray.array3d(screen)
         # swap the first two axes
         s3d=np.swapaxes(s3d,0,1)  
-        
+
+        # IMPORTANT
         # convert rgb to bgr DO NOT use: s3d=s3d[:,:,::-1]
         # https://github.com/opencv/opencv/issues/18120#issuecomment-688190878
         # cv2.COLOR_RGB2BGR and COLOR_BGR2RGB both evaluate to 4
@@ -100,7 +134,7 @@ def image_generator(device=DEVICE,size=SIZE,filename=FILENAME):
         
         yield s3d
 
-def capture_loop(age_net,gender_net,imgen):
+def capture_loop(age_net,gender_net,imgen,haar_path=None,opencv_display='no',delay=1):
     '''
     This is the capture loop.
     age_net, gender_net are dnns (created by initialize_caffe_model)
@@ -108,12 +142,17 @@ def capture_loop(age_net,gender_net,imgen):
     '''
     print('Starting capture loop...')
     font = cv2.FONT_HERSHEY_SIMPLEX
+    # https://stackoverflow.com/questions/30508922/error-215-empty-in-function-detectmultiscale        
+    # face_cascade = cv2.CascadeClassifier('/home/pi/venv/magopencv/lib/python3.7/site-packages/cv2/data/haarcascade_frontalface_alt.xml')
+    # face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_alt.xml')
+    # print('haar_path=',type(haar_path))
+    if haar_path is None:
+        face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades+'haarcascade_frontalface_alt.xml')
+    else:
+        face_cascade = cv2.CascadeClassifier(haar_path)
+    
     for image in imgen:
         np.save('input_from_camera',image)
-        # https://stackoverflow.com/questions/30508922/error-215-empty-in-function-detectmultiscale        
-        face_cascade = cv2.CascadeClassifier('/home/pvj/opencv/opencv-3.4.1/data/haarcascades/haarcascade_frontalface_alt.xml')
-        # face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades+'haarcascade_frontalface_alt.xml')
-        # face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_alt.xml')
         gray  = cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
         faces = face_cascade.detectMultiScale(gray, 1.1, 5)
         print("Found ",len(faces)," face(s)")
@@ -136,15 +175,17 @@ def capture_loop(age_net,gender_net,imgen):
             cv2.putText(image, overlay_text ,(x,y), font, 0.6,(255,255,255),2,cv2.LINE_AA)
             print(gender, age)
 
-        cv2.imshow("Image",image)
-        key = cv2.waitKey(1000)
-        cv2.destroyAllWindows()
+        if (opencv_display == 'yes'): cv2.imshow("Image",image)
+        key = cv2.waitKey(delay) 
+        # if (opencv_display == 'yes'): cv2.destroyAllWindows()
 
 if __name__ == '__main__':
     
     args    = getargs()
     gendict = {
-               'webcam':image_generator(device=DEVICE,size=SIZE,filename=FILENAME),
+               'webcam':image_generator(device=DEVICE,size=SIZE,filename=FILENAME,
+                                        pygame_display=args.pygame_display
+                                       ),
                'nachiket':image_nachiket()
               }
     imgen   = gendict[args.image_source]
@@ -152,8 +193,13 @@ if __name__ == '__main__':
     age_net,gender_net = initialize_caffe_model()     # initialize models, pygame
     #imgen  = image_generator(device=DEVICE,size=SIZE,filename=FILENAME) # streams usb camera
     #imnach = image_nachiket()  # this produces only a stream of nachiket.jpg
-    capture_loop(age_net=age_net,gender_net=gender_net,imgen=imgen)
+    capture_loop(age_net=age_net,gender_net=gender_net,
+                 imgen=imgen,haar_path=args.haar_path,
+                 opencv_display=args.opencv_display,
+                 delay=args.delay
+                )
     
         
     
+
 

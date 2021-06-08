@@ -1397,7 +1397,7 @@ if ($_GET['action'] == 'updateall') {
   	system("sudo dpkg -i /var/www/sync/debs/python3-dbus_1.2.0-2+b1_armhf.deb");
    	system("sudo dpkg -i /var/www/sync/debs/libssh-4_0.6.3-4+deb8u2_armhf.deb");
 	//install new omxplayer version:
-	//system("sudo dpkg -i /var/www/sync/debs/omxplayer_0.3.7-git20170130-62fb580_armhf.deb");
+	//system("sudo dpkg -i /var/www/sync/debs/omxplayer_20190607+gitf06235c-1_armhf.deb");
 	system("sudo dpkg -i /var/www/sync/debs/omxplayer_20180910_7f3faf6_stretch_armhf.deb");
 	//copy omxplayer-sync scripts
 	system("sudo cp /var/www/sync/omxplayer-sync /usr/bin/omxplayer-sync");

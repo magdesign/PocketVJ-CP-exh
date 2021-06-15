@@ -1,7 +1,11 @@
+# origin: https://gist.github.com/magdesign/06434a4412b6f378199f4e40731fc238
 #made for pocketvj exhibition
 # still a few issues: 1. opens too many windows, 2.is very laggy
 #run it like this:
-#python3 gender.py --image_source=webcam --pygame_display=yes --opencv_display=yes --delay=1 --haar_path=/home/pvj/opencv/opencv-3.4.1/data/haarcascades/haarcascade_frontalface_alt.xml
+
+#python3 /var/www/sync/gender.py --image_source=webcam --pygame_display=yes --opencv_display=yes --delay=1 --haar_path= /home/pvj/opencv/opencv-3.4.1/data/haarcascades/haarcascade_frontalface_alt.xml
+#python3 /var/www/sync/gender.py --image_source=webcam --pygame_display=none --opencv_display=yes --delay=1 --haar_path= /home/pvj/opencv/opencv-3.4.1/data/haarcascades/haarcascade_frontalface_alt.xml
+
 
 
 import pygame
@@ -16,7 +20,7 @@ import argparse
 
 # http://www.pygame.org/wiki/HeadlessNoWindowsNeeded
 # https://stackoverflow.com/questions/10466590/hiding-pygame-display  (Chris Jeong's answer)
-#import os
+import os
 #os.environ["SDL_VIDEODRIVER"] = "dummy"
 
 # allow the camera to warmup
@@ -58,8 +62,12 @@ def getargs():
     args = parser.parse_args()
 
     # process args
-    if (args.haar_path == 'None'):
-        args.haar_path = None
+    #if (args.haar_path == 'None'):
+    #    args.haar_path = None
+
+    # turn off display for pygame 
+    if (args.pygame_display == 'no'):  os.environ["SDL_VIDEODRIVER"] = "dummy"
+    if (args.haar_path == 'None'):     args.haar_path = None
 
     assert (args.delay>0),'--delay should be integer > 0, you specified {}'.format(args.delay)
         
@@ -72,11 +80,11 @@ def initialize_caffe_model():
     # http://itywik.org/download/128/
     print('Loading models...')
     age_net = cv2.dnn.readNetFromCaffe(
-                        "age_gender_models/deploy_age.prototxt", 
-                        "age_gender_models/age_net.caffemodel")
+                        "/home/pvj/opencv/age_gender_models/deploy_age.prototxt", 
+                        "/home/pvj/opencv/age_gender_models/age_net.caffemodel")
     gender_net = cv2.dnn.readNetFromCaffe(
-                        "age_gender_models/deploy_gender.prototxt", 
-                        "age_gender_models/gender_net.caffemodel")
+                        "/home/pvj/opencv/age_gender_models/deploy_gender.prototxt", 
+                        "/home/pvj/opencv/age_gender_models/gender_net.caffemodel")
 
     print('Models loaded...')
  

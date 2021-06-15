@@ -55,7 +55,7 @@ Code below loads custom js for form submission without reload-->
                 <div class="col d-flex justify-content-end">
                     <div class="row">
                         <div class="col">
-                            <p class="text-center" id="version_text" style="font-weight: normal;padding-top: 12px;color: rgb(0,0,0);">CP 4.1.0b<br><a href="https://github.com/magdesign/PocketVJ-CP-exh/issues" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help.svg" style="text-align: right;padding: 8px;max-width: 60%;"></a><br></p>
+                            <p class="text-center" id="version_text" style="font-weight: normal;padding-top: 12px;color: rgb(0,0,0);">CP 4.1.1<br><a href="https://github.com/magdesign/PocketVJ-CP-exh/issues" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help.svg" style="text-align: right;padding: 8px;max-width: 60%;"></a><br></p>
                         </div>
                     </div>
                 </div>
@@ -655,7 +655,7 @@ Code below loads custom js for form submission without reload-->
                             <div class="col">
                                 <div>
                                     <h3>&nbsp;</h3>
-                                    <div class="col colforbutton" style="height: 48px;"></div>
+                                    <div class="col colforbutton" style="height: 48px;"><a class="btn btn-primary action" role="button" data-toggle="tooltip" title="show webcam on screen with gender detection" href="?action=onscreenwebcamusbgender">Gender on Screen<br></a></div>
                                     <div class="col colforbutton"><a class="btn btn-primary action" role="button" href="?action=stopwebcamusb" data-toggle="tooltip" title="turn remote webcam off">Webcam OFF<br></a></div>
                                 </div>
                             </div>
@@ -2155,7 +2155,7 @@ Code below loads custom js for form submission without reload-->
                                     <h2>AUDIO OUTPUT</h2>
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="set audio output to hdmi" href="?action=hdmi_out">HDMI<br></a></div>
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="audio to both" href="?action=both_out">HDMI&amp;Jack<br></a></div>
-                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="audio to bluetooth (pair first!!!)" href="?action=bluetooth_out">Bluetooth<br></a></div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="audio to bluetooth (pair first!!!)" href="?action=bluetooth_out"><span style="text-decoration: line-through;">Bluetooth</span><br></a></div>
                                 </div>
                             </div>
                             <div class="col">
@@ -2215,9 +2215,7 @@ Code below loads custom js for form submission without reload-->
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="" href="?action=updateola">Update OLA<br></a></div>
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="install pygame for countdown" href="?action=installpygame">install pygame<br></a></div>
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="install bluetooth" href="?action=installbluetooth">install bluetooth<br></a></div>
-                                    <div class="col colforbutton">
-                                        <h3>&nbsp;</h3>
-                                    </div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="to fix clock on first generation PVJs" href="?action=fixclock">fix RTC bug<br></a></div>
                                 </div>
                             </div>
                             <div class="col">
@@ -2273,9 +2271,11 @@ Code below loads custom js for form submission without reload-->
                             </div>
                             <div class="col">
                                 <div>
-                                    <h2>&nbsp;ALPHA STUFF</h2>
-                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="untested, do not click!" href="?action=updatekernel">update rt kernel<br></a></div>
-                                    <div class="col colforbutton"></div>
+                                    <h2>RESSOURCE SAVING</h2>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="stop remote IR daemon" href="?action=stoplirc">stop/disable LIRC<br></a></div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="" href="?action=stopsamba">stop/disable SAMBA<br></a></div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="" href="?action=stopshell">stop/disable shell<br></a></div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="" href="?action=stopwebserver">stop server, php, smb<br></a></div>
                                     <div class="col colforbutton">
                                         <h3>&nbsp;</h3>
                                     </div>
@@ -2284,8 +2284,9 @@ Code below loads custom js for form submission without reload-->
                             <div class="col">
                                 <div>
                                     <h3>&nbsp;</h3>
-                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="" href="?action=stopwebserver">stop server, php, smb<br></a></div>
-                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="to fix clock on first generation PVJs" href="?action=fixclock">fix RTC bug<br></a></div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="" href="?action=startlirc">start/enable LIRC<br></a></div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="to fix clock on first generation PVJs" href="?action=startsamba">start/enable SAMBA<br></a></div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="enable terminal access directly from CP" href="?action=startshell">start/enable shell<br></a></div>
                                     <div class="col colforbutton">
                                         <h3>&nbsp;</h3>
                                     </div>
@@ -2314,6 +2315,8 @@ Code below loads custom js for form submission without reload-->
     </footer>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+
 
 <!-- Code below sets the "Set Time" button function--> 
  
@@ -2377,6 +2380,9 @@ setInterval(run, 3000);
         });
     });
     </script>
+
+
+
 
 </body>
 

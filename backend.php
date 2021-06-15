@@ -2572,12 +2572,55 @@ if ($_GET['action'] == 'passwdenable'){
 }
 
 if ($_GET['action'] == 'stopwebserver'){
-	$outputtext =  "CP - Webserver down";
-	system("service shellinabox stop");
+	$outputtext =  "CP - Webserver down until next reboot";
 	system("service lighttpd stop");
 	system("service smbd stop");
 	system("sudo kill $(pgrep -f '/usr/bin/php-cgi') > /dev/null 2>&1");
 }
+
+//#Ressource Saving
+
+if ($_GET['action'] == 'stoplirc'){
+	$outputtext =  "IR daemon disabled";
+	system("sudo systemctl stop lircd");
+	system("sudo systemctl disable lircd");
+}
+
+if ($_GET['action'] == 'startlirc'){
+	$outputtext =  "IR daemon enabled";
+	system("sudo systemctl start lircd");
+	system("sudo systemctl enable lircd");
+}
+
+if ($_GET['action'] == 'stopsamba'){
+	$outputtext =  "stop and disable samba";
+	system("sudo systemctl stop smbd");
+	system("sudo systemctl disable smbd");
+	system("sudo systemctl stop nmbd");
+	system("sudo systemctl disable nmbd");
+}
+
+if ($_GET['action'] == 'startsamba'){
+	$outputtext =  "start and enable samba";
+	system("sudo systemctl start smbd");
+	system("sudo systemctl enable smbd");
+	system("sudo systemctl start nmbd");
+	system("sudo systemctl enable nmbd");
+}
+
+if ($_GET['action'] == 'stopshell'){
+	$outputtext =  "stop and disable shellinabox";
+	system("sudo systemctl stop shellinabox.service");
+	system("sudo systemctl disable shellinabox.service");
+
+}
+
+if ($_GET['action'] == 'startshell'){
+	$outputtext =  "start and enable shellinabox";
+	system("sudo systemctl start shellinabox.service");
+	system("sudo systemctl enable shellinabox.service");
+}
+
 
 
 //# OSC receiver
@@ -2650,7 +2693,12 @@ if ($_GET['action'] == 'onscreenwebcamusb') {
 	system("sudo /usr/bin/python /var/www/sync/camerastream.py");
 }
 
-
+if ($_GET['action'] == 'onscreenwebcamusbgender') {
+	$outputtext =  "not coded yet";
+	// needs a script to open x and trigger /sync/gender.py
+	//system("sudo /var/www/sync/stopall");
+	//system("sudo /var/www/sync/gender.sh");
+}
 
 //# enable camera in boot.config
 

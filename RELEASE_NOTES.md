@@ -1,5 +1,9 @@
 # PocketVJ Exhibition / Control Panel 3.x.x
 
+## CP 4.1.1 15. June 2021 <br />
+
+- added RESSOURCE SAVING to disable lirc, samba and shellinabox deaomen, safes energy and ressources<br />
+- disabled onboard leds to save energy<br />
 
 ## CP 4.1.0b 08. June 2021 <br />
 

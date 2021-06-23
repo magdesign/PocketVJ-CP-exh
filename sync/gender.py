@@ -3,8 +3,8 @@
 # still a few issues: 1. opens too many windows, 2.is very laggy
 #run it like this:
 
-#python3 /var/www/sync/gender.py --image_source=webcam --pygame_display=yes --opencv_display=yes --delay=1 --haar_path= /home/pvj/opencv/opencv-3.4.1/data/haarcascades/haarcascade_frontalface_alt.xml
-#python3 /var/www/sync/gender.py --image_source=webcam --pygame_display=none --opencv_display=yes --delay=1 --haar_path= /home/pvj/opencv/opencv-3.4.1/data/haarcascades/haarcascade_frontalface_alt.xml
+#python3 /var/www/sync/gender.py --image_source=webcam --pygame_display=yes --opencv_display=yes --delay=1 --haar_path=/home/pvj/opencv/opencv-3.4.1/data/haarcascades/haarcascade_frontalface_alt.xml
+#python3 /var/www/sync/gender.py --image_source=webcam --pygame_display=none --opencv_display=yes --delay=1 --haar_path=/home/pvj/opencv/opencv-3.4.1/data/haarcascades/haarcascade_frontalface_alt.xml
 
 
 

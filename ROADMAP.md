@@ -13,6 +13,7 @@
 - create a low power setting which disables: hdmi output (/usr/bin/tvservice -o), [bluetooth](https://scribles.net/disabling-bluetooth-on-raspberry-pi/) , [usb ports & leds](https://learn.pi-supply.com/make/how-to-save-power-on-your-raspberry-pi/#disable-on-board-leds), avai, [wifi](https://pimylifeup.com/raspberry-pi-disable-wifi/) <p/>
 - change temp soft limit from 60° to 70° with adding: temp_soft_limit = 70 to boot/config.txt <p/>
 - make the led to flash every 10s so we know its alive<p/>
+- CP add feature to enable/disable broadcast feature in /var/lib/ola/conf/ola-artnet.conf and mention in [usermanual](https://docs.openlighting.org/ola/conf/ola-artnet.conf.html) if artnet is not working.
 
 ## Next to come:
 

@@ -2843,7 +2843,9 @@ if ($_GET['action'] == 'beacon3name') {
 	$outputtext = shell_exec('cat /var/www/sync/bluetooth_beacon.py | grep beacon3=');
 }
 
-
+if ($_GET['action'] == 'beacon4name') {
+	$outputtext = shell_exec('cat /var/www/sync/bluetooth_beacon.py | grep beacon4=');
+}
 
 
 echo $outputtext;

@@ -37,11 +37,13 @@ Code below loads custom js for form submission without reload-->
 <script src="js/submitbeacon1.js"></script>
 <script src="js/submitbeacon2.js"></script>
 <script src="js/submitbeacon3.js"></script>
+<script src="js/submitbeacon4.js"></script>
 
  <!--Code below is for beacons function-->
 <script src="js/submitcpbeacon1.js"></script>
 <script src="js/submitcpbeacon2.js"></script>
 <script src="js/submitcpbeacon3.js"></script>
+<script src="js/submitcpbeacon4.js"></script>
 
  <!--Code below loads my custom bootstrap colors-->
 <link href="assets/css/styles.css" rel="stylesheet">
@@ -55,7 +57,7 @@ Code below loads custom js for form submission without reload-->
                 <div class="col d-flex justify-content-end">
                     <div class="row">
                         <div class="col">
-                            <p class="text-center" id="version_text" style="font-weight: normal;padding-top: 12px;color: rgb(0,0,0);">CP 4.1.1<br><a href="https://github.com/magdesign/PocketVJ-CP-exh/issues" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help.svg" style="text-align: right;padding: 8px;max-width: 60%;"></a><br></p>
+                            <p class="text-center" id="version_text" style="font-weight: normal;padding-top: 12px;color: rgb(0,0,0);">CP 4.1.2<br><a href="https://github.com/magdesign/PocketVJ-CP-exh/issues" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help.svg" style="text-align: right;padding: 8px;max-width: 60%;"></a><br></p>
                         </div>
                     </div>
                 </div>
@@ -1212,6 +1214,9 @@ Code below loads custom js for form submission without reload-->
                                         <form id="beacon3form" method="post"><input class="form-control" type="text" id="beacon3" name="beacon3" placeholder="8954cc84cab307e6952f" style="margin-left: 10px;max-width: 200px;"></form>
                                     </div>
                                     <div class="col colforbutton">
+                                        <form id="beacon4form" method="post"><input class="form-control" type="text" id="beacon4" name="beacon4" placeholder="8964cc84cab307e6989f" style="margin-left: 10px;max-width: 200px;"></form>
+                                    </div>
+                                    <div class="col colforbutton">
                                         <h3>&nbsp;</h3>
                                     </div>
                                 </div>
@@ -1223,6 +1228,7 @@ Code below loads custom js for form submission without reload-->
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="submitBeacon1FormData" data-toggle="tooltip" title="set Beacon1 namespace" onclick="Submitbeacon1FormData();" value="set Beacon1">&lt;&nbsp; Set Beacon1</a></div>
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="submitBeacon2FormData" data-toggle="tooltip" title="set Beacon2 namespace" onclick="Submitbeacon2FormData();" value="set Beacon2">&lt;&nbsp; Set Beacon2</a></div>
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="submitBeacon3FormData" data-toggle="tooltip" title="set Beacon3 namespace" onclick="Submitbeacon3FormData();" value="set Beacon3">&lt;&nbsp; Set Beacon3</a></div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="submitBeacon4FormData" data-toggle="tooltip" title="set Beacon4 namespace" onclick="Submitbeacon4FormData();" value="set Beacon3">&lt;&nbsp; Set Beacon4</a></div>
                                     <div class="col colforbutton">
                                         <h3>&nbsp;</h3>
                                     </div>
@@ -1237,6 +1243,7 @@ Code below loads custom js for form submission without reload-->
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="expansionbutton" data-toggle="tooltip" title="show beacon1 namespace" href="?action=beacon1name">Beacon1 Name?</a></div>
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="expansionbutton" data-toggle="tooltip" title="show beacon2 namespace" href="?action=beacon2name">Beacon2 Name?</a></div>
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="expansionbutton" data-toggle="tooltip" title="show beacon3 namespace" href="?action=beacon3name">Beacon3 Name?</a></div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="expansionbutton" data-toggle="tooltip" title="show beacon4 namespace" href="?action=beacon4name">Beacon4 Name?</a></div>
                                 </div>
                             </div>
                             <div class="col">
@@ -1371,7 +1378,42 @@ Code below loads custom js for form submission without reload-->
                             </div>
                             <div class="col">
                                 <div>
-                                    <h2>&nbsp;</h2>
+                                    <h2>BEACON 4</h2>
+                                    <div class="col colforbutton" style="height: 24px;">
+                                        <form id="cpbeacon3form" method="post" style="margin-left: 10px;">
+                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon4" method="post" name="cpbeacon4" onclick="SubmitCPBeacon4FormData();" value="stopall"><label class="form-check-label" for="formCheck-1">stopall</label></div>
+                                        </form>
+                                    </div>
+                                    <div class="col colforbutton" style="height: 24px;">
+                                        <form id="cpbeacon3form-1" method="post" style="margin-left: 10px;">
+                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon4" method="post" name="cpbeacon4" onclick="SubmitCPBeacon4FormData();" value="startlessonce01"><label class="form-check-label" for="formCheck-1">startvideo once 01_*</label></div>
+                                        </form>
+                                    </div>
+                                    <div class="col colforbutton" style="height: 24px;">
+                                        <form id="cpbeacon3form-2" method="post" style="margin-left: 10px;">
+                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon4" method="post" name="cpbeacon4" onclick="SubmitCPBeacon4FormData();" value="startlessonce02"><label class="form-check-label" for="formCheck-1">startvideo once 02_*</label></div>
+                                        </form>
+                                    </div>
+                                    <div class="col colforbutton" style="height: 24px;">
+                                        <form id="cpbeacon3form-3" method="post" style="margin-left: 10px;">
+                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon4" method="post" name="cpbeacon4" onclick="SubmitCPBeacon4FormData();" value="startlessonce04"><label class="form-check-label" for="formCheck-1">startvideo once 03_*</label></div>
+                                        </form>
+                                    </div>
+                                    <div class="col colforbutton" style="height: 24px;">
+                                        <form id="cpbeacon3form-4" method="post" style="margin-left: 10px;">
+                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon4" method="post" name="cpbeacon4" onclick="SubmitCPBeacon4FormData();" value="startdmxplaybackonce01"><label class="form-check-label" for="formCheck-1">startdmx playback once 01_*</label></div>
+                                        </form>
+                                    </div>
+                                    <div class="col colforbutton" style="height: 24px;">
+                                        <form id="cpbeacon3form-5" method="post" style="margin-left: 10px;">
+                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon4" method="post" name="cpbeacon4" onclick="SubmitCPBeacon4FormData();" value="startdmxplaybackonce02"><label class="form-check-label" for="formCheck-1">startdmx playback once 02_*</label></div>
+                                        </form>
+                                    </div>
+                                    <div class="col colforbutton" style="height: 24px;">
+                                        <form id="cpbeacon3form-6" method="post" style="margin-left: 10px;">
+                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon4" method="post" name="cpbeacon4" onclick="SubmitCPBeacon4FormData();" value="startdmxplaybackonce04"><label class="form-check-label" for="formCheck-1">startdmx playback once 04_*</label></div>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -2317,7 +2359,6 @@ Code below loads custom js for form submission without reload-->
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 
 
-
 <!-- Code below sets the "Set Time" button function--> 
  
 <script type="text/javascript">
@@ -2381,9 +2422,67 @@ setInterval(run, 3000);
     });
     </script>
 
-
-
-
 </body>
 
-</html>
+</html><!-- Code below sets the "Set Time" button function--> 
+ 
+ <script type="text/javascript">
+  function settime() {
+     window.open('time_change.php');
+     document.getElementById('actions_output').innerHTML = ("time set");
+   } 
+ </script>
+ 
+ 
+ <!--Code below this line checks if user is online-->
+ 
+ <script src="js/offline.min.js"></script>
+ <link rel="stylesheet" href="../themes/offline-theme-chrome.css" />
+ <link rel="stylesheet" href="../themes/offline-language-english.css" />
+ 
+ <script>
+   var run = function(){
+   var req = new XMLHttpRequest();
+   req.timeout = 5000;
+   req.open('GET', 'http://localhost:8888/walter/0', true);
+   req.send();
+ }
+ setInterval(run, 3000);
+ 
+         Offline.options = {
+         requests: false
+         }
+         
+ </script>
+ 
+ 
+ <!--Code below is for button actions-->
+ 
+   <script type="text/javascript">
+    $("a.action").on("click", function(event) { 
+        event.preventDefault();
+        $.get( "backend.php" + $(this).attr('href'), function(data) {
+           $("#actions_output").html(data);
+        });
+    });
+    </script>
+ 
+ 
+    <!--Code  below is for cron / Scheduler generator -->
+ 
+   <link rel="stylesheet" href="js/gentleSelect/jquery-gentleSelect.css">
+   <link rel="stylesheet" href="js/cron/jquery-cron.css">
+     <script src="js/jquery.min.js"></script>
+   <script src="js/gentleSelect/jquery-gentleSelect-min.js"></script>
+   <script src="js/cron/jquery-cron.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function() {
+         $('#example1b').cron({
+             initial: "9 21 * * *",
+             onChange: function() {
+                 $('#example1b-val').text($(this).cron("value"));
+             },
+             useGentleSelect: true
+         });
+     });
+     </script>

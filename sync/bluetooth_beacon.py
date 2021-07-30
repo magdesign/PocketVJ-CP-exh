@@ -17,16 +17,18 @@ from beacontools import BeaconScanner, EddystoneFilter # EddystoneTLMFrame (not 
 beacon1="3f9c7795ddcc9920997d"
 beacon2="fbfd15706aef5c1c91de"
 beacon3="8954cc84cab307e6952f"
+beacon4="8964cc84cab307e6989f"
 
 # beacon_list and command_list should be of the same length
 # commands corresponting to each beacon are in command_list
 
 command1= 'echo this is 1'
 command2= 'echo this is 2'
-command3= 'echo this is 2'
+command3= 'echo this is 3'
+command4= 'echo this is 4'
 
-beacon_list  = [beacon1,beacon2,beacon3]
-command_list = [command1,command2,command3]
+beacon_list  = [beacon1,beacon2,beacon3,beacon4]
+command_list = [command1,command2,command3,command4]
 
 # this function checks if 'namespace' and 'instance' are in additional_info
 # then it loops over beacon_list and command_list and checks if each beacon is equal to additional_info['namespace']

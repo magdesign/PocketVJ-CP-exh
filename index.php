@@ -57,7 +57,7 @@ Code below loads custom js for form submission without reload-->
                 <div class="col d-flex justify-content-end">
                     <div class="row">
                         <div class="col">
-                            <p class="text-center" id="version_text" style="font-weight: normal;padding-top: 12px;color: rgb(0,0,0);">CP 4.1.2<br><a href="https://github.com/magdesign/PocketVJ-CP-exh/issues" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help.svg" style="text-align: right;padding: 8px;max-width: 60%;"></a><br></p>
+                            <p class="text-center" id="version_text" style="font-weight: normal;padding-top: 12px;color: rgb(0,0,0);">CP 4.1.3<br><a href="https://github.com/magdesign/PocketVJ-CP-exh/issues" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help.svg" style="text-align: right;padding: 8px;max-width: 60%;"></a><br></p>
                         </div>
                     </div>
                 </div>
@@ -1266,32 +1266,32 @@ Code below loads custom js for form submission without reload-->
                                     </div>
                                     <div class="col colforbutton" style="height: 24px;">
                                         <form id="cpbeacon1form-1" method="post" style="margin-left: 12px;">
-                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon1" method="post" name="cpbeacon1" onclick="SubmitCPBeacon1FormData();" value="startlessonce01"><label class="form-check-label" for="formCheck-1">startvideo once 01_*</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon1" method="post" name="cpbeacon1" onclick="SubmitCPBeacon1FormData();" value="startlessonce01b"><label class="form-check-label" for="formCheck-1">startvideo once 01_*</label></div>
                                         </form>
                                     </div>
                                     <div class="col colforbutton" style="height: 24px;">
                                         <form id="cpbeacon1form-2" method="post" style="margin-left: 12px;">
-                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon1" method="post" name="cpbeacon1" onclick="SubmitCPBeacon1FormData();" value="startlessonce02"><label class="form-check-label" for="formCheck-1">startvideo once 02_*</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon1" method="post" name="cpbeacon1" onclick="SubmitCPBeacon1FormData();" value="startlessonce02b"><label class="form-check-label" for="formCheck-1">startvideo once 02_*</label></div>
                                         </form>
                                     </div>
                                     <div class="col colforbutton" style="height: 24px;">
                                         <form id="cpbeacon1form-3" method="post" style="margin-left: 12px;">
-                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon1" method="post" name="cpbeacon1" onclick="SubmitCPBeacon1FormData();" value="startlessonce03"><label class="form-check-label" for="formCheck-1">startvideo once 03_*</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon1" method="post" name="cpbeacon1" onclick="SubmitCPBeacon1FormData();" value="startlessonce03b"><label class="form-check-label" for="formCheck-1">startvideo once 03_*</label></div>
                                         </form>
                                     </div>
                                     <div class="col colforbutton" style="height: 24px;">
                                         <form id="cpbeacon1form-4" method="post" style="margin-left: 12px;">
-                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon1" method="post" name="cpbeacon1" onclick="SubmitCPBeacon1FormData();" value="startdmxplaybackonce01"><label class="form-check-label" for="formCheck-1">startdmx playback once 01_*</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon1" method="post" name="cpbeacon1" onclick="SubmitCPBeacon1FormData();" value="startdmxplaybackonce01b"><label class="form-check-label" for="formCheck-1">startdmx playback once 01_*</label></div>
                                         </form>
                                     </div>
                                     <div class="col colforbutton" style="height: 24px;">
                                         <form id="cpbeacon1form-5" method="post" style="margin-left: 12px;">
-                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon1" method="post" name="cpbeacon1" onclick="SubmitCPBeacon1FormData();" value="startdmxplaybackonce03"><label class="form-check-label" for="formCheck-1">startdmx playback once 02_*</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon1" method="post" name="cpbeacon1" onclick="SubmitCPBeacon1FormData();" value="startdmxplaybackonce02b"><label class="form-check-label" for="formCheck-1">startdmx playback once 02_*</label></div>
                                         </form>
                                     </div>
                                     <div class="col colforbutton" style="height: 24px;">
                                         <form id="cpbeacon1form-6" method="post" style="margin-left: 12px;">
-                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon1" method="post" name="cpbeacon1" onclick="SubmitCPBeacon1FormData();" value="startdmxplaybackonce02"><label class="form-check-label" for="formCheck-1">startdmx playback once 03_*</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon1" method="post" name="cpbeacon1" onclick="SubmitCPBeacon1FormData();" value="startdmxplaybackonce03b"><label class="form-check-label" for="formCheck-1">startdmx playback once 03_*</label></div>
                                         </form>
                                     </div>
                                 </div>
@@ -1306,32 +1306,32 @@ Code below loads custom js for form submission without reload-->
                                     </div>
                                     <div class="col colforbutton" style="height: 24px;">
                                         <form id="cpbeacon2form-1" method="post" style="margin-left: 10px;">
-                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon2" method="post" name="cpbeacon2" onclick="SubmitCPBeacon2FormData();" value="startlessonce01"><label class="form-check-label" for="formCheck-1">startvideo once 01_*</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon2" method="post" name="cpbeacon2" onclick="SubmitCPBeacon2FormData();" value="startlessonce01b"><label class="form-check-label" for="formCheck-1">startvideo once 01_*</label></div>
                                         </form>
                                     </div>
                                     <div class="col colforbutton" style="height: 24px;">
                                         <form id="cpbeacon2form-2" method="post" style="margin-left: 10px;">
-                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon2" method="post" name="cpbeacon2" onclick="SubmitCPBeacon2FormData();" value="startlessonce02"><label class="form-check-label" for="formCheck-1">startvideo once 02_*</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon2" method="post" name="cpbeacon2" onclick="SubmitCPBeacon2FormData();" value="startlessonce02b"><label class="form-check-label" for="formCheck-1">startvideo once 02_*</label></div>
                                         </form>
                                     </div>
                                     <div class="col colforbutton" style="height: 24px;">
                                         <form id="cpbeacon2form-3" method="post" style="margin-left: 10px;">
-                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon2" method="post" name="cpbeacon2" onclick="SubmitCPBeacon2FormData();" value="startlessonce03"><label class="form-check-label" for="formCheck-1">startvideo once 03_*</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon2" method="post" name="cpbeacon2" onclick="SubmitCPBeacon2FormData();" value="startlessonce03b"><label class="form-check-label" for="formCheck-1">startvideo once 03_*</label></div>
                                         </form>
                                     </div>
                                     <div class="col colforbutton" style="height: 24px;">
                                         <form id="cpbeacon2form-4" method="post" style="margin-left: 10px;">
-                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon2" method="post" name="cpbeacon2" onclick="SubmitCPBeacon2FormData();" value="startdmxplaybackonce01"><label class="form-check-label" for="formCheck-1">startdmx playback once 01_*</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon2" method="post" name="cpbeacon2" onclick="SubmitCPBeacon2FormData();" value="startdmxplaybackonce01b"><label class="form-check-label" for="formCheck-1">startdmx playback once 01_*</label></div>
                                         </form>
                                     </div>
                                     <div class="col colforbutton" style="height: 24px;">
                                         <form id="cpbeacon2form-5" method="post" style="margin-left: 10px;">
-                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon2" method="post" name="cpbeacon2" onclick="SubmitCPBeacon2FormData();" value="startdmxplaybackonce02"><label class="form-check-label" for="formCheck-1">startdmx playback once 02_*</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon2" method="post" name="cpbeacon2" onclick="SubmitCPBeacon2FormData();" value="startdmxplaybackonce02b"><label class="form-check-label" for="formCheck-1">startdmx playback once 02_*</label></div>
                                         </form>
                                     </div>
                                     <div class="col colforbutton" style="height: 24px;">
                                         <form id="cpbeacon2form-6" method="post" style="margin-left: 10px;">
-                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon2" method="post" name="cpbeacon2" onclick="SubmitCPBeacon2FormData();" value="startdmxplaybackonce02"><label class="form-check-label" for="formCheck-1">startdmx playback once 03_*</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon2" method="post" name="cpbeacon2" onclick="SubmitCPBeacon2FormData();" value="startdmxplaybackonce03b"><label class="form-check-label" for="formCheck-1">startdmx playback once 03_*</label></div>
                                         </form>
                                     </div>
                                 </div>
@@ -1346,32 +1346,32 @@ Code below loads custom js for form submission without reload-->
                                     </div>
                                     <div class="col colforbutton" style="height: 24px;">
                                         <form id="cpbeacon3form-1" method="post" style="margin-left: 10px;">
-                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon3" method="post" name="cpbeacon3" onclick="SubmitCPBeacon3FormData();" value="startlessonce01"><label class="form-check-label" for="formCheck-1">startvideo once 01_*</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon3" method="post" name="cpbeacon3" onclick="SubmitCPBeacon3FormData();" value="startlessonce01b"><label class="form-check-label" for="formCheck-1">startvideo once 01_*</label></div>
                                         </form>
                                     </div>
                                     <div class="col colforbutton" style="height: 24px;">
                                         <form id="cpbeacon3form-2" method="post" style="margin-left: 10px;">
-                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon3" method="post" name="cpbeacon3" onclick="SubmitCPBeacon3FormData();" value="startlessonce02"><label class="form-check-label" for="formCheck-1">startvideo once 02_*</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon3" method="post" name="cpbeacon3" onclick="SubmitCPBeacon3FormData();" value="startlessonce02b"><label class="form-check-label" for="formCheck-1">startvideo once 02_*</label></div>
                                         </form>
                                     </div>
                                     <div class="col colforbutton" style="height: 24px;">
                                         <form id="cpbeacon3form-3" method="post" style="margin-left: 10px;">
-                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon3" method="post" name="cpbeacon3" onclick="SubmitCPBeacon3FormData();" value="startlessonce03"><label class="form-check-label" for="formCheck-1">startvideo once 03_*</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon3" method="post" name="cpbeacon3" onclick="SubmitCPBeacon3FormData();" value="startlessonce03b"><label class="form-check-label" for="formCheck-1">startvideo once 03_*</label></div>
                                         </form>
                                     </div>
                                     <div class="col colforbutton" style="height: 24px;">
                                         <form id="cpbeacon3form-4" method="post" style="margin-left: 10px;">
-                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon3" method="post" name="cpbeacon3" onclick="SubmitCPBeacon3FormData();" value="startdmxplaybackonce01"><label class="form-check-label" for="formCheck-1">startdmx playback once 01_*</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon3" method="post" name="cpbeacon3" onclick="SubmitCPBeacon3FormData();" value="startdmxplaybackonce01b"><label class="form-check-label" for="formCheck-1">startdmx playback once 01_*</label></div>
                                         </form>
                                     </div>
                                     <div class="col colforbutton" style="height: 24px;">
                                         <form id="cpbeacon3form-5" method="post" style="margin-left: 10px;">
-                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon-2" method="post" name="cpbeacon3" onclick="SubmitCPBeacon3FormData();" value="startdmxplaybackonce02"><label class="form-check-label" for="formCheck-1">startdmx playback once 02_*</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon-2" method="post" name="cpbeacon3" onclick="SubmitCPBeacon3FormData();" value="startdmxplaybackonce02b"><label class="form-check-label" for="formCheck-1">startdmx playback once 02_*</label></div>
                                         </form>
                                     </div>
                                     <div class="col colforbutton" style="height: 24px;">
                                         <form id="cpbeacon3form-6" method="post" style="margin-left: 10px;">
-                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon-1" method="post" name="cpbeacon3" onclick="SubmitCPBeacon3FormData();" value="startdmxplaybackonce03"><label class="form-check-label" for="formCheck-1">startdmx playback once 03_*</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon-1" method="post" name="cpbeacon3" onclick="SubmitCPBeacon3FormData();" value="startdmxplaybackonce03b"><label class="form-check-label" for="formCheck-1">startdmx playback once 03_*</label></div>
                                         </form>
                                     </div>
                                 </div>
@@ -1386,32 +1386,32 @@ Code below loads custom js for form submission without reload-->
                                     </div>
                                     <div class="col colforbutton" style="height: 24px;">
                                         <form id="cpbeacon3form-1" method="post" style="margin-left: 10px;">
-                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon4" method="post" name="cpbeacon4" onclick="SubmitCPBeacon4FormData();" value="startlessonce01"><label class="form-check-label" for="formCheck-1">startvideo once 01_*</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon4" method="post" name="cpbeacon4" onclick="SubmitCPBeacon4FormData();" value="startlessonce01b"><label class="form-check-label" for="formCheck-1">startvideo once 01_*</label></div>
                                         </form>
                                     </div>
                                     <div class="col colforbutton" style="height: 24px;">
                                         <form id="cpbeacon3form-2" method="post" style="margin-left: 10px;">
-                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon4" method="post" name="cpbeacon4" onclick="SubmitCPBeacon4FormData();" value="startlessonce02"><label class="form-check-label" for="formCheck-1">startvideo once 02_*</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon4" method="post" name="cpbeacon4" onclick="SubmitCPBeacon4FormData();" value="startlessonce02b"><label class="form-check-label" for="formCheck-1">startvideo once 02_*</label></div>
                                         </form>
                                     </div>
                                     <div class="col colforbutton" style="height: 24px;">
                                         <form id="cpbeacon3form-3" method="post" style="margin-left: 10px;">
-                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon4" method="post" name="cpbeacon4" onclick="SubmitCPBeacon4FormData();" value="startlessonce04"><label class="form-check-label" for="formCheck-1">startvideo once 03_*</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon4" method="post" name="cpbeacon4" onclick="SubmitCPBeacon4FormData();" value="startlessonce04b"><label class="form-check-label" for="formCheck-1">startvideo once 04_*</label></div>
                                         </form>
                                     </div>
                                     <div class="col colforbutton" style="height: 24px;">
                                         <form id="cpbeacon3form-4" method="post" style="margin-left: 10px;">
-                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon4" method="post" name="cpbeacon4" onclick="SubmitCPBeacon4FormData();" value="startdmxplaybackonce01"><label class="form-check-label" for="formCheck-1">startdmx playback once 01_*</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon4" method="post" name="cpbeacon4" onclick="SubmitCPBeacon4FormData();" value="startdmxplaybackonce01b"><label class="form-check-label" for="formCheck-1">startdmx playback once 01_*</label></div>
                                         </form>
                                     </div>
                                     <div class="col colforbutton" style="height: 24px;">
                                         <form id="cpbeacon3form-5" method="post" style="margin-left: 10px;">
-                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon4" method="post" name="cpbeacon4" onclick="SubmitCPBeacon4FormData();" value="startdmxplaybackonce02"><label class="form-check-label" for="formCheck-1">startdmx playback once 02_*</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon4" method="post" name="cpbeacon4" onclick="SubmitCPBeacon4FormData();" value="startdmxplaybackonce02b"><label class="form-check-label" for="formCheck-1">startdmx playback once 02_*</label></div>
                                         </form>
                                     </div>
                                     <div class="col colforbutton" style="height: 24px;">
                                         <form id="cpbeacon3form-6" method="post" style="margin-left: 10px;">
-                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon4" method="post" name="cpbeacon4" onclick="SubmitCPBeacon4FormData();" value="startdmxplaybackonce04"><label class="form-check-label" for="formCheck-1">startdmx playback once 04_*</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon4" method="post" name="cpbeacon4" onclick="SubmitCPBeacon4FormData();" value="startdmxplaybackonce04b"><label class="form-check-label" for="formCheck-1">startdmx playback once 04_*</label></div>
                                         </form>
                                     </div>
                                 </div>
@@ -2424,65 +2424,4 @@ setInterval(run, 3000);
 
 </body>
 
-</html><!-- Code below sets the "Set Time" button function--> 
- 
- <script type="text/javascript">
-  function settime() {
-     window.open('time_change.php');
-     document.getElementById('actions_output').innerHTML = ("time set");
-   } 
- </script>
- 
- 
- <!--Code below this line checks if user is online-->
- 
- <script src="js/offline.min.js"></script>
- <link rel="stylesheet" href="../themes/offline-theme-chrome.css" />
- <link rel="stylesheet" href="../themes/offline-language-english.css" />
- 
- <script>
-   var run = function(){
-   var req = new XMLHttpRequest();
-   req.timeout = 5000;
-   req.open('GET', 'http://localhost:8888/walter/0', true);
-   req.send();
- }
- setInterval(run, 3000);
- 
-         Offline.options = {
-         requests: false
-         }
-         
- </script>
- 
- 
- <!--Code below is for button actions-->
- 
-   <script type="text/javascript">
-    $("a.action").on("click", function(event) { 
-        event.preventDefault();
-        $.get( "backend.php" + $(this).attr('href'), function(data) {
-           $("#actions_output").html(data);
-        });
-    });
-    </script>
- 
- 
-    <!--Code  below is for cron / Scheduler generator -->
- 
-   <link rel="stylesheet" href="js/gentleSelect/jquery-gentleSelect.css">
-   <link rel="stylesheet" href="js/cron/jquery-cron.css">
-     <script src="js/jquery.min.js"></script>
-   <script src="js/gentleSelect/jquery-gentleSelect-min.js"></script>
-   <script src="js/cron/jquery-cron.js"></script>
-   <script type="text/javascript">
-     $(document).ready(function() {
-         $('#example1b').cron({
-             initial: "9 21 * * *",
-             onChange: function() {
-                 $('#example1b-val').text($(this).cron("value"));
-             },
-             useGentleSelect: true
-         });
-     });
-     </script>
+</html>

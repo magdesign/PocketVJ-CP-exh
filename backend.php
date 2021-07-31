@@ -2828,6 +2828,7 @@ if ($_GET['action'] == 'startbeacon') {
 
 if ($_GET['action'] == 'stopbeacon') {
 	system("sudo /var/www/sync/stopbeacon");
+	system ("sudo /var/www/sync/stopall > /dev/null 2>&1");
 	$outputtext =  "stop beacon listener";
 }
 

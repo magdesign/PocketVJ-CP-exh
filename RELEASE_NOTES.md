@@ -3,6 +3,7 @@
 ## CP 4.1.2 30. July 2021 <br />
 
 - added one more beacon<br />
+- changed the scanner script<br />
 
 
 ## CP 4.1.1 15. June 2021 <br />

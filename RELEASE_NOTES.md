@@ -1,12 +1,11 @@
-# PocketVJ Exhibition / Control Panel 3.x.x
+# PocketVJ Exhibition / Control Panel 4.x.x
 
 ## Image 4.0.9 01.August 2021 <br />
-- pip install pybeacon
-
-
+- Bluetooth already installed by default<br />
+- DOwngraded omxplayer to 2018 for fadingout via dmx/artnet<br />
 
 ## CP 4.1.4 1. August 2021 <br />
-- added questin mark to link to usermanual in CP<br />
+- added questin mark to link to usermanual in CP
 - added audio output selection also to beacon scripts<br />
 
 ## CP 4.1.3 31. July 2021 <br />

@@ -5,8 +5,9 @@
 - DOwngraded omxplayer to 2018 for fadingout via dmx/artnet<br />
 
 ## CP 4.1.4 1. August 2021 <br />
-- added questin mark to link to usermanual in CP
+- added questin mark to link to usermanual in CP<br />
 - added audio output selection also to beacon scripts<br />
+- fixed ola-artnet.conf which was not set to broadcast while update/factory preset<br />
 
 ## CP 4.1.3 31. July 2021 <br />
 

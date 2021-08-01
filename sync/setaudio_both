@@ -58,6 +58,17 @@
 	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startlesser03 &
 	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startlesser04 &
 	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startlesser05 &
+#once without sync less
+	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startlessonce01 &
+	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startlessonce02 &
+	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startlessonce03 &
+	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startlessonce04 &
+	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startlessonce05 &
+	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startlessonce06 &
+	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startlessonce07 &
+	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startlessonce08 &
+	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startlessonce09 &
+	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startlessonce10 &
 #set the audio on dmx scripts
 	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startdmxplaybackaudio01 &
 	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startdmxplaybackaudio02 &
@@ -69,6 +80,11 @@
 	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startdmxplaybackvid03 &
 	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startdmxplaybackvid04 &
 	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startdmxplaybackvid05 &
+#set on beacon
+	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startlessonce01b &
+	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startlessonce02b &
+	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startlessonce03b &
+	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startlessonce04b &
 #set on midi
 	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startmididmxvideoplay01 &
 	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startmididmxaudioplay01 &

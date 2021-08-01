@@ -1,6 +1,10 @@
 # PocketVJ Exhibition / Control Panel 3.x.x
 
 
+## CP 4.1.4 1. August 2021 <br />
+- added questin mark to link to usermanual in CP<br />
+- added audio output selection also to beacon scripts<br />
+
 ## CP 4.1.3 31. July 2021 <br />
 
 - fixed endless trigger loop when beacon triggered a video sequence<br />

@@ -1,5 +1,9 @@
 # PocketVJ Exhibition / Control Panel 3.x.x
 
+## Image 4.0.9 01.August 2021 <br />
+- pip install pybeacon
+
+
 
 ## CP 4.1.4 1. August 2021 <br />
 - added questin mark to link to usermanual in CP<br />

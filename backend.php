@@ -1451,7 +1451,7 @@ if ($_GET['action'] == 'updateall') {
 	//remove .xsession file
 	system("sudo rm -rf /home/pvj/.xsession");
 	//copy the artnet conf set to broadcast
-	system("sudo cp /var/www/sync/ola-artnet.conf /etc/ola/ola-artnet.conf");
+	system("sudo cp /var/www/sync/ola-artnet.conf /var/lib/ola/conf/ola-artnet.conf");
 	// set audio to jack and hdmi
 	system("sudo /var/www/sync/setaudio_both");
 	//set ip on network scripts to match pvj current ip
@@ -1515,7 +1515,7 @@ if ($_GET['action'] == 'factoryreset') {
 	// fix the iptables rules
 	system("sudo cp /var/www/sync/iptables.ipv4.nat /etc/iptables.ipv4.nat");
 	//copy the artnet conf set to broadcast
-	system("sudo cp /var/www/sync/ola-artnet.conf /etc/ola/ola-artnet.conf");
+	system("sudo cp /var/www/sync/ola-artnet.conf /var/lib/ola/conf/ola-artnet.conf");
 	//set slidetime to 5 seconds
 	system("sudo sed -ri 's@<SlideDuration>.+</SlideDuration>@<SlideDuration>5</SlideDuration>@' /home/pvj/openFrameworks/addons/ofxPiMapper/example_fbo-sources/bin/data/magslideshow_settings.xml");
 	//disable ola daemon
@@ -1620,7 +1620,7 @@ if ($_GET['action'] == 'rentalreset') {
 	// fix the iptables rules
 	system("sudo cp /var/www/sync/iptables.ipv4.nat /etc/iptables.ipv4.nat");
 	//copy the artnet conf set to broadcast
-	system("sudo cp /var/www/sync/ola-artnet.conf /etc/ola/ola-artnet.conf");
+	system("sudo cp /var/www/sync/ola-artnet.conf /var/lib/ola/conf/ola-artnet.conf");
 	//reset to 192.168.2.* ip range
 	system("sudo /var/www/sync/iprange192");
 	//stop OLA and oladeamon

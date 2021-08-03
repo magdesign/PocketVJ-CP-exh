@@ -5,16 +5,17 @@
 
 See here on how to update your PocketVJ Exhibition:
 
-https://vimeo.com/467914288
+https://video.pocketvj.com/AVideo/video/7/pocketvj-exhibition-update
 
-Get tutorials on: https://pocketvj.com
+
+Get tutorials on: https://www.pocketvj.com/pocketvj-exhibition#Tutorials_Exhibition
 
 
 
 
 
 Exhibition models from the very first generation (4.0.0) need to be updated like this:
-https://vimeo.com/468128933
+https://video.pocketvj.com/AVideo/video/6/pocketvj-exhibition-alternative-update
 and then go to "system settings" and click "update all", this is important!
 
 

@@ -2,8 +2,8 @@
 
 ## Currently in the pipeline: 
 
+- button to check if bluetooth is installed and enabled <p/>
 - mapper => when selecting mapper preset 1-4, open fake keyboard so mouseless mapping is working same as when autostart<p/>
-- upgrading resp. downgrading omxplayer also on recent images, option to install 2019 or 2018 build<p/>
 - bluetooth features: connecting boombox, finish this!! <p/>
 - bluetooth beacon, find soution for retrigger, re-scan <p/>
 - measure power consumption (video mode, dmx mode, mapping mode, sheduler mode) and provide data in usermanual <p/>
@@ -69,8 +69,7 @@
 - create my own gitea server to move away from github?<p/>
 
 ### **Test:**
-- test if new omxplayer still syncs well<p/>
-- test syncing 1 exhibition with 2 rtcs, what happens when master is changing file? push buttons? <p/>
+
 - test autostart of dmxshow<p/>
 
 

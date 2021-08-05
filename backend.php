@@ -1641,6 +1641,8 @@ if ($_GET['action'] == 'rentalreset') {
 	system("mkdir /home/pvj/.local/share/pjlink");
 	//copy standard pjlink config file:
 	system("cp /var/www/sync/pjlink.conf /home/pvj/.local/share/pjlink/pjlink.conf");
+	//enable wifi and bluetooth
+	system("sudo cp /var/www/sync/raspi-blacklist.empty /etc/modprobe.d/raspi-blacklist.conf");
 	////////////////
 	//////to do:
 	// set to default filebrowser!!!

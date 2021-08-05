@@ -2,10 +2,10 @@
 
 ## Image 4.0.9 01.August 2021 <br />
 - Bluetooth already installed by default<br />
-- DOwngraded omxplayer to 2018 for fadingout via dmx/artnet<br />
+- Downgraded omxplayer to 2018 for fadingout via dmx/artnet<br />
 
 ## CP 4.1.4 1. August 2021 <br />
-- added questin mark to link to usermanual in CP<br />
+- added questionmark to link to usermanual in CP<br />
 - added audio output selection also to beacon scripts<br />
 - fixed ola-artnet.conf which was not set to broadcast while update/factory preset<br />
 

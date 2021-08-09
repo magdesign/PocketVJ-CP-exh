@@ -57,7 +57,7 @@ Code below loads custom js for form submission without reload-->
                 <div class="col d-flex justify-content-end">
                     <div class="row">
                         <div class="col">
-                            <p class="text-center" id="version_text" style="font-weight: normal;padding-top: 12px;color: rgb(0,0,0);">CP 4.1.4<br><a href="https://github.com/magdesign/PocketVJ-CP-exh/issues" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help_issue.svg" style="text-align: right;padding: 8px;max-width: 60%;"></a><a href="https://www.pocketvj.com/manual/index.html" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help.svg" style="text-align: right;padding: 8px;max-width: 60%;"></a><br></p>
+                            <p class="text-center" id="version_text" style="font-weight: normal;padding-top: 12px;color: rgb(0,0,0);">CP 4.1.5<br><a href="https://github.com/magdesign/PocketVJ-CP-exh/issues" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help_issue.svg" style="text-align: right;padding: 8px;max-width: 60%;"></a><a href="https://www.pocketvj.com/manual/index.html" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help.svg" style="text-align: right;padding: 8px;max-width: 60%;"></a><br></p>
                         </div>
                     </div>
                 </div>
@@ -1224,7 +1224,7 @@ Code below loads custom js for form submission without reload-->
                             <div class="col">
                                 <div>
                                     <h3>&nbsp;</h3>
-                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="expansionbutton" href="?action=stopbeacon" data-toggle="tooltip" title="stop beacon listener">Stop</a></div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="expansionbutton" href="?action=stop" data-toggle="tooltip" title="stop beacon listener">Stop</a></div>
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="submitBeacon1FormData" data-toggle="tooltip" title="set Beacon1 namespace" onclick="Submitbeacon1FormData();" value="set Beacon1">&lt;&nbsp; Set Beacon1</a></div>
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="submitBeacon2FormData" data-toggle="tooltip" title="set Beacon2 namespace" onclick="Submitbeacon2FormData();" value="set Beacon2">&lt;&nbsp; Set Beacon2</a></div>
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="submitBeacon3FormData" data-toggle="tooltip" title="set Beacon3 namespace" onclick="Submitbeacon3FormData();" value="set Beacon3">&lt;&nbsp; Set Beacon3</a></div>

@@ -16,8 +16,9 @@ if ($_GET['action'] == 'fastforward') {
 
 if ($_GET['action'] == 'stop') {
 	$outputtext =  "all players stopped";
+	system("sudo /var/www/sync/stopbeacon > /dev/null 2>&1");
 	system ("sudo /var/www/sync/stopall > /dev/null 2>&1");
-}
+	}
 
 if ($_GET['action'] == 'stopvideo') {
 	$outputtext =  "stop video player only";
@@ -1040,7 +1041,7 @@ if ($_GET['action'] == 'setosc') {
 }
 
 if ($_GET['action'] == 'setbeacon') {
-	$outputtext = "autostart to BLuetooth Becon, can only be stopped from Expansion setting!";
+	$outputtext = "autostart to Bluetooth Beacon";
 	system("sudo cp /var/www/sync/rc.local.beacon /etc/rc.local");
 }
 
@@ -2824,7 +2825,7 @@ if ($_GET['action'] == 'stopbuttons') {
 if ($_GET['action'] == 'startbeacon') {
 	system("sudo /var/www/sync/stopall &");
 	system("sudo fbi -T 1 -a -noverbose /media/internal/pir/stillshot.png &");
-	system("sudo python3 /var/www/sync/bluetooth_beacon.py	> /dev/null 2>&1 &");
+	system("sudo /var/www/sync/startbeacon > /dev/null 2>&1 &");
 	$outputtext =  "start beacon listener";
 }
 

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# create a file so we know bluetooth scanner shall stay active
+touch /tmp/bluetooth_beacon
+
+# start beacon scanner
+sudo python3 /var/www/sync/bluetooth_beacon.py
+
+exit 0

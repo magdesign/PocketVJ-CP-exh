@@ -1,8 +1,16 @@
 # PocketVJ Exhibition / Control Panel 4.x.x
 
+## CP 4.1.5 9. August 2021 <br />
+- Added stop beacon listener to the red STOP button in CP<br />
+- Fixed beacon scanner endlessly adding new scanning instance until system crashes<br />
+- Fixed Autostart to beacon, please set Autostart again after update! <br />
+- Fixed setdmxblack in stopall to only performing when olad is active, since its a very slow process<br />
+- speeded up setdmxblack<br />
+- STILL TO DO: fix dmxplayback triggered from beacon, comming soon!<br />
+
 ## Image 4.0.9 01.August 2021 <br />
 - Bluetooth already installed by default<br />
-- Downgraded omxplayer to 2018 for fadingout via dmx/artnet<br />
+- Downgraded omxplayer to 2018 for fading out via dmx/artnet<br />
 
 ## CP 4.1.4 1. August 2021 <br />
 - added questionmark to link to usermanual in CP<br />

@@ -2,8 +2,13 @@
 #LED Blinking 
 /usr/bin/python /var/www/sync/ledblinking.py
 
-#start script to listen to osc commands on port 9876
-/usr/bin/python3 /var/www/sync/bluetooth_beacon.py &
+#start beacon stillshot onto HDMi output
+sudo fbi -T 1 -a -noverbose /media/internal/pir/stillshot.png &
+
+#sleep for 5s until bluetooth is up and loaded
+sleep 5
+#start script to listen to beacons
+sudo /var/www/sync/startbeacon &
 
 
 exit 0

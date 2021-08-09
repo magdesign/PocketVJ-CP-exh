@@ -1,7 +1,8 @@
 #!/bin/bash
 
 #kill beacon scanner
-/var/www/sync/stopbeacon
+#/var/www/sync/stopbeacon > /dev/null 2>&1
+sudo kill $(pgrep -f 'python3 /var/www/sync/bluetooth_beacon.py') > /dev/null 2>&1 &
 sleep 0.5
 
 #kill all running tasks
@@ -10,9 +11,23 @@ sleep 0.5
 #play video01 without sync
 /usr/bin/omxplayer --no-osd -o both /media/internal/video/01* 
 
-#start stillshot after video is finished
-sudo fbi -T 1 -a -noverbose /media/internal/pir/stillshot.png > /dev/null 2>&1 
+#when video has finished, check if scannerfile /tmp/bluetooth_beacon exists, then do
+if [ -f /tmp/bluetooth_beacon ]
+then
+     echo file found, scan again:
+    #start still image    
+    sudo fbi -T 1 -a -noverbose /media/internal/pir/stillshot.png > /dev/null 2>&1 
+    #start beacon scanner again
+    sudo python3 /var/www/sync/bluetooth_beacon.py > /dev/null 2>&1 &
+else
+    #stop scanner and exit all processes
+    echo no file found, stopping everything
+    sudo kill $(pgrep -f 'python3 /var/www/sync/bluetooth_beacon.py') > /dev/null 2>&1 &
+    /var/www/sync/stopall > /dev/null 2>&1
+    echo all tasks stopped
+fi
 
-#start beacon scanner again
-sudo python3 /var/www/sync/bluetooth_beacon.py > /dev/null 2>&1 &
+echo ended startlessonce0*b
+#give an exit everything good when finished
+exit 0
 

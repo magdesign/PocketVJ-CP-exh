@@ -1,5 +1,14 @@
 # PocketVJ Exhibition / Control Panel 4.x.x
 
+
+## CP 4.1.6 9. August 2021 <br />
+
+- fixed dmxplayback show05, since it was triggering show04<br />
+- stop beacon when manually start dmxplayback from CP<br />
+- fixed beacon triggers dmxplayback<br />
+
+
+
 ## CP 4.1.5 9. August 2021 <br />
 - Added stop beacon listener to the red STOP button in CP<br />
 - Fixed beacon scanner endlessly adding new scanning instance until system crashes<br />

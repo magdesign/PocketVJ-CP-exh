@@ -705,54 +705,64 @@ if ($_GET['action'] == 'startdmxrecord05') {
 //// dmx Playback
 
 if ($_GET['action'] == 'startdmxplayback01') {
+	system("sudo /var/www/sync/stopbeacon > /dev/null 2>&1");
 	exec("sudo /var/www/sync/startdmxplayback01 > /dev/null &");
 	$outputtext = "playback show01";
 }
 
 if ($_GET['action'] == 'startdmxplayback02') {
+	system("sudo /var/www/sync/stopbeacon > /dev/null 2>&1");
 	exec("sudo /var/www/sync/startdmxplayback02 > /dev/null &");
 	$outputtext = "playback show02";
 }
 
 if ($_GET['action'] == 'startdmxplayback03') {
+	system("sudo /var/www/sync/stopbeacon > /dev/null 2>&1");
 	exec("sudo /var/www/sync/startdmxplayback03 > /dev/null &");
 	$outputtext = "playback show03";
 }
 
 if ($_GET['action'] == 'startdmxplayback04') {
+	system("sudo /var/www/sync/stopbeacon > /dev/null 2>&1");
 	exec("sudo /var/www/sync/startdmxplayback04 > /dev/null &");
 	$outputtext = "playback show04";
 }
 
-if ($_GET['action'] == 'startdmxplayback04') {
-	exec("sudo /var/www/sync/startdmxplayback04 > /dev/null &");
+if ($_GET['action'] == 'startdmxplayback05') {
+	system("sudo /var/www/sync/stopbeacon > /dev/null 2>&1");
+	exec("sudo /var/www/sync/startdmxplayback05 > /dev/null &");
 	$outputtext = "playback show04";
 }
 
 //# DMX and video player
 
 if ($_GET['action'] == 'startdmxplaybackvid01') {
+	system("sudo /var/www/sync/stopbeacon > /dev/null 2>&1");
 	exec("sudo /var/www/sync/startdmxplaybackvid01 > /dev/null &");
 	$outputtext = "playback dmx01 and video 01_* in loop";
 	}
 
 if ($_GET['action'] == 'startdmxplaybackvid02') {
+	system("sudo /var/www/sync/stopbeacon > /dev/null 2>&1");
 	exec("sudo /var/www/sync/startdmxplaybackvid02 > /dev/null &");
 	$outputtext = "playback dmx02 and video 02_* in loop";
 	}
 
 
 if ($_GET['action'] == 'startdmxplaybackvid03') {
+	system("sudo /var/www/sync/stopbeacon > /dev/null 2>&1");
 	exec("sudo /var/www/sync/startdmxplaybackvid03 > /dev/null &");
 	$outputtext = "playback dmx03 and video 03_* in loop";
 	}
 
 if ($_GET['action'] == 'startdmxplaybackvid04') {
+	system("sudo /var/www/sync/stopbeacon > /dev/null 2>&1");
 	exec("sudo /var/www/sync/startdmxplaybackvid04 > /dev/null &");
 	$outputtext = "playback dmx04 and video 04_* in loop";
 	}
 	
 if ($_GET['action'] == 'startdmxplaybackvid05') {
+	system("sudo /var/www/sync/stopbeacon > /dev/null 2>&1");
 	exec("sudo /var/www/sync/startdmxplaybackvid05 > /dev/null &");
 	$outputtext = "playback dmx05 and video 05_* in loop";
 	}
@@ -760,26 +770,31 @@ if ($_GET['action'] == 'startdmxplaybackvid05') {
 //# DMX with audio player
 
 if ($_GET['action'] == 'startdmxplaybackaudio01') {
+	system("sudo /var/www/sync/stopbeacon > /dev/null 2>&1");
 	exec("sudo /var/www/sync/startdmxplaybackaudio01 > /dev/null &");
 	$outputtext = "playback dmx and audio 01_* and loop";
 }
 
 if ($_GET['action'] == 'startdmxplaybackaudio02') {
+	system("sudo /var/www/sync/stopbeacon > /dev/null 2>&1");
 	exec("sudo /var/www/sync/startdmxplaybackaudio02 > /dev/null &");
 	$outputtext = "playback dmx and audio 02_* and loop";
 }
 
 if ($_GET['action'] == 'startdmxplaybackaudio03') {
+	system("sudo /var/www/sync/stopbeacon > /dev/null 2>&1");
 	exec("sudo /var/www/sync/startdmxplaybackaudio03 > /dev/null &");
 	$outputtext = "playback dmx and audio 03_* and loop";
 }
 
 if ($_GET['action'] == 'startdmxplaybackaudio04') {
+	system("sudo /var/www/sync/stopbeacon > /dev/null 2>&1");
 	exec("sudo /var/www/sync/startdmxplaybackaudio04 > /dev/null &");
 	$outputtext = "playback dmx and audio 04_* and loop";
 }
 
 if ($_GET['action'] == 'startdmxplaybackaudio05') {
+	system("sudo /var/www/sync/stopbeacon > /dev/null 2>&1");
 	exec("sudo /var/www/sync/startdmxplaybackaudio05 > /dev/null &");
 	$outputtext = "playback dmx and audio 05_* and loop";
 }

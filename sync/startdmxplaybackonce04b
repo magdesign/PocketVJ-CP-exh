@@ -1,22 +1,32 @@
 #!/bin/bash
 
 #kill beacon scanner
-/var/www/sync/stopbeacon
+sudo kill $(pgrep -f 'python3 /var/www/sync/bluetooth_beacon.py') > /dev/null 2>&1 &
 sleep 0.5
-
 #kill all running tasks
 /var/www/sync/stopall > /dev/null 2>&1
-
-if [ -f /etc/openvpn/pocketvj.remote.conf ] && [ "$(md5sum < /proc/device-tree/hat/product)" = "33e26e96aeb252a3e1374ca44ad684a2  -" ]
+sleep 0.5
+#play dmx sequence
+if [ -f /tmp/bluetooth_beacon ] && [ "$(md5sum < /proc/device-tree/hat/product)" = "33e26e96aeb252a3e1374ca44ad684a2  -" ]
 
         then
         # plays once
         sudo ola_recorder --no-verify-playback -i 1 -p /media/internal/dmx/show04 
-        echo "playback show01 once"
+        #set all dmx to black
+        sudo /var/www/sync/setdmxblackout &
+        sleep 1
         #start beacon scanner again
         sudo python3 /var/www/sync/bluetooth_beacon.py > /dev/null 2>&1 &
 else
   echo "this is not PocketVJ Exhibition, aborting"
-  exit 0
+  echo "or"
+  echo "no bluetooth scan file found, stopping everything"
+    sudo kill $(pgrep -f 'python3 /var/www/sync/bluetooth_beacon.py') > /dev/null 2>&1 &
+    sudo /var/www/sync/stopall > /dev/null 2>&1
+    echo "all tasks stopped"
 fi
+
+echo "ended startdmxplaybackonce0*b"
+#give an exit everything good when finished
+exit 0
 

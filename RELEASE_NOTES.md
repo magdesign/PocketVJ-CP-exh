@@ -1,13 +1,22 @@
 # PocketVJ Exhibition / Control Panel 4.x.x
 
 
-## CP 4.1.6 9. August 2021 <br />
 
+
+## CP 4.1.7 12. August 2021 <br />
+- added button to check CPU frequency<br />
+- autostart "Beacon without GPU", to save enrgy<br />
+- "Check Services" to see what is running and what not incl. online status :-) <br />
+- added "GPU OFF" button under Display, to save energy and prevent heat<br />
+- added "CPU Frequency" to check if it is running on fullspeed or not <br />
+- added "stop USB/RJ45", start it needs some more work to be done<br />
+- added "remove Bluetooth" button<br />
+
+
+## CP 4.1.6 9. August 2021 <br />
 - fixed dmxplayback show05, since it was triggering show04<br />
 - stop beacon when manually start dmxplayback from CP<br />
 - fixed beacon triggers dmxplayback<br />
-
-
 
 ## CP 4.1.5 9. August 2021 <br />
 - Added stop beacon listener to the red STOP button in CP<br />

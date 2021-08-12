@@ -1,0 +1,14 @@
+#!/bin/bash
+#LED Blinking 
+/usr/bin/python /var/www/sync/ledblinking.py
+
+
+#sleep for 5s until bluetooth is up and loaded
+sleep 5
+#turn off GPU
+sudo /opt/vc/bin/tvservice -o &
+
+#start script to listen to beacons
+sudo /var/www/sync/startbeacon &
+
+exit 0

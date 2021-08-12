@@ -3,18 +3,15 @@
 ## Currently in the pipeline: 
 
 
-- function to check if bluetooth is installed and enabled<p/>
-- add beacon scanner to CP<p/>
+- add rescan timeout varible to bluetooth scanner <p/>
+- add toggle to enable/disable timeout on bluetooth scanner<p/>
+- update manual with all the service checking stuff and energy saving things <p/>
+- function to release throotlle after hi temp <p/>
 - mapper => when selecting mapper preset 1-4, open fake keyboard so mouseless mapping is working same as when autostart<p/>
 - entry field for fading time under video<p/>
-- button to check if bluetooth is installed and enabled <p/>
-- mapper => when selecting mapper preset 1-4, open fake keyboard so mouseless mapping is working same as when autostart<p/>
-- bluetooth features: connecting boombox, finish this!! <p/>
-- bluetooth beacon, find soution for retrigger, re-scan <p/>
-- measure power consumption (video mode, dmx mode, mapping mode, sheduler mode) and provide data in usermanual <p/>
-- also provide rough meassurements in usermanual <p/>
+- bluetooth features: connecting boombox, finish this!! 
+
 - add gender and or facemask detection via webcam, test the new script => it works, but slow <p/>
-- create a low power setting which disables: hdmi output (/usr/bin/tvservice -o), [bluetooth](https://scribles.net/disabling-bluetooth-on-raspberry-pi/) , [usb ports & leds](https://learn.pi-supply.com/make/how-to-save-power-on-your-raspberry-pi/#disable-on-board-leds), avai, [wifi](https://pimylifeup.com/raspberry-pi-disable-wifi/) <p/>
 - change temp soft limit from 60° to 70° with adding: temp_soft_limit = 70 to boot/config.txt <p/>
 - make the led to flash every 10s so we know its alive<p/>
 - power off button also closes browser tab<p/>

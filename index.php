@@ -57,7 +57,7 @@ Code below loads custom js for form submission without reload-->
                 <div class="col d-flex justify-content-end">
                     <div class="row">
                         <div class="col">
-                            <p class="text-center" id="version_text" style="font-weight: normal;padding-top: 12px;color: rgb(0,0,0);">CP 4.1.6<br><a href="https://github.com/magdesign/PocketVJ-CP-exh/issues" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help_issue.svg" style="text-align: right;padding: 8px;max-width: 60%;"></a><a href="https://www.pocketvj.com/manual/index.html" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help.svg" style="text-align: right;padding: 8px;max-width: 60%;"></a><br></p>
+                            <p class="text-center" id="version_text" style="font-weight: normal;padding-top: 12px;color: rgb(0,0,0);">CP 4.1.7<br><a href="https://github.com/magdesign/PocketVJ-CP-exh/issues" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help_issue.svg" style="text-align: right;padding: 8px;max-width: 60%;width: 40px;" data-toggle="tooltip" title="issues"></a><a href="https://www.pocketvj.com/manual/index.html" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help.svg" style="text-align: right;padding: 8px;max-width: 60%;width: 40px;" data-toggle="tooltip" title="read the f**king docs!"></a><br></p>
                         </div>
                     </div>
                 </div>
@@ -186,6 +186,7 @@ Code below loads custom js for form submission without reload-->
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" href="?action=setpir1">PIR Motion</a></div>
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" href="?action=setbutton1">Buttons</a></div>
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" href="?action=setbeacon">Beacons</a></div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" href="?action=setbeaconnogpu">Beacons/noGPU</a></div>
                                 </div>
                             </div>
                             <div class="col" style="background: #574696;">
@@ -328,9 +329,9 @@ Code below loads custom js for form submission without reload-->
                             <div class="col">
                                 <div>
                                     <h2>&nbsp;&nbsp;</h2>
-                                    <div class="col colforbutton"><a class="btn btn-dark action" role="button" href="?action=defaultfilebrowser">make default</a></div>
-                                    <div class="col colforbutton"><a class="btn btn-dark action" role="button" href="?action=defaultelfinder">make default</a></div>
-                                    <div class="col colforbutton"><a class="btn btn-dark action" role="button" href="?action=defaultextplorer">make default</a></div>
+                                    <div class="col colforbutton"><a class="btn btn-dark action" role="button" href="?action=defaultfilebrowser">&lt;= make default</a></div>
+                                    <div class="col colforbutton"><a class="btn btn-dark action" role="button" href="?action=defaultelfinder">&lt;= make default</a></div>
+                                    <div class="col colforbutton"><a class="btn btn-dark action" role="button" href="?action=defaultextplorer">&lt;= make default</a></div>
                                     <div class="col colforbutton">
                                         <h3>&nbsp;</h3>
                                     </div>
@@ -351,6 +352,38 @@ Code below loads custom js for form submission without reload-->
                             <div class="col">
                                 <h3>&nbsp;</h3>
                                 <div></div>
+                            </div>
+                        </div>
+                        <div class="row no-gutters row-cols-1 row-cols-sm-2 row-cols-lg-4" style="margin-right: -15px;margin-left: -15px;background: #ffc800;">
+                            <div class="col">
+                                <div>
+                                    <div class="col colforbutton"></div>
+                                    <div class="col colforbutton">
+                                        <h3>&nbsp;</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div>
+                                    <div class="col colforbutton" style="height: 36px;"></div>
+                                    <div class="col colforbutton"></div>
+                                    <div class="col colforbutton"></div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <h2>SAMBA</h2>
+                                <div>
+                                    <div class="col colforbutton"><a class="btn btn-dark action" role="button" href="?action=startsamba" data-toggle="tooltip" title="Enable Samba access">Enable smb://</a></div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <h3>&nbsp;</h3>
+                                <div>
+                                    <div class="col colforbutton"><a class="btn btn-dark action" role="button" href="?action=stopsamba" data-toogle="tooltip" title="Disable Samba access">Disable smb://</a></div>
+                                    <div class="col colforbutton">
+                                        <h3>&nbsp;</h3>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1887,7 +1920,7 @@ Code below loads custom js for form submission without reload-->
                             <div class="col">
                                 <h2>SLEEP</h2>
                                 <div>
-                                    <div class="col colforbutton"><a class="btn btn-danger action" role="button" href="?action=screenoff">Display Sleep</a></div>
+                                    <div class="col colforbutton"><a class="btn btn-danger action" role="button" href="?action=screenoff" data-toggle="tooltip" title="turn off screen and GPU">Display/GPU OFF</a></div>
                                     <div class="col colforbutton"></div>
                                     <div class="col colforbutton"></div>
                                 </div>
@@ -1895,7 +1928,7 @@ Code below loads custom js for form submission without reload-->
                             <div class="col">
                                 <h3>&nbsp;</h3>
                                 <div>
-                                    <div class="col colforbutton"><a class="btn btn-danger action" role="button" href="?action=screenon">Display Wakeup</a></div>
+                                    <div class="col colforbutton"><a class="btn btn-danger action" role="button" href="?action=screenon" data-toggle="tooltip" title="turn on screen and GPU">Display/GPU ON</a></div>
                                     <div class="col colforbutton"></div>
                                     <div class="col colforbutton"></div>
                                 </div>
@@ -2109,7 +2142,7 @@ Code below loads custom js for form submission without reload-->
                                 <div>
                                     <h2>WIFI ANTENNA</h2>
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="networkbutton" data-toggle="tooltip" title="enable onboard wifi" href="?action=wifiup">ON</a></div>
-                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="networkbutton" data-toggle="tooltip" title="always enable onboard wifi (default)" href="?action=wifienable">ON Permanent</a></div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="networkbutton" data-toggle="tooltip" title="always enable onboard wifi &amp; bluetooth (default)" href="?action=wifienable">ON Permanent</a></div>
                                     <div class="col colforbutton">
                                         <h3>&nbsp;</h3>
                                     </div>
@@ -2122,7 +2155,7 @@ Code below loads custom js for form submission without reload-->
                                 <div>
                                     <h3>&nbsp;</h3>
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="networkbutton" data-toggle="tooltip" title="disable onboard wifi" href="?action=wifidown">OFF</a></div>
-                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="networkbutton" data-toggle="tooltip" title="disable wifi forever" href="?action=wifidisable">OFF Permanent</a></div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="networkbutton" data-toggle="tooltip" title="disable wifi and bluetooth forever" href="?action=wifidisable">OFF Permanent</a></div>
                                     <div class="col colforbutton">
                                         <h3>&nbsp;</h3>
                                     </div>
@@ -2181,12 +2214,13 @@ Code below loads custom js for form submission without reload-->
                                     <div class="col colforbutton">
                                         <h2>&nbsp;&nbsp;</h2><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="show cpu temperature" href="?action=gettemp">CPU Temperature<br></a>
                                     </div>
-                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="check if powersupply is good" href="?action=powersupply">Powersupply<br></a></div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="show CPU Frequency low=600000 fast=1400000" href="?action=getfreq">CPU Frequency<br></a></div>
                                 </div>
                             </div>
                             <div class="col">
                                 <div><a class="action" href="?action=rentalreset" data-toogle="tooltip" titel="rental reset, attention! deletes everything!" target="_blank"><img id="rentalreset" src="assets/img/danger_icon.svg" style="text-align: right;height: 40px;"></a>
                                     <div class="col colforbutton"><a class="btn btn-primary action" role="button" id="settingsbutton" data-toggle="tooltip" title="" href="?action=getgpu">GPU Usage<br></a></div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="check if powersupply is good" href="?action=powersupply">Powersupply<br></a></div>
                                     <div class="col colforbutton"></div>
                                 </div>
                             </div>
@@ -2255,8 +2289,8 @@ Code below loads custom js for form submission without reload-->
                                     <h2>FIRMWARE</h2>
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="" href="?action=updateall">Update Everything<br></a></div>
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="" href="?action=updateola">Update OLA<br></a></div>
-                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="install pygame for countdown" href="?action=installpygame">install pygame<br></a></div>
-                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="install bluetooth" href="?action=installbluetooth">install bluetooth<br></a></div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="install pygame for countdown" href="?action=installpygame">install pyGame<br></a></div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="install Bluetooth" href="?action=installbluetooth">install bluetooth<br></a></div>
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="to fix clock on first generation PVJs" href="?action=fixclock">fix RTC bug<br></a></div>
                                 </div>
                             </div>
@@ -2268,6 +2302,7 @@ Code below loads custom js for form submission without reload-->
                                     <div class="col colforbutton">
                                         <h3>&nbsp;</h3>
                                     </div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="remove all Bluetooth drivers (takes a moment!)" href="?action=removebluetooth">remove bluetooth<br></a></div>
                                     <div class="col colforbutton"></div>
                                 </div>
                             </div>
@@ -2294,7 +2329,7 @@ Code below loads custom js for form submission without reload-->
                             <div class="col">
                                 <div>
                                     <h2>ACCESS</h2>
-                                    <div class="col colforbutton"><a class="btn btn-warning" role="button" id="settingsbutton" onclick="window.open(`//${window.location.hostname}:4222`)" target="_blank">Terminal<br></a></div>
+                                    <div class="col colforbutton"><a class="btn btn-warning" role="button" id="settingsbutton" onclick="window.open(`//${window.location.hostname}:4222`)" target="_blank">Terminal/shell<br></a></div>
                                     <div class="col colforbutton">
                                         <h3>&nbsp;</h3>
                                     </div>
@@ -2313,11 +2348,15 @@ Code below loads custom js for form submission without reload-->
                             </div>
                             <div class="col">
                                 <div>
-                                    <h2>RESSOURCE SAVING</h2>
-                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="stop remote IR daemon" href="?action=stoplirc">stop/disable LIRC<br></a></div>
-                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="" href="?action=stopsamba">stop/disable SAMBA<br></a></div>
-                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="" href="?action=stopshell">stop/disable shell<br></a></div>
-                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="" href="?action=stopwebserver">stop server, php, smb<br></a></div>
+                                    <h2>RESSOURCES/SERVICES</h2>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="check what is running and if we are online" href="?action=servicecheck">Check Services<br></a></div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="Enables infrared support" href="?action=startlirc">start/enable LIRC<br></a></div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="enables smb:// support" href="?action=startsamba">start/enable SAMBA<br></a></div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="enable terminal/shell via browser (default)" href="?action=startshell">start/enable shell<br></a></div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="WIP: not ready yet!! (turns USB/RJ45 on and reloads network config)" href="?action=startusb">start USB/RJ45<br></a></div>
+                                    <div class="col colforbutton">
+                                        <h3>&nbsp;</h3>
+                                    </div>
                                     <div class="col colforbutton">
                                         <h3>&nbsp;</h3>
                                     </div>
@@ -2326,12 +2365,14 @@ Code below loads custom js for form submission without reload-->
                             <div class="col">
                                 <div>
                                     <h3>&nbsp;</h3>
-                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="" href="?action=startlirc">start/enable LIRC<br></a></div>
-                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="to fix clock on first generation PVJs" href="?action=startsamba">start/enable SAMBA<br></a></div>
-                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="enable terminal access directly from CP" href="?action=startshell">start/enable shell<br></a></div>
                                     <div class="col colforbutton">
                                         <h3>&nbsp;</h3>
                                     </div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="Disables infrared support (default)" href="?action=stoplirc">stop/disable LIRC<br></a></div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="disables smb:// support (default)" href="?action=stopsamba">stop/disable SAMBA<br></a></div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="disables terminal/shell via webbrowser" href="?action=stopshell">stop/disable shell<br></a></div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="turns USB/RJ45 off until reboot" href="?action=stopusb">stop USB/RJ45<br></a></div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="close webserver&amp;CP, only ssh, osc, midi, dmx will work" href="?action=stopwebserver">stop server, php, smb<br></a></div>
                                 </div>
                             </div>
                         </div>
@@ -2357,7 +2398,6 @@ Code below loads custom js for form submission without reload-->
     </footer>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-
 <!-- Code below sets the "Set Time" button function--> 
  
 <script type="text/javascript">

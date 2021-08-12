@@ -1060,6 +1060,13 @@ if ($_GET['action'] == 'setbeacon') {
 	system("sudo cp /var/www/sync/rc.local.beacon /etc/rc.local");
 }
 
+if ($_GET['action'] == 'setbeaconnogpu') {
+	$outputtext = "autostart to Bluetooth Beacon GPU/screen deactivated";
+	system("sudo cp /var/www/sync/rc.local.beaconnogpu /etc/rc.local");
+}
+
+
+
 
 if ($_GET['action'] == 'setbutton1') {
 	$outputtext = "autostart to button script";
@@ -1686,6 +1693,15 @@ if ($_GET['action'] == 'installbluetooth') {
 	system("sudo pip3 install /var/www/sync/debs/enum34-1.1.10-py3-none-any.whl /var/www/sync/debs/PyBeacon-0.3.0.0-py2.py3-none-any.whl");
 	$outputtext = "installed bluetooth";
 }
+
+if ($_GET['action'] == 'removebluetooth') {
+	$outputtext =  "remove bluetooth support";
+	system ("sudo /var/www/sync/stopall > /dev/null 2>&1");
+	system(" sudo apt-get purge -y bluez-firmware bluez");
+	$outputtext = "removed bluetooth";
+}
+
+
 
 if ($_GET['action'] == 'updatekernel') {
 	$outputtext =  "Kernel to RT Kernel, untested yet!";
@@ -2548,6 +2564,10 @@ if ($_GET['action'] == 'getgpu') {
 	$outputtext = "<pre>$output</pre>";
 }
 
+if ($_GET['action'] == 'getfreq') {
+	$outputtext = shell_exec('sudo cat /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_cur_freq');
+}
+
 if ($_GET['action'] == 'cpuusage') {
 	$output = shell_exec('top');
 	system("sudo killall -9 top");
@@ -2598,20 +2618,25 @@ if ($_GET['action'] == 'stopwebserver'){
 
 //#Ressource Saving
 
+if ($_GET['action'] == 'servicecheck'){
+	$output = shell_exec('sudo /var/www/sync/servicecheck');
+	$outputtext = "<pre>$output</pre>";
+}
+
 if ($_GET['action'] == 'stoplirc'){
-	$outputtext =  "IR daemon disabled";
+	$outputtext =  "LIRC/IR daemon disabled";
 	system("sudo systemctl stop lircd");
 	system("sudo systemctl disable lircd");
 }
 
 if ($_GET['action'] == 'startlirc'){
-	$outputtext =  "IR daemon enabled";
+	$outputtext =  "LIRC/IR daemon enabled";
 	system("sudo systemctl start lircd");
 	system("sudo systemctl enable lircd");
 }
 
 if ($_GET['action'] == 'stopsamba'){
-	$outputtext =  "stop and disable samba";
+	$outputtext =  "stop/disable samba";
 	system("sudo systemctl stop smbd");
 	system("sudo systemctl disable smbd");
 	system("sudo systemctl stop nmbd");
@@ -2619,7 +2644,7 @@ if ($_GET['action'] == 'stopsamba'){
 }
 
 if ($_GET['action'] == 'startsamba'){
-	$outputtext =  "start and enable samba";
+	$outputtext =  "start/enable samba";
 	system("sudo systemctl start smbd");
 	system("sudo systemctl enable smbd");
 	system("sudo systemctl start nmbd");
@@ -2639,7 +2664,17 @@ if ($_GET['action'] == 'startshell'){
 	system("sudo systemctl enable shellinabox.service");
 }
 
+if ($_GET['action'] == 'stopusb'){
+	system("sudo echo '1-1' |sudo tee /sys/bus/usb/drivers/usb/unbind");
+	$outputtext =  "disbled usb&rj45 ports";
+}
 
+if ($_GET['action'] == 'startusb'){
+	//system("sudo echo '1-1' |sudo tee /sys/bus/usb/drivers/usb/bind");
+	//system("sudo service networking restart > /dev/null 2>&1");
+	//system("ifconfig wlan0 up");
+	$outputtext =  "WIP not implemented yet, just reboot to be back";
+}
 
 //# OSC receiver
 
@@ -2647,7 +2682,6 @@ if ($_GET['action'] == 'oscreceiver') {
 	system("sudo /var/www/sync/osc_start");
 	$outputtext =  "start OSC Control Receiver";
 }
-
 
 //# Remote Access over Internet
 

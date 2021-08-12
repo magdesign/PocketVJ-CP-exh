@@ -11,7 +11,8 @@
 - function to release throotle after hi temp, or set temp to 70 <p/>
 - mapper => when selecting mapper preset 1-4, open fake keyboard so mouseless mapping is working same as when autostart<p/>
 - entry field for fading time under video<p/>
-- bluetooth features: connecting boombox, finish this!! 
+- setdmxblack = fadeout possible? <p/>
+- bluetooth features: connecting boombox, finish this!! <p/>
 
 - add gender and or facemask detection via webcam, test the new script => it works, but slow <p/>
 - change temp soft limit from 60° to 70° with adding: temp_soft_limit = 70 to boot/config.txt <p/>

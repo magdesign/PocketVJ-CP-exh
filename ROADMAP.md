@@ -6,7 +6,9 @@
 - add rescan timeout varible to bluetooth scanner <p/>
 - add toggle to enable/disable timeout on bluetooth scanner<p/>
 - update manual with all the service checking stuff and energy saving things <p/>
-- function to release throotlle after hi temp <p/>
+- sdram_freq=350 in vcgencmd, check ram speed with vcgencmd get_config int | grep sdram, on 350 it stays at 58<p/>
+- disable swap? = sudo swapoff -a | sudo service dphys-swapfile stop | free | sudo systemctl disable dphys-swapfile<p/>
+- function to release throotle after hi temp, or set temp to 70 <p/>
 - mapper => when selecting mapper preset 1-4, open fake keyboard so mouseless mapping is working same as when autostart<p/>
 - entry field for fading time under video<p/>
 - bluetooth features: connecting boombox, finish this!! 

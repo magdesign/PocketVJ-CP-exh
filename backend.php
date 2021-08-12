@@ -2627,12 +2627,19 @@ if ($_GET['action'] == 'stoplirc'){
 	$outputtext =  "LIRC/IR daemon disabled";
 	system("sudo systemctl stop lircd");
 	system("sudo systemctl disable lircd");
+	system("sudo systemctl disable lircmd.service");
+	system("sudo systemctl disable lircd-setup.service");
+	system("sudo systemctl disable lircd-uinput.service");
 }
 
 if ($_GET['action'] == 'startlirc'){
 	$outputtext =  "LIRC/IR daemon enabled";
 	system("sudo systemctl start lircd");
 	system("sudo systemctl enable lircd");
+	system("sudo systemctl enable lircmd.service");
+	system("sudo systemctl enable lircd-setup.service");
+	system("sudo systemctl enable lircd-uinput.service");
+
 }
 
 if ($_GET['action'] == 'stopsamba'){

@@ -3,16 +3,10 @@
 ## Currently in the pipeline: 
 
 
-- add rescan timeout varible to bluetooth scanner <p/>
-- add toggle to enable/disable timeout on bluetooth scanner<p/>
-- update manual with all the service checking stuff and energy saving things <p/>
-- disable swap? = sudo swapoff -a | sudo service dphys-swapfile stop | free | sudo systemctl disable dphys-swapfile<p/>
-- mapper => when selecting mapper preset 1-4, open fake keyboard so mouseless mapping is working same as when autostart<p/>
 - entry field for fading time under video<p/>
 - setdmxblack = fadeout possible? <p/>
 - bluetooth features: connecting boombox, finish this!! <p/>
 - add gender and or facemask detection via webcam, test the new script => it works, but slow <p/>
-- change temp soft limit from 60° to 70° with adding: temp_soft_limit = 70 to boot/config.txt <p/>
 - make the led to flash every 10s so we know its alive<p/>
 - power off button also closes browser tab<p/>
 
@@ -20,13 +14,10 @@
 
 - move, rotate, scale images interactive => I do this via dmx/artnet => png gobo player<p/>
 - remove old projector scripts <p/>
-- add bluetooth audio tethering to connect boomboxes (scan works, connect is wip) <p/>
-- do some more bluetooth features  <p/>
 - when leaving VNC mode, presenter is not working correctly, fix this! <p/>
-- function to directly drive LED stripes via [PWM](https://tutorials-raspberrypi.com/connect-control-raspberry-pi-ws2812-rgb-led-strips/) from the expansion board
+- function to directly drive LED stripes via [PWM](https://tutorials-raspberrypi.com/connect-control-raspberry-pi-ws2812-rgb-led-strips/) from the expansion board <p/>
 - limit IP input to IP adresses only, no text etc. how do I do that??  <p/>
 - when accessed over the internet, the ola panel is not visible, check how to handle ports with the remote, currently you can ask via mail for another port link..   <p/>
-- dmx comand to remote record (start / stop recording dmx) directly from light-console, on universe 50? <p/>
 - playlist feature to play dmx/video01 and afterwards 02 and so on, tricky bit will be to gather the end of the file audio or dmx end counts?...   <p/>
 - CP => remove set to 1 and make function to flip all OLA inputs to OLA outputs  <p/>
 - OLA => is dmx thru working so we can see the show while recording<p/>
@@ -51,7 +42,6 @@
 - read color from video and create dmx fixture for it: https://github.com/MadSciLabs/ofxDmxUtils  <p/>
 - heating beamercases with [stressing the cpu](https://raw.githubusercontent.com/ssvb/cpuburn-arm/master/cpuburn-a53.S)<p/>
 
-<p/>
 
 
 ## **Tutorials/Manual:**
@@ -68,7 +58,6 @@
 - change webshop to an opensource variant, any suggestions? <p/>
 - create my own gitea server to move away from github?<p/>
 
-### **Test:**
 
 
 

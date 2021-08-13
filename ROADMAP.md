@@ -57,7 +57,6 @@
 ## **Tutorials/Manual:**
 
 - rewrite mapper section since mapping without mouse and over remote is working now! <p/>
-- Video connect usb soundcard for better audio quality<p/>
 - Video tutorial for mapper sync<p/>
 - remote mapper with webcam, is this possible?, I guess yes, but need to try<p/>
 - create list of OSC/midi commands for website (without code around it)<p/>
@@ -71,7 +70,7 @@
 
 ### **Test:**
 
-- test autostart of dmxshow<p/>
+
 
 
 

@@ -1,31 +1,63 @@
 #!/bin/bash
 
+ENABLE=NO
+DELAY=90
+
+#######################
+#Essential things
+######################
 #kill beacon scanner
+echo "beacon found, kill scanner"
 sudo kill $(pgrep -f 'python3 /var/www/sync/bluetooth_beacon.py') > /dev/null 2>&1 &
 sleep 0.5
 #kill all running tasks
 /var/www/sync/stopall > /dev/null 2>&1
 sleep 0.5
+#is the blackout needed?
+echo "all tasks killed"
+#sudo /var/www/sync/setdmxblackout &
+######################
+
+
 #play dmx sequence
 if [ -f /tmp/bluetooth_beacon ] && [ "$(md5sum < /proc/device-tree/hat/product)" = "33e26e96aeb252a3e1374ca44ad684a2  -" ]
 
         then
-        # plays once
-        sudo ola_recorder --no-verify-playback -i 1 -p /media/internal/dmx/show02 
-        #set all dmx to black
-        sudo /var/www/sync/setdmxblackout &
-        sleep 1
-        #start beacon scanner again
+        #check if DELAY is enabled or disabled
+	echo "Start scanner while playing:" $ENABLE 
+	echo "Delay time is" $DELAY
+
+		if [[ $ENABLE == "YES" ]]; then
+		sudo ola_recorder --no-verify-playback -i 1 -p /media/internal/dmx/show02 &
+		echo "dmxplaying and restarting scanner in" $DELAY
+		sleep $DELAY
+		fi
+
+
+		if [[ $ENABLE == "NO" ]]; then
+		sudo ola_recorder --no-verify-playback -i 1 -p /media/internal/dmx/show02 
+		echo "dmxplaying, waited until finished"
+		sudo /var/www/sync/setdmxblackout &
+		fi
+
+
+        echo "start beacon scanner again"
         sudo python3 /var/www/sync/bluetooth_beacon.py > /dev/null 2>&1 &
+        echo "beacon scanner is running"
+
 else
   echo "this is not PocketVJ Exhibition, aborting"
   echo "or"
-  echo "no bluetooth scan file found, stopping everything"
+  echo "no bluetooth scan loop file found, stopping everything"
     sudo kill $(pgrep -f 'python3 /var/www/sync/bluetooth_beacon.py') > /dev/null 2>&1 &
     sudo /var/www/sync/stopall > /dev/null 2>&1
     echo "all tasks stopped"
 fi
 
 echo "ended startdmxplaybackonce0*b"
-#give an exit everything good when finished
+
+
 exit 0
+
+
+

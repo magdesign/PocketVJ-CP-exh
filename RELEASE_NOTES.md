@@ -1,7 +1,16 @@
 # PocketVJ Exhibition / Control Panel 4.x.x
 
 
+## CP 4.1.8 13. August 2021 <br />
 
+- if you update via alternative method, make sure to push "factory reset" afterwards and reboot!! this adds new power features!!<br />
+- added beacon delay, see manual for more info<br />
+- when setting a new beacon value, beconscanner will be stopped to refresh values<br />
+- added "Mem Usage" to show memory and swap consumption <br />
+- softlimit to 70 <br />
+- factory&rental reset disables lirc by default, disables beacondelay<br />
+- massive speedup of setdmxblackout<br />
+- made a lot of energy saving tests, need to write all the things down to usermanual<br />
 
 ## CP 4.1.7 12. August 2021 <br />
 - added button to check CPU frequency<br />

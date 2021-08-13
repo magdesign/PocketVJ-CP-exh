@@ -24,6 +24,9 @@ Code below loads custom js for form submission without reload-->
 <!--Code below is for setting dmx delay-->
 <script src="js/submitdelay.js"></script>
 
+<!--Code below is for setting beacon delay-->
+<script src="js/submitbtdelay.js"></script>
+
  <!--Code below is for wifi infos-->
 <script src="js/submitwifi.js"></script>
 <script src="js/submitwifipass.js"></script>
@@ -57,7 +60,7 @@ Code below loads custom js for form submission without reload-->
                 <div class="col d-flex justify-content-end">
                     <div class="row">
                         <div class="col">
-                            <p class="text-center" id="version_text" style="font-weight: normal;padding-top: 12px;color: rgb(0,0,0);">CP 4.1.7<br><a href="https://github.com/magdesign/PocketVJ-CP-exh/issues" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help_issue.svg" style="text-align: right;padding: 8px;max-width: 60%;width: 40px;" data-toggle="tooltip" title="issues"></a><a href="https://www.pocketvj.com/manual/index.html" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help.svg" style="text-align: right;padding: 8px;max-width: 60%;width: 40px;" data-toggle="tooltip" title="read the f**king docs!"></a><br></p>
+                            <p class="text-center" id="version_text" style="font-weight: normal;padding-top: 12px;color: rgb(0,0,0);">CP 4.1.8<br><a href="https://github.com/magdesign/PocketVJ-CP-exh/issues" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help_issue.svg" style="text-align: right;padding: 8px;max-width: 60%;width: 40px;" data-toggle="tooltip" title="issues"></a><a href="https://www.pocketvj.com/manual/index.html" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help.svg" style="text-align: right;padding: 8px;max-width: 60%;width: 40px;" data-toggle="tooltip" title="read the f**king docs!"></a><br></p>
                         </div>
                     </div>
                 </div>
@@ -1258,17 +1261,17 @@ Code below loads custom js for form submission without reload-->
                                 <div>
                                     <h3>&nbsp;</h3>
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="expansionbutton" href="?action=stop" data-toggle="tooltip" title="stop beacon listener">Stop</a></div>
-                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="submitBeacon1FormData" data-toggle="tooltip" title="set Beacon1 namespace" onclick="Submitbeacon1FormData();" value="set Beacon1">&lt;&nbsp; Set Beacon1</a></div>
-                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="submitBeacon2FormData" data-toggle="tooltip" title="set Beacon2 namespace" onclick="Submitbeacon2FormData();" value="set Beacon2">&lt;&nbsp; Set Beacon2</a></div>
-                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="submitBeacon3FormData" data-toggle="tooltip" title="set Beacon3 namespace" onclick="Submitbeacon3FormData();" value="set Beacon3">&lt;&nbsp; Set Beacon3</a></div>
-                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="submitBeacon4FormData" data-toggle="tooltip" title="set Beacon4 namespace" onclick="Submitbeacon4FormData();" value="set Beacon3">&lt;&nbsp; Set Beacon4</a></div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="submitBeacon1FormData" data-toggle="tooltip" title="set Beacon1 namespace" onclick="Submitbeacon1FormData();" value="set Beacon1" href="?action=setbeacon">&lt;&nbsp; Set Beacon1</a></div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="submitBeacon2FormData" data-toggle="tooltip" title="set Beacon2 namespace" onclick="Submitbeacon2FormData();" value="set Beacon2" href="?action=setbeacon">&lt;&nbsp; Set Beacon2</a></div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="submitBeacon3FormData" data-toggle="tooltip" title="set Beacon3 namespace" onclick="Submitbeacon3FormData();" value="set Beacon3" href="?action=setbeacon">&lt;&nbsp; Set Beacon3</a></div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="submitBeacon4FormData" data-toggle="tooltip" title="set Beacon4 namespace" onclick="Submitbeacon4FormData();" value="set Beacon3" href="?action=setbeacon">&lt;&nbsp; Set Beacon4</a></div>
                                     <div class="col colforbutton">
                                         <h3>&nbsp;</h3>
                                     </div>
                                 </div>
                             </div>
                             <div class="col">
-                                <h2 data-toggle="tooltip" title="forces to selected resolution, needs reboot!">BEACON INFO</h2>
+                                <h2 data-toggle="" title="">BEACON INFO</h2>
                                 <div>
                                     <div class="col colforbutton">
                                         <p>Eddystone UID Namespace</p>
@@ -1280,12 +1283,21 @@ Code below loads custom js for form submission without reload-->
                                 </div>
                             </div>
                             <div class="col">
-                                <h3>&nbsp;</h3>
+                                <h2 data-toggle="" title="">DELAY</h2>
                                 <div>
                                     <div class="col colforbutton">
-                                        <h3>&nbsp;</h3>
+                                        <p>Set delay for Beaconscan</p>
                                     </div>
+                                    <div class="col colforbutton">
+                                        <form id="submitbtdelayform" method="post"><input class="form-control" type="number" id="btdelay" name="btdelay" placeholder="90" step="1.0" style="margin-left: 10px;max-width: 200px;"></form>
+                                    </div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="submitbtdelayFormData" onclick="SubmitbtdelayFormData();" value="Set Delay" data-toggle="tooltip" title="set delay time in seconds until beaconscanner starts again" href="?action=setbeacon">Set Delay</a></div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="expansionbutton" data-toggle="tooltip" title="Enable beacon delay, will kill running task when beacon is deteced" href="?action=beacondelayenable">Enable Delay</a></div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="expansionbutton" data-toggle="tooltip" title="Disable delay, wait until task is finished, then scan" href="?action=beacondelaydisable">Disable Delay</a></div>
                                 </div>
+                            </div>
+                            <div class="col">
+                                <div></div>
                             </div>
                         </div>
                         <div class="row no-gutters row-cols-1 row-cols-sm-2 row-cols-lg-4" style="margin-right: -15px;margin-left: -15px;background: #574696;padding-bottom: 20px;">
@@ -2219,7 +2231,7 @@ Code below loads custom js for form submission without reload-->
                             </div>
                             <div class="col">
                                 <div><a class="action" href="?action=rentalreset" data-toogle="tooltip" titel="rental reset, attention! deletes everything!" target="_blank"><img id="rentalreset" src="assets/img/danger_icon.svg" style="text-align: right;height: 40px;"></a>
-                                    <div class="col colforbutton"><a class="btn btn-primary action" role="button" id="settingsbutton" data-toggle="tooltip" title="" href="?action=getgpu">GPU Usage<br></a></div>
+                                    <div class="col colforbutton"><a class="btn btn-primary action" role="button" id="settingsbutton" data-toggle="tooltip" title="show mem usage" href="?action=getswap">Mem Usage<br></a></div>
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="check if powersupply is good" href="?action=powersupply">Powersupply<br></a></div>
                                     <div class="col colforbutton"></div>
                                 </div>
@@ -2231,7 +2243,7 @@ Code below loads custom js for form submission without reload-->
                                     <h2>AUDIO OUTPUT</h2>
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="set audio output to hdmi" href="?action=hdmi_out">HDMI<br></a></div>
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="audio to both" href="?action=both_out">HDMI&amp;Jack<br></a></div>
-                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="audio to bluetooth (pair first!!!)" href="?action=bluetooth_out"><span style="text-decoration: line-through;">Bluetooth</span><br></a></div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="WIP: audio to bluetooth (pair first!!!)" href="?action=bluetooth_out"><span style="text-decoration: line-through;">Bluetooth</span><br></a></div>
                                 </div>
                             </div>
                             <div class="col">
@@ -2398,6 +2410,7 @@ Code below loads custom js for form submission without reload-->
     </footer>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
 <!-- Code below sets the "Set Time" button function--> 
  
 <script type="text/javascript">
@@ -2460,7 +2473,6 @@ setInterval(run, 3000);
         });
     });
     </script>
-
 
 </body>
 

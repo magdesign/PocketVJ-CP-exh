@@ -1506,6 +1506,15 @@ if ($_GET['action'] == 'updateall') {
 	system("mkdir /home/pvj/.local/share/pjlink");
 	//copy standard pjlink config file:
 	system("cp /var/www/sync/pjlink.conf /home/pvj/.local/share/pjlink/pjlink.conf");
+	// disable lirc service
+	system("sudo systemctl stop lircd");
+	system("sudo systemctl disable lircd");
+	system("sudo systemctl disable lircd.socket");
+	system("sudo systemctl disable lircmd.service");
+	system("sudo systemctl disable lircd-setup.service");
+	system("sudo systemctl disable lircd-uinput.service");
+	system("sudo systemctl stop irexec.service");
+	system("sudo systemctl disable irexec.service");
 	//Text Output
 	$outputtext =  "Updated everything Controlpanel, Mapper, OMXPLAYER, Timer, Boot";
 }
@@ -1563,6 +1572,25 @@ if ($_GET['action'] == 'factoryreset') {
 	system("sudo mkdir /home/pvj/.local/share/pjlink");
 	//copy standard pjlink config file:
 	system("sudo cp /var/www/sync/pjlink.conf /home/pvj/.local/share/pjlink/pjlink.conf");
+	// disable lirc service
+	system("sudo systemctl stop lircd");
+	system("sudo systemctl disable lircd");
+	system("sudo systemctl disable lircd.socket");
+	system("sudo systemctl disable lircmd.service");
+	system("sudo systemctl disable lircd-setup.service");
+	system("sudo systemctl disable lircd-uinput.service");
+	system("sudo systemctl stop irexec.service");
+	system("sudo systemctl disable irexec.service");
+	//disable beacon delay
+	system("sudo /var/www/sync/stopbeacon");
+	system ("sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startlessonce01b");
+	system ("sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startlessonce02b");
+	system ("sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startlessonce03b");
+	system ("sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startlessonce04b");
+	system ("sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startdmxplaybackonce01b");
+	system ("sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startdmxplaybackonce02b");
+	system ("sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startdmxplaybackonce03b");
+	system ("sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startdmxplaybackonce04b");
 }
 
 // rental reset
@@ -1666,6 +1694,25 @@ if ($_GET['action'] == 'rentalreset') {
 	system("cp /var/www/sync/pjlink.conf /home/pvj/.local/share/pjlink/pjlink.conf");
 	//enable wifi and bluetooth
 	system("sudo cp /var/www/sync/raspi-blacklist.empty /etc/modprobe.d/raspi-blacklist.conf");
+	// disable lirc service
+	system("sudo systemctl stop lircd");
+	system("sudo systemctl disable lircd");
+	system("sudo systemctl disable lircd.socket");
+	system("sudo systemctl disable lircmd.service");
+	system("sudo systemctl disable lircd-setup.service");
+	system("sudo systemctl disable lircd-uinput.service");
+	system("sudo systemctl stop irexec.service");
+	system("sudo systemctl disable irexec.service");
+	// disable beacon delay
+	system("sudo /var/www/sync/stopbeacon");
+	system ("sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startlessonce01b");
+	system ("sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startlessonce02b");
+	system ("sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startlessonce03b");
+	system ("sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startlessonce04b");
+	system ("sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startdmxplaybackonce01b");
+	system ("sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startdmxplaybackonce02b");
+	system ("sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startdmxplaybackonce03b");
+	system ("sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startdmxplaybackonce04b");
 	////////////////
 	//////to do:
 	// set to default filebrowser!!!
@@ -2564,6 +2611,11 @@ if ($_GET['action'] == 'getgpu') {
 	$outputtext = "<pre>$output</pre>";
 }
 
+if ($_GET['action'] == 'getswap') {
+	$output = shell_exec('sudo free');
+	$outputtext = "<pre>$output</pre>";
+}
+
 if ($_GET['action'] == 'getfreq') {
 	$outputtext = shell_exec('sudo cat /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_cur_freq');
 }
@@ -2610,10 +2662,10 @@ if ($_GET['action'] == 'passwdenable'){
 }
 
 if ($_GET['action'] == 'stopwebserver'){
-	$outputtext =  "CP - Webserver down until next reboot";
-	system("service lighttpd stop");
-	system("service smbd stop");
+	system("sudo service lighttpd stop");
+	system("sudo service smbd stop");
 	system("sudo kill $(pgrep -f '/usr/bin/php-cgi') > /dev/null 2>&1");
+	$outputtext =  "CP - Webserver down until reboot";
 }
 
 //#Ressource Saving
@@ -2687,6 +2739,22 @@ if ($_GET['action'] == 'startusb'){
 	//system("ifconfig wlan0 up");
 	$outputtext =  "WIP not implemented yet, just reboot to be back";
 }
+
+if ($_GET['action'] == 'startswap'){
+	system("sudo swapon -a");
+	system("sudo service dphys-swapfile start > /dev/null 2>&1");
+	system("sudo systemctl enable dphys-swapfile");
+	$outputtext =  "Swap space enabled";
+}
+
+if ($_GET['action'] == 'stopswap'){
+	system("sudo swapoff -a");
+	system("sudo service dphys-swapfile stop > /dev/null 2>&1");
+	system("sudo systemctl disable dphys-swapfile");
+	$outputtext =  "Swap space disabled";
+}
+
+
 
 //# OSC receiver
 
@@ -2895,6 +2963,40 @@ if ($_GET['action'] == 'stopbeacon') {
 	system ("sudo /var/www/sync/stopall > /dev/null 2>&1");
 	$outputtext =  "stop beacon listener";
 }
+
+
+
+if ($_GET['action'] == 'beacondelayenable') {
+	system("sudo /var/www/sync/stopbeacon");
+	system ("sudo sed -i '/ENABLE=/c ENABLE=YES' /var/www/sync/startlessonce01b");
+	system ("sudo sed -i '/ENABLE=/c ENABLE=YES' /var/www/sync/startlessonce02b");
+	system ("sudo sed -i '/ENABLE=/c ENABLE=YES' /var/www/sync/startlessonce03b");
+	system ("sudo sed -i '/ENABLE=/c ENABLE=YES' /var/www/sync/startlessonce04b");
+	system ("sudo sed -i '/ENABLE=/c ENABLE=YES' /var/www/sync/startdmxplaybackonce01b");
+	system ("sudo sed -i '/ENABLE=/c ENABLE=YES' /var/www/sync/startdmxplaybackonce02b");
+	system ("sudo sed -i '/ENABLE=/c ENABLE=YES' /var/www/sync/startdmxplaybackonce03b");
+	system ("sudo sed -i '/ENABLE=/c ENABLE=YES' /var/www/sync/startdmxplaybackonce04b");
+	$outputtext =  "enabled beacon delay";
+}
+
+if ($_GET['action'] == 'beacondelaydisable') {
+	system("sudo /var/www/sync/stopbeacon");
+	system ("sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startlessonce01b");
+	system ("sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startlessonce02b");
+	system ("sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startlessonce03b");
+	system ("sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startlessonce04b");
+	system ("sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startdmxplaybackonce01b");
+	system ("sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startdmxplaybackonce02b");
+	system ("sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startdmxplaybackonce03b");
+	system ("sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startdmxplaybackonce04b");
+	$outputtext =  "disabled beacon delay";
+}
+
+if ($_GET['action'] == 'setbeacon') {
+	system("sudo /var/www/sync/stopbeacon");
+	system("sudo /var/www/sync/stopall");
+}	
+
 
 if ($_GET['action'] == 'beacon1name') {
 	$outputtext = shell_exec('cat /var/www/sync/bluetooth_beacon.py | grep beacon1=');

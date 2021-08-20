@@ -2,6 +2,7 @@
 
 ## CP 4.1.9 20. August 2021 <br />
 
+- added play dmx and audio to beacon, also function to set the time between dmx and audio to sync them<br />
 - rewrote all the beacontriggerscripts DELAY becomes TRIGGERDELAY <br />
 - rewrote all dmxplay with audio script due to DELAY namechange to AUDIODELAY<br />
 - fixed stopall on beacons, added also the TRIGGERDELAY to script<br />

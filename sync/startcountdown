@@ -4,7 +4,7 @@
 #stop everything
 
 sudo /var/www/sync/stopall > /dev/null 2>&1
-
+sudo /var/www/sync/stopbeacon > /dev/null 2>&1
 
 # starts the countdown script
 

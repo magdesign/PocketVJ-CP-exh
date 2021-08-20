@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set the delay value in seconds, use 0.1 for smaller numbers
-DELAY=1
+AUDIODELAY=1
 
 #kill all runing tasks to be safe
 /var/www/sync/stopall > /dev/null 2>&1
@@ -24,7 +24,7 @@ do
   sudo ola_recorder --no-verify-playback -i 1 -p /media/internal/dmx/show01 > /dev/null &
 
   #sleep, used to create the dealy
-  sleep ${DELAY}
+  sleep ${AUDIODELAY}
 
   #play audio 01
   /usr/bin/omxplayer -o both /media/internal/audio/01* > /dev/null 2>&1 

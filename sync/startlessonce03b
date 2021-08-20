@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ENABLE=NO
-DELAY=90
+TRIGGERDELAY=90
 
 ###################
 #kill beacon scanner
@@ -13,10 +13,10 @@ sleep 0.5
 /var/www/sync/stopall > /dev/null 2>&1
 ##################
 
-#check if DELAY is enabled or disabled
+#check if TRIGGERDELAY is enabled or disabled
 
 echo "Start scanner while playing:" $ENABLE 
-echo "Delay time is" $DELAY
+echo "TRIGGERDELAY time is" $TRIGGERDELAY
 
 
 if [[ $ENABLE == "YES" ]]; then
@@ -31,10 +31,10 @@ echo "omxplayer no additions, waited until file finished"
 fi
 
 
-# sleep before starting beacon scanner again, only when Delay is enabled
+# sleep before starting beacon scanner again, only when TRIGGERDELAY is enabled
 if [[ $ENABLE == "YES" ]]; then
-echo "sleep before rescan" $DELAY
-sleep $DELAY
+echo "sleep before rescan" $TRIGGERDELAY
+sleep $TRIGGERDELAY
 fi
 
 

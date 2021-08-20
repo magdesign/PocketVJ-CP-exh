@@ -1,7 +1,9 @@
 #!/bin/bash
+#this is the stopall only for the bluetooth beacon function, since we need to know if we rescon after stop or not
 
 ENABLE=NO
 TRIGGERDELAY=90
+
 
 #######################
 #Essential things
@@ -13,9 +15,7 @@ sleep 0.5
 #kill all running tasks
 /var/www/sync/stopall > /dev/null 2>&1
 sleep 0.5
-#is the blackout needed?
 echo "all tasks killed"
-#sudo /var/www/sync/setdmxblackout &
 ######################
 
 
@@ -24,22 +24,20 @@ if [ -f /tmp/bluetooth_beacon ] && [ "$(md5sum < /proc/device-tree/hat/product)"
 
         then
         #check if TRIGGERDELAY is enabled or disabled
-	echo "Start scanner while playing:" $ENABLE 
-	echo "TRIGGERDELAY time is" $TRIGGERDELAY
+	    echo "Start scanner while playing:" $ENABLE 
+	    echo "TRIGGERDELAY time is" $TRIGGERDELAY
 
 		if [[ $ENABLE == "YES" ]]; then
-		sudo ola_recorder --no-verify-playback -i 1 -p /media/internal/dmx/show02 &
+		/var/www/sync/stopall > /dev/null 2>&1
 		echo "dmxplaying and restarting scanner in" $TRIGGERDELAY
 		sleep $TRIGGERDELAY
 		fi
 
 
 		if [[ $ENABLE == "NO" ]]; then
-		sudo ola_recorder --no-verify-playback -i 1 -p /media/internal/dmx/show02 
+		/var/www/sync/stopall > /dev/null 2>&1
 		echo "dmxplaying, waited until finished"
-		sudo /var/www/sync/setdmxblackout &
 		fi
-
 
         echo "start beacon scanner again"
         sudo python3 /var/www/sync/bluetooth_beacon.py > /dev/null 2>&1 &
@@ -54,10 +52,8 @@ else
     echo "all tasks stopped"
 fi
 
-echo "ended startdmxplaybackonce0*b"
+echo "stopall in beaconstuff"
 
 
 exit 0
-
-
 

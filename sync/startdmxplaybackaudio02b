@@ -2,6 +2,7 @@
 
 ENABLE=NO
 TRIGGERDELAY=90
+AUDIODELAY=0
 
 #######################
 #Essential things
@@ -10,11 +11,15 @@ TRIGGERDELAY=90
 echo "beacon found, kill scanner"
 sudo kill $(pgrep -f 'python3 /var/www/sync/bluetooth_beacon.py') > /dev/null 2>&1 &
 sleep 0.5
+echo "scanner killed"
 #kill all running tasks
 /var/www/sync/stopall > /dev/null 2>&1
+echo "all tasks stopped"
+echo "sleep 1"
 sleep 0.5
-#is the blackout needed?
-echo "all tasks killed"
+#echo "manually kill all dmx sequenced again"
+#sudo killall -9 ola_recorder > /dev/null 2>&1 &
+#echo "set dmx blackout"
 #sudo /var/www/sync/setdmxblackout &
 ######################
 
@@ -29,17 +34,22 @@ if [ -f /tmp/bluetooth_beacon ] && [ "$(md5sum < /proc/device-tree/hat/product)"
 
 		if [[ $ENABLE == "YES" ]]; then
 		sudo ola_recorder --no-verify-playback -i 1 -p /media/internal/dmx/show02 &
+        #delay until audio starts
+        sleep ${AUDIODELAY}
+		echo "startaudioplayer"
+	        $(/usr/bin/omxplayer -o both /media/internal/audio/02* ) & 
 		echo "dmxplaying and restarting scanner in" $TRIGGERDELAY
 		sleep $TRIGGERDELAY
 		fi
 
 
 		if [[ $ENABLE == "NO" ]]; then
-		sudo ola_recorder --no-verify-playback -i 1 -p /media/internal/dmx/show02 
-		echo "dmxplaying, waited until finished"
+		sudo ola_recorder --no-verify-playback -i 1 -p /media/internal/dmx/show02 &
+        sleep ${DELAY}
+	        /usr/bin/omxplayer -o both /media/internal/audio/02* > /dev/null 2>&1
+		echo "dmxplaying, waited until audio finished"
 		sudo /var/www/sync/setdmxblackout &
 		fi
-
 
         echo "start beacon scanner again"
         sudo python3 /var/www/sync/bluetooth_beacon.py > /dev/null 2>&1 &
@@ -54,10 +64,7 @@ else
     echo "all tasks stopped"
 fi
 
-echo "ended startdmxplaybackonce0*b"
-
+echo "ended startdmxplaybackaudio0*b"
 
 exit 0
-
-
 

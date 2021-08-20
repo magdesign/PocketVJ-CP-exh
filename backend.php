@@ -2976,6 +2976,10 @@ if ($_GET['action'] == 'beacondelayenable') {
 	system ("sudo sed -i '/ENABLE=/c ENABLE=YES' /var/www/sync/startdmxplaybackonce02b");
 	system ("sudo sed -i '/ENABLE=/c ENABLE=YES' /var/www/sync/startdmxplaybackonce03b");
 	system ("sudo sed -i '/ENABLE=/c ENABLE=YES' /var/www/sync/startdmxplaybackonce04b");
+	system ("sudo sed -i '/ENABLE=/c ENABLE=YES' /var/www/sync/startdmxplaybackaudio01b");
+	system ("sudo sed -i '/ENABLE=/c ENABLE=YES' /var/www/sync/startdmxplaybackaudio02b");
+	system ("sudo sed -i '/ENABLE=/c ENABLE=YES' /var/www/sync/startdmxplaybackaudio03b");
+	system ("sudo sed -i '/ENABLE=/c ENABLE=YES' /var/www/sync/startdmxplaybackaudio04b");
 	$outputtext =  "enabled beacon delay";
 }
 
@@ -2989,14 +2993,18 @@ if ($_GET['action'] == 'beacondelaydisable') {
 	system ("sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startdmxplaybackonce02b");
 	system ("sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startdmxplaybackonce03b");
 	system ("sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startdmxplaybackonce04b");
+	system ("sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startdmxplaybackaudio01b");
+	system ("sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startdmxplaybackaudio02b");
+	system ("sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startdmxplaybackaudio03b");
+	system ("sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startdmxplaybackaudio04b");
 	$outputtext =  "disabled beacon delay";
 }
 
-if ($_GET['action'] == 'setbeacon') {
-	system("sudo /var/www/sync/stopbeacon");
-	system("sudo /var/www/sync/stopall");
+if ($_GET['action'] == 'setbeaconname') {
+	system("sudo /var/www/sync/stopbeacon > /dev/null 2>&1");
+	system("sudo /var/www/sync/stopall > /dev/null 2>&1");
+	$outputtext =  "beacon name set";
 }	
-
 
 if ($_GET['action'] == 'beacon1name') {
 	$outputtext = shell_exec('cat /var/www/sync/bluetooth_beacon.py | grep beacon1=');

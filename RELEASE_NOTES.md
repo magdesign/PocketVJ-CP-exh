@@ -1,6 +1,10 @@
 # PocketVJ Exhibition / Control Panel 4.x.x
 
-## CP 4.1.9a 22. August 2021 <br />
+## CP 4.1.10  unreleased yet  <br />
+- added slider to fade video under video section <br />
+
+
+## CP 4.1.9a 22. August 2021
 - fixed beacondelay, now also works on stopall under beacon <br />
 
 ## CP 4.1.9 20. August 2021 <br />

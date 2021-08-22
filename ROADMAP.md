@@ -2,7 +2,7 @@
 
 ## Currently in the pipeline: 
 
-
+- fading images via slider and via dmx <p/>
 - entry field for fading time under video<p/>
 - setdmxblack = fadeout possible? <p/>
 - bluetooth features: connecting boombox, finish this!! <p/>

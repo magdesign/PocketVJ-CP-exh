@@ -60,7 +60,7 @@ Code below loads custom js for form submission without reload-->
                 <div class="col d-flex justify-content-end">
                     <div class="row">
                         <div class="col">
-                            <p class="text-center" id="version_text" style="font-weight: normal;padding-top: 12px;color: rgb(0,0,0);">CP 4.1.9a<br><a href="https://github.com/magdesign/PocketVJ-CP-exh/issues" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help_issue.svg" style="text-align: right;padding: 8px;max-width: 60%;width: 40px;" data-toggle="tooltip" title="issues"></a><a href="https://www.pocketvj.com/manual/index.html" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help.svg" style="text-align: right;padding: 8px;max-width: 60%;width: 40px;" data-toggle="tooltip" title="read the f**king docs!"></a><br></p>
+                            <p class="text-center" id="version_text" style="font-weight: normal;padding-top: 12px;color: rgb(0,0,0);">CP 4.2.0<br><a href="https://github.com/magdesign/PocketVJ-CP-exh/issues" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help_issue.svg" style="text-align: right;padding: 8px;max-width: 60%;width: 40px;" data-toggle="tooltip" title="issues"></a><a href="https://www.pocketvj.com/manual/index.html" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help.svg" style="text-align: right;padding: 8px;max-width: 60%;width: 40px;" data-toggle="tooltip" title="read the f**king docs!"></a><br></p>
                         </div>
                     </div>
                 </div>
@@ -640,14 +640,46 @@ Code below loads custom js for form submission without reload-->
                         <div class="row no-gutters row-cols-1 row-cols-sm-2 row-cols-lg-4" style="margin-right: -15px;margin-left: -15px;background: #6cc6d9;padding-bottom: 20px;">
                             <div class="col">
                                 <div>
-                                    <h2 data-toggle="tooltip" title="only works with video named: wifisync.mp4">FADING</h2>
-                                    <div class="col colforbutton"><a class="btn btn-primary action" role="button" id="dmxbuttoncolor-1" href="?action=videofadeout" data-toggle="tooltip" title="fade video to black (still playing!)">Fade out</a></div>
+                                    <h2 data-toggle="">FADING</h2>
+                                    <div class="col colforbutton"><div>
+    
+<!--this shows the value -->
+<div class="opacityvalue">255</div>
+<!--this defines the slider type-->
+<input type="range" min="0" max="255" step="1" value=255>
+<!--this is the js script to upddate the value on html--> 
+<script>
+var elem = document.querySelector('input[type="range"]');
+
+var rangeValue = function(){
+  var newValue = elem.value;
+  var target = document.querySelector('.opacityvalue');
+  target.innerHTML = newValue;
+<!--this line is needed to be able to make the console log-->
+  test(newValue); 
+}
+
+function test(newValue){
+  <!--console.log (newValue);-->
+$.post("submit_opacity.php", { newValue: newValue },
+	   function(data) {});
+	}
+
+elem.addEventListener("input", rangeValue);
+</script>
+
+
+
+
+</div></div>
+                                    <div class="col colforbutton"><a class="btn btn-primary action" role="button" id="dmxbuttoncolor-2" href="?action=videofadeout" data-toggle="tooltip" title="fade video to black (still playing!)">Fade out</a></div>
                                 </div>
                             </div>
                             <div class="col">
                                 <div>
                                     <h3>&nbsp;</h3>
-                                    <div class="col colforbutton"><a class="btn btn-primary action" role="button" id="dmxbuttoncolor-3" href="?action=videofadein" data-toggle="tooltip" title="fade video from black in to full visible">Fade in</a></div>
+                                    <div class="col colforbutton" style="height: 58px;"></div>
+                                    <div class="col colforbutton"><a class="btn btn-primary action" role="button" id="dmxbuttoncolor-4" href="?action=videofadein" data-toggle="tooltip" title="fade video from black in to full visible">Fade in</a></div>
                                 </div>
                             </div>
                         </div>

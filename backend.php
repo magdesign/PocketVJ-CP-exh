@@ -2980,6 +2980,7 @@ if ($_GET['action'] == 'beacondelayenable') {
 	system ("sudo sed -i '/ENABLE=/c ENABLE=YES' /var/www/sync/startdmxplaybackaudio02b");
 	system ("sudo sed -i '/ENABLE=/c ENABLE=YES' /var/www/sync/startdmxplaybackaudio03b");
 	system ("sudo sed -i '/ENABLE=/c ENABLE=YES' /var/www/sync/startdmxplaybackaudio04b");
+	system ("sudo sed -i '/ENABLE=/c ENABLE=YES' /var/www/sync/stopallb");
 	$outputtext =  "enabled beacon delay";
 }
 
@@ -2997,6 +2998,7 @@ if ($_GET['action'] == 'beacondelaydisable') {
 	system ("sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startdmxplaybackaudio02b");
 	system ("sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startdmxplaybackaudio03b");
 	system ("sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startdmxplaybackaudio04b");
+	system ("sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/stopallb");
 	$outputtext =  "disabled beacon delay";
 }
 

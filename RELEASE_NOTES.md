@@ -1,5 +1,8 @@
 # PocketVJ Exhibition / Control Panel 4.x.x
 
+## CP 4.1.9a 22. August 2021 <br />
+- fixed beacondelay, now also works on stopall under beacon <br />
+
 ## CP 4.1.9 20. August 2021 <br />
 
 - added play dmx and audio to beacon, also function to set the time between dmx and audio to sync them<br />

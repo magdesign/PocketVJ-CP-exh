@@ -21,6 +21,8 @@ shell_exec("sudo sed -i '/TRIGGERDELAY=/c TRIGGERDELAY=$usgab' /var/www/sync/sta
 shell_exec("sudo sed -i '/TRIGGERDELAY=/c TRIGGERDELAY=$usgab' /var/www/sync/startdmxplaybackaudio03b");
 shell_exec("sudo sed -i '/TRIGGERDELAY=/c TRIGGERDELAY=$usgab' /var/www/sync/startdmxplaybackaudio04b");
 
+shell_exec("sudo sed -i '/TRIGGERDELAY=/c TRIGGERDELAY=$usgab' /var/www/sync/stopallb");
+
 
 
 echo " = Seconds Delay";

@@ -2,7 +2,7 @@
 
 ## Currently in the pipeline: 
 
-- fading images via slider and via dmx <p/>
+- fading images, show next, scale via sliders and via dmx/midi/osc [pygame](https://www.taskboy.com/blog/A_simple_image_viewer_with_pygame.html)<p/>
 - entry field for fading time under video<p/>
 - setdmxblack = fadeout possible? <p/>
 - bluetooth features: connecting boombox, finish this!! <p/>

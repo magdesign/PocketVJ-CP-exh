@@ -2,7 +2,7 @@
 
 ## CP 4.1.10  unreleased yet  <br />
 - added slider to fade video under video section <br />
-
+- added slider to change videospeed (finally, this took my 5 years to figure out, and it was soo stupid simple)<br />
 
 ## CP 4.1.9a 22. August 2021
 - fixed beacondelay, now also works on stopall under beacon <br />

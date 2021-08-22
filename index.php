@@ -642,34 +642,31 @@ Code below loads custom js for form submission without reload-->
                                 <div>
                                     <h2 data-toggle="">FADING</h2>
                                     <div class="col colforbutton"><div>
-    
 <!--this shows the value -->
-<div class="opacityvalue">255</div>
+<div id="videoopacity2" class="opacityvalue">255</div>
 <!--this defines the slider type-->
-<input type="range" min="0" max="255" step="1" value=255>
+<input id="videoopacity" type="range" min="0" max="255" step="1" value=255>
 <!--this is the js script to upddate the value on html--> 
 <script>
-var elem = document.querySelector('input[type="range"]');
+var elem = document.querySelector('input[id="videoopacity"]');
 
 var rangeValue = function(){
-  var newValue = elem.value;
+  var opacityValue = elem.value;
   var target = document.querySelector('.opacityvalue');
-  target.innerHTML = newValue;
+  target.innerHTML = opacityValue;
 <!--this line is needed to be able to make the console log-->
-  test(newValue); 
+  test(opacityValue); 
 }
 
-function test(newValue){
-  <!--console.log (newValue);-->
-$.post("submit_opacity.php", { newValue: newValue },
+function test(opacityValue){
+<!--you can uncomment this, is only for debugging-->
+  <!--console.log (opacityValue);-->
+$.post("submit_opacity.php", { opacityValue: opacityValue },
 	   function(data) {});
 	}
 
-elem.addEventListener("input", rangeValue);
+elem.addEventListener('input', rangeValue);
 </script>
-
-
-
 
 </div></div>
                                     <div class="col colforbutton"><a class="btn btn-primary action" role="button" id="dmxbuttoncolor-2" href="?action=videofadeout" data-toggle="tooltip" title="fade video to black (still playing!)">Fade out</a></div>
@@ -680,6 +677,36 @@ elem.addEventListener("input", rangeValue);
                                     <h3>&nbsp;</h3>
                                     <div class="col colforbutton" style="height: 58px;"></div>
                                     <div class="col colforbutton"><a class="btn btn-primary action" role="button" id="dmxbuttoncolor-4" href="?action=videofadein" data-toggle="tooltip" title="fade video from black in to full visible">Fade in</a></div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div>
+                                    <h2 data-toggle="">Speed</h2>
+                                    <div class="col colforbutton"><div>
+<!--this shows the value -->
+<div id="videospeed2" class="speedvalue">1</div>
+<!--this defines the slider type-->
+<input id="videospeed" type="range" min="0.1" max="4" step="0.1" value=1>
+<!--this is the js script to update the value on html--> 
+<script>
+var elem2 = document.querySelector('input[id="videospeed"]');
+
+var range2Value = function(){
+  var speedValue = elem2.value;
+  var target2 = document.querySelector('.speedvalue');
+  target2.innerHTML = speedValue;
+  test2(speedValue); 
+}
+
+function test2(speedValue){
+  <!--console.log (speedValue);--> 
+$.post("submit_speed.php", { speedValue: speedValue },
+	   function(data) {});
+	}
+elem2.addEventListener("input", range2Value);
+</script>
+</div></div>
+                                    <div class="col colforbutton"></div>
                                 </div>
                             </div>
                         </div>
@@ -2463,6 +2490,7 @@ elem.addEventListener("input", rangeValue);
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 
+
 <!-- Code below sets the "Set Time" button function--> 
  
 <script type="text/javascript">
@@ -2525,6 +2553,7 @@ setInterval(run, 3000);
         });
     });
     </script>
+
 
 
 </body>

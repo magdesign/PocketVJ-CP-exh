@@ -3,9 +3,8 @@
 ## Currently in the pipeline: 
 
 - fading images, show next, scale via sliders and via dmx/midi/osc [pygame](https://www.taskboy.com/blog/A_simple_image_viewer_with_pygame.html)<p/>
-- entry field for fading time under video<p/>
 - setdmxblack = fadeout possible? <p/>
-- bluetooth features: connecting boombox, finish this!! <p/>
+- bluetooth features: connecting boombox, finish this, if somehow possible, already spent several days and nights <p/>
 - add gender and or facemask detection via webcam, test the new script => it works, but slow <p/>
 - make the led to flash every 10s so we know its alive<p/>
 - power off button also closes browser tab<p/>

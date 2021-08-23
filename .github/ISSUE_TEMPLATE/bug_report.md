@@ -28,4 +28,4 @@ If applicable, add screenshots to help explain your problem.
 
 
 **Additional context**
-Add any other context about the problem here.
+Add any other context  here, if the problem was solved or you found a workaround, be polite enough the share it here!

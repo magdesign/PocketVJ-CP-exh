@@ -7,7 +7,6 @@ function SubmitCPBeacon1FormData() {
          function(data) {
                $('#actions_output').html(data);
                $('#cpbeacon1form')[0].reset();
-               $('#cpbeacon1form-1')[0].reset();
                $('#cpbeacon1form-2')[0].reset();
                $('#cpbeacon1form-3')[0].reset();
                $('#cpbeacon1form-4')[0].reset();
@@ -15,9 +14,8 @@ function SubmitCPBeacon1FormData() {
                $('#cpbeacon1form-6')[0].reset();
                $('#cpbeacon1form-7')[0].reset();
                $('#cpbeacon1form-8')[0].reset();
-               $('#cpbeacon1form-9')[0].reset();
-               $('#cpbeacon1form-10')[0].reset();
-               
+
+
          });
 }
 

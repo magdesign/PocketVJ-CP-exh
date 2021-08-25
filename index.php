@@ -8,26 +8,25 @@
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/Open%20Sans.css">
     <link rel="stylesheet" href="assets/css/styles.css">
-<!--
-Code below loads custom js for form submission without reload-->
+<!--Loads custom js for form submission without reload-->
 <script src="js/submitcppw.js"></script>
 
-<!--Code  below is for beamer IP infos-->
+<!--for beamer IP infos-->
 <script src="js/submitbeamerip.js"></script>
 
-<!--Code  below is for beamer password -->
+<!--for beamer password -->
 <script src="js/submitbeamerpass.js"></script>
 
-<!--Code  below is for countdown set-->
+<!-- for countdown set-->
 <script src="js/submitcountdown.js"></script>
 
-<!--Code below is for setting dmx delay-->
+<!--for setting dmx delay-->
 <script src="js/submitdelay.js"></script>
 
-<!--Code below is for setting beacon delay-->
+<!--for setting beacon delay-->
 <script src="js/submitbtdelay.js"></script>
 
- <!--Code below is for wifi infos-->
+ <!--for wifi infos-->
 <script src="js/submitwifi.js"></script>
 <script src="js/submitwifipass.js"></script>
 
@@ -60,7 +59,7 @@ Code below loads custom js for form submission without reload-->
                 <div class="col d-flex justify-content-end">
                     <div class="row">
                         <div class="col">
-                            <p class="text-center" id="version_text" style="font-weight: normal;padding-top: 12px;color: rgb(0,0,0);">CP 4.2.0<br><a href="https://github.com/magdesign/PocketVJ-CP-exh/issues" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help_issue.svg" style="text-align: right;padding: 8px;max-width: 60%;width: 40px;" data-toggle="tooltip" title="issues"></a><a href="https://www.pocketvj.com/manual/index.html" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help.svg" style="text-align: right;padding: 8px;max-width: 60%;width: 40px;" data-toggle="tooltip" title="read the f**king docs!"></a><br></p>
+                            <p class="text-center" id="version_text" style="font-weight: normal;padding-top: 12px;color: rgb(0,0,0);">CP 4.2.0a<br><a href="https://github.com/magdesign/PocketVJ-CP-exh/issues" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help_issue.svg" style="text-align: right;padding: 8px;max-width: 60%;width: 40px;" data-toggle="tooltip" title="issues"></a><a href="https://www.pocketvj.com/manual/index.html" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help.svg" style="text-align: right;padding: 8px;max-width: 60%;width: 40px;" data-toggle="tooltip" title="read the f**king docs!"></a><br></p>
                         </div>
                     </div>
                 </div>
@@ -669,14 +668,73 @@ elem.addEventListener('input', rangeValue);
 </script>
 
 </div></div>
-                                    <div class="col colforbutton"><a class="btn btn-primary action" role="button" id="dmxbuttoncolor-2" href="?action=videofadeout" data-toggle="tooltip" title="fade video to black (still playing!)">Fade out</a></div>
                                 </div>
                             </div>
                             <div class="col">
                                 <div>
-                                    <h3>&nbsp;</h3>
-                                    <div class="col colforbutton" style="height: 58px;"></div>
-                                    <div class="col colforbutton"><a class="btn btn-primary action" role="button" id="dmxbuttoncolor-4" href="?action=videofadein" data-toggle="tooltip" title="fade video from black in to full visible">Fade in</a></div>
+                                    <h2 data-toggle="tooltip" title="change video size">SIZE</h2>
+                                    <div class="col colforbutton"><div>
+<div id="videosize2" class="sizevalue">100</div>
+<!--defines the slider type-->
+<input id="videosize" type="range" min="0" max="200" step="1" value=100>
+<!--js script to upddate the value on html--> 
+<script>
+var elem3 = document.querySelector('input[id="videosize"]');
+
+var range3Value = function(){
+  var sizeValue = elem3.value;
+  var target3 = document.querySelector('.sizevalue');
+  target3.innerHTML = sizeValue;
+    <!--this line is needed to be able to make the console log-->
+  test3(sizeValue); 
+}
+
+function test3(sizeValue){
+<!--you can uncomment this, is only for debugging-->
+  <!--console.log (sizeValue);-->
+$.post("submit_size.php", { sizeValue: sizeValue },
+	   function(data) {});
+	}
+
+elem3.addEventListener('input', range3Value);
+</script>
+
+    
+
+</div></div>
+                                </div>
+                                <div>
+                                    <h2 data-toggle="tooltip" title="change video X position">X Position</h2>
+                                    <div class="col colforbutton"><div>
+<!--this shows the value -->
+    
+<div id="videoXposition2" class="Xpositionvalue">100</div>
+    
+<!--this defines the slider type-->
+<input id="videoXposition" type="range" min="-1000" max="1000" step="1" value=500>
+<!--this is the js script to upddate the value on html--> 
+<script>
+var elem4 = document.querySelector('input[id="videoXposition"]');
+
+var range4Value = function(){
+  var XpositionValue = elem4.value;
+  var target4 = document.querySelector('.Xpositionvalue');
+  target4.innerHTML = XpositionValue;
+<!--this line is needed to be able to make the console log-->
+  test4(XpositionValue); 
+}
+
+function test4(XpositionValue){
+<!--you can uncomment this, is only for debugging-->
+  <!--console.log (XpositionValue);-->
+$.post("submit_Xposition.php", { XpositionValue: XpositionValue },
+	   function(data) {});
+	}
+
+elem4.addEventListener('input', range4Value);
+</script>
+
+</div></div>
                                 </div>
                             </div>
                             <div class="col">
@@ -1364,7 +1422,7 @@ elem2.addEventListener("input", range2Value);
                                 <div>
                                     <h2>BEACON 1</h2>
                                     <div class="col colforbutton" style="height: 24px;">
-                                        <form id="cpbeacon1form-1" method="post" style="margin-left: 12px;">
+                                        <form id="cpbeacon1form" method="post" style="margin-left: 12px;">
                                             <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon1" method="post" name="cpbeacon1" onclick="SubmitCPBeacon1FormData();" value="startlessonce01b"><label class="form-check-label" for="formCheck-1">startvideo once 01_*</label></div>
                                         </form>
                                     </div>
@@ -1394,13 +1452,13 @@ elem2.addEventListener("input", range2Value);
                                         </form>
                                     </div>
                                     <div class="col colforbutton" style="height: 24px;">
-                                        <form id="cpbeacon1form-6" method="post" style="margin-left: 12px;">
+                                        <form id="cpbeacon1form-7" method="post" style="margin-left: 12px;">
                                             <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon1" method="post" name="cpbeacon1" onclick="SubmitCPBeacon1FormData();" value="startdmxplaybackaudio02b"><label class="form-check-label" for="formCheck-1">startdmx playback/audio 02_*</label></div>
                                         </form>
                                     </div>
                                     <div class="col colforbutton" style="height: 24px;">
-                                        <form id="cpbeacon1form-7" method="post" style="margin-left: 12px;">
-                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon1" method="post" name="cpbeacon1" onclick="SubmitCPBeacon1FormData();" value="stopallb"><label class="form-check-label" for="formCheck-1">stopall</label></div>
+                                        <form id="cpbeacon1form-8" method="post" style="margin-left: 12px;">
+                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon1-8" method="post" name="cpbeacon1" onclick="SubmitCPBeacon1FormData();" value="stopallb"><label class="form-check-label" for="formCheck-1">stopall</label></div>
                                         </form>
                                     </div>
                                 </div>
@@ -1439,12 +1497,12 @@ elem2.addEventListener("input", range2Value);
                                         </form>
                                     </div>
                                     <div class="col colforbutton" style="height: 24px;">
-                                        <form id="cpbeacon2form-6" method="post" style="margin-left: 10px;">
+                                        <form id="cpbeacon2form-7" method="post" style="margin-left: 10px;">
                                             <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon2" method="post" name="cpbeacon2" onclick="SubmitCPBeacon2FormData();" value="startdmxplaybackaudio02b"><label class="form-check-label" for="formCheck-1">startdmx playback/audio 02_*</label></div>
                                         </form>
                                     </div>
                                     <div class="col colforbutton" style="height: 24px;">
-                                        <form id="cpbeacon2form-7" method="post" style="margin-left: 10px;">
+                                        <form id="cpbeacon2form-8" method="post" style="margin-left: 10px;">
                                             <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon2" method="post" name="cpbeacon2" onclick="SubmitCPBeacon2FormData();" value="stopallb"><label class="form-check-label" for="formCheck-1">stopall</label></div>
                                         </form>
                                     </div>
@@ -1489,7 +1547,7 @@ elem2.addEventListener("input", range2Value);
                                         </form>
                                     </div>
                                     <div class="col colforbutton" style="height: 24px;">
-                                        <form id="cpbeacon3form-7" method="post" style="margin-left: 10px;">
+                                        <form id="cpbeacon3form-8" method="post" style="margin-left: 10px;">
                                             <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon3" method="post" name="cpbeacon3" onclick="SubmitCPBeacon3FormData();" value="stopallb"><label class="form-check-label" for="formCheck-1">stopall</label></div>
                                         </form>
                                     </div>
@@ -1499,42 +1557,42 @@ elem2.addEventListener("input", range2Value);
                                 <div>
                                     <h2>BEACON 4</h2>
                                     <div class="col colforbutton" style="height: 24px;">
-                                        <form id="cpbeacon3form-1" method="post" style="margin-left: 10px;">
+                                        <form id="cpbeacon4form-1" method="post" style="margin-left: 10px;">
                                             <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon4" method="post" name="cpbeacon4" onclick="SubmitCPBeacon4FormData();" value="startlessonce02b"><label class="form-check-label" for="formCheck-1">startvideo once 02_*</label></div>
                                         </form>
                                     </div>
                                     <div class="col colforbutton" style="height: 24px;">
-                                        <form id="cpbeacon3form-2" method="post" style="margin-left: 10px;">
+                                        <form id="cpbeacon4form-2" method="post" style="margin-left: 10px;">
                                             <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon4" method="post" name="cpbeacon4" onclick="SubmitCPBeacon4FormData();" value="startlessonce03b"><label class="form-check-label" for="formCheck-1">startvideo once 03_*</label></div>
                                         </form>
                                     </div>
                                     <div class="col colforbutton" style="height: 24px;">
-                                        <form id="cpbeacon3form-3" method="post" style="margin-left: 10px;">
+                                        <form id="cpbeacon4form-3" method="post" style="margin-left: 10px;">
                                             <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon4" method="post" name="cpbeacon4" onclick="SubmitCPBeacon4FormData();" value="startlessonce04b"><label class="form-check-label" for="formCheck-1">startvideo once 04_*</label></div>
                                         </form>
                                     </div>
                                     <div class="col colforbutton" style="height: 24px;">
-                                        <form id="cpbeacon3form-4" method="post" style="margin-left: 10px;">
+                                        <form id="cpbeacon4form-4" method="post" style="margin-left: 10px;">
                                             <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon4" method="post" name="cpbeacon4" onclick="SubmitCPBeacon4FormData();" value="startdmxplaybackonce03b"><label class="form-check-label" for="formCheck-1">startdmx playback once 03_*</label></div>
                                         </form>
                                     </div>
                                     <div class="col colforbutton" style="height: 24px;">
-                                        <form id="cpbeacon3form-5" method="post" style="margin-left: 10px;">
+                                        <form id="cpbeacon4form-5" method="post" style="margin-left: 10px;">
                                             <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon4" method="post" name="cpbeacon4" onclick="SubmitCPBeacon4FormData();" value="startdmxplaybackonce04b"><label class="form-check-label" for="formCheck-1">startdmx playback once 04_*</label></div>
                                         </form>
                                     </div>
                                     <div class="col colforbutton" style="height: 24px;">
-                                        <form id="cpbeacon3form-6" method="post" style="margin-left: 10px;">
+                                        <form id="cpbeacon4form-6" method="post" style="margin-left: 10px;">
                                             <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon4" method="post" name="cpbeacon4" onclick="SubmitCPBeacon4FormData();" value="startdmxplaybackaudio03b"><label class="form-check-label" for="formCheck-1">startdmx playback/audio 03_*</label></div>
                                         </form>
                                     </div>
                                     <div class="col colforbutton" style="height: 24px;">
-                                        <form id="cpbeacon3form-8" method="post" style="margin-left: 10px;">
+                                        <form id="cpbeacon4form-7" method="post" style="margin-left: 10px;">
                                             <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon4" method="post" name="cpbeacon4" onclick="SubmitCPBeacon4FormData();" value="startdmxplaybackaudio04b"><label class="form-check-label" for="formCheck-1">startdmx playback/audio 04_*</label></div>
                                         </form>
                                     </div>
                                     <div class="col colforbutton" style="height: 24px;">
-                                        <form id="cpbeacon3form-8" method="post" style="margin-left: 10px;">
+                                        <form id="cpbeacon4form-8" method="post" style="margin-left: 10px;">
                                             <div class="form-check"><input class="form-check-input" type="radio" id="cpbeacon4" method="post" name="cpbeacon4" onclick="SubmitCPBeacon4FormData();" value="stopallb"><label class="form-check-label" for="formCheck-1">stopall</label></div>
                                         </form>
                                     </div>
@@ -2125,7 +2183,7 @@ elem2.addEventListener("input", range2Value);
                                 </div>
                             </div>
                             <div class="col">
-                                <h2 data-toggle="tooltip" title="forces to selected resolution, needs reboot!">CHANGE IP</h2>
+                                <h2 data-toggle="tooltip" title="Change the IP address, be careful!">CHANGE IP</h2>
                                 <div>
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="networkbutton" data-toggle="tooltip" title="change to default range" href="?action=iprange192">192.168.2.*</a></div>
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="networkbutton" data-toggle="tooltip" title="sets rj45 to dhcp to get ip from router" href="?action=setdhcp">RJ45 DHCP</a></div>
@@ -2158,7 +2216,7 @@ elem2.addEventListener("input", range2Value);
                                 </div>
                             </div>
                             <div class="col">
-                                <h2 data-toggle="tooltip" title="forces to selected resolution, needs reboot!">CP PASSWORD</h2>
+                                <h2 data-toggle="tooltip" title="Set a passsord for the CP">CP PASSWORD</h2>
                                 <div>
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="networkbutton" href="?action=passwdenable">Enable</a></div>
                                     <div class="col colforbutton">
@@ -2256,7 +2314,7 @@ elem2.addEventListener("input", range2Value);
                                 </div>
                             </div>
                             <div class="col">
-                                <h2 data-toggle="tooltip" title="forces to selected resolution, needs reboot!">WIFI CHANNEL</h2>
+                                <h2 data-toggle="tooltip" title="select wifi channel">WIFI CHANNEL</h2>
                                 <div>
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="networkbutton" href="?action=setwifi4">CH4</a></div>
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="networkbutton" href="?action=setwifi9">CH9</a></div>
@@ -2491,7 +2549,7 @@ elem2.addEventListener("input", range2Value);
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 
 
-<!-- Code below sets the "Set Time" button function--> 
+<!-- Sets the "Set Time" button function--> 
  
 <script type="text/javascript">
  function settime() {
@@ -2501,7 +2559,7 @@ elem2.addEventListener("input", range2Value);
 </script>
 
 
-<!--Code below this line checks if user is online-->
+<!--Checks if user is online-->
 
 <script src="js/offline.min.js"></script>
 <link rel="stylesheet" href="../themes/offline-theme-chrome.css" />
@@ -2553,7 +2611,6 @@ setInterval(run, 3000);
         });
     });
     </script>
-
 
 
 </body>

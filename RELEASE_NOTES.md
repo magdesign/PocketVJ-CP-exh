@@ -1,8 +1,14 @@
 # PocketVJ Exhibition / Control Panel 4.x.x
 
+
+## CP 4.2.0a  25.August 2021  <br />
+
+- fixed selector for beacon functions <br />
+- added scale slider to video  <br />
+
 ## CP 4.1.10  23.August 2021  <br />
 - added slider to fade video under video section <br />
-- added slider to change videospeed (finally, this took my 5 years to figure out, and it was soo stupid simple)<br />
+- added slider to change videospeed <br />
 - added script to change videospeed also via dmx/artnet<br />
 
 ## CP 4.1.9a 22. August 2021

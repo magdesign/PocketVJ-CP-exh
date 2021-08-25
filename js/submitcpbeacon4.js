@@ -6,7 +6,6 @@ function SubmitCPBeacon4FormData() {
       $.post("submit_cpbeacon4.php", { cheibeding: cheibeding },
          function(data) {
                $('#actions_output').html(data);
-               $('#cpbeacon4form')[0].reset();
                $('#cpbeacon4form-1')[0].reset();
                $('#cpbeacon4form-2')[0].reset();
                $('#cpbeacon4form-3')[0].reset();
@@ -15,8 +14,6 @@ function SubmitCPBeacon4FormData() {
                $('#cpbeacon4form-6')[0].reset();
                $('#cpbeacon4form-7')[0].reset();
                $('#cpbeacon4form-8')[0].reset();
-               $('#cpbeacon4form-9')[0].reset();
-               $('#cpbeacon4form-10')[0].reset();
                
          });
 }

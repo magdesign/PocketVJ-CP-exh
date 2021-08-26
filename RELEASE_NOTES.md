@@ -1,6 +1,11 @@
 # PocketVJ Exhibition / Control Panel 4.x.x
 
 
+## CP 4.2.1  26.August 2021  <br />
+
+- added webcam with HSV effect<br />
+- added very experimental gender detection (might overheat your unit!)<br />
+
 ## CP 4.2.0a  25.August 2021  <br />
 
 - fixed selector for beacon functions <br />

@@ -2821,15 +2821,25 @@ if ($_GET['action'] == 'stopwebcamusb') {
 
 if ($_GET['action'] == 'onscreenwebcamusb') {
 	$outputtext =  "show webcam on screen/display";
-	system("sudo /var/www/sync/stopall");
+	system("sudo /var/www/sync/stopbeacon > /dev/null 2>&1");
+	system ("sudo /var/www/sync/stopall > /dev/null 2>&1");
 	system("sudo /usr/bin/python /var/www/sync/camerastream.py");
 }
 
+if ($_GET['action'] == 'onscreenwebcamusbhsv') {
+	$outputtext =  "show webcam on screen/display";
+	system("sudo /var/www/sync/stopbeacon > /dev/null 2>&1");
+	system ("sudo /var/www/sync/stopall > /dev/null 2>&1");
+	system("sudo /usr/bin/python /var/www/sync/camerastreamhsv.py");
+}
+
 if ($_GET['action'] == 'onscreenwebcamusbgender') {
-	$outputtext =  "not coded yet";
+	$outputtext =  "show gender detection on screen, read manual!";
 	// needs a script to open x and trigger /sync/gender.py
-	//system("sudo /var/www/sync/stopall");
-	//system("sudo /var/www/sync/gender.sh");
+	system("sudo /var/www/sync/stopbeacon > /dev/null 2>&1");
+	system ("sudo /var/www/sync/stopall > /dev/null 2>&1");
+	system("sudo cp /var/www/sync/xsessiongender /home/pvj/.config/lxsession/LXDE/autostart");
+	system("sudo su -s /bin/bash -c startx pvj &");
 }
 
 //# enable camera in boot.config

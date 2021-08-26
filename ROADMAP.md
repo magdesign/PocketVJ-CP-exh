@@ -2,7 +2,8 @@
 
 ## Currently in the pipeline: 
 
-- fading images, show next, scale via sliders and via dmx/midi/osc [pygame](https://www.taskboy.com/blog/A_simple_image_viewer_with_pygame.html)<p/>
+- disable swap space, free performance <p/>
+- fading images, show next, scale via sliders and via dmx/midi/osc...coming.. [pygame](https://www.taskboy.com/blog/A_simple_image_viewer_with_pygame.html)<p/>
 - setdmxblack = fadeout possible? <p/>
 - bluetooth features: connecting boombox, finish this, if somehow possible, already spent several days and nights <p/>
 - add gender and or facemask detection via webcam, test the new script => it works, but slow <p/>

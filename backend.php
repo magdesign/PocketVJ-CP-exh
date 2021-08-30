@@ -1716,14 +1716,20 @@ if ($_GET['action'] == 'rentalreset') {
 	////////////////
 	//////to do:
 	// set to default filebrowser!!!
-		$outputtext =  "Rental reset done";
+	$outputtext =  "Rental reset done";
 }
 
 if ($_GET['action'] == 'installpygame') {
 	$outputtext =  "Install pygame";
-	system("sudo apt-get install -f /var/www/sync/debs/python3-pygame_1.9.3+dfsg-2_armhf.deb");
-	system("sudo apt-get install -f /var/www/sync/debs/python-pygame_1.9.3+dfsg-2_armhf.deb");
-	$outputtext = "installed pygame";
+	system("sudo apt-get install -f /var/www/sync/debs/python3-pygame_1.9.3+dfsg-2_armhf.deb -y");
+	system("sudo apt-get install -f /var/www/sync/debs/python-pygame_1.9.3+dfsg-2_armhf.deb -y");
+	//system("sudo apt-get install -f /var/www/sync/debs/python-socketio_0.3.6-4_all.deb -y");
+	//system("sudo apt-get install -f /var/www/sync/debs/python-eventlet_0.19.0-6_all.deb -y");
+	//for python2:
+	system("sudo apt-get install -f /var/www/sync/debs/python-zmq_16.0.2-2_armhf.deb -y");
+	//for python3:
+	//system("sudo pip3 install /var/www/sync/debs/pyzmq-20.0.0-cp35-cp35m-linux_armv7l.whl");
+	$outputtext = "installed pygame + zmq";
 }
 
 if ($_GET['action'] == 'installbluetooth') {

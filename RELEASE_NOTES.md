@@ -1,5 +1,11 @@
 # PocketVJ Exhibition / Control Panel 4.x.x
 
+## CP 4.2.2 unreleased yet
+
+- fixed error in pyGame installer<br />
+- added python-zmq to be installed when installing pygame<br />
+- added first sketch of grandPA.py, there is a hell lot to learn, any help welcome<br />
+
 ## CP 4.2.1a  30.August 2021  <br />
 
 - fixed stopall/setdmxblackout to not reset our controluniverse 15<br />

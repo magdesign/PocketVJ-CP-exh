@@ -3,8 +3,8 @@
 # this is in very early stagae, help from anyone very welcome
 # image folders are located in  /media/internal/grandPA/
 # trying to solve the socket thing first, so I can bind anything like tcp, dmx, artnet from PocketVJ system to grandPA
-# how to map received messageds from socket to functions???
 # usage: run grandPA.py and in another terminal grandpPA_client.py
+
 import pygame
 import sys
 import time
@@ -40,18 +40,6 @@ def gamedrawing():
     #display refreshrate
     pygame.display.update()
 
-
-#SOCKETLISTENER  the accept messages from grandPA_client.py
-#should be put in a thread as soon as I realize how this is working
-def socketlistener():
-	while True:
-#opening our socket listener server
-	  message = socket.recv()
-    	  print("Received request: %s" % message)
-          K_LEFT = socket.recv(K_LEFT)
-#                  if socket.recv[K_LEFT]:
-#                   print("left received")
-
 #SET VARIABLES
 # x and y should always be the center in future, something like: pygame.display
 x = 300 #would be nice to get half of pygame.FULLSCREEN / 2 ??
@@ -59,6 +47,7 @@ y = 240
 speed = 5
 gobo1width = 40
 gobo1height = 80
+
 
 # lets create walls so the gobos dont get lost somewhere out of sight
 leftWall = pygame.draw.rect(screen, (0,0,0),(0,0,2,1080),0)
@@ -90,10 +79,37 @@ while go:
     #if key left is pressed, then
     if keypushed[pygame.K_LEFT] and not gobo1size.colliderect(leftWall):
         x -= speed
- 
+
+    #define socketremotecontrol
+    message = socket.recv()
+    #KEY_UP Remotecontrol
+    if  'K_UP' in ("%s" % message):
+        print('pfiu nach obe') #for debugging only
+        y -= speed
+
+    if  'K_RIGHT' in ("%s" % message):
+        print('pfiu nach raechts') #for debugging only
+        x += speed
+
+    if  'K_DOWN' in ("%s" % message):
+        print('pfiu nach abe') #for debugging only
+        y += speed
+
+    if  'K_LEFT' in ("%s" % message):
+        print('pfiu nach links') #for debugging only
+        x -= speed
+
+
+
+
+#map input values:
+    if  'x_pos' in ("%s" % message):
+         x_pos = ("%s" % message)
+         print(x_pos) #for debugging only
 
 
    #drawing our game
     gamedrawing()
+
 
     clock.tick(60)

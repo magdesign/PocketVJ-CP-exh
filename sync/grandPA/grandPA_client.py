@@ -27,9 +27,12 @@ socket.connect("tcp://localhost:5555")
 # Adding optional argument
 parser.add_argument("-x", "--xPosition", help = "x Position")
 parser.add_argument("-y", "--yPosition", help = "y Position")
-parser.add_argument("-a", "--Alpha", help = "Alpha value")
+parser.add_argument("-a", "--Alpha")
 
-parser.add_argument("-KEY_LEFT", "--KEY_LEFT", help = "KEY_LEFT")
+parser.add_argument("-KEY_UP")
+parser.add_argument("-KEY_RIGHT")
+parser.add_argument("-KEY_DOWN")
+parser.add_argument("-KEY_LEFT")
 
  
 # Read arguments from command line
@@ -41,18 +44,33 @@ args = parser.parse_args()
 # how would I write this asynchron, so all 3 arguemtnes can be sent simultaniously??
 if args.xPosition:
     print("X position % s" % args.xPosition)
-    socket.send(b"X % s" % args.xPosition)
+    socket.send(b"x_pos=%s" % args.xPosition)
 
 if args.yPosition:
     print("Y position % s" % args.yPosition)
-    socket.send(b"Y % s" % args.yPosition)
+    socket.send(b"Y_pos % s" % args.yPosition)
 
 if args.Alpha:
      print("Alpha value % s" % args.Alpha)
      socket.send(b"a % s" % args.Alpha)
 
 
+# key simluating args
+if args.KEY_UP:
+     print("KEY_UP % s" % args.KEY_UP)
+     socket.send(b"K_UP")
+
+if args.KEY_RIGHT:
+     print("KEY_RIGHT % s" % args.KEY_RIGHT)
+     socket.send(b"K_RIGHT")
+
+if args.KEY_DOWN:
+     print("KEY_DOWN % s" % args.KEY_DOWN)
+     socket.send(b"K_DOWN")
+
 if args.KEY_LEFT:
      print("KEY_LEFT % s" % args.KEY_LEFT)
      socket.send(b"K_LEFT")
+
+
 

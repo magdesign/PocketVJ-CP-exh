@@ -1,5 +1,8 @@
 # PocketVJ Exhibition / Control Panel 4.x.x
 
+## CP 4.2.1a  30.August 2021  <br />
+
+- fixed stopall/setdmxblackout to not reset our controluniverse 15<br />
 
 ## CP 4.2.1  26.August 2021  <br />
 

@@ -2,6 +2,7 @@
 
 ## Currently in the pipeline: 
 
+- play image after play video once has finished <p/>
 - disable swap space, free performance <p/>
 - fading images, show next, scale via sliders and via dmx/midi/osc...coming.. [pygame](https://www.taskboy.com/blog/A_simple_image_viewer_with_pygame.html)<p/>
 - setdmxblack = fadeout possible? <p/>
@@ -41,7 +42,11 @@
 - Complete authors file, will this ever happen, there are soooo many people involved<p/>
 - read color from video and create dmx fixture for it: https://github.com/MadSciLabs/ofxDmxUtils  https://github.com/pixout/PixView https://github.com/hzeller/rpi-rgb-led-matrix <p/>
 - maybe just convert rgb value to CH1-255,value 0-255, so the reader must convert [float to byte](https://stackoverflow.com/questions/1914115/converting-color-value-from-float-0-1-to-byte-0-255/46575472), reading color in rgb would use 3 dmx channels, r,g,b, then we would need to define a square to read from (which will be our movie later.).
-	create a pyton script to send ola_set, create a structure (fixture control) or fork from somewhere..<p/>
+	[create a pyton script](https://www.openlighting.org/ola/developer-documentation/python-api/) to send 'ola_set_dmx --universe 1 --dmx 0,0,0,0,0,0,0,0,0,0,' create a structure (fixture control) or fork from somewhere..<p/>
+- send video to framebuffer and make the reading there, like a screenshot https://gist.github.com/Darfk/5790622, use mplayer to stream to image sequence mplayer mf://*.jpg<p/>
+- maybe this would also enable to [capture running screen](https://github.com/BoboTiG/python-mss)<p/>
+- Does ofx and omx play into framebuffer? screenhoters are all tooo slow<p/>
+
 - heating beamercases with [stressing the cpu](https://raw.githubusercontent.com/ssvb/cpuburn-arm/master/cpuburn-a53.S)<p/>
 
 ## **Video/Content** ##

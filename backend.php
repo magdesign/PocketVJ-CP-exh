@@ -25,6 +25,15 @@ if ($_GET['action'] == 'stopvideo') {
 	system ("sudo /var/www/sync/stopvideo > /dev/null 2>&1");
 }
 
+if ($_GET['action'] == 'pause') {
+	exec("sudo /var/www/sync/pause.py");
+	$outputtext = "Pause, click again to resume";
+}
+
+if ($_GET['action'] == 'screenshot') {
+	exec("sudo /var/www/sync/screenshot");
+	$outputtext = "printscreen saved in /media/internal/images";
+}
 
 ///////////////////
 //# Video Section
@@ -394,15 +403,21 @@ if ($_GET['action'] == 'starthplayer') {
 	$outputtext =  "start hplayer with OSC control";
 }
 
-if ($_GET['action'] == 'pause') {
-	exec("sudo /var/www/sync/pause.py");
-	$outputtext = "Pause, click again to resume";
+/////////////////////////////
+// Slideshow after video once
+/////////////////////////////
+
+if ($_GET['action'] == 'enableslideafter') {
+	$outputtext =  "enable slideshow after video played once";
+	system ("sudo /var/www/sync/set_enableslideafter > /dev/null 2>&1");
 }
 
-if ($_GET['action'] == 'screenshot') {
-	exec("sudo /var/www/sync/screenshot");
-	$outputtext = "printscreen saved in /media/internal/images";
+if ($_GET['action'] == 'disableslideafter') {
+	$outputtext =  "disable slideshow after video played once";
+	system ("sudo /var/www/sync/set_disableslideafter > /dev/null 2>&1");
 }
+
+
 //////////////////////
 // Video fader
 ////////////////////////

@@ -35,6 +35,14 @@
 	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startmasterone10 &
 	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startmasterone11 &
 	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startmasterone12 &
+	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startmasterone13 &
+	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startmasterone14 &
+	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startmasterone15 &
+	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startmasterone16 &
+	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startmasterone17 &
+	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startmasterone18 &
+	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startmasterone19 &
+	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startmasterone20 &
 	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startaudio &
 	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startaudioslave &
 	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startaudiousb &
@@ -69,6 +77,18 @@
 	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startlessonce08 &
 	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startlessonce09 &
 	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startlessonce10 &
+	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startlessonce11 &
+	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startlessonce12 &
+	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startlessonce13 &
+	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startlessonce14 &
+	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startlessonce15 &
+	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startlessonce16 &
+	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startlessonce17 &
+	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startlessonce18 &
+	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startlessonce19 &
+	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startlessonce20 &
+
+
 #set the audio on dmx scripts
 	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startdmxplaybackaudio01 &
 	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startdmxplaybackaudio02 &

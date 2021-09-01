@@ -2,6 +2,7 @@
 
 ## CP 4.2.2 unreleased yet
 
+- added SLIDESHOW after to play slideshow after video played once<br />
 - fixed error in pyGame installer<br />
 - added python-zmq to be installed when installing pygame<br />
 - added first sketch of grandPA.py, there is a hell lot to learn, any help welcome<br />

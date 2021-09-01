@@ -11,6 +11,11 @@
 - make the led to flash every 10s so we know its alive<p/>
 - power off button also closes browser tab<p/>
 
+## Website:
+
+- Link How to mount the Expansion Board on Image kits to an actual tutorial
+- 
+
 ## Next to come:
 
 - move, rotate, scale images interactive => I do this via dmx/artnet => png gobo player<p/>

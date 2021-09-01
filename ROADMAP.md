@@ -34,14 +34,19 @@
 - add wireless-power off to interfaces ? <p/>
 - Integrate this script for more CPU infos in CP: https://gist.github.com/ecampidoglio/5009512#file-cpustatus-sh <p/>
 - play images and videos after each other, depending on filename or with an ofx timeline, do we really need that?  <p/>
-- System alive ping, which sends out an email every 5 minutes to tell that beamer&pocketvj is alive, alarm function. <p/>
+- System alive ping, which sends out an email every 5 minutes to tell that beamer&pocketvj is alive, alarm function (do you really need that?) <p/>
 - AES67 Support, is it possible (https://github.com/dewiweb/ALSA-RAVENNA-AES67-Driver) Edit: Dante USB-dongles are supported <p/>
-- Add DMX in control commands to control the video player/mapper with DMX <p/>
+- Add DMX in control commands to control mapper with DMX <p/>
 - Automount and connect to usb lte modems for remote internet, tricky since each brand is different<p/>
 - Complete authors file, will this ever happen, there are soooo many people involved<p/>
-- read color from video and create dmx fixture for it: https://github.com/MadSciLabs/ofxDmxUtils  <p/>
+- read color from video and create dmx fixture for it: https://github.com/MadSciLabs/ofxDmxUtils  https://github.com/pixout/PixView https://github.com/hzeller/rpi-rgb-led-matrix <p/>
+- maybe just convert rgb value to CH1-255,value 0-255, so the reader must convert [float to byte](https://stackoverflow.com/questions/1914115/converting-color-value-from-float-0-1-to-byte-0-255/46575472), reading color in rgb would use 3 dmx channels, r,g,b, then we would need to define a square to read from (which will be our movie later.).
+	create a pyton script to send ola_set, create a structure (fixture control) or fork from somewhere..<p/>
 - heating beamercases with [stressing the cpu](https://raw.githubusercontent.com/ssvb/cpuburn-arm/master/cpuburn-a53.S)<p/>
 
+## **Video/Content** ##
+
+- Bring tutorial videos to video folder 01_, 02_, 03_, 04_  <p/>
 
 
 ## **Tutorials/Manual:**
@@ -55,9 +60,9 @@
 
 ### **Pipeline/Provider/Freedom:**
 
-- change webshop to an opensource variant, any suggestions? <p/>
-- create my own gitea server to move away from github?<p/>
-
+- change webshop to an opensource variant, finish this!! <p/>
+- create my own gitea server and mirror to away to github<p/>
+- delete youtube channel, move to peertube<p/>
 
 
 

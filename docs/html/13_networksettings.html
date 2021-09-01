@@ -1,0 +1,320 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>NETWORK SETTINGS &mdash; PocketVJ Exhibition 4.x documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="SYSTEM SETTINGS" href="14_systemsettings.html" />
+    <link rel="prev" title="DISPLAY" href="12_display.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> PocketVJ Exhibition
+          
+
+          
+            
+            <img src="_static/PocketVJ.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="01_first_steps.html">First Steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_controlpanel.html">CONTROL PANEL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_autostart.html">AUTOSTART</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_filemanagement.html">FILE MANAGEMENT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_presenter.html">PRESENTER</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_video.html">VIDEO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_sharing.html">SHARING</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_mapping.html">MAPPING</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_expansion.html">EXPANSION</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_scheduler.html">SCHEDULER</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11_dmxoscmidi.html">DMX OSC MIDI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_display.html">DISPLAY</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_display.html#info">INFO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_display.html#resolution">RESOLUTION</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_display.html#rotate-flip">ROTATE &amp; FLIP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_display.html#sleep">SLEEP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_display.html#projector">PROJECTOR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_display.html#projector-ir">PROJECTOR IR</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">NETWORK SETTINGS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#info">INFO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#change-ip">CHANGE IP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#remote-access">REMOTE ACCESS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cp-password">CP PASSWORD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#connecting-to-wifi">CONNECTING TO WIFI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#wifi-antenna">WIFI ANTENNA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#wifi-channel">WIFI CHANNEL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#udp-control">UDP Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tcp-control">TCP Control</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="14_systemsettings.html">SYSTEM SETTINGS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="15_troubleshooting.html">TROUBLESHOOTING</a></li>
+<li class="toctree-l1"><a class="reference internal" href="16_irremote.html">IR REMOTE LIRC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="17_power.html">POWER SUPPLY</a></li>
+<li class="toctree-l1"><a class="reference internal" href="17_power.html#direct-power">DIRECT POWER</a></li>
+<li class="toctree-l1"><a class="reference internal" href="99_theend.html">END</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">PocketVJ Exhibition</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>NETWORK SETTINGS</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/13_networksettings.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="network-settings">
+<h1>NETWORK SETTINGS<a class="headerlink" href="#network-settings" title="Permalink to this headline">¶</a></h1>
+<img alt="_images/13_CP_networksettings.png" src="_images/13_CP_networksettings.png" />
+<div class="section" id="info">
+<h2>INFO<a class="headerlink" href="#info" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="change-ip">
+<h2>CHANGE IP<a class="headerlink" href="#change-ip" title="Permalink to this headline">¶</a></h2>
+<p><strong>192.168.2.</strong> =&gt; Sets the ip range to <code class="docutils literal notranslate"><span class="pre">192.168.2.***</span></code> (reverts from dhcp)</p>
+<p><strong>10.0.0.0.</strong> =&gt; Set the ip range to <code class="docutils literal notranslate"><span class="pre">10.0.0.0.***</span></code> (reverts from dhcp)</p>
+<p><strong>RJ45 DHCP</strong> =&gt; Sets the rj45 connection to dhcp to get the ip address from a router</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Wifi IP will always stay the same!</p>
+</div>
+</div>
+<div class="section" id="remote-access">
+<h2>REMOTE ACCESS<a class="headerlink" href="#remote-access" title="Permalink to this headline">¶</a></h2>
+<p>see video tutorial:
+<a class="reference external" href="https://video.pocketvj.com/AVideo/video/3/pocketvj-exhibition-access-from-everywhere-over-the-internet">https://video.pocketvj.com/AVideo/video/3/pocketvj-exhibition-access-from-everywhere-over-the-internet</a></p>
+</div>
+<div class="section" id="cp-password">
+<h2>CP PASSWORD<a class="headerlink" href="#cp-password" title="Permalink to this headline">¶</a></h2>
+<p>Used to lock the Control Panel and the content with a password.</p>
+<p>Username: <code class="docutils literal notranslate"><span class="pre">admin</span></code>
+Pass: <code class="docutils literal notranslate"><span class="pre">12345</span></code></p>
+<p><strong>Enable</strong> =&gt; Enables the CP password</p>
+<p><strong>Disable</strong> =&gt; Disables the CP password</p>
+<p><strong>Entry Filed</strong> =&gt; Set your own password</p>
+<img alt="_images/13_CP_password.png" src="_images/13_CP_password.png" />
+</div>
+<div class="section" id="connecting-to-wifi">
+<h2>CONNECTING TO WIFI<a class="headerlink" href="#connecting-to-wifi" title="Permalink to this headline">¶</a></h2>
+<p>Used to connect to an in house Wifi with internet so you can accesss from anywhere.</p>
+<img alt="_images/13_CP_connectwifi.png" src="_images/13_CP_connectwifi.png" />
+<p>see video tutorial: <a class="reference external" href="https://video.pocketvj.com/AVideo/video/11/pocketvj-exhibition-wifi-connecting">https://video.pocketvj.com/AVideo/video/11/pocketvj-exhibition-wifi-connecting</a></p>
+</div>
+<div class="section" id="wifi-antenna">
+<h2>WIFI ANTENNA<a class="headerlink" href="#wifi-antenna" title="Permalink to this headline">¶</a></h2>
+<p>Enable or disable the internal wifi</p>
+<img alt="_images/13_CP_wifiantenna.png" src="_images/13_CP_wifiantenna.png" />
+<p><strong>ON</strong> =&gt; Turns wifi on</p>
+<p><strong>ON Permanent</strong> =&gt; Turns wifi on also after reboot</p>
+<p><strong>OFF</strong> =&gt; Turns wifi and bluetooth off until next reboot</p>
+<p><strong>OFF Permanent</strong> =&gt; Turns wifi and bluetooth off  forever</p>
+</div>
+<div class="section" id="wifi-channel">
+<h2>WIFI CHANNEL<a class="headerlink" href="#wifi-channel" title="Permalink to this headline">¶</a></h2>
+<p>Change Wifi channels, useful when using multiple PocketVJ’s in public spaces to split up the frequencies.</p>
+</div>
+<div class="section" id="udp-control">
+<h2>UDP Control<a class="headerlink" href="#udp-control" title="Permalink to this headline">¶</a></h2>
+<p>You can control the PocketVJ with UDP commands. On port <code class="docutils literal notranslate"><span class="pre">5000</span></code></p>
+<p><strong>Uppercase and lowercase matters!</strong></p>
+<p>When using Packetsender or similar, make sure to send a “Newline” after every command,</p>
+<p>e.g:   <code class="docutils literal notranslate"><span class="pre">stop\n</span></code></p>
+<p>see here: <a class="reference external" href="https://docs.allthingstalk.com/developers/api/udp-messaging/">https://docs.allthingstalk.com/developers/api/udp-messaging/</a></p>
+<img alt="_images/13_udp_packetsender.png" src="_images/13_udp_packetsender.png" />
+<p>The commands are defined in: <a class="reference external" href="https://github.com/magdesign/PocketVJ-CP-exh/blob/master/sync/commandmapping.sh">https://github.com/magdesign/PocketVJ-CP-exh/blob/master/sync/commandmapping.sh</a></p>
+<p>Ask if you need more control commands and I will add them or edit the file by yourself.</p>
+</div>
+<div class="section" id="tcp-control">
+<h2>TCP Control<a class="headerlink" href="#tcp-control" title="Permalink to this headline">¶</a></h2>
+<p>You can control the PocketVJ with TCP commands.</p>
+<p>Standard port for <a class="reference external" href="http://">http://</a> commands is port <code class="docutils literal notranslate"><span class="pre">80</span></code></p>
+<p>Its your decision which tool you use to send the commands,
+here is an example using curl via terminal to control a PocketVJ with the IP: 2.0.0.100</p>
+<p><code class="docutils literal notranslate"><span class="pre">curl</span> <span class="pre">-s</span> <span class="pre">http://2.0.0.100/backend.php/?action=stop</span></code></p>
+<p>IP://X.X.X:X/backend.php/?action=…………..</p>
+<p>For more commands check backend.php
+Every function is controllable via TCP!</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="14_systemsettings.html" class="btn btn-neutral float-right" title="SYSTEM SETTINGS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="12_display.html" class="btn btn-neutral float-left" title="DISPLAY" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2021, M.A.Gasser, https://pocketvj.com
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

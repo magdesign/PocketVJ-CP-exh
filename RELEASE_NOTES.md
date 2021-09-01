@@ -5,6 +5,7 @@
 - fixed error in pyGame installer<br />
 - added python-zmq to be installed when installing pygame<br />
 - added first sketch of grandPA.py, there is a hell lot to learn, any help welcome<br />
+- added docs to system, so they can be read offline (prepare to bring everything offline available)<br />
 
 ## CP 4.2.1a  30.August 2021  <br />
 

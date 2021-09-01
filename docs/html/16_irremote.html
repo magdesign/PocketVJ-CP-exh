@@ -1,0 +1,334 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>IR REMOTE LIRC &mdash; PocketVJ Exhibition 4.x documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="END" href="99_theend.html" />
+    <link rel="prev" title="TROUBLESHOOTING" href="15_troubleshooting.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> PocketVJ Exhibition
+          
+
+          
+            
+            <img src="_static/PocketVJ.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="01_first_steps.html">First Steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_controlpanel.html">CONTROL PANEL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_autostart.html">AUTOSTART</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_filemanagement.html">FILE MANAGEMENT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_presenter.html">PRESENTER</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_video.html">VIDEO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_sharing.html">SHARING</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_mapping.html">MAPPING</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_expansion.html">EXPANSION</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_scheduler.html">SCHEDULER</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11_dmxoscmidi.html">DMX OSC MIDI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_display.html">DISPLAY</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_display.html#info">INFO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_display.html#resolution">RESOLUTION</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_display.html#rotate-flip">ROTATE &amp; FLIP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_display.html#sleep">SLEEP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_display.html#projector">PROJECTOR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_display.html#projector-ir">PROJECTOR IR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13_networksettings.html">NETWORK SETTINGS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_systemsettings.html">SYSTEM SETTINGS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="15_troubleshooting.html">TROUBLESHOOTING</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">IR REMOTE LIRC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="99_theend.html">END</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">PocketVJ Exhibition</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>IR REMOTE LIRC</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/16_irremote.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ir-remote-lirc">
+<span id="irremote"></span><h1>IR REMOTE LIRC<a class="headerlink" href="#ir-remote-lirc" title="Permalink to this headline">¶</a></h1>
+<p>Using lirc to remotely control devices with IR (infrared).</p>
+<p>PocketVJ Exhibition Image 4.0.7 or older do following steps:</p>
+<p>First uninstall the out of date  lirc version with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">purge</span> <span class="n">lirc</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">autoclean</span>
+</pre></div>
+</div>
+<p>Then install the special patched version (needs CP 4.0.6 or newer) with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">sync</span><span class="o">/</span><span class="n">debs</span><span class="o">/</span><span class="n">liblirc</span><span class="o">-</span><span class="n">client0_0</span><span class="o">.</span><span class="mf">9.4</span><span class="n">c</span><span class="o">-</span><span class="mi">9</span><span class="n">_armhf</span><span class="o">.</span><span class="n">deb</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">sync</span><span class="o">/</span><span class="n">debs</span><span class="o">/</span><span class="n">liblirc0_0</span><span class="o">.</span><span class="mf">9.4</span><span class="n">c</span><span class="o">-</span><span class="mi">9</span><span class="n">_armhf</span><span class="o">.</span><span class="n">deb</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">sync</span><span class="o">/</span><span class="n">debs</span><span class="o">/</span><span class="n">lirc_0</span><span class="o">.</span><span class="mf">9.4</span><span class="n">c</span><span class="o">-</span><span class="mi">9</span><span class="n">_armhf</span><span class="o">.</span><span class="n">deb</span>
+</pre></div>
+</div>
+<p>This will take a few minutes.</p>
+<p>After comnpletion, edit the .conf file to enable sending:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">nano</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">lirc</span><span class="o">/</span><span class="n">lirc_options</span><span class="o">.</span><span class="n">conf</span>
+
+<span class="n">driver</span>          <span class="o">=</span> <span class="n">default</span>
+<span class="n">device</span>          <span class="o">=</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">lirc0</span>
+</pre></div>
+</div>
+<p>From here on the software is installed.
+Now we need to enable the IR sender:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">nano</span> <span class="o">/</span><span class="n">boot</span><span class="o">/</span><span class="n">config</span><span class="o">.</span><span class="n">txt</span>
+
+<span class="n">dtoverlay</span><span class="o">=</span><span class="n">gpio</span><span class="o">-</span><span class="n">ir</span><span class="o">-</span><span class="n">tx</span><span class="p">,</span><span class="n">gpio_pin</span><span class="o">=</span><span class="mi">4</span>
+</pre></div>
+</div>
+<p>Finally we copy the IR protocol file to the lirc config, I always store mine in:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">sync</span><span class="o">/</span><span class="n">remotes</span><span class="o">/</span>
+</pre></div>
+</div>
+<p>In this example, the IR file made for U400 Livia Ultra Short Throw Laser Beamer:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">cp</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">sync</span><span class="o">/</span><span class="n">remotes</span><span class="o">/</span><span class="n">laserbeamer</span><span class="o">.</span><span class="n">lircd</span><span class="o">.</span><span class="n">conf</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">lirc</span><span class="o">/</span><span class="n">lircd</span><span class="o">.</span><span class="n">conf</span>
+</pre></div>
+</div>
+<p>Connect the IR sender as documented in <a class="reference internal" href="09_expansion.html#expansion"><span class="std std-ref">EXPANSION</span></a>.</p>
+<p>Test it with (use a digicam to check if diode is flashing):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">irsend</span> <span class="n">SEND_ONCE</span> <span class="n">laserbeamer</span> <span class="n">KEY_POWER</span>
+</pre></div>
+</div>
+<p>Recording your own IR is way more complicated and will not be described here in detail, only some hints:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">nano</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">lirc</span><span class="o">/</span><span class="n">lirc_options</span><span class="o">.</span><span class="n">conf</span> <span class="o">=&gt;</span>
+<span class="n">driver</span>          <span class="o">=</span> <span class="n">default</span>
+<span class="n">device</span>          <span class="o">=</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">lirc1</span>
+
+<span class="n">nano</span> <span class="o">/</span><span class="n">boot</span><span class="o">/</span><span class="n">config</span><span class="o">.</span><span class="n">txt</span> <span class="o">=&gt;</span>
+<span class="n">dtoverlay</span><span class="o">=</span><span class="n">gpio</span><span class="o">-</span><span class="n">ir</span><span class="p">,</span><span class="n">gpio_pin</span><span class="o">=</span><span class="mi">18</span> <span class="c1">#pin of receiver</span>
+<span class="n">dtoverlay</span><span class="o">=</span><span class="n">gpio</span><span class="o">-</span><span class="n">ir</span><span class="o">-</span><span class="n">tx</span><span class="p">,</span><span class="n">gpio_pin</span><span class="o">=</span><span class="mi">4</span> <span class="c1">#pin of sender</span>
+
+
+<span class="n">stop</span> <span class="n">lircd</span><span class="o">.</span><span class="n">service</span> <span class="o">=&gt;</span>
+<span class="n">sudo</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">init</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">lircd</span> <span class="n">stop</span>
+
+<span class="n">test</span> <span class="o">=&gt;</span>
+<span class="n">mode2</span> <span class="o">-</span><span class="n">d</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">lirc1</span>
+
+
+<span class="n">record</span> <span class="o">=&gt;</span>
+<span class="n">irrecord</span> <span class="o">-</span><span class="n">f</span> <span class="o">-</span><span class="n">d</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">lirc1</span> <span class="o">~/</span><span class="n">lircd</span><span class="o">.</span><span class="n">conf</span>
+
+<span class="n">nice</span> <span class="n">tool</span> <span class="n">to</span> <span class="n">check</span> <span class="o">=&gt;</span>
+<span class="n">sudo</span> <span class="n">ir</span><span class="o">-</span><span class="n">keytable</span> <span class="o">-</span><span class="n">c</span> <span class="o">-</span><span class="n">p</span> <span class="nb">all</span> <span class="o">-</span><span class="n">t</span>
+
+<span class="n">Most</span> <span class="n">important</span> <span class="n">keys</span><span class="p">:</span>
+<span class="n">KEY_POWER</span>
+<span class="n">KEY_OK</span>
+<span class="n">KEY_HOME</span>
+<span class="n">KEY_MENU</span>
+<span class="n">KEY_MEDIA</span> <span class="p">(</span><span class="n">source</span> <span class="n">select</span><span class="p">)</span>
+
+<span class="n">KEY_VOLUMEUP</span>
+<span class="n">KEY_VOLUMEDOWN</span>
+<span class="n">KEY_MUTE</span>
+
+<span class="n">KEY_UP</span>
+<span class="n">KEY_LEFT</span>
+<span class="n">KEY_DOWN</span>
+<span class="n">KEY_RIGHT</span>
+
+<span class="n">KEY_PLAY</span>
+<span class="n">KEY_PAUSE</span>
+
+<span class="n">KEY_F1</span> <span class="p">(</span><span class="n">focus</span><span class="o">+</span><span class="p">)</span>
+<span class="n">KEY_F2</span> <span class="p">(</span><span class="n">focus</span><span class="o">-</span><span class="p">)</span>
+
+<span class="n">KEY_F3</span> <span class="p">(</span><span class="n">keystone</span><span class="o">+</span><span class="p">)</span>
+<span class="n">KEY_F4</span> <span class="p">(</span><span class="n">keystone</span><span class="o">-</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>I ended up in listing the raw ir commands in terminal with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mode2</span> <span class="o">-</span><span class="n">d</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">lirc1</span>
+</pre></div>
+</div>
+<p>Ignore the first 2 blocks, then always make 6 blocks for one line:</p>
+<img alt="_images/16_raw_signals.png" src="_images/16_raw_signals.png" />
+<p>Which is extremely time consuming and frustrating, but it works!</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="99_theend.html" class="btn btn-neutral float-right" title="END" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="15_troubleshooting.html" class="btn btn-neutral float-left" title="TROUBLESHOOTING" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2021, M.A.Gasser, https://pocketvj.com
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

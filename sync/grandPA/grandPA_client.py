@@ -55,7 +55,7 @@ if args.Alpha:
      socket.send(b"a % s" % args.Alpha)
 
 
-# key simluating args
+# key simulating args
 if args.KEY_UP:
      print("KEY_UP % s" % args.KEY_UP)
      socket.send(b"K_UP")

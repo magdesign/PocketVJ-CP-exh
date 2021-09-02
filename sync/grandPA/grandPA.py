@@ -13,6 +13,7 @@ import threading
 
 ### INITIALIZE socket for external inputs to tcp://*:5555
 context = zmq.Context()
+# need something else than PULL?
 socket = context.socket(zmq.PULL)
 socket.bind("tcp://*:5555")
 ###
@@ -80,6 +81,10 @@ while go:
     if keypushed[pygame.K_LEFT] and not gobo1size.colliderect(leftWall):
         x -= speed
 
+
+    print ("now it blocks")
+################
+# THIS BLOCKS THE WHOLE LOOP: WHY???
     #define socketremotecontrol
     message = socket.recv()
     #KEY_UP Remotecontrol

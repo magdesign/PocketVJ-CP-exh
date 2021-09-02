@@ -2665,7 +2665,7 @@ if ($_GET['action'] == 'kernelversion') {
 }
 
 if ($_GET['action'] == 'powersupply') {
-	$outputtext = shell_exec('/var/www/sync/powersupply | grep Power');
+	$outputtext = shell_exec('/var/www/sync/powersupply');
 }
 
 //# Webserver

@@ -31,6 +31,7 @@
 
 ## Just some ideas:
 
+- enable https:// and create a PWA link (kind of an app<p/>
 - slideshow with different times of images depending on number in file-name of image  <p/>
 - Add gender recognition based on openCV to trigger gender based content <p/>
 - Add scripts to trigger content based on humidity/temperature <p/>

@@ -52,7 +52,7 @@ if args.yPosition:
 
 if args.Alpha:
      print("Alpha value % s" % args.Alpha)
-     socket.send(b"a % s" % args.Alpha)
+     socket.send(b"alpha % s" % args.Alpha)
 
 
 # key simulating args

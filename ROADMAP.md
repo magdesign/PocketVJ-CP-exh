@@ -28,6 +28,7 @@
 - CP => remove set to 1 and make function to flip all OLA inputs to OLA outputs  <p/>
 - OLA => is dmx thru working so we can see the show while recording<p/>
 - parse dmx sequences from "*cough* from the garage" software to playback on PocketVJ (similar to mapping converter, can someone send me an exported file?)<p/>
+- audio equalizer and volume slider in CP<p/>
 
 ## Just some ideas:
 

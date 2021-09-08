@@ -2,6 +2,7 @@
 
 ## Currently in the pipeline: 
 
+- remove —no-verify-playback from dmx player scripts, since it seems SACN will not play the files propper with this option (thanks to @DSTN !)
 - play image after play video once has finished <p/>
 - disable swap space, free performance <p/>
 - fading images, show next, scale via sliders and via dmx/midi/osc...coming.. [pygame](https://www.taskboy.com/blog/A_simple_image_viewer_with_pygame.html)<p/>

@@ -1,8 +1,9 @@
 # **Roadmap / Next Steps:** 
 
 ## Currently in the pipeline: 
-
-- remove —no-verify-playback from dmx player scripts, since it seems SACN will not play the files propper with this option (thanks to @DSTN !)
+<p/>
+- Update Everything => check olad version, if not 0.10.7, update this as well..... <p/>
+- remove —no-verify-playback from dmx player scripts, since it seems SACN will not play the files propper with this option (thanks to @DSTN !) ?? <p/>
 - play image after play video once has finished <p/>
 - disable swap space, free performance <p/>
 - fading images, show next, scale via sliders and via dmx/midi/osc...coming.. [pygame](https://www.taskboy.com/blog/A_simple_image_viewer_with_pygame.html)<p/>

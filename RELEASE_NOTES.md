@@ -1,5 +1,9 @@
 # PocketVJ Exhibition / Control Panel 4.x.x
 
+## unreleased
+
+- fixed autostart to dmx show, added blackout and longer sleep<br />
+
 ## CP 4.2.2 24.September 2021
 
 - added SLIDESHOW after to play slideshow after video played once<br />

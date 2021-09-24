@@ -5,9 +5,13 @@
 #start ola service
 sudo service olad start &
 
-sleep 1
+sleep 3
 #start videoplayer
 #/var/www/sync/startmaster &
+
+sudo /var/www/sync/setdmxblackout
+
+sleep 2
 
 #start dmx playback
 #sudo ola_recorder -i 0 -p /media/internal/dmx/show01 &

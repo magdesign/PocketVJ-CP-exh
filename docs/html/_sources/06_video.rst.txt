@@ -43,7 +43,8 @@ PLAYER SYNC ONCE
 .. note::
     - To be able to sync, the file names on master and slave must be exactly the same!
 
-   
+
+.. image:: _images/06_CP_video_sync.png
 
 SYNC WIFI
 *********
@@ -118,6 +119,33 @@ use a switch to connect more players, if you use a router, make sure its configu
     - Play the testfile and take pictures with your camera to check the timecode offset.
     - Make sure your files are at least 60s in duration to increase the stability of seamless looping.
     - For Syncing with high bitrates (1080p with 12 MB/s or more) you may set the SYNC_OFFSET to a higher value.
+
+
+
+SLIDESHOW after
+***************
+
+.. image:: _images/06_CP_slideafter.png
+
+
+If you play a video Once 0x _* and want that afterwards a slideshow is starting.
+
+**Enable**
+
+Enables slideshow
+
+**Disable**
+
+Disables slideshow
+
+
+.. note::
+    To stop you need push STOP 2x, first will stop video, second stops imageplayer.
+
+    Set the slideshow time in the green PRESENTER section.
+
+    If you only want one slide to display, just add one slide to the images folder.
+
 
 
 FADING / SIZE / SPEED

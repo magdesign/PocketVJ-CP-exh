@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>MAPPING &mdash; PocketVJ Exhibition 4.x documentation</title>
+  <title>CREATE CONTENT &mdash; PocketVJ Exhibition 4.x documentation</title>
   
 
   
@@ -36,8 +36,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="EXPANSION" href="09_expansion.html" />
-    <link rel="prev" title="SHARING" href="07_sharing.html" /> 
+    <link rel="next" title="END" href="99_theend.html" />
+    <link rel="prev" title="POWER SUPPLY" href="17_power.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -93,18 +93,7 @@
 <li class="toctree-l1"><a class="reference internal" href="05_presenter.html">PRESENTER</a></li>
 <li class="toctree-l1"><a class="reference internal" href="06_video.html">VIDEO</a></li>
 <li class="toctree-l1"><a class="reference internal" href="07_sharing.html">SHARING</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">MAPPING</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#open">OPEN</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#save">SAVE</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#mode">MODE</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#function">FUNCTION</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#sync">SYNC</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#remote">REMOTE</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#fbo">FBO</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#slideshow">SLIDESHOW</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#format">FORMAT</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="08_mapping.html">MAPPING</a></li>
 <li class="toctree-l1"><a class="reference internal" href="09_expansion.html">EXPANSION</a></li>
 <li class="toctree-l1"><a class="reference internal" href="10_scheduler.html">SCHEDULER</a></li>
 <li class="toctree-l1"><a class="reference internal" href="11_dmxoscmidi.html">DMX OSC MIDI</a></li>
@@ -121,7 +110,11 @@
 <li class="toctree-l1"><a class="reference internal" href="16_irremote.html">IR REMOTE LIRC</a></li>
 <li class="toctree-l1"><a class="reference internal" href="17_power.html">POWER SUPPLY</a></li>
 <li class="toctree-l1"><a class="reference internal" href="17_power.html#direct-power">DIRECT POWER</a></li>
-<li class="toctree-l1"><a class="reference internal" href="18_content_creation.html">CREATE CONTENT</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">CREATE CONTENT</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#convert-movies-to-h-264-mp4-files">Convert movies to h.264 * .mp4 files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-animations-or-video-content">Create Animations or Video Content</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="99_theend.html">END</a></li>
 </ul>
 
@@ -169,13 +162,13 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>MAPPING</li>
+      <li>CREATE CONTENT</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/08_mapping.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/18_content_creation.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -188,71 +181,26 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="mapping">
-<h1>MAPPING<a class="headerlink" href="#mapping" title="Permalink to this headline">¶</a></h1>
-<p>see video tutorial: <a class="reference external" href="https://video.pocketvj.com/AVideo/video/38/mapping_single_channel">https://video.pocketvj.com/AVideo/video/38/mapping_single_channel</a></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<ul class="simple">
-<li><p><strong>If you want to map with a mouse, connect a cabled USB mouse before booting.</strong></p></li>
-<li><p>since CP 4.0.5 and higher, you are able to remotely map without any mouse or keyboard connected.</p></li>
-<li><p>If you use an IR mouse, you need to use an IR Keyboard to control the mapper, CP will not work.</p></li>
-<li><p>If you use an IR mouse, you need to use an IR Keyboard to control the mapper, CP will not work.</p></li>
-<li><p>Keyboard keys: 1,2,3,4,a,v,b,m,n,l,k,5,7,8,9,0</p></li>
-<li><p>Use a Video resolution of 1280 x 720 and a video containing an audiotrack (even silent).</p></li>
-<li><p>If the mapped video stutters, decrease the bitrate and resolution or wait until it played a few times.</p></li>
-</ul>
+  <div class="section" id="create-content">
+<h1>CREATE CONTENT<a class="headerlink" href="#create-content" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="convert-movies-to-h-264-mp4-files">
+<h2>Convert movies to h.264 * .mp4 files<a class="headerlink" href="#convert-movies-to-h-264-mp4-files" title="Permalink to this headline">¶</a></h2>
+<img alt="_images/18_handbrake.png" src="_images/18_handbrake.png" />
+<p><strong>Adobe media codecs are unusable proprietary crap!</strong></p>
+<p>Real pros use <a class="reference external" href="https://handbrake.fr">https://handbrake.fr</a></p>
+<p>Make sure to disable Crop under “Dimensions” !!</p>
+<p>Under “Video” select:</p>
+<p>Framerate: same as source</p>
+<p>If you get videos with ending .m4v, disable the check mark in settings:</p>
+<img alt="_images/18_handbrake_prefs.png" src="_images/18_handbrake_prefs.png" />
 </div>
-<img alt="_images/08_CP_mapping.png" src="_images/08_CP_mapping.png" />
-<div class="section" id="open">
-<h2>OPEN<a class="headerlink" href="#open" title="Permalink to this headline">¶</a></h2>
-<p><strong>01 - 04</strong> =&gt; Opens a stored mapping preset</p>
-</div>
-<div class="section" id="save">
-<h2>SAVE<a class="headerlink" href="#save" title="Permalink to this headline">¶</a></h2>
-<p><strong>01 - 04</strong> =&gt; Saves a mapping preset</p>
-</div>
-<div class="section" id="mode">
-<h2>MODE<a class="headerlink" href="#mode" title="Permalink to this headline">¶</a></h2>
-<p><strong>Mapping</strong> =&gt; Enables the <strong>Mapping</strong> mode</p>
-<p><strong>Add…</strong> =&gt; Add a mapping surface</p>
-</div>
-<div class="section" id="function">
-<h2>FUNCTION<a class="headerlink" href="#function" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>Select one of the available functions in <strong>Mapping</strong> mode</p></li>
-</ul>
-</div>
-<div class="section" id="sync">
-<h2>SYNC<a class="headerlink" href="#sync" title="Permalink to this headline">¶</a></h2>
-<p><strong>Set to?</strong> =&gt; Check to which mode the mapper is set to</p>
-<p><strong>Sender</strong> =&gt; Set the mapper to be master</p>
-<p><strong>Receiver</strong> =&gt; Set the mapper to be receiver</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>sync works only with one video file in mapper</p>
-<p>no sync for slideshows</p>
-</div>
-</div>
-<div class="section" id="remote">
-<h2>REMOTE<a class="headerlink" href="#remote" title="Permalink to this headline">¶</a></h2>
-<p><strong>Launch</strong> =&gt; Launches the mapper which is compatible with the seperate remote app</p>
-</div>
-<div class="section" id="fbo">
-<h2>FBO<a class="headerlink" href="#fbo" title="Permalink to this headline">¶</a></h2>
-<p><strong>Launch</strong> =&gt; Launches the mapper with slideshow function (no sync or softedge in this version)</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Images may be maximal 1920x1080pixel 72dpi</p>
-</div>
-</div>
-<div class="section" id="slideshow">
-<h2>SLIDESHOW<a class="headerlink" href="#slideshow" title="Permalink to this headline">¶</a></h2>
-<p><strong>2s - 15s</strong> =&gt; Set the slideshow time</p>
-</div>
-<div class="section" id="format">
-<h2>FORMAT<a class="headerlink" href="#format" title="Permalink to this headline">¶</a></h2>
-<p><strong>Native</strong> =&gt; Set the aspect ratio of the images</p>
+<div class="section" id="create-animations-or-video-content">
+<h2>Create Animations or Video Content<a class="headerlink" href="#create-animations-or-video-content" title="Permalink to this headline">¶</a></h2>
+<p>I produce all my 2d animations with:</p>
+<p>Blender <a class="reference external" href="https://blender.org">https://blender.org</a></p>
+<p>Natron <a class="reference external" href="https://natrongithub.github.io/">https://natrongithub.github.io/</a></p>
+<p>Enve <a class="reference external" href="https://maurycyliebner.github.io/">https://maurycyliebner.github.io/</a></p>
+<p>Olive <a class="reference external" href="https://www.olivevideoeditor.org/">https://www.olivevideoeditor.org/</a></p>
 </div>
 </div>
 
@@ -264,10 +212,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="09_expansion.html" class="btn btn-neutral float-right" title="EXPANSION" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="99_theend.html" class="btn btn-neutral float-right" title="END" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="07_sharing.html" class="btn btn-neutral float-left" title="SHARING" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="17_power.html" class="btn btn-neutral float-left" title="POWER SUPPLY" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

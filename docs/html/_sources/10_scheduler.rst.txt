@@ -2,10 +2,11 @@
 SCHEDULER
 ==========
 
-see video tutorial: https://video.pocketvj.com/AVideo/video/10/pocketvj_exhibition_scheduler
-
-
 .. image:: _images/10_CP_scheduler.png
+
+
+
+see video tutorial: https://video.pocketvj.com/AVideo/video/10/pocketvj_exhibition_scheduler
 
 
 CLOCK
@@ -47,13 +48,51 @@ COMMANDS
 
 
 .. note::
-    make sure the last command is an empty line!
+    make sure the last command is an empty line! otherwise it will not work as expected!!
 
     Every task seen in the Control Panel can be scheduled!
 
 
 
 .. image:: _images/10_scheduler_shema.png
+
+
+**Example:**
+
+Starts playing all videofiles on 08:01pm resp. 20:01 o'clock:
+
+``01 20 * * * /var/www/sync/startmaster``
+
+
+**Commands:**
+
+
+Stop:             ``/var/www/sync/stopall``
+    
+Play video 01_* once: ``/var/www/sync/startmasterone01``
+
+Beameron:    ``/var/www/sync/beameron``
+
+Beameroff:  ``/var/www/sync/beameroff``
+
+Start Mapper: ``/var/www/sync/relaunchmapper``
+
+
+.. note::
+    ``startmaster01`` goes up to ``startmaster99``
+
+    ``startmasterone01`` goes up to ``startmasterone99`` (only up to 20 with SLIDESHOW after)
+
+    ``startless01`` goes up to ``startless12`` (loops without sync)
+
+    ``startlesseronce01`` goes up to ``startlesseronce20`` (once without sync)
+
+    ``startlesser01`` goes up to ``startlesser05 (start video without stopping anything)``
+
+
+    If you need from once specific command more scripts, just copy and edit them in ``/var/www/sync/``
+    or open an issue on github to ask for more scripts.
+
 
 
 COUNTDOWN
@@ -75,4 +114,4 @@ and click:
 
 
 .. note::
-    Countdown was introduced with image 4.0.7, older systems need ``python3-pygame`` to be installed!
+    Countdown was introduced with image 4.0.7, older systems need ``python3-pygame`` to be installed from SYSTEM SETTINGS!

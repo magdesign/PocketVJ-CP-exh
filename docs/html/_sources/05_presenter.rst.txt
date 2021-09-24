@@ -23,15 +23,19 @@ SLIDE SHOW
 - **Slide Show USB** => Plays all images from the root folder of an USB stick
 - **Manual .pdf USB** => Opens the demo.pdf from USB stick
 
+.. note::
+    - Do not use empty spaces, special characters and very long filenames.
+    - Rename your images with a short name without any empty spaces or umlauts, you can do this also with the 'Filename-Fixer' function.
+    - If you have images slightly bigger than 1920x1080, in SLIDESHOW mode they will be displayed with the ken burn effect! Just make sure your images are not huge, meaning in numbers: 3840x2160 pixel / 72dpi is way enough!!
+
+
+
 
 SLIDE TIME
 ***********
 
 - Define the time until next slide will appear
 
-.. note::
-    - Do not use empty spaces, special characters and very long filenames.
-    - Rename your images with a short name without any empty spaces or umlauts, you can do this also with the 'Filename-Fixer' function.
 
 
     

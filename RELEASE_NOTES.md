@@ -1,6 +1,6 @@
 # PocketVJ Exhibition / Control Panel 4.x.x
 
-## CP 4.2.2 unreleased yet
+## CP 4.2.2 24.September 2021
 
 - added SLIDESHOW after to play slideshow after video played once<br />
 - fixed error in pyGame installer<br />

@@ -116,6 +116,9 @@
 <li class="toctree-l1"><a class="reference internal" href="14_systemsettings.html">SYSTEM SETTINGS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="15_troubleshooting.html">TROUBLESHOOTING</a></li>
 <li class="toctree-l1"><a class="reference internal" href="16_irremote.html">IR REMOTE LIRC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="17_power.html">POWER SUPPLY</a></li>
+<li class="toctree-l1"><a class="reference internal" href="17_power.html#direct-power">DIRECT POWER</a></li>
+<li class="toctree-l1"><a class="reference internal" href="18_content_creation.html">CREATE CONTENT</a></li>
 <li class="toctree-l1"><a class="reference internal" href="99_theend.html">END</a></li>
 </ul>
 
@@ -184,8 +187,8 @@
             
   <div class="section" id="scheduler">
 <h1>SCHEDULER<a class="headerlink" href="#scheduler" title="Permalink to this headline">¶</a></h1>
-<p>see video tutorial: <a class="reference external" href="https://video.pocketvj.com/AVideo/video/10/pocketvj_exhibition_scheduler">https://video.pocketvj.com/AVideo/video/10/pocketvj_exhibition_scheduler</a></p>
 <img alt="_images/10_CP_scheduler.png" src="_images/10_CP_scheduler.png" />
+<p>see video tutorial: <a class="reference external" href="https://video.pocketvj.com/AVideo/video/10/pocketvj_exhibition_scheduler">https://video.pocketvj.com/AVideo/video/10/pocketvj_exhibition_scheduler</a></p>
 <div class="section" id="clock">
 <h2>CLOCK<a class="headerlink" href="#clock" title="Permalink to this headline">¶</a></h2>
 <p><strong>Check</strong> =&gt; Check internal date and time</p>
@@ -211,10 +214,29 @@
 <p><strong>Write Scheduler</strong> =&gt; Write the made timetable to system</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>make sure the last command is an empty line!</p>
+<p>make sure the last command is an empty line! otherwise it will not work as expected!!</p>
 <p>Every task seen in the Control Panel can be scheduled!</p>
 </div>
 <img alt="_images/10_scheduler_shema.png" src="_images/10_scheduler_shema.png" />
+<p><strong>Example:</strong></p>
+<p>Starts playing all videofiles on 08:01pm resp. 20:01 o’clock:</p>
+<p><code class="docutils literal notranslate"><span class="pre">01</span> <span class="pre">20</span> <span class="pre">*</span> <span class="pre">*</span> <span class="pre">*</span> <span class="pre">/var/www/sync/startmaster</span></code></p>
+<p><strong>Commands:</strong></p>
+<p>Stop:             <code class="docutils literal notranslate"><span class="pre">/var/www/sync/stopall</span></code></p>
+<p>Play video 01_* once: <code class="docutils literal notranslate"><span class="pre">/var/www/sync/startmasterone01</span></code></p>
+<p>Beameron:    <code class="docutils literal notranslate"><span class="pre">/var/www/sync/beameron</span></code></p>
+<p>Beameroff:  <code class="docutils literal notranslate"><span class="pre">/var/www/sync/beameroff</span></code></p>
+<p>Start Mapper: <code class="docutils literal notranslate"><span class="pre">/var/www/sync/relaunchmapper</span></code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">startmaster01</span></code> goes up to <code class="docutils literal notranslate"><span class="pre">startmaster99</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">startmasterone01</span></code> goes up to <code class="docutils literal notranslate"><span class="pre">startmasterone99</span></code> (only up to 20 with SLIDESHOW after)</p>
+<p><code class="docutils literal notranslate"><span class="pre">startless01</span></code> goes up to <code class="docutils literal notranslate"><span class="pre">startless12</span></code> (loops without sync)</p>
+<p><code class="docutils literal notranslate"><span class="pre">startlesseronce01</span></code> goes up to <code class="docutils literal notranslate"><span class="pre">startlesseronce20</span></code> (once without sync)</p>
+<p><code class="docutils literal notranslate"><span class="pre">startlesser01</span></code> goes up to <code class="docutils literal notranslate"><span class="pre">startlesser05</span> <span class="pre">(start</span> <span class="pre">video</span> <span class="pre">without</span> <span class="pre">stopping</span> <span class="pre">anything)</span></code></p>
+<p>If you need from once specific command more scripts, just copy and edit them in <code class="docutils literal notranslate"><span class="pre">/var/www/sync/</span></code>
+or open an issue on github to ask for more scripts.</p>
+</div>
 </div>
 <div class="section" id="countdown">
 <h2>COUNTDOWN<a class="headerlink" href="#countdown" title="Permalink to this headline">¶</a></h2>
@@ -226,7 +248,7 @@
 <p><strong>Stop</strong> =&gt; Stops the countdown</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Countdown was introduced with image 4.0.7, older systems need <code class="docutils literal notranslate"><span class="pre">python3-pygame</span></code> to be installed!</p>
+<p>Countdown was introduced with image 4.0.7, older systems need <code class="docutils literal notranslate"><span class="pre">python3-pygame</span></code> to be installed from SYSTEM SETTINGS!</p>
 </div>
 </div>
 </div>

@@ -87,12 +87,16 @@ Remote “Power On Projector” does not work
 
 
 
-CREATE h264 MOVIES
-******************
+**Special Functions**
+*********************
 
-Best way to do this is using https://handbrake.fr
+Nearly everything is possible ;)
 
-Believe me, Adobe codecs are crap!
+Open an issue on github and your desired function it will be available on the next update ;)
+
+If you are in a hurry, you might drop me a donation to get things coded fast...
+
+
 
 
 

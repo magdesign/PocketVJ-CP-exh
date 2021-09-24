@@ -2,6 +2,7 @@
 
 ## Currently in the pipeline: 
 <p/>
+- disable OLA damon befor updating ola, make a function<p/>
 - Update Everything => check olad version, if not 0.10.7, update this as well..... <p/>
 - remove —no-verify-playback from dmx player scripts, since it seems SACN will not play the files propper with this option (thanks to @DSTN !) ?? <p/>
 - play image after play video once has finished <p/>

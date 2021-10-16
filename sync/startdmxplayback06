@@ -3,7 +3,7 @@
 
 
 #kill all running tasks
-/var/www/sync/stopall > /dev/null 2>&1
+/var/www/sync/stopall
 
 if [ -f /etc/openvpn/pocketvj.remote.conf ] && [ "$(md5sum < /proc/device-tree/hat/product)" = "33e26e96aeb252a3e1374ca44ad684a2  -" ]
         

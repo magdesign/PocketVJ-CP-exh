@@ -1,8 +1,12 @@
 # PocketVJ Exhibition / Control Panel 4.x.x
 
-## unreleased
+## CP 4.2.3 16.October 2021
 
+- fixed dmx blackout when starting show 05-10  <br />
 - fixed autostart to dmx show, added blackout and longer sleep<br />
+- tweaked usb mount <br />
+- added autostart master usb (hope this works also with sticks from OSX & win)<br />
+- fixed execution rights on servicecheck<br />
 
 ## CP 4.2.2 24.September 2021
 

@@ -1370,12 +1370,15 @@ if ($_GET['action'] == 'shutdown') {
 
 if ($_GET['action'] == 'eject') {
 	$outputtext =  "usb stick unmounted";
+	system("sudo umount /dev/sda");
 	system("sudo umount /dev/sda1");
 	system("sudo umount /dev/sda2");
 }
 
 if ($_GET['action'] == 'mount') {
 	$outputtext =  "usb stick mounted";
+	system("sudo mount /dev/sda /media/usb/");		
+	system("sudo mount /dev/sda1 /media/usb/");	
 	system("sudo mount /dev/sda2 /media/usb/");
 }
 

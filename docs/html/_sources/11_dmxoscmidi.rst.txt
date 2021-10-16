@@ -129,6 +129,15 @@ See all commands here: https://github.com/magdesign/PocketVJ-CP-exh/blob/master/
 Autostart to OSC/ArtNet/UDP
 
 
+.. note::
+    You can also use any ArtNet node. I successfully tested with Eurolite dxt series Node IV.
+
+    Make sure to use the right IP address in your node, somtimes the node must be restarted to take the IP change.
+
+    .. image:: _images/11_artnetnode.jpg
+
+
+
 OSC
 *****
 

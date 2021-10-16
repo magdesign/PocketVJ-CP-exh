@@ -59,7 +59,7 @@
                 <div class="col d-flex justify-content-end">
                     <div class="row">
                         <div class="col">
-                            <p class="text-center" id="version_text" style="font-weight: normal;padding-top: 12px;color: rgb(0,0,0);">CP 4.2.2<br><a href="https://github.com/magdesign/PocketVJ-CP-exh/issues" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help_issue.svg" style="text-align: right;padding: 8px;max-width: 60%;width: 40px;" data-toggle="tooltip" title="issues"></a><a href="/docs/html/index.html" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help.svg" style="text-align: right;padding: 8px;max-width: 60%;width: 40px;" data-toggle="tooltip" title="read the f**king docs!"></a><br></p>
+                            <p class="text-center" id="version_text" style="font-weight: normal;padding-top: 12px;color: rgb(0,0,0);">CP 4.2.3<br><a href="https://github.com/magdesign/PocketVJ-CP-exh/issues" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help_issue.svg" style="text-align: right;padding: 8px;max-width: 60%;width: 40px;" data-toggle="tooltip" title="issues"></a><a href="/docs/html/index.html" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help.svg" style="text-align: right;padding: 8px;max-width: 60%;width: 40px;" data-toggle="tooltip" title="read the f**king docs!"></a><br></p>
                         </div>
                     </div>
                 </div>
@@ -146,6 +146,7 @@
                                     <div class="col colforbutton"><a class="btn btn-info action" role="button" href="?action=autostartloop02">02_* Loop</a></div>
                                     <div class="col colforbutton"><a class="btn btn-info action" role="button" href="?action=setmasterdmx01">Master/dmxShow01</a></div>
                                     <div class="col colforbutton"><a class="btn btn-info action" role="button" href="?action=setmasterdmx">Master/QLC+</a></div>
+                                    <div class="col colforbutton"><a class="btn btn-info action" role="button" href="?action=setmasterusb">Master USB</a></div>
                                 </div>
                             </div>
                             <div class="col" style="background: #6cc6d9;">
@@ -2587,6 +2588,7 @@ elem2.addEventListener("input", range2Value);
     </footer>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
 
 <!-- Sets the "Set Time" button function--> 
  

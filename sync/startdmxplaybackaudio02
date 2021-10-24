@@ -27,8 +27,9 @@ do
   sleep ${AUDIODELAY}
 
   #play audio 01
-  /usr/bin/omxplayer -o both /media/internal/audio/02* > /dev/null 2>&1 
-
+  #/usr/bin/omxplayer -o both /media/internal/audio/02* > /dev/null 2>&1 
+  /usr/bin/mpg123 -o alsa:hw:0,0 -f -22000 /media/internal/audio/02* > /dev/null 2>&1
+  
 done
 
 exit

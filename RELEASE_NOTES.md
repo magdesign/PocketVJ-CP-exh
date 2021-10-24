@@ -1,11 +1,9 @@
 # PocketVJ Exhibition / Control Panel 4.x.x
 
-## CP 4.2.5 unreleased yet (25.10.2021)
-
-- massive incerease of DMX audio quality with changing the audio player<br />
-
 ## CP 4.2.4 24.10.2021
 
+- massive incerease of DMX audio quality with changing the audio player<br />
+- added new audioplayer kill to stopall script<br />
 - changes in play audio script (stopall kills now everything)<br />
 - factory reset and update all will set audio to jack output, since setting to both decreases audio quality a lot  <br />
 - testtone now works according to the audio output selection, including usb audio <br />

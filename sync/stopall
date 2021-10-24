@@ -27,6 +27,7 @@ sudo killall -9 /usr/bin/TCPSClient.bin > /dev/null 2>&1 &
 #kill clock, audioplayer and imageplayer
 sudo killall -9 tty-clock > /dev/null 2>&1 &
 sudo killall -9 mpg321 > /dev/null 2>&1 &
+sudo killall -9 mpg123 > /dev/null 2>&1 &
 sudo killall -9 feh > /dev/null 2>&1 &
 sudo /var/www/sync/testscreenoff > /dev/null 2>&1 &
 

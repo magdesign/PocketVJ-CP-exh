@@ -4,6 +4,10 @@
 <p/>
 
 - add volume setting with store function<p/>
+- change audio testfile to a lostcowboy track, also in the rental preset<p/>
+<p/>
+
+## Next to come:
 
 - disable OLA damon before updating ola, make a function<p/>
 - Update Everything => check olad version, if not 0.10.7, update this as well..... <p/>
@@ -17,13 +21,6 @@
 - make the led to flash every 10s so we know its alive<p/>
 - power off button also closes browser tab<p/>
 
-## Website:
-
-- Link How to mount the Expansion Board on Image kits to an actual tutorial
-- 
-
-## Next to come:
-
 - move, rotate, scale images interactive => I do this via dmx/artnet => png gobo player<p/>
 - remove old projector scripts <p/>
 - when leaving VNC mode, presenter is not working correctly, fix this! <p/>
@@ -35,6 +32,12 @@
 - OLA => is dmx thru working so we can see the show while recording<p/>
 - parse dmx sequences from "*cough* from the garage" software to playback on PocketVJ (similar to mapping converter, can someone send me an exported file?)<p/>
 - audio equalizer and volume slider in CP<p/>
+
+## Website:
+
+- Link How to mount the Expansion Board on Image kits to an actual tutorial
+- 
+
 
 ## Just some ideas:
 

@@ -2,6 +2,8 @@
 
 ## CP 4.2.4 24.10.2021
 
+!! needs 2x "Upate Everything" !!
+
 - massive incerease of DMX audio quality with changing the audio player<br />
 - added new audioplayer kill to stopall script<br />
 - changes in play audio script (stopall kills now everything)<br />

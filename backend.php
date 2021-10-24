@@ -1915,7 +1915,7 @@ if ($_GET['action'] == 'jack_out') {
 
 if ($_GET['action'] == 'both_out') {
 	system("sudo /var/www/sync/setaudio_both");
-	$outputtext =  "Audio set to both";
+	$outputtext =  "Audio set to both (remember: its bad quality!!)";
 }
 
 if ($_GET['action'] == 'alsa_out') {

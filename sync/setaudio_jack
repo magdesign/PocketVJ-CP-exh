@@ -89,9 +89,13 @@
 	sudo sed -ri 's/-o [[:graph:]]+/-o local/' /var/www/sync/startlessonce20 &	
 #set the audio on dmx scripts
 	sudo sed -ri 's/-o [[:graph:]]+/-o local/' /var/www/sync/startdmxplaybackaudio01 &
+	sudo sed -ri 's/-o [[:graph:]]+/-o local/' /var/www/sync/startdmxplaybackaudio01b &	
 	sudo sed -ri 's/-o [[:graph:]]+/-o local/' /var/www/sync/startdmxplaybackaudio02 &
+	sudo sed -ri 's/-o [[:graph:]]+/-o local/' /var/www/sync/startdmxplaybackaudio02b &	
 	sudo sed -ri 's/-o [[:graph:]]+/-o local/' /var/www/sync/startdmxplaybackaudio03 &
+	sudo sed -ri 's/-o [[:graph:]]+/-o local/' /var/www/sync/startdmxplaybackaudio03b &
 	sudo sed -ri 's/-o [[:graph:]]+/-o local/' /var/www/sync/startdmxplaybackaudio04 &
+	sudo sed -ri 's/-o [[:graph:]]+/-o local/' /var/www/sync/startdmxplaybackaudio04b &	
 	sudo sed -ri 's/-o [[:graph:]]+/-o local/' /var/www/sync/startdmxplaybackaudio05 &
 	sudo sed -ri 's/-o [[:graph:]]+/-o local/' /var/www/sync/startdmxplaybackvid01 &
 	sudo sed -ri 's/-o [[:graph:]]+/-o local/' /var/www/sync/startdmxplaybackvid02 &

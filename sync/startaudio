@@ -1,26 +1,18 @@
 #!/bin/bash
 
-#kill all running tasks exept slideshow
-sudo /var/www/sync/omxkill > /dev/null 2>&1
-sudo killall -9 /home/pvj/openFrameworks/addons/ofxPiMapper/example/./bin/example > /dev/null 2>&1
-sudo killall -9 /usr/bin/TCPSClient.bin > /dev/null 2>&1
-sudo killall -9 tty-clock > /dev/null 2>&1
-sudo killall -9 mpg321 > /dev/null 2>&1
-#sudo killall -9 feh > /dev/null 2>&1
-sudo kill $(pidof X) > /dev/null 2>&1
-#dont know if I have to kill this:
-sudo killall -9 fsaysuinput > /dev/null 2>&1
-sudo /var/www/sync/testscreenoff > /dev/null 2>&1
-sudo killall -9 avconv > /dev/null 2>&1
-sudo killall -9 pwomxplayer.bin > /dev/null 2>&1
-sudo /var/www/sync/clearscreen.sh > /dev/null 2>&1
-sudo rm /var/www/*.log
-sudo pkill gst-launch > /dev/null 2>&1
-#Kill janus server:
-sudo killall -9 janus > /dev/null 2>&1
-#Remove Loopback device:
-sudo modprobe -r snd-loop
+#kill all running tasks
+/var/www/sync/stopall > /dev/null 2>&1
 
 #start audioplayer:
+
+#enable as alternative, no sync!!
 #mpg321 -l 0 /media/internal/audio/* > /dev/null 2>&1 & echo $! &
+# -f sets the volume, max is:32768  but dont go higher than 22000
+#mpg123 -f -22000 /media/internal/audio/* 
+
+#enable for mp3
 /usr/bin/omxplayer-sync -mu -o both /media/internal/audio/*.mp3 > /dev/null 2>&1 & echo $! &
+
+
+#enable for wav
+#/usr/bin/omxplayer-sync -mu -o both /media/internal/audio/*.wav > /dev/null 2>&1 & echo $! &

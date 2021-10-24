@@ -3,6 +3,8 @@
 ## Currently in the pipeline: 
 <p/>
 
+- fix testtone to also play over alsa usb devices<p/>
+
 - disable OLA damon before updating ola, make a function<p/>
 - Update Everything => check olad version, if not 0.10.7, update this as well..... <p/>
 - remove —no-verify-playback from dmx player scripts, since it seems SACN will not play the files propper with this option (thanks to @DSTN !) no sure about this?? <p/>

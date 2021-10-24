@@ -23,11 +23,11 @@ do
   #play dmx sequence01 -i 1 means play once, -i 0 loops forever
   sudo ola_recorder --no-verify-playback -i 1 -p /media/internal/dmx/show01 > /dev/null &
 
-  #sleep, used to create the dealy
+  #sleep, used to create the delay
   sleep ${AUDIODELAY}
 
   #play audio 01
-  /usr/bin/omxplayer -o both /media/internal/audio/01* > /dev/null 2>&1 
+  /usr/bin/omxplayer -o local /media/internal/audio/01* > /dev/null 2>&1 
 
 done
 

@@ -74,6 +74,10 @@
 	sudo sed -ri 's/-o [[:graph:]]+/-o alsa/' /var/www/sync/startdmxplaybackaudio03 &
 	sudo sed -ri 's/-o [[:graph:]]+/-o alsa/' /var/www/sync/startdmxplaybackaudio04 &
 	sudo sed -ri 's/-o [[:graph:]]+/-o alsa/' /var/www/sync/startdmxplaybackaudio05 &
+	sudo sed -ri 's/-o [[:graph:]]+/-o alsa/' /var/www/sync/startdmxplaybackaudio01b &
+	sudo sed -ri 's/-o [[:graph:]]+/-o alsa/' /var/www/sync/startdmxplaybackaudio02b &
+	sudo sed -ri 's/-o [[:graph:]]+/-o alsa/' /var/www/sync/startdmxplaybackaudio03b &
+	sudo sed -ri 's/-o [[:graph:]]+/-o alsa/' /var/www/sync/startdmxplaybackaudio04b &	
 	sudo sed -ri 's/-o [[:graph:]]+/-o alsa/' /var/www/sync/startdmxplaybackvid01 &
 	sudo sed -ri 's/-o [[:graph:]]+/-o alsa/' /var/www/sync/startdmxplaybackvid02 &
 	sudo sed -ri 's/-o [[:graph:]]+/-o alsa/' /var/www/sync/startdmxplaybackvid03 &

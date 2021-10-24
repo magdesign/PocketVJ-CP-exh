@@ -37,7 +37,7 @@ if [ -f /tmp/bluetooth_beacon ] && [ "$(md5sum < /proc/device-tree/hat/product)"
         #delay until audio starts
         sleep ${AUDIODELAY}
 		echo "startaudioplayer"
-	        $(/usr/bin/omxplayer -o both /media/internal/audio/01* ) & 
+	        $(/usr/bin/omxplayer -o local /media/internal/audio/01* ) & 
 		echo "dmxplaying and restarting scanner in" $TRIGGERDELAY
 		sleep $TRIGGERDELAY
 		fi
@@ -46,7 +46,7 @@ if [ -f /tmp/bluetooth_beacon ] && [ "$(md5sum < /proc/device-tree/hat/product)"
 		if [[ $ENABLE == "NO" ]]; then
 		sudo ola_recorder --no-verify-playback -i 1 -p /media/internal/dmx/show01 &
         sleep ${DELAY}
-	        /usr/bin/omxplayer -o both /media/internal/audio/01* > /dev/null 2>&1
+	        /usr/bin/omxplayer -o local /media/internal/audio/01* > /dev/null 2>&1
 		echo "dmxplaying, waited until audio finished"
 		sudo /var/www/sync/setdmxblackout &
 		fi

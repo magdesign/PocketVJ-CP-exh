@@ -1,11 +1,11 @@
 # PocketVJ Exhibition / Control Panel 4.x.x
 
-## CP 4.2.4 unreleasd yet
+## CP 4.2.4 24.10.2021
 
 - changes in play audio script (stopall kills now everything)<br />
 - factory reset and update all will set audio to jack output, since setting to both decreases audio quality a lot  <br />
 - testtone now works according to the audio output selection, including usb audio <br />
-
+- added dmx/audio to buttons  <br />
 
 ## CP 4.2.3 16.October 2021
 

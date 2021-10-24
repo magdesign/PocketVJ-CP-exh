@@ -3,7 +3,7 @@
 ## Currently in the pipeline: 
 <p/>
 
-- fix testtone to also play over alsa usb devices<p/>
+- add volume setting with store function<p/>
 
 - disable OLA damon before updating ola, make a function<p/>
 - Update Everything => check olad version, if not 0.10.7, update this as well..... <p/>

@@ -17,6 +17,7 @@ function SubmitBTN3FormData3() {
                $('#cpbutton3form-8')[0].reset();
                $('#cpbutton3form-9')[0].reset();
                $('#cpbutton3form-10')[0].reset();
+               $('#cpbutton3form-11')[0].reset();
 
 
          });

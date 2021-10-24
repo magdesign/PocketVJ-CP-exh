@@ -107,6 +107,10 @@
 	sudo sed -ri 's/-o [[:graph:]]+/-o local/' /var/www/sync/startlessonce02b &
 	sudo sed -ri 's/-o [[:graph:]]+/-o local/' /var/www/sync/startlessonce03b &
 	sudo sed -ri 's/-o [[:graph:]]+/-o local/' /var/www/sync/startlessonce04b &	
+#set for testtone
+	sudo sed -ri 's/-o [[:graph:]]+/-o local/' /var/www/sync/testtone &
+	sudo sed -ri 's/-o [[:graph:]]+/-o local/' /var/www/sync/testtoneleft &
+	sudo sed -ri 's/-o [[:graph:]]+/-o local/' /var/www/sync/testtoneright &
 #set audio for midi script
 	sudo sed -ri 's/-o [[:graph:]]+/-o local/' /var/www/sync/startmididmxvideoplay01 &
 	sudo sed -ri 's/-o [[:graph:]]+/-o local/' /var/www/sync/startmididmxaudioplay01 &

@@ -109,6 +109,11 @@
 	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startlessonce02b &
 	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startlessonce03b &
 	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startlessonce04b &
+#Set on testtone
+	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/testttone &
+	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/testtoneleft &
+	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/testtoneright &
+
 #set on midi
 	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startmididmxvideoplay01 &
 	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startmididmxaudioplay01 &

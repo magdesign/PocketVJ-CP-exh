@@ -88,6 +88,11 @@
 	sudo sed -ri 's/-o [[:graph:]]+/-o alsa/' /var/www/sync/startlessonce02b &
 	sudo sed -ri 's/-o [[:graph:]]+/-o alsa/' /var/www/sync/startlessonce03b &
 	sudo sed -ri 's/-o [[:graph:]]+/-o alsa/' /var/www/sync/startlessonce04b &
+#set on testtone
+	sudo sed -ri 's/-o [[:graph:]]+/-o alsa/' /var/www/sync/testtone &
+	sudo sed -ri 's/-o [[:graph:]]+/-o alsa/' /var/www/sync/testtoneright &
+	sudo sed -ri 's/-o [[:graph:]]+/-o alsa/' /var/www/sync/testtoneleft &
+
 #set on midi
 	sudo sed -ri 's/-o [[:graph:]]+/-o alsa/' /var/www/sync/startmididmxvideoplay01 &
 	sudo sed -ri 's/-o [[:graph:]]+/-o alsa/' /var/www/sync/startmididmxaudioplay01 &

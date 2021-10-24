@@ -4,6 +4,7 @@
 
 - changes in play audio script (stopall kills now everything)<br />
 - factory reset and update all will set audio to jack output, since setting to both decreases audio quality a lot  <br />
+- testtone now works according to the audio output selection, including usb audio <br />
 
 
 ## CP 4.2.3 16.October 2021

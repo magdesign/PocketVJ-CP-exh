@@ -28,6 +28,22 @@ then all you have to do is to remove the  https:// in the addressbar:
 
 
 
+**Trouble connecting to Wifi Hotspot (vj100) with a Windows Computer**
+**********************************************************************
+
+If your Windows10 does not allow to connect to the PocketVJ wifi (vj100), following steps might help:
+
+
+.. image:: _images/15_windows_wifi.png
+
+
+or this one:
+
+.. image:: _images/15_windows_wifi2.png
+
+
+.
+
 
 
 Movie plays, but stutters
@@ -39,6 +55,8 @@ Movie plays, but stutters
 I dont get an IP address from the PocketVJ
 ******************************************
 => Be patient, try again.
+
+
 
 
 .. note::

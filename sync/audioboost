@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#set audio volume to 100%
+# for pcm
+/usr/bin/amixer set PCM 100% > /dev/null 2>&1
+
+#for alsa
+sudo su - pvj -c 'amixer set Master 100%' > /dev/null 2>&1
+
+#store setting
+sudo alsactl store > /dev/null 2>&1
+
+echo "volume set to 100%"

@@ -1496,8 +1496,10 @@ if ($_GET['action'] == 'updateall') {
 	// set audio to jack and hdmi
 	system("sudo /var/www/sync/setaudio_jack");
 	// set alsa volume to 100
-	system("sudo su - pvj -c 'amixer set Master 100%'");
-	system("sudo alsactl store");
+	system("sudo /var/www/sync/audioboost");
+	//system("sudo su - pvj -c 'amixer set Master 100%'");
+	//system("sudo su - pvj -c /usr/bin/amixer set 'PCM' 100%");
+	//system("sudo alsactl store");
 	//set ip on network scripts to match pvj current ip
 	system("sudo /var/www/sync/iprangeUpdatecall");
 	//remove filebrowser, if there is one
@@ -1583,8 +1585,10 @@ if ($_GET['action'] == 'factoryreset') {
 	//set audio to jack and hdmi
 	system("sudo /var/www/sync/setaudio_jack");
 	//set alsa volume to 100
-	system("sudo su - pvj -c 'amixer set Master 100%'");
-	system("sudo alsactl store");
+	system("sudo /var/www/sync/audioboost");
+	//system("sudo su - pvj -c 'amixer set Master 100%'");
+	//system("sudo su - pvj -c /usr/bin/amixer set 'PCM' 100%");
+	//system("sudo alsactl store");
 	//system("sudo rm -rf /tmp/*");
 	//system("sudo rm -rf /var/log/*");
 	//system("sudo rm -rf /var/tmp/*");
@@ -1899,8 +1903,10 @@ if ($_GET['action'] == 'wifienable') {
 ///////////
 
 if ($_GET['action'] == 'volume_up') {
-	system("sudo su - pvj -c 'amixer set Master 100%'");
-	system("sudo alsactl store");
+	//system("sudo su - pvj -c 'amixer set Master 100%'");
+	//system("sudo su - pvj -c '/usr/bin/amixer set PCM 100%'");
+	//system("sudo alsactl store");
+	system("sudo /var/www/sync/audioboost");
 	$outputtext =  "<pre>$output</pre>";
 }
 

@@ -1,7 +1,12 @@
 # PocketVJ Exhibition / Control Panel 4.x.x
 
-## CP 4.2.4 24.10.2021
 
+## CP 4.2.4a 25.10.2021
+!! needs 2x "Upate Everything" !!
+
+- added audio boost to Set Audio to 100% on all channels <br />
+
+## CP 4.2.4 24.10.2021
 !! needs 2x "Upate Everything" !!
 
 - massive incerease of DMX audio quality with changing the audio player<br />

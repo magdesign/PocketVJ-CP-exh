@@ -628,20 +628,23 @@ if ($_GET['action'] == 'stopaudio') {
 //# Testtone
 
 if ($_GET['action'] == 'testtone') {
-	exec("sudo /var/www/sync/omxkill");
-	exec("sudo omxplayer-sync -mu /var/www/sync/testtone.mp3 > /dev/null 2>&1 & echo $!");
+	system("sudo /var/www/sync/testtone > /dev/null &");
+	//exec("sudo /var/www/sync/omxkill");
+	//exec("sudo omxplayer-sync -mu /var/www/sync/testtone.mp3 > /dev/null 2>&1 & echo $!");
 	$outputtext = "sinus 440 testtone";
 }
 
 if ($_GET['action'] == 'testtoneright') {
-	exec("sudo /var/www/sync/omxkill");
-	exec("sudo omxplayer-sync -mu /var/www/sync/testtone_right.mp3 > /dev/null 2>&1 & echo $!");
+	system("sudo /var/www/sync/testtoneright > /dev/null &");
+	//exec("sudo /var/www/sync/omxkill");
+	//exec("sudo omxplayer-sync -mu /var/www/sync/testtone_right.mp3 > /dev/null 2>&1 & echo $!");
 	$outputtext = "sinus testtone right";
 }
 
 if ($_GET['action'] == 'testtoneleft') {
-	exec("sudo /var/www/sync/omxkill");
-	exec("sudo omxplayer-sync -mu /var/www/sync/testtone_left.mp3 > /dev/null 2>&1 & echo $!");
+	system("sudo /var/www/sync/testtoneleft > /dev/null &");
+	//exec("sudo /var/www/sync/omxkill");
+	//exec("sudo omxplayer-sync -mu /var/www/sync/testtone_left.mp3 > /dev/null 2>&1 & echo $!");
 	$outputtext = "sinus testtone left";
 }
 
@@ -1660,8 +1663,10 @@ if ($_GET['action'] == 'rentalreset') {
 	system ("rm -rf /media/internal/pir/");
 	//copy pir folder
 	system ("cp -R /home/pvj/content/pir/ /media/internal/");
-	//create rest of folder structure if not already present
+	//Copy demo audio
 	system ("mkdir /media/internal/audio/");
+	system ("cp /home/pvj/content/01_LSdee2.mp3 /media/internal/audio/");
+	//create rest of folder structure if not already present
 	system ("mkdir /media/internal/converter/");
 	system ("mkdir /media/internal/audio/");
 	system ("mkdir /media/internal/dmx/");

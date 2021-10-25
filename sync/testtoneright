@@ -4,8 +4,6 @@
 /var/www/sync/stopall > /dev/null 2>&1
 
 #start testtone:
-
-
 #enable for mp3
 /usr/bin/omxplayer -o local /var/www/sync/testtone_right.mp3 > /dev/null 2>&1 & echo $! &
 

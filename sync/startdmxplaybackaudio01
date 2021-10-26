@@ -13,11 +13,12 @@ touch /tmp/dmxloop
 while [ -f /tmp/dmxloop ]
 do
 
-#for debugging only
+#for debugging only:
 #echo start looping
   
-#kill omxplayer and dmx player
+#kill omxplayer, audioplayer and dmx player
   sudo /var/www/sync/omxkill > /dev/null 2>&1
+  sudo killall -9 /usr/bin/mpg123 > /dev/null 2>&1
   sudo killall -9 ola_recorder > /dev/null 2>&1
 
   #play dmx sequence01 -i 1 means play once, -i 0 loops forever

@@ -59,7 +59,7 @@
                 <div class="col d-flex justify-content-end">
                     <div class="row">
                         <div class="col">
-                            <p class="text-center" id="version_text" style="font-weight: normal;padding-top: 12px;color: rgb(0,0,0);">CP 4.2.4a<br><a href="https://github.com/magdesign/PocketVJ-CP-exh/issues" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help_issue.svg" style="text-align: right;padding: 8px;max-width: 60%;width: 40px;" data-toggle="tooltip" title="issues"></a><a href="/docs/html/index.html" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help.svg" style="text-align: right;padding: 8px;max-width: 60%;width: 40px;" data-toggle="tooltip" title="read the f**king docs!"></a><br></p>
+                            <p class="text-center" id="version_text" style="font-weight: normal;padding-top: 12px;color: rgb(0,0,0);">CP 4.2.5<br><a href="https://github.com/magdesign/PocketVJ-CP-exh/issues" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help_issue.svg" style="text-align: right;padding: 8px;max-width: 60%;width: 40px;" data-toggle="tooltip" title="issues"></a><a href="/docs/html/index.html" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help.svg" style="text-align: right;padding: 8px;max-width: 60%;width: 40px;" data-toggle="tooltip" title="read the f**king docs!"></a><br></p>
                         </div>
                     </div>
                 </div>
@@ -190,6 +190,15 @@
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" href="?action=setbutton1">Buttons</a></div>
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" href="?action=setbeacon">Beacons</a></div>
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" href="?action=setbeaconnogpu">Beacons/noGPU</a></div>
+                                </div>
+                            </div>
+                            <div class="col" style="background: #574696;">
+                                <h2 style="height: 32px;margin-top: 15px;">&nbsp;</h2>
+                                <div>
+                                    <div class="col colforbutton" style="height: 48px;"></div>
+                                    <div class="col colforbutton" style="height: 48px;"></div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" href="?action=setbuttonbeacon">Buttos+Beacons</a></div>
+                                    <div class="col colforbutton" style="height: 48px;"></div>
                                 </div>
                             </div>
                             <div class="col" style="background: #574696;">
@@ -1932,9 +1941,9 @@ elem2.addEventListener("input", range2Value);
                                         <form id="submitdelayform" method="post"><input class="form-control" type="number" id="delay" name="delay" placeholder="1.0" step="0.01" style="margin-left: 10px;max-width: 200px;"></form>
                                     </div>
                                     <div class="col colforbutton"><a class="btn btn-secondary action" role="button" id="dmxbuttoncolor" data-toggle="tooltip" title="play show01 only" href="?action=startdmxplayback01">&nbsp; &nbsp; &nbsp; &nbsp;Show01&nbsp; &nbsp; &nbsp; &nbsp;</a></div>
-                                    <div class="col colforbutton" style="height: 68px;"></div>
+                                    <div class="col colforbutton" style="height: 68px;"><a class="btn btn-secondary action" role="button" id="dmxbuttoncolor" data-toggle="tooltip" title="play show01 only once" href="?action=startdmxplayback01once">&nbsp; &nbsp; &nbsp; &nbsp;Show01once&nbsp; &nbsp; &nbsp; &nbsp;</a></div>
                                     <div class="col colforbutton"><a class="btn btn-secondary action" role="button" id="dmxbuttoncolor" data-toggle="tooltip" title="play show02 only" href="?action=startdmxplayback02">&nbsp; &nbsp; &nbsp; &nbsp;Show02&nbsp; &nbsp; &nbsp; &nbsp;</a></div>
-                                    <div class="col colforbutton" style="height: 68px;"></div>
+                                    <div class="col colforbutton" style="height: 68px;"><a class="btn btn-secondary action" role="button" id="dmxbuttoncolor" data-toggle="tooltip" title="play show02 only once" href="?action=startdmxplayback02once">&nbsp; &nbsp; &nbsp; &nbsp;Show02once&nbsp; &nbsp; &nbsp; &nbsp;</a></div>
                                     <div class="col colforbutton"><a class="btn btn-secondary action" role="button" id="dmxbuttoncolor" data-toggle="tooltip" title="play show03 only" href="?action=startdmxplayback03">&nbsp; &nbsp; &nbsp; &nbsp;Show03&nbsp; &nbsp; &nbsp; &nbsp;</a></div>
                                     <div class="col colforbutton" style="height: 68px;"></div>
                                     <div class="col colforbutton"><a class="btn btn-secondary action" role="button" id="dmxbuttoncolor" data-toggle="tooltip" title="play show04 only" href="?action=startdmxplayback04">&nbsp; &nbsp; &nbsp; &nbsp;Show04&nbsp; &nbsp; &nbsp; &nbsp;</a></div>
@@ -2603,6 +2612,7 @@ elem2.addEventListener("input", range2Value);
     </footer>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
 
 <!-- Sets the "Set Time" button function--> 
  

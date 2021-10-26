@@ -728,10 +728,21 @@ if ($_GET['action'] == 'startdmxplayback01') {
 	$outputtext = "playback show01";
 }
 
+if ($_GET['action'] == 'startdmxplayback01once') {
+	system("sudo /var/www/sync/stopbeacon > /dev/null 2>&1");
+	exec("sudo /var/www/sync/startdmxplayback01once > /dev/null &");
+	$outputtext = "playback show01 once";
+}
+
 if ($_GET['action'] == 'startdmxplayback02') {
 	system("sudo /var/www/sync/stopbeacon > /dev/null 2>&1");
 	exec("sudo /var/www/sync/startdmxplayback02 > /dev/null &");
 	$outputtext = "playback show02";
+}
+if ($_GET['action'] == 'startdmxplayback02once') {
+	system("sudo /var/www/sync/stopbeacon > /dev/null 2>&1");
+	exec("sudo /var/www/sync/startdmxplayback02once > /dev/null &");
+	$outputtext = "playback show02 once";
 }
 
 if ($_GET['action'] == 'startdmxplayback03') {
@@ -1083,8 +1094,10 @@ if ($_GET['action'] == 'setbeaconnogpu') {
 	system("sudo cp /var/www/sync/rc.local.beaconnogpu /etc/rc.local");
 }
 
-
-
+if ($_GET['action'] == 'setbuttonbeacon') {
+	$outputtext = "autostart to Bluetooth Beacon & Buttons";
+	system("sudo cp /var/www/sync/rc.local.setbuttonbeacon  /etc/rc.local");
+}
 
 if ($_GET['action'] == 'setbutton1') {
 	$outputtext = "autostart to button script";

@@ -1,5 +1,10 @@
 # PocketVJ Exhibition / Control Panel 4.x.x
 
+## CP 4.2.5 26.10.2021
+
+- fixed audio was not stopping when switching dmx show <br />
+- added autostart buttons together with beacons <br />
+- added play dmxshow 01 + 02 only once <br />
 
 ## CP 4.2.4a 25.10.2021
 !! needs 2x "Upate Everything" !!
@@ -9,7 +14,7 @@
 ## CP 4.2.4 24.10.2021
 !! needs 2x "Upate Everything" !!
 
-- massive incerease of DMX audio quality with changing the audio player<br />
+- massive increase of DMX audio quality with changing the audio player<br />
 - added new audioplayer kill to stopall script<br />
 - changes in play audio script (stopall kills now everything)<br />
 - factory reset and update all will set audio to jack output, since setting to both decreases audio quality a lot  <br />

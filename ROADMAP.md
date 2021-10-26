@@ -4,20 +4,18 @@
 <p/>
 
 - add volume setting with store function<p/>
-- change audio testfile to a lostcowboy track, also in the rental preset<p/>
+
 <p/>
 
 ## Next to come:
 
 - disable OLA damon before updating ola, make a function<p/>
+- make a cue loop function for dmx, e.g. ola_recorder --playback show01 --duration 30 --start 1000 --stop 10000 
 - Update Everything => check olad version, if not 0.10.7, update this as well..... <p/>
-- remove —no-verify-playback from dmx player scripts, since it seems SACN will not play the files propper with this option (thanks to @DSTN !) no sure about this?? <p/>
-- play image after play video once has finished <p/>
 - disable swap space, free performance <p/>
 - fading images, show next, scale via sliders and via dmx/midi/osc...coming.. [pygame](https://www.taskboy.com/blog/A_simple_image_viewer_with_pygame.html)<p/>
 - setdmxblack = fadeout possible? <p/>
 - bluetooth features: connecting boombox, finish this, if somehow possible, already spent several days and nights <p/>
-- add gender and or facemask detection via webcam, test the new script => it works, but slow <p/>
 - make the led to flash every 10s so we know its alive<p/>
 - power off button also closes browser tab<p/>
 

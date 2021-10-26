@@ -2,13 +2,9 @@
 
 ## Currently in the pipeline: 
 <p/>
-- add autostart dmx/audio01once together with button trigger<p/>
-- remove autostart button+beacon since its not used<p/>
-- fix autostart buttons, seems to have no execution rights<p/>
-- put a higher value into the debounce function of button trigger script<p/>
-
 
 - add volume setting with store function<p/>
+- remove autostart button+beacon since its not used<p/>
 
 <p/>
 

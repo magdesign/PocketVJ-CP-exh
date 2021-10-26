@@ -1,23 +1,19 @@
 #!/bin/bash
-
-
-#LED Blinking 
 /usr/bin/python /var/www/sync/ledblinking.py
 
+#start ola service
+sudo service olad start &
 
-#enter your custom startup application below this line:
-#kill all running tasks
+sleep 3
 
-/var/www/sync/stopall
+sudo /var/www/sync/setdmxblackout
 
-#write to .xsession that chromium shall start
-#sudo cp /var/www/sync/xsessionchromium /home/pvj/.xsession
-sudo rm /home/pvj/.xsession
-sudo cp /var/www/sync/lxdeautochromium /home/pvj/.config/lxsession/LXDE/autostart
+sleep 2
 
-#start x and run chromium
-su -s /bin/bash -c startx pvj &
-
+#start dmx show 01 only for once
+sudo /var/www/sync/startdmxplaybackaudio01once &
+#start buttons listener
+sudo /usr/bin/python3 /var/www/sync/startbuttons.py &
 
 
 exit 0

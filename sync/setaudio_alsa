@@ -96,7 +96,8 @@
 #set on dmx audio player mpg123
 	sudo amixer cset numid=3 0 > /dev/null 2>&1 &
 	sudo sed -ri 's/-o [[:graph:]]+/-o alsa:hw:1,0/' /var/www/sync/startdmxplaybackaudio01 &
-	sudo sed -ri 's/-o [[:graph:]]+/-o alsa:hw:1,0/' /var/www/sync/startdmxplaybackaudio01b &	
+	sudo sed -ri 's/-o [[:graph:]]+/-o alsa:hw:1,0/' /var/www/sync/startdmxplaybackaudio01b &
+	sudo sed -ri 's/-o [[:graph:]]+/-o alsa:hw:1,0/' /var/www/sync/startdmxplaybackaudio01once &	
 	sudo sed -ri 's/-o [[:graph:]]+/-o alsa:hw:1,0/' /var/www/sync/startdmxplaybackaudio02 &
 	sudo sed -ri 's/-o [[:graph:]]+/-o alsa:hw:1,0/' /var/www/sync/startdmxplaybackaudio02b &	
 	sudo sed -ri 's/-o [[:graph:]]+/-o alsa:hw:1,0/' /var/www/sync/startdmxplaybackaudio03 &

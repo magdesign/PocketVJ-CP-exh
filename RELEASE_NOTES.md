@@ -1,5 +1,14 @@
 # PocketVJ Exhibition / Control Panel 4.x.x
 
+
+## CP 4.2.6 26.10.2021
+
+- Button 01 and Button 03 where wrong numbered, flipped them <br />
+- Increased debounce time of buttons to 4000ms <br />
+- After changing button function when already using them, they did not get active, now it does <br />
+- "Autostart Custom" now starts dmxshow/audio01_* once and goes to button listener <br />
+- Added script "stardmxplaybackaudio01once <br />
+
 ## CP 4.2.5 26.10.2021
 
 - fixed audio was not stopping when switching dmx show <br />

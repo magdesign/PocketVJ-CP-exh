@@ -8,9 +8,9 @@ import RPi.GPIO as GPIO
 
 #the functions for the buttons
 
-BTN1 = ("sudo /var/www/sync/startmaster &")
-BTN2 = ("sudo /var/www/sync/stopall &")
-BTN3 = ("sudo /var/www/sync/startmaster &")
+BTN1 = ("sudo /var/www/sync/startimage &")
+BTN2 = ("sudo /var/www/sync/startimage &")
+BTN3 = ("sudo /var/www/sync/startimage &")
 
 
 #here we define each button function:
@@ -41,9 +41,9 @@ GPIO.setup(27, GPIO.IN, pull_up_down=GPIO.PUD_DOWN) # Set gpio27 button3 to be a
 
 #the main programm
 class MainProgram():
-	GPIO.add_event_detect(17,GPIO.RISING,callback=button1_callback,bouncetime=3000) # Setup event on pin 17 rising edge
-	GPIO.add_event_detect(18,GPIO.RISING,callback=button2_callback,bouncetime=3000) # Setup event on pin 18 rising edge
-	GPIO.add_event_detect(27,GPIO.RISING,callback=button3_callback,bouncetime=3000) # Setup event on pin 27 rising edge
+	GPIO.add_event_detect(27,GPIO.RISING,callback=button1_callback,bouncetime=4000) # Setup event on pin 17 rising edge
+	GPIO.add_event_detect(18,GPIO.RISING,callback=button2_callback,bouncetime=4000) # Setup event on pin 18 rising edge
+	GPIO.add_event_detect(17,GPIO.RISING,callback=button3_callback,bouncetime=4000) # Setup event on pin 27 rising edge
 
 print("running")
 

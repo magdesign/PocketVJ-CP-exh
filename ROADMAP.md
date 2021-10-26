@@ -9,7 +9,8 @@
 <p/>
 
 ## Next to come:
-
+- on image update, set slideshowtime to 5s to prevent madness <p/>
+- make button debounce time selectable, values of 4seconds, 6secons and 10seconds <p/>
 - disable OLA damon before updating ola, make a function<p/>
 - make a cue loop function for dmx, e.g. ola_recorder --playback show01 --duration 30 --start 1000 --stop 10000 [see here](https://docs.openlighting.org/ola/man/man1/ola_recorder.1.html?__cf_chl_managed_tk__=pmd_uykauhsGehEgHY7kTiCowqZB00Kn7FrmfgCjXOfF_J0-1635233352-0-gqNtZGzNAxCjcnBszQh9)<p/>
 - Update Everything => check olad version, if not 0.10.7, update this as well..... <p/>

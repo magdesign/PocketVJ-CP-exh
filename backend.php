@@ -3003,6 +3003,7 @@ if ($_GET['action'] == 'gettemperature') {
 if ($_GET['action'] == 'startbuttons') {
 	//first stop buttons to make sure its not double running
 	system("sudo /var/www/sync/stopbuttons");
+	#shell_exec("sudo /usr/bin/python3 /var/www/sync/startbuttons_old.py > /dev/null 2>&1 & ");
 	shell_exec("sudo /usr/bin/python3 /var/www/sync/startbuttons.py > /dev/null 2>&1 & ");
 	$outputtext =  "start buttons";
 }

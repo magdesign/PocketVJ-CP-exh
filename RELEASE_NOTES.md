@@ -1,5 +1,10 @@
 # PocketVJ Exhibition / Control Panel 4.x.x
 
+## CP 4.2.7 27.10.2021
+
+- complete rewrite of startbuttons.py since GPIO bouncetime= does not really what it should (remember to oppen issue!!) <br />
+- changed button trigger for dmx shows to only play once <br />
+- added scripts: stardmxplaybackaudio02once, stardmxplaybackaudio03once <br />
 
 ## CP 4.2.6 26.10.2021
 
@@ -7,7 +12,7 @@
 - Increased debounce time of buttons to 4000ms <br />
 - After changing button function when already using them, they did not get active, now it does <br />
 - "Autostart Custom" now starts dmxshow/audio01_* once and goes to button listener <br />
-- Added script "stardmxplaybackaudio01once <br />
+- Added script stardmxplaybackaudio01once <br />
 
 ## CP 4.2.5 26.10.2021
 

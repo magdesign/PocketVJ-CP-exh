@@ -2,4 +2,5 @@
 
 #stops the button script
 
-sudo kill $(pgrep -f 'python3 /var/www/sync/startbuttons.py') > /dev/null 2>&1
+sudo kill $(pgrep -f 'python /var/www/sync/startbuttons.py') > /dev/null 2>&1
+#sudo kill $(pgrep -f 'python3 /var/www/sync/startbuttons.py') > /dev/null 2>&1

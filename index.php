@@ -59,7 +59,7 @@
                 <div class="col d-flex justify-content-end">
                     <div class="row">
                         <div class="col">
-                            <p class="text-center" id="version_text" style="font-weight: normal;padding-top: 12px;color: rgb(0,0,0);">CP 4.2.7<br><a href="https://github.com/magdesign/PocketVJ-CP-exh/issues" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help_issue.svg" style="text-align: right;padding: 8px;max-width: 60%;width: 40px;" data-toggle="tooltip" title="issues"></a><a href="/docs/html/index.html" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help.svg" style="text-align: right;padding: 8px;max-width: 60%;width: 40px;" data-toggle="tooltip" title="read the f**king docs!"></a><br></p>
+                            <p class="text-center" id="version_text" style="font-weight: normal;padding-top: 12px;color: rgb(0,0,0);">CP 4.2.6<br><a href="https://github.com/magdesign/PocketVJ-CP-exh/issues" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help_issue.svg" style="text-align: right;padding: 8px;max-width: 60%;width: 40px;" data-toggle="tooltip" title="issues"></a><a href="/docs/html/index.html" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help.svg" style="text-align: right;padding: 8px;max-width: 60%;width: 40px;" data-toggle="tooltip" title="read the f**king docs!"></a><br></p>
                         </div>
                     </div>
                 </div>
@@ -1248,7 +1248,7 @@ elem2.addEventListener("input", range2Value);
                                     </div>
                                     <div class="col colforbutton" style="height: 24px;">
                                         <form id="cpbutton1form-11" method="post" style="margin-left: 12px;">
-                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbutton1" method="post" name="cpbutton1" onclick="SubmitBTNFormData();" value="startdmxplaybackaudio01once"><label class="form-check-label" for="formCheck-1">start dmx/aud 01_* once</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbutton1" method="post" name="cpbutton1" onclick="SubmitBTNFormData();" value="startdmxplaybackaudio01"><label class="form-check-label" for="formCheck-1">start dmx/audio 01_*</label></div>
                                         </form>
                                     </div>
                                 </div>
@@ -1313,7 +1313,7 @@ elem2.addEventListener("input", range2Value);
                                     </div>
                                     <div class="col colforbutton" style="height: 24px;">
                                         <form id="cpbutton2form-11" method="post" style="margin-left: 10px;">
-                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbutton2" method="post" name="cpbutton2" onclick="SubmitBTN2FormData2();" value="startdmxplaybackaudio02once"><label class="form-check-label" for="formCheck-1">start dmx/aud 02_* once&nbsp;</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbutton2" method="post" name="cpbutton2" onclick="SubmitBTN2FormData2();" value="startdmxplaybackaudio02"><label class="form-check-label" for="formCheck-1">start dmx/audio 02_*</label></div>
                                         </form>
                                     </div>
                                 </div>
@@ -1378,7 +1378,7 @@ elem2.addEventListener("input", range2Value);
                                     </div>
                                     <div class="col colforbutton" style="height: 24px;">
                                         <form id="cpbutton3form-11" method="post" style="margin-left: 10px;">
-                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbutton3" method="post" name="cpbutton3" onclick="SubmitBTN3FormData3();" value="startdmxplaybackaudio03once"><label class="form-check-label" for="formCheck-1">start dmx/aud 03_* once</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="radio" id="cpbutton3" method="post" name="cpbutton3" onclick="SubmitBTN3FormData3();" value="startdmxplaybackaudio03"><label class="form-check-label" for="formCheck-1">start dmx/audio 03_*</label></div>
                                         </form>
                                     </div>
                                 </div>

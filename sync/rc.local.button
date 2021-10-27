@@ -3,7 +3,7 @@
 /usr/bin/python /var/www/sync/ledblinking.py
 
 
-sudo /usr/bin/python /var/www/sync/startbuttons.py &
+sudo /usr/bin/python3 /var/www/sync/startbuttons.py &
 
 
 

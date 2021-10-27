@@ -3,7 +3,7 @@
 /usr/bin/python /var/www/sync/ledblinking.py
 
 #start button actions
-sudo /usr/bin/python /var/www/sync/startbuttons.py &
+sudo /usr/bin/python3 /var/www/sync/startbuttons.py &
 
 #start beacon stillshot onto HDMi output
 sudo fbi -T 1 -a -noverbose /media/internal/pir/stillshot.png &

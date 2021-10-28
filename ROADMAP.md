@@ -3,6 +3,7 @@
 ## Currently in the pipeline: 
 <p/>
 
+- workaround the GPIO library debounce button stuff<p/>
 - add volume setting with store function<p/>
 - remove autostart button+beacon since its not used<p/>
 

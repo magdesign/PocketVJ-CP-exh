@@ -3,7 +3,7 @@
 ## Currently in the pipeline: 
 <p/>
 
-- workaround the GPIO library debounce button stuff<p/>
+- workaround the GPIO library debounce button stuff with switching to sudo apt-get install pigpio python-pigpio python3-pigpio, [see here](http://abyz.me.uk/rpi/pigpio/python.html#set_glitch_filter) examples can be found [here](https://github.com/joan2937/pigpio)<p/>
 - add volume setting with store function<p/>
 - remove autostart button+beacon since its not used<p/>
 

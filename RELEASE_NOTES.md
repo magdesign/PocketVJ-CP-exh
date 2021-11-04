@@ -1,7 +1,13 @@
 # PocketVJ Exhibition / Control Panel 4.x.x
 
-## CP 4.2.7 27.10.2021
+## CP 4.2.8 04.11.2021
 
+after installing the update, click "Update Everything" again!<br />
+
+- added gpiozero library <br />
+- changed the button trigger script, finally with propper debouncing when pushed very very very fast...<br />
+
+## CP 4.2.7 27.10.2021
 
 - changed button trigger for dmx shows to only play once <br />
 - added scripts: stardmxplaybackaudio02once, stardmxplaybackaudio03once <br />

@@ -4,9 +4,6 @@
 <p/>
 
 - add volume setting with store function<p/>
-- remove autostart button+beacon since its not used<p/>
-- add audio01-03 to button selection <p/>
-- speed up "check services" if we are offline <p/>
 - move update everything to a seperate script so we can directly update without having to do 2x<p/>
 <p/>
 

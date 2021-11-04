@@ -11,8 +11,8 @@
 #mpg123 -f -22000 /media/internal/audio/* 
 
 #enable for mp3
-/usr/bin/omxplayer-sync -mu -o local /media/internal/audio/*.mp3 > /dev/null 2>&1 & echo $! &
+/usr/bin/omxplayer-sync -m -o local /media/internal/audio/02*.mp3 > /dev/null 2>&1 & echo $! &
 
 
 #enable for wav
-#/usr/bin/omxplayer-sync -mu -o local /media/internal/audio/*.wav > /dev/null 2>&1 & echo $! &
+#/usr/bin/omxplayer-sync -mu -o both /media/internal/audio/*.wav > /dev/null 2>&1 & echo $! &

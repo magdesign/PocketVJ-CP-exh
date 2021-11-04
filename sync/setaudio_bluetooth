@@ -34,7 +34,11 @@
 	sudo sed -ri 's/-o [[:graph:]]+/-o alsa/' /var/www/sync/startmasterone10 &
 	sudo sed -ri 's/-o [[:graph:]]+/-o alsa/' /var/www/sync/startmasterone11 &
 	sudo sed -ri 's/-o [[:graph:]]+/-o alsa/' /var/www/sync/startmasterone12 &
+#audio
 	sudo sed -ri 's/-o [[:graph:]]+/-o alsa/' /var/www/sync/startaudio &
+    sudo sed -ri 's/-o [[:graph:]]+/-o alsa/' /var/www/sync/startaudio01once &
+	sudo sed -ri 's/-o [[:graph:]]+/-o alsa/' /var/www/sync/startaudio02once &
+	sudo sed -ri 's/-o [[:graph:]]+/-o alsa/' /var/www/sync/startaudio03once &
 	sudo sed -ri 's/-o [[:graph:]]+/-o alsa/' /var/www/sync/startaudioslave &
 	sudo sed -ri 's/-o [[:graph:]]+/-o alsa/' /var/www/sync/startaudiousb &
 #looped without sync

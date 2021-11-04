@@ -1554,6 +1554,13 @@ if ($_GET['action'] == 'updateall') {
 	system("sudo systemctl disable lircd-uinput.service");
 	system("sudo systemctl stop irexec.service");
 	system("sudo systemctl disable irexec.service");
+	// install the new GPIO library
+	system("sudo dpkg -i /var/www/sync/debs/python3-spidev_20170223~145721-1_all.deb");
+	system("sudo dpkg -i /var/www/sync/debs/python3-gpiozero_1.5.0_all.deb");
+	system("sudo dpkg -i /var/www/sync/debs/python3-colorzero_1.1_all.deb");
+	system("sudo dpkg -i /var/www/sync/debs/python-spidev_20170223~145721-1_all.deb");
+	system("sudo dpkg -i /var/www/sync/debs/python-gpiozero_1.5.0_all.deb");
+	system("sudo dpkg -i /var/www/sync/debs/python-colorzero_1.1_all.deb");
 	//Text Output
 	$outputtext =  "Updated everything Controlpanel, Mapper, OMXPLAYER, Timer, Boot";
 }

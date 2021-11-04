@@ -7,6 +7,7 @@
 - add volume setting with store function<p/>
 - remove autostart button+beacon since its not used<p/>
 
+- speed up "check services" if we are offline <p/>
 <p/>
 
 ## Next to come:

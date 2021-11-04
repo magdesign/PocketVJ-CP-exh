@@ -63,10 +63,12 @@ See tutorial:
 AUDIO
 ******
 
-- Play an audio file from /internal/audio/
+- Play an audio file from /internal/audio/*.mp3
 
 .. note::
     - max. audio bitrate is: 160kbit
+    
+    - must be an mp3 (uncomment in /sync/startaudio script to play .wav)
 
 
 

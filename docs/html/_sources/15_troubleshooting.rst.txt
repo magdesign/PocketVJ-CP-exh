@@ -105,6 +105,13 @@ Remote “Power On Projector” does not work
 
 
 
+**Audio quality is Bad, Audio glitches or stutters**
+*****************************************************
+
+- Make sure audio compression is not higher than 160kp/s
+- Make sure you enable only one output: e.g. audio jack or audio HDMI, not both!!
+
+
 **Special Functions**
 *********************
 

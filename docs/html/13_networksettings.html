@@ -115,7 +115,6 @@
 <li class="toctree-l2"><a class="reference internal" href="#wifi-antenna">WIFI ANTENNA</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#wifi-channel">WIFI CHANNEL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#udp-control">UDP Control</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tcp-control">TCP Control</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="14_systemsettings.html">SYSTEM SETTINGS</a></li>
@@ -228,6 +227,12 @@ Pass: <code class="docutils literal notranslate"><span class="pre">12345</span><
 <p>Used to connect to an in house Wifi with internet so you can accesss from anywhere.</p>
 <img alt="_images/13_CP_connectwifi.png" src="_images/13_CP_connectwifi.png" />
 <p>see video tutorial: <a class="reference external" href="https://video.pocketvj.com/AVideo/video/11/pocketvj-exhibition-wifi-connecting">https://video.pocketvj.com/AVideo/video/11/pocketvj-exhibition-wifi-connecting</a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When connecting to your in-house wifi, there will be no longer a “vj100” hotspot available, so you must make sure to have internet and beeing able to
+remote connect to the device, otherwhise you will lock yourself out!</p>
+<p>After remote accessing with the given ip address shipped with your unit, you can go to “Network Settings” and check the units Wifi IP to access it again directly within your network.</p>
+</div>
 </div>
 <div class="section" id="wifi-antenna">
 <h2>WIFI ANTENNA<a class="headerlink" href="#wifi-antenna" title="Permalink to this headline">¶</a></h2>
@@ -252,13 +257,7 @@ Pass: <code class="docutils literal notranslate"><span class="pre">12345</span><
 <img alt="_images/13_udp_packetsender.png" src="_images/13_udp_packetsender.png" />
 <p>The commands are defined in: <a class="reference external" href="https://github.com/magdesign/PocketVJ-CP-exh/blob/master/sync/commandmapping.sh">https://github.com/magdesign/PocketVJ-CP-exh/blob/master/sync/commandmapping.sh</a></p>
 <p>Ask if you need more control commands and I will add them or edit the file by yourself.</p>
-</div>
-<div class="section" id="tcp-control">
-<h2>TCP Control<a class="headerlink" href="#tcp-control" title="Permalink to this headline">¶</a></h2>
-<p>You can control the PocketVJ with TCP commands.</p>
-<p>Standard port for <a class="reference external" href="http://">http://</a> commands is port <code class="docutils literal notranslate"><span class="pre">80</span></code></p>
-<p>Its your decision which tool you use to send the commands,
-here is an example using curl via terminal to control a PocketVJ with the IP: 2.0.0.100</p>
+<p>TCP Controouse Wifi with internet so you can accesss from anywhere. example using curl via terminal to control a PocketVJ with the IP: 2.0.0.100</p>
 <p><code class="docutils literal notranslate"><span class="pre">curl</span> <span class="pre">-s</span> <span class="pre">http://2.0.0.100/backend.php/?action=stop</span></code></p>
 <p>IP://X.X.X:X/backend.php/?action=…………..</p>
 <p>For more commands check backend.php

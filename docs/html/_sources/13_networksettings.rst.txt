@@ -61,6 +61,12 @@ Used to connect to an in house Wifi with internet so you can accesss from anywhe
 see video tutorial: https://video.pocketvj.com/AVideo/video/11/pocketvj-exhibition-wifi-connecting
 
 
+.. note::
+    When connecting to your in-house wifi, there will be no longer a "vj100" hotspot available, so you must make sure to have internet and beeing able to
+    remote connect to the device, otherwhise you will lock yourself out!
+
+    After remote accessing with the given ip address shipped with your unit, you can go to "Network Settings" and check the units Wifi IP to access it again directly within your network.
+
 WIFI ANTENNA
 ************
 
@@ -110,15 +116,7 @@ Ask if you need more control commands and I will add them or edit the file by yo
 
 
 
-TCP Control
-***********
-
-You can control the PocketVJ with TCP commands.
-
-Standard port for http:// commands is port ``80``
-
-Its your decision which tool you use to send the commands,
-here is an example using curl via terminal to control a PocketVJ with the IP: 2.0.0.100
+TCP Controouse Wifi with internet so you can accesss from anywhere. example using curl via terminal to control a PocketVJ with the IP: 2.0.0.100
 
 ``curl -s http://2.0.0.100/backend.php/?action=stop``
 

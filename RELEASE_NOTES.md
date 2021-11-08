@@ -9,6 +9,10 @@
 - updated the audio output selection to include new scripts  <br />
 - remove audostart beacon&buttons, since it is not used <br />
 
+## Image 4.0.10 04.November 2021 <br />
+
+- updated the GPIO library to gpiozero<br />
+
 ## CP 4.2.8 04.11.2021
 
 after installing the update, click "Update Everything" again!<br />

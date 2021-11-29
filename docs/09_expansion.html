@@ -1,0 +1,367 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>EXPANSION &mdash; PocketVJ Exhibition 4.x documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="SCHEDULER" href="10_scheduler.html" />
+    <link rel="prev" title="MAPPING" href="08_mapping.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> PocketVJ Exhibition
+          
+
+          
+            
+            <img src="_static/PocketVJ.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="01_first_steps.html">First Steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_controlpanel.html">CONTROL PANEL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_autostart.html">AUTOSTART</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_filemanagement.html">FILE MANAGEMENT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_presenter.html">PRESENTER</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_video.html">VIDEO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_sharing.html">SHARING</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_mapping.html">MAPPING</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">EXPANSION</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#pir-sensor">PIR SENSOR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sensitivity">SENSITIVITY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#stillshot">STILLSHOT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#connect-pir">CONNECT PIR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#buttons">BUTTONS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#connect-buttons">CONNECT BUTTONS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sensors">SENSORS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#beacons">BEACONS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#expansion-pins">EXPANSION PINS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="10_scheduler.html">SCHEDULER</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11_dmxoscmidi.html">DMX OSC MIDI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_display.html">DISPLAY</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_display.html#info">INFO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_display.html#resolution">RESOLUTION</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_display.html#rotate-flip">ROTATE &amp; FLIP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_display.html#sleep">SLEEP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_display.html#projector">PROJECTOR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_display.html#projector-ir">PROJECTOR IR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13_networksettings.html">NETWORK SETTINGS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_systemsettings.html">SYSTEM SETTINGS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="15_troubleshooting.html">TROUBLESHOOTING</a></li>
+<li class="toctree-l1"><a class="reference internal" href="16_irremote.html">IR REMOTE LIRC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="17_power.html">POWER SUPPLY</a></li>
+<li class="toctree-l1"><a class="reference internal" href="17_power.html#direct-power">DIRECT POWER</a></li>
+<li class="toctree-l1"><a class="reference internal" href="18_content_creation.html">CREATE CONTENT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="99_theend.html">END</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">PocketVJ Exhibition</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>EXPANSION</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/09_expansion.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="expansion">
+<span id="id1"></span><h1>EXPANSION<a class="headerlink" href="#expansion" title="Permalink to this headline">¶</a></h1>
+<p>This section holds all functions for the expansion board:</p>
+<img alt="_images/09_CP_expansion.png" src="_images/09_CP_expansion.png" />
+<div class="section" id="pir-sensor">
+<h2>PIR SENSOR<a class="headerlink" href="#pir-sensor" title="Permalink to this headline">¶</a></h2>
+<p>see video tutorial: <a class="reference external" href="https://video.pocketvj.com/AVideo/video/13/pocketvj-exhibition-pir-sensor">https://video.pocketvj.com/AVideo/video/13/pocketvj-exhibition-pir-sensor</a></p>
+<p>With the PIR Sensor attached, you can create an interactive installation which triggers a random video as soon as the sensor detects motion.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>This works with <a href="#id2"><span class="problematic" id="id3">*</span></a>.mp4 videos and/or <a href="#id4"><span class="problematic" id="id5">*</span></a>.mp3 audios</p></li>
+<li><p>Copy the loop (default, standby) video to the media/internal/pir/loop folder</p></li>
+<li><p>Copy the trigger videos (can by any amount) to the media/internal/pir/trigger folder</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="sensitivity">
+<h2>SENSITIVITY<a class="headerlink" href="#sensitivity" title="Permalink to this headline">¶</a></h2>
+<p>Adjust after how many movements the video will be triggered.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>low =&gt; 30 movements</p></li>
+<li><p>medium =&gt; 20 movements</p></li>
+<li><p>high =&gt; 12 movements</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="stillshot">
+<h2>STILLSHOT<a class="headerlink" href="#stillshot" title="Permalink to this headline">¶</a></h2>
+<p>Set the picture which will appear for approx. 1s when the loop file stops and the trigger file starts to play.</p>
+</div>
+<div class="section" id="connect-pir">
+<h2>CONNECT PIR<a class="headerlink" href="#connect-pir" title="Permalink to this headline">¶</a></h2>
+<img alt="_images/09_pir_connect.png" src="_images/09_pir_connect.png" />
+<p>If you have trouble with the pir sensor, there is a testscript which you can run from terminal to check what its states:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">sync</span><span class="o">/</span><span class="n">startpirtest</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>Factory standard the sensor is set to a distance range of ~5m, if you need another range, you can adjust this directly on
+the sensor. Gently unscrew it with a hex key and then change the range with a screwdriver:</p>
+<img alt="_images/09_pir_adjust.png" src="_images/09_pir_adjust.png" />
+<p>Its also possible to connect Ultrasonic sensors which can be mounted behind materials, ask me for more info.</p>
+</div>
+<div class="section" id="buttons">
+<h2>BUTTONS<a class="headerlink" href="#buttons" title="Permalink to this headline">¶</a></h2>
+<p>see video tutorial: <a class="reference external" href="https://video.pocketvj.com/AVideo/video/8/pocketvj-exhibition-button-connecting">https://video.pocketvj.com/AVideo/video/8/pocketvj-exhibition-button-connecting</a></p>
+</div>
+<div class="section" id="connect-buttons">
+<h2>CONNECT BUTTONS<a class="headerlink" href="#connect-buttons" title="Permalink to this headline">¶</a></h2>
+<img alt="_images/09_button_connect.png" src="_images/09_button_connect.png" />
+</div>
+<div class="section" id="sensors">
+<h2>SENSORS<a class="headerlink" href="#sensors" title="Permalink to this headline">¶</a></h2>
+<p><strong>Temperature</strong> =&gt; see temperature/humidity from temperature sensor.</p>
+<p>Attached a DHT11 Temperature/Humidity Sensor as shown in the diagram.</p>
+<ul class="simple">
+<li><p><strong>+5V</strong> goes to PIN13</p></li>
+<li><p><strong>GND</strong> goes to PIN1</p></li>
+<li><p><strong>S</strong> Signal goes to PIN5</p></li>
+</ul>
+<img alt="_images/09_temperature_connect.png" src="_images/09_temperature_connect.png" />
+<p><strong>IR Sender diode</strong> =&gt; See <a class="reference internal" href="16_irremote.html#irremote"><span class="std std-ref">IR REMOTE LIRC</span></a></p>
+<ul class="simple">
+<li><p><strong>+5V</strong> goes to PIN13</p></li>
+<li><p><strong>GND</strong> goes to PIN1</p></li>
+<li><p><strong>S</strong> Signal goes to PIN6</p></li>
+</ul>
+<img alt="_images/09_ir_connect.png" src="_images/09_ir_connect.png" />
+</div>
+<div class="section" id="beacons">
+<h2>BEACONS<a class="headerlink" href="#beacons" title="Permalink to this headline">¶</a></h2>
+<p>See video tutorial: <a class="reference external" href="https://video.pocketvj.com/AVideo/videoEmbed/46/bluetooth-beacon-support">https://video.pocketvj.com/AVideo/videoEmbed/46/bluetooth-beacon-support</a></p>
+<img alt="_images/09_CP_beacon.png" src="_images/09_CP_beacon.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>PocketVJ’s bought before 31. March 2021 need to install Bluetooth first to use this function, see
+Systemsettings=&gt;Firmware=&gt;Install Bluetooth</p>
+<p>An Eddystone beacon UID looks like this: <em>4927cc84cab307e6952f</em></p>
+<p>If you simulate a beacon with e.g. PyBeacon like: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">PyBeacon</span> <span class="pre">-i</span> <span class="pre">4927cc84cab307e6952f5dadf7f8468c</span></code>
+the resulting namespace to enter in PocketVJ would be: <code class="docutils literal notranslate"><span class="pre">4927cc84cab307e6952f</span></code></p>
+<p>Do not add the same beacon UID more than once, otherwise its confusing what to trigger</p>
+</div>
+<p><strong>Start</strong> =&gt; Starts the beacon listener.</p>
+<p><strong>Stop</strong> =&gt; Stops the beacon listener since regular stop button will not stop the beacon listener.</p>
+<p><strong>Set Beacon</strong> =&gt; Insert your Eddystone UID beacon namespace to which you want to trigger stuff.</p>
+<p><strong>Beacon Info</strong> =&gt; Display which beacon names you are listening to.</p>
+<p><strong>Beacon1, Beacon2, Beacon3, Beacon4</strong> =&gt;&gt; Set the desired function to trigger.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Quick how to setup:</p>
+<ol class="arabic simple">
+<li><p>Stop all</p></li>
+<li><p>Enter your beacon UID’s</p></li>
+<li><p>Select the function it shall trigger</p></li>
+<li><p>Start the Beacon listener</p></li>
+</ol>
+<p>make sure you did not =&gt; WIFI ANTENNA =&gt; OFF Permanent  since this will also disable the Bluetooth chip !!!</p>
+</div>
+<p><strong>DELAY</strong></p>
+<p><strong>Disable Delay</strong> is the default value, after triggering an action with a beacon, we wait until the action is finished.</p>
+<p><strong>Enable Delay</strong> will wait for Delay in Seconds until it starts scanning again and if it found any beacon, it will stop the current action and trigger the new one.</p>
+<p><strong>Set Delay</strong> enter a number (Seconds) and click Set Delay to set the above mentioned delay.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You are able to set a delay time for the audio to trigger, so you can reach a sync, for this see the
+<cite>DMX PLAYER</cite> section of this manual and also watch the dmx video tutorial.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For debugging purposes you can run  <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">python3</span> <span class="pre">/var/www/sync/bluetooth_scanner.py</span></code> script within the terminal to see all bluetooth devices around you,
+if you want to display only beacons containing a namespace: <code class="docutils literal notranslate"><span class="pre">/var/www/sync/bluetooth_scanner.py</span> <span class="pre">|</span> <span class="pre">grep</span> <span class="pre">&quot;namespace&quot;</span></code> and wait for 10seconds until you get the output to see if your beacon is visible.</p>
+</div>
+</div>
+<div class="section" id="expansion-pins">
+<h2>EXPANSION PINS<a class="headerlink" href="#expansion-pins" title="Permalink to this headline">¶</a></h2>
+<img alt="_images/09_expansion_pins.png" src="_images/09_expansion_pins.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>MOSFET max. 10A</p>
+<p>PWM0 + PWM1 only usable on special series cases</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="10_scheduler.html" class="btn btn-neutral float-right" title="SCHEDULER" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="08_mapping.html" class="btn btn-neutral float-left" title="MAPPING" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, M.A.Gasser, https://pocketvj.com.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

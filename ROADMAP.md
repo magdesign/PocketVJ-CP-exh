@@ -34,8 +34,8 @@
 
 ## Website:
 
-- Link How to mount the Expansion Board on Image kits to an actual tutorial
-- 
+- Link How to mount the Expansion Board on Image kits to an actual tutorial<p/>
+
 
 
 ## Just some ideas:
@@ -81,10 +81,7 @@
 ### **Pipeline/Provider/Freedom:**
 
 - change webshop to an opensource variant, finish this!! <p/>
-- create my own gitea server and mirror to away to github<p/>
-- delete youtube channel, move to peertube<p/>
-
-
+- create my own gitea server and mirror on github<p/>
 
 
 

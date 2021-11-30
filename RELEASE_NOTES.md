@@ -9,6 +9,7 @@
 - updated the audio output selection to include new scripts  <br />
 - remove autostart beacon&buttons, since it is not used <br />
 - added startmasterone to scheduler <br />
+- addED scheduler status to "Check Services"  <br />
 
 ## Image 4.0.10 04.November 2021 <br />
 

@@ -13,6 +13,7 @@ BLUETOOTH="$(bluetoothd -v)"
 WIFI="$(ifconfig | grep -o wlan0)"
 REMOTE_ACCESS="$(systemctl is-active openvpn.service)"
 POWER="$(sudo /var/www/sync/powersupply)"
+#SCHEDULER="$(sudo -u root crontab -l | grep -o 'no crontab for root' )"
 
 
 #infrared
@@ -46,7 +47,6 @@ else
     echo "OLAD dmx = off"
 fi
 
-
 #GPU
 if [ "${GPU}" = "state 0x2 [TV is off]" ]; then
     echo "GPU = off"
@@ -66,25 +66,27 @@ else echo "WIFI = disabled"
 fi
 
 #Internet
-
 if timeout 1 ping -q -w1 -c1 pocketvj.com >/dev/null; then
  echo "INTERNET = online"
 else
  echo "INTERNET = offline"
 fi
 
+#Scheduler
+if [ $(crontab -l 2>/dev/null | wc -c) -eq 0 ]; then
+  echo "SCHEDULER = off"
+else
+  echo "SCHEDULER = on"
+fi
 
 #Remote_access
-
 if [ "${REMOTE_ACCESS}" = "active" ]; then
     echo "REMOTE ACCESS = on"
 else
     echo "REMOTE ACCESS = off"
 fi
 
-
 #Power
-
 echo POWER = "${POWER}" 
 
 exit 0

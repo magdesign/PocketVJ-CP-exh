@@ -2,7 +2,7 @@
 
 ## Currently in the pipeline: 
 <p/>
-- add scheduler status to "Check Services"  <br />
+
 - add volume setting with store function<p/>
 - move update everything to a seperate script so we can directly update without having to do 2x<p/>
 <p/>

@@ -1,13 +1,14 @@
 # PocketVJ Exhibition / Control Panel 4.x.x
 
 
-## CP 4.2.9 unreleased yet
+## CP 4.2.9 30.11.2021
 
 - made Check Services (ping) much faster with setting a timout <br />
 - added startaudio01-03 once scripts <br />
 - added startaudio once to buttons <br />
 - updated the audio output selection to include new scripts  <br />
-- remove audostart beacon&buttons, since it is not used <br />
+- remove autostart beacon&buttons, since it is not used <br />
+- added startmasterone to scheduler <br />
 
 ## Image 4.0.10 04.November 2021 <br />
 

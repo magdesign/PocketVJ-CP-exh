@@ -1760,7 +1760,7 @@ elem2.addEventListener("input", range2Value);
                                                                 <div class="form-check"><input class="form-check-input" type="radio" id="shedulerradio" method="post" name="shedulerradio" onclick="displayRadioValue();" value="stopall"><label class="form-check-label" for="formCheck-1">stop all</label></div>
                                                                 <div class="form-check"><input class="form-check-input" type="radio" id="shedulerradio-2" method="post" name="shedulerradio" onclick="displayRadioValue();" value="startmaster"><label class="form-check-label" for="formCheck-1">start video master</label></div>
                                                                 <div class="form-check"><input class="form-check-input" type="radio" id="shedulerradio-4" method="post" name="shedulerradio" onclick="displayRadioValue();" value="startmaster01"><label class="form-check-label" for="formCheck-1">start video 01_*</label></div>
-                                                                <div class="form-check"><input class="form-check-input" type="radio" id="shedulerradio-5" method="post" name="shedulerradio" onclick="displayRadioValue();" value="startmaster02"><label class="form-check-label" for="formCheck-1">start video 02_*</label></div>
+                                                                <div class="form-check"><input class="form-check-input" type="radio" id="shedulerradio-14" method="post" name="shedulerradio" onclick="displayRadioValue();" value="startmasterone01"><label class="form-check-label" for="formCheck-1">start video 01_* once</label></div>
                                                                 <div class="form-check"><input class="form-check-input" type="radio" id="shedulerradio-6" method="post" name="shedulerradio" onclick="displayRadioValue();" value="relaunchmapper"><label class="form-check-label" for="formCheck-1">start mapper</label></div>
                                                                 <div class="form-check"><input class="form-check-input" type="radio" id="shedulerradio-8" method="post" name="shedulerradio" onclick="displayRadioValue();" value="mapperimport1"><label class="form-check-label" for="formCheck-1">start mapper 01</label></div>
                                                                 <div class="form-check"><input class="form-check-input" type="radio" id="shedulerradio-7" method="post" name="shedulerradio" onclick="displayRadioValue();" value="mapperimport2"><label class="form-check-label" for="formCheck-1">start mapper 02</label></div>
@@ -2625,6 +2625,7 @@ elem2.addEventListener("input", range2Value);
     </footer>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
 
 <!-- Sets the "Set Time" button function--> 
  

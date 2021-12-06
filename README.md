@@ -23,8 +23,9 @@ See [**Release notes**](RELEASE_NOTES.md)
 See [**Roadmap**](ROADMAP.md)
 
 ## Tutorials
-See [videos tutorials](https://www.pocketvj.com/pocketvj-exhibition#Tutorials_Exhibition)
-Read [the docs](https://www.pocketvj.com/manual/index.html)
+See [**Videos**](https://www.pocketvj.com/pocketvj-exhibition#Tutorials_Exhibition)
+<p/>
+Read [**Manual**](https://www.pocketvj.com/manual/index.html)
 
 
 ## 📝 Notes

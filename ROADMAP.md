@@ -5,6 +5,7 @@
 
 - add volume setting with store function<p/>
 - move update everything to a seperate script so we can directly update without having to do 2x<p/>
+- move overlay into a seperate folder, update manual on this<p/>
 <p/>
 
 ## Next to come:

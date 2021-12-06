@@ -10,7 +10,9 @@
 [![pulls](https://img.shields.io/github/issues-pr-raw/magdesign/PocketVJ-CP-exh.svg?style=flat-square)](https://github.com/magdesign/PocketVJ-CP-exh/pulls)
 
 
-### (not compatible with any other PocketVJ Version!!)
+ (not compatible with any other PocketVJ Version!!)
+
+## 📖️ Instructions
 
 See [here](https://video.pocketvj.com/AVideo/video/7/pocketvj-exhibition-update) on how to update your PocketVJ Exhibition.
 
@@ -22,15 +24,19 @@ See [**Release notes**](RELEASE_NOTES.md)
 
 See [**Roadmap**](ROADMAP.md)
 
-## Tutorials
-See [**Videos**](https://www.pocketvj.com/pocketvj-exhibition#Tutorials_Exhibition)
-<p/>
+## ⁉️ Tutorials
+Watch [**Videos**](https://www.pocketvj.com/pocketvj-exhibition#Tutorials_Exhibition)
+
+
+or
+
+
 Read [**Manual**](https://www.pocketvj.com/manual/index.html)
 
 
 ## 📝 Notes
 
-Exhibition models from the very first generation (4.0.0) need to be updated like [on the alternative way](https://video.pocketvj.com/AVideo/video/6/pocketvj-exhibition-alternative-update).
+Exhibition models from the very first generation (4.0.0) need to be updated [on the alternative way](https://video.pocketvj.com/AVideo/video/6/pocketvj-exhibition-alternative-update).
 and then go to "system settings" and click "update all", this is important!
 
 

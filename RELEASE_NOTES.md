@@ -1,5 +1,8 @@
 # PocketVJ Exhibition / Control Panel 4.x.x
 
+## CP 4.2.9b 28.12.2021
+- added "overlay" to "autostart" => "master" and to "player sync" => play all
+- there might be some edge cases when overlay is on and you enable it again...
 
 ## CP 4.2.9 30.11.2021
 

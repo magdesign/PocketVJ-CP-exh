@@ -2,7 +2,8 @@
 
 ## Currently in the pipeline: 
 <p/>
-
+- add overlay to autostart <br />
+- play all video files random  <br />
 - add volume setting with store function<p/>
 - move update everything to a seperate script so we can directly update without having to do 2x<p/>
 - move overlay into a seperate folder, update manual on this<p/>

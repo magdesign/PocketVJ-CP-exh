@@ -1,0 +1,136 @@
+#! /bin/bash
+
+	#stop everything
+	sudo /var/www/sync/stopall > /dev/null 2>&1
+
+	# chmod everything, not sure if this is need when update does not work
+	sudo chmod 755 -R /var/www/
+
+	#unpack zip and Update CP, (add variable with if .zip is present)
+	sudo unzip /media/internal/PocketVJ-CP-exh.zip -d /media/internal/
+	sudo cp -r /media/internal/PocketVJ-CP-exh/* /var/www/
+	sudo chmod 755 -R /var/www/
+	sudo rm -rf /media/internal/PocketVJ-CP-exh.zip
+	sudo rm -rf /media/internal/PocketVJ-CP-exh
+        echo "files unzipped, going to install..."
+    ### OMXPLAYER
+	#Update omxplayer and sync
+	sudo apt-get remove omxplayer
+	rm -rf /usr/bin/omxplayer /usr/bin/omxplayer.bin /usr/lib/omxplayer
+	rm -f /usr/bin/omxplayer-sync
+	rm -f /usr/bin/dbuscontrol.sh
+	sudo apt-get clean
+	# install omxplayer dependencies
+  	#sudo dpkg -i /var/www/sync/debs/python3-dbus_1.2.0-2+b1_armhf.deb
+	sudo dpkg -i /var/www/sync/debs/python3-dbus_1.2.4-1_armhf.deb
+	sudo dpkg -i /var/www/sync/debs/libssh-4_0.6.3-4+deb8u2_armhf.deb
+	#install new omxplayer version:
+	#sudo dpkg -i /var/www/sync/debs/omxplayer_20190607+gitf06235c-1_armhf.deb
+	sudo dpkg -i /var/www/sync/debs/omxplayer_20180910_7f3faf6_stretch_armhf.deb
+	#copy omxplayer-sync scripts
+	sudo cp /var/www/sync/omxplayer-sync /usr/bin/omxplayer-sync
+	sudo cp /var/www/sync/omxplayer-sync-old /usr/bin/omxplayer-sync-old
+	sudo cp /var/www/sync/omxplayer-sync-wifi /usr/bin/omxplayer-sync-wifi
+	# permissions for the sync scripts
+	sudo chmod a+x /usr/bin/omxplayer
+	sudo chmod a+x /usr/bin/omxplayer.bin
+	sudo chmod a+x /usr/bin/omxplayer-sync
+	sudo chmod a+x /usr/bin/omxplayer-sync-old
+
+    
+	#cleanup:
+	sudo apt-get clean	
+	#Update Interfaceswifi
+	sudo cp /var/www/sync/interfaceswifi /etc/network/interfaceswifi
+	#Update Boot config
+	sudo cp /var/www/sync/defaulthdmi /boot/config.txt
+	#Update timer.txt
+	sudo cp /var/www/sync/timer.txt /media/internal/timer.txt
+	#Update Mapper new method
+	sudo rm -r /home/pvj/openFrameworks/addons/ofxPiMapper/
+	sudo unzip /var/www/sync/mapper_all_jack.zip -d /
+	sudo ln -s /media/internal/video /home/pvj/openFrameworks/addons/ofxPiMapper/example_basic/bin/data/sources/videos
+	sudo ln -s /media/internal/images /home/pvj/openFrameworks/addons/ofxPiMapper/example_basic/bin/data/sources/images
+	sudo ln -s /media/internal/video /home/pvj/openFrameworks/addons/ofxPiMapper/example_fbo-sources/bin/data/sources/videos
+	sudo ln -s /media/internal/images /home/pvj/openFrameworks/addons/ofxPiMapper/example_fbo-sources/bin/data/sources/images
+	sudo ln -s /media/internal/video /home/pvj/openFrameworks/addons/ofxPiMapper/example_remote-server/bin/data/sources/videos
+	sudo ln -s /media/internal/images /home/pvj/openFrameworks/addons/ofxPiMapper/example_remote-server/bin/data/sources/images
+    #Update ofxOMXPlayer, think this i currently not needed
+	#sudo rm -r /home/pvj/openFrameworks/addons/ofxOMXPlayer/
+	#sudo unzip /var/www/sync/ofxOMXPlayer.zip -d /
+	#Update ofxVideoSync
+	#this is only essential for compiling stuff
+	#sudo rm -r /home/pvj/openFrameworks/addons/ofxVideoSync/
+	#sudo unzip /var/www/sync/ofxVideoSync.zip -d /
+	#Updates TCPSyphon
+	sudo rm /usr/bin/TCPSClient.bin
+	sudo cp /var/www/sync/TCPSClient.bin /usr/bin/TCPSClient.bin
+	sudo chmod +x /usr/bin/TCPSClient.bin
+	#Update raspidmx png
+	sudo rm -rf /home/pvj/raspidmx
+	sudo unzip /var/www/sync/debs/raspidmx.zip -d /
+	#Update mappingconverter
+	sudo rm -rf /home/pvj/openFrameworks/apps/myApps/mapping-converter2
+	sudo unzip /var/www/sync/mappingconverter.zip -d /home/pvj/openFrameworks/apps/myApps/
+	#Update OSC control in home folder
+	sudo cp /var/www/sync/osc_control.js /home/pvj/osc/osc_control.js
+	#remove .xsession file
+	sudo rm -rf /home/pvj/.xsession
+	#copy the artnet conf set to broadcast
+	sudo cp /var/www/sync/ola-artnet.conf /var/lib/ola/conf/ola-artnet.conf
+	# set audio to jack and hdmi
+	sudo /var/www/sync/setaudio_jack
+	# set alsa volume to 100
+	sudo /var/www/sync/audioboost
+	#sudo su - pvj -c 'amixer set Master 100%'
+	#sudo su - pvj -c /usr/bin/amixer set 'PCM' 100%
+	#sudo alsactl store
+	#set ip on network scripts to match pvj current ip
+	sudo /var/www/sync/iprangeUpdatecall
+	#remove filebrowser, if there is one
+	sudo rm -rf /var/www/filebrowser
+	#install filebrowser from zip
+	sudo unzip /var/www/sync/filebrowser -d /
+	#copy filebrowser daemon
+	sudo cp /var/www/filebrowser/filebrowser.service /etc/systemd/system/filebrowser.service
+	#remove git history folder
+	sudo rm -rf /var/www/.git/ 
+
+	#remove debs from sync since its moved to debs
+	sudo rm -rf /var/www/sync/python3-dbus_1.2.0-2+b1_armhf.deb
+	sudo rm -rf /var/www/sync/libssh-4_armhf.deb
+	sudo rm -rf /var/www/sync/omxplayer_0.3.7-git20170130-62fb580_armhf.deb
+	sudo rm -rf /var/www/sync/omxplayer_0.3.7-git20160923-dfea8c9_armhf.deb	
+	#fix permissions
+	sudo chmod 777 -R /media
+	#fix the pjlink to new version
+	#create folder if not already present
+	mkdir /home/pvj/.local/share/pjlink
+	#copy standard pjlink config file:
+	cp /var/www/sync/pjlink.conf /home/pvj/.local/share/pjlink/pjlink.conf
+
+	# disable lirc service
+	sudo systemctl stop lircd
+	sudo systemctl disable lircd
+	sudo systemctl disable lircd.socket
+	sudo systemctl disable lircmd.service
+	sudo systemctl disable lircd-setup.service
+	sudo systemctl disable lircd-uinput.service
+	sudo systemctl stop irexec.service
+	sudo systemctl disable irexec.service
+
+	# install the new GPIO library
+	sudo dpkg -i /var/www/sync/debs/python3-spidev_20170223~145721-1_all.deb
+	sudo dpkg -i /var/www/sync/debs/python3-gpiozero_1.5.0_all.deb
+	sudo dpkg -i /var/www/sync/debs/python3-colorzero_1.1_all.deb
+	sudo dpkg -i /var/www/sync/debs/python-spidev_20170223~145721-1_all.deb
+	sudo dpkg -i /var/www/sync/debs/python-gpiozero_1.5.0_all.deb
+	sudo dpkg -i /var/www/sync/debs/python-colorzero_1.1_all.deb
+
+	# Disaable logging
+	sudo service rsyslog stop
+    sudo systemctl disable rsyslog
+
+	#Text Output
+	echo "Updated everything Controlpanel, Mapper, OMXPLAYER, Timer, Boot"
+

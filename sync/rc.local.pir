@@ -2,6 +2,9 @@
 #LED Blinking 
 /usr/bin/python /var/www/sync/ledblinking.py
 
+#Check that lighttpd can run and has its temp folder
+/var/www/sync/rescue &
+
 #kill boot animatoin
 sudo /var/www/sync/omxkill
 

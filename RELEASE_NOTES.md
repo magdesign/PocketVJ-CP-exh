@@ -1,8 +1,18 @@
 # PocketVJ Exhibition / Control Panel 4.x.x
 
+## CP 4.3.0 04.01.2022
+
+- changed layout in DMX tab, so recording does not show up in the beginning (client feedback)<br />
+- OLA now disables and stops itself before executing updateola<p/>
+- "Update Everything" is now in a seperate script in /var/www/sync/updateall<p/>
+- "Update All" & "Factory Reset" now disables logging <p/>
+- Added "rescue" script to all autostarts, to make sure webserver can always run <p/>
+
+
 ## CP 4.2.9b 28.12.2021
-- added "overlay" to "autostart" => "master" and to "player sync" => play all
-- there might be some edge cases when overlay is on and you enable it again...
+
+- added "overlay" to "autostart" => "master" and to "player sync" => play all <br />
+- there might be some edge cases when overlay is on and you enable it again... <br />
 
 ## CP 4.2.9 30.11.2021
 

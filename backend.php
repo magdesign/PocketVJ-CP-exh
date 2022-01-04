@@ -1436,135 +1436,8 @@ if ($_GET['action'] == 'mapperupdatehdmi') {
 
 
 if ($_GET['action'] == 'updateall') {
-	//stop everything
-	system ("sudo /var/www/sync/stopall > /dev/null 2>&1");
-	// chmod everything, not sure if this is need when update does not work
-	system("sudo chmod 755 -R /var/www/");
-	//Update CP
-	system("sudo unzip /media/internal/PocketVJ-CP-exh.zip -d /media/internal/");
-	system("sudo cp -r /media/internal/PocketVJ-CP-exh/* /var/www/");
-	system("sudo chmod 755 -R /var/www/");
-	system("sudo rm -rf /media/internal/PocketVJ-CP-exh.zip");
-	system("sudo rm -rf /media/internal/PocketVJ-CP-exh");
-	//Update omxplayer and sync
-	system("sudo apt-get remove omxplayer");
-	system("rm -rf /usr/bin/omxplayer /usr/bin/omxplayer.bin /usr/lib/omxplayer");
-	system("rm -f /usr/bin/omxplayer-sync");
-	system("rm -f /usr/bin/dbuscontrol.sh");
-	system("sudo apt-get clean");
-	// install omxplayer dependencies
-  	//system("sudo dpkg -i /var/www/sync/debs/python3-dbus_1.2.0-2+b1_armhf.deb");
-	system("sudo dpkg -i /var/www/sync/debs/python3-dbus_1.2.4-1_armhf.deb");
-	system("sudo dpkg -i /var/www/sync/debs/libssh-4_0.6.3-4+deb8u2_armhf.deb");
-	//install new omxplayer version:
-	//system("sudo dpkg -i /var/www/sync/debs/omxplayer_20190607+gitf06235c-1_armhf.deb");
-	system("sudo dpkg -i /var/www/sync/debs/omxplayer_20180910_7f3faf6_stretch_armhf.deb");
-	//copy omxplayer-sync scripts
-	system("sudo cp /var/www/sync/omxplayer-sync /usr/bin/omxplayer-sync");
-	system("sudo cp /var/www/sync/omxplayer-sync-old /usr/bin/omxplayer-sync-old");
-	system ("sudo cp /var/www/sync/omxplayer-sync-wifi /usr/bin/omxplayer-sync-wifi");
-	// permissions for the sync scripts
-	system("sudo chmod a+x /usr/bin/omxplayer");
-	system("sudo chmod a+x /usr/bin/omxplayer.bin");
-	system("sudo chmod a+x /usr/bin/omxplayer-sync");
-	system("sudo chmod a+x /usr/bin/omxplayer-sync-old");
-	//cleanup:
-	system("sudo apt-get clean");	
-	//Update Interfaceswifi
-	system("sudo cp /var/www/sync/interfaceswifi /etc/network/interfaceswifi");
-	//Update Boot config
-	system("sudo cp /var/www/sync/defaulthdmi /boot/config.txt");
-	//Update timer.txt
-	system("sudo cp /var/www/sync/timer.txt /media/internal/timer.txt");
-	//Update Mapper new method
-	system("sudo rm -r /home/pvj/openFrameworks/addons/ofxPiMapper/");
-	system("sudo unzip /var/www/sync/mapper_all_jack.zip -d /");
-	system ("sudo ln -s /media/internal/video /home/pvj/openFrameworks/addons/ofxPiMapper/example_basic/bin/data/sources/videos");
-	system ("sudo ln -s /media/internal/images /home/pvj/openFrameworks/addons/ofxPiMapper/example_basic/bin/data/sources/images");
-	system ("sudo ln -s /media/internal/video /home/pvj/openFrameworks/addons/ofxPiMapper/example_fbo-sources/bin/data/sources/videos");
-	system ("sudo ln -s /media/internal/images /home/pvj/openFrameworks/addons/ofxPiMapper/example_fbo-sources/bin/data/sources/images");
-	system ("sudo ln -s /media/internal/video /home/pvj/openFrameworks/addons/ofxPiMapper/example_remote-server/bin/data/sources/videos");
-	system ("sudo ln -s /media/internal/images /home/pvj/openFrameworks/addons/ofxPiMapper/example_remote-server/bin/data/sources/images");
-    //Update ofxOMXPlayer, think this i currently not needed
-	//system("sudo rm -r /home/pvj/openFrameworks/addons/ofxOMXPlayer/");
-	//system("sudo unzip /var/www/sync/ofxOMXPlayer.zip -d /");
-	//Update ofxVideoSync
-	//this is only essential for compiling stuff
-	//system("sudo rm -r /home/pvj/openFrameworks/addons/ofxVideoSync/");
-	//system("sudo unzip /var/www/sync/ofxVideoSync.zip -d /");
-	//Updates TCPSyphon
-	system("sudo rm /usr/bin/TCPSClient.bin");
-	system("sudo cp /var/www/sync/TCPSClient.bin /usr/bin/TCPSClient.bin");
-	system("sudo chmod +x /usr/bin/TCPSClient.bin");
-	//Set to PJlink
-	system("sudo cp /var/www/sync/beamer_on_off_pjlink.sh /var/www/sync/beamer_on_off.sh");
-	system("sudo chmod 755 /var/www/sync/beamer_on_off.sh");
-	//Update raspidmx png
-	system("sudo rm -rf /home/pvj/raspidmx");
-	system("sudo unzip /var/www/sync/debs/raspidmx.zip -d /");
-	//Update mappingconverter
-	system("sudo rm -rf /home/pvj/openFrameworks/apps/myApps/mapping-converter2");
-	system("sudo unzip /var/www/sync/mappingconverter.zip -d /home/pvj/openFrameworks/apps/myApps/");
-	//Update OSC control in home folder
-	system("sudo cp /var/www/sync/osc_control.js /home/pvj/osc/osc_control.js");
-	//remove .xsession file
-	system("sudo rm -rf /home/pvj/.xsession");
-	//copy the artnet conf set to broadcast
-	system("sudo cp /var/www/sync/ola-artnet.conf /var/lib/ola/conf/ola-artnet.conf");
-	// set audio to jack and hdmi
-	system("sudo /var/www/sync/setaudio_jack");
-	// set alsa volume to 100
-	system("sudo /var/www/sync/audioboost");
-	//system("sudo su - pvj -c 'amixer set Master 100%'");
-	//system("sudo su - pvj -c /usr/bin/amixer set 'PCM' 100%");
-	//system("sudo alsactl store");
-	//set ip on network scripts to match pvj current ip
-	system("sudo /var/www/sync/iprangeUpdatecall");
-	//remove filebrowser, if there is one
-	system("sudo rm -rf /var/www/filebrowser");
-	//install filebrowser from zip
-	system("sudo unzip /var/www/sync/filebrowser -d /");
-	//copy filebrowser daemon
-	system("sudo cp /var/www/filebrowser/filebrowser.service /etc/systemd/system/filebrowser.service");
-	//remove git history folder
-	system("sudo rm -rf /var/www/.git/ ");
-	//remove webflow junk
-	system("sudo rm -rf /var/www/icons/");
-	system("sudo rm -rf /var/www/fonts/");
-	system("sudo rm -rf /var/www/docs/");
-	system("sudo rm -rf /var/www/css/");
-	system("sudo rm -rf /var/www/images/");
-	system("sudo rm -rf /var/www/js/webflow.js");
-	//remove debs from sync since its moved to debs
-	system("sudo rm -rf /var/www/sync/python3-dbus_1.2.0-2+b1_armhf.deb");
-	system("sudo rm -rf /var/www/sync/libssh-4_armhf.deb");
-	system("sudo rm -rf /var/www/sync/omxplayer_0.3.7-git20170130-62fb580_armhf.deb");
-	system("sudo rm -rf /var/www/sync/omxplayer_0.3.7-git20160923-dfea8c9_armhf.deb");	
-	//fix permissions
-	system("sudo chmod 777 -R /media");
-	//fix the pjlink to new version
-	//create folder if not already present
-	system("mkdir /home/pvj/.local/share/pjlink");
-	//copy standard pjlink config file:
-	system("cp /var/www/sync/pjlink.conf /home/pvj/.local/share/pjlink/pjlink.conf");
-	// disable lirc service
-	system("sudo systemctl stop lircd");
-	system("sudo systemctl disable lircd");
-	system("sudo systemctl disable lircd.socket");
-	system("sudo systemctl disable lircmd.service");
-	system("sudo systemctl disable lircd-setup.service");
-	system("sudo systemctl disable lircd-uinput.service");
-	system("sudo systemctl stop irexec.service");
-	system("sudo systemctl disable irexec.service");
-	// install the new GPIO library
-	system("sudo dpkg -i /var/www/sync/debs/python3-spidev_20170223~145721-1_all.deb");
-	system("sudo dpkg -i /var/www/sync/debs/python3-gpiozero_1.5.0_all.deb");
-	system("sudo dpkg -i /var/www/sync/debs/python3-colorzero_1.1_all.deb");
-	system("sudo dpkg -i /var/www/sync/debs/python-spidev_20170223~145721-1_all.deb");
-	system("sudo dpkg -i /var/www/sync/debs/python-gpiozero_1.5.0_all.deb");
-	system("sudo dpkg -i /var/www/sync/debs/python-colorzero_1.1_all.deb");
-	//Text Output
-	$outputtext =  "Updated everything Controlpanel, Mapper, OMXPLAYER, Timer, Boot";
+	//update all script
+	$outputtext = shell_exec('sudo /var/www/sync/updateall');
 }
 
 if ($_GET['action'] == 'factoryreset') {
@@ -1644,6 +1517,9 @@ if ($_GET['action'] == 'factoryreset') {
 	system ("sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startdmxplaybackonce02b");
 	system ("sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startdmxplaybackonce03b");
 	system ("sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startdmxplaybackonce04b");
+	// Disaable logging
+	system("sudo service rsyslog stop");
+    system("sudo systemctl disable rsyslog");
 }
 
 // rental reset
@@ -1825,6 +1701,10 @@ if ($_GET['action'] == 'updatekernel') {
 
 if ($_GET['action'] == 'updateola') {
 	system ("sudo /var/www/sync/stopall > /dev/null 2>&1");
+	//stop ola before update
+	exec("sudo service olad stop");
+	exec("sudo update-rc.d olad disable");
+    exec("sudo killall -9 /usr/bin/olad");
 	$outputtext = system("sudo /var/www/sync/updateola");
 	//$outputtext =  "Updates ola";
 }

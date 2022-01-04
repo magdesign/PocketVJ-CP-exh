@@ -3,6 +3,9 @@
 #LED Blinking 
 /usr/bin/python /var/www/sync/ledblinking.py
 
+#Check that lighttpd can run and has its temp folder
+/var/www/sync/rescue &
+
 #mount usb (trying one of the 3 partitions)
 sudo mount /dev/sda /media/usb/
 sudo mount /dev/sda1 /media/usb/
@@ -10,6 +13,7 @@ sudo mount /dev/sda2 /media/usb/
 
 #wait
 sleep 1
+
 
 
 /var/www/sync/startmasterusb &

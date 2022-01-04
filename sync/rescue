@@ -1,0 +1,9 @@
+#! /bin/bash
+
+## makes sure that webserver can start
+
+if [[ ! -e /var/log/lighttpd ]]; then
+    sudo mkdir /var/log/lighttpd
+    sudo chown -R www-data:www-data /var/log/lighttpd/
+    sudo service lighttpd restart
+fi

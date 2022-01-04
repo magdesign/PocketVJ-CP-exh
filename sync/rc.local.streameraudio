@@ -2,6 +2,8 @@
 #LED Blinking 
 /usr/bin/python /var/www/sync/ledblinking.py
 
+#Check that lighttpd can run and has its temp folder
+/var/www/sync/rescue &
 
 sudo modprobe snd-aloop > /dev/null &
 sudo /opt/janus/bin/janus -F /opt/janus/etc/janus > /dev/null &

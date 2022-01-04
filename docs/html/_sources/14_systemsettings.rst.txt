@@ -61,9 +61,10 @@ Is for updating stuff.
 
 **Update All** is used to update via zipfile:
 
+
 see video tutorial:  https://video.pocketvj.com/AVideo/video/7/pocketvj-exhibition-update
 
-Always read the release notes, sometimes you need to do this 2x to get all new features.
+Always read the release notes, sometimes you need to do this 2x to get all new features (best to do it always 2x).
 
 or: https://video.pocketvj.com/AVideo/video/6/pocketvj-exhibition-alternative-update
 

@@ -28,3 +28,10 @@ be no warranty from my side if you burn the electronics!
 
 
 
+LITTLE COLORED SQUARE ON SCREEEN
+================================
+
+
+.. image:: _images/15_power_failure.png
+
+Power Supply is bad, you need 5V 3A Power!

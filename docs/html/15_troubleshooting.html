@@ -110,6 +110,7 @@
 <li class="toctree-l1"><a class="reference internal" href="14_systemsettings.html">SYSTEM SETTINGS</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">TROUBLESHOOTING</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#not-able-to-connect-cp-via-browser">Not able to connect CP via browser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#not-able-to-connect-cp-via-browser-2">Not able to connect CP via browser 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#trouble-connecting-to-wifi-hotspot-vj100-with-a-windows-computer"><strong>Trouble connecting to Wifi Hotspot (vj100) with a Windows Computer</strong></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#movie-plays-but-stutters">Movie plays, but stutters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#i-dont-get-an-ip-address-from-the-pocketvj">I dont get an IP address from the PocketVJ</a></li>
@@ -123,6 +124,7 @@
 <li class="toctree-l1"><a class="reference internal" href="16_irremote.html">IR REMOTE LIRC</a></li>
 <li class="toctree-l1"><a class="reference internal" href="17_power.html">POWER SUPPLY</a></li>
 <li class="toctree-l1"><a class="reference internal" href="17_power.html#direct-power">DIRECT POWER</a></li>
+<li class="toctree-l1"><a class="reference internal" href="17_power.html#little-colored-square-on-screeen">LITTLE COLORED SQUARE ON SCREEEN</a></li>
 <li class="toctree-l1"><a class="reference internal" href="18_content_creation.html">CREATE CONTENT</a></li>
 <li class="toctree-l1"><a class="reference internal" href="99_theend.html">END</a></li>
 </ul>
@@ -207,6 +209,20 @@
 <p>then all you have to do is to remove the  <a class="reference external" href="https://">https://</a> in the addressbar:</p>
 <img alt="_images/15_disable_https.png" src="_images/15_disable_https.png" />
 </div>
+<div class="section" id="not-able-to-connect-cp-via-browser-2">
+<h2>Not able to connect CP via browser 2<a class="headerlink" href="#not-able-to-connect-cp-via-browser-2" title="Permalink to this headline">¶</a></h2>
+<p>There is an edge scenario when the PocketVJ looses power while playing DMX Sequences causing the webserver (lighttpd) not to run anymore.
+To fix this, access it with ssh and do following</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">mkdir</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">log</span><span class="o">/</span><span class="n">lighttpd</span>
+<span class="n">sudo</span> <span class="n">chown</span> <span class="o">-</span><span class="n">R</span> <span class="n">www</span><span class="o">-</span><span class="n">data</span><span class="p">:</span><span class="n">www</span><span class="o">-</span><span class="n">data</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">log</span><span class="o">/</span><span class="n">lighttpd</span><span class="o">/</span>
+<span class="n">sudo</span> <span class="n">service</span> <span class="n">lighttpd</span> <span class="n">start</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>To check if the webserver is now running without errors ::</dt><dd><p>sudo service lighttpd status</p>
+</dd>
+</dl>
+</div>
 <div class="section" id="trouble-connecting-to-wifi-hotspot-vj100-with-a-windows-computer">
 <h2><strong>Trouble connecting to Wifi Hotspot (vj100) with a Windows Computer</strong><a class="headerlink" href="#trouble-connecting-to-wifi-hotspot-vj100-with-a-windows-computer" title="Permalink to this headline">¶</a></h2>
 <p>If your Windows10 does not allow to connect to the PocketVJ wifi (vj100), following steps might help:</p>
@@ -260,9 +276,9 @@ Also after plugging in some USB sticks. If there are many wireless devices in th
 <p><code class="docutils literal notranslate"><span class="pre">Default</span> <span class="pre">Gateway:</span> <span class="pre">192.168.2.1</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">DNS</span> <span class="pre">Server:</span> <span class="pre">192.168.2.1</span></code></p>
 <ul class="simple">
-<li><p>check this troubleshoot video: <a class="reference external" href="https://vimeo.com/379009854">https://vimeo.com/379009854</a></p></li>
 <li><p>make sure the computer which is connected to the PocketVJ CP is not connected to second network, for example RJ45 in your local network and wifi to PocketVJ, if this is the case, unplug rj45 until it finds the projector, then you can plug it in again.</p></li>
 <li><p>Get a list of standard passwords for projectors here: <a class="reference external" href="https://github.com/magdesign/PocketVJ-CP-v3/blob/master/projector_passwords.md">https://github.com/magdesign/PocketVJ-CP-v3/blob/master/projector_passwords.md</a></p></li>
+<li><p>Some projectors have broken firmware and can not be remotely powered on, test with other hardware before blaming me (sometimes powering off works!)</p></li>
 </ul>
 </div>
 <div class="section" id="audio-quality-is-bad-audio-glitches-or-stutters">

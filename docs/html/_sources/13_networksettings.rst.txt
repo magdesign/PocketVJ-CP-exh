@@ -18,8 +18,6 @@ CHANGE IP
 
 **RJ45 DHCP** => Sets the rj45 connection to dhcp to get the ip address from a router
 
-.. note::
-    The Wifi IP will always stay the same!
 
 
 REMOTE ACCESS

@@ -28,6 +28,22 @@ then all you have to do is to remove the  https:// in the addressbar:
 
 
 
+Not able to connect CP via browser 2
+************************************
+
+There is an edge scenario when the PocketVJ looses power while playing DMX Sequences causing the webserver (lighttpd) not to run anymore.
+To fix this, access it with ssh and do following ::
+
+ sudo mkdir /var/log/lighttpd
+ sudo chown -R www-data:www-data /var/log/lighttpd/
+ sudo service lighttpd start
+
+To check if the webserver is now running without errors ::
+    sudo service lighttpd status
+
+ 
+
+
 **Trouble connecting to Wifi Hotspot (vj100) with a Windows Computer**
 **********************************************************************
 
@@ -99,10 +115,9 @@ Remote “Power On Projector” does not work
 
 ``DNS Server: 192.168.2.1``
 
-- check this troubleshoot video: https://vimeo.com/379009854
 - make sure the computer which is connected to the PocketVJ CP is not connected to second network, for example RJ45 in your local network and wifi to PocketVJ, if this is the case, unplug rj45 until it finds the projector, then you can plug it in again.
 - Get a list of standard passwords for projectors here: https://github.com/magdesign/PocketVJ-CP-v3/blob/master/projector_passwords.md
-
+- Some projectors have broken firmware and can not be remotely powered on, test with other hardware before blaming me (sometimes powering off works!)
 
 
 **Audio quality is Bad, Audio glitches or stutters**

@@ -129,7 +129,7 @@
 
 	# Disaable logging
 	sudo service rsyslog stop
-    sudo systemctl disable rsyslog
+	sudo systemctl disable rsyslog
 
 	#Text Output
 	echo "Updated everything Controlpanel, Mapper, OMXPLAYER, Timer, Boot"

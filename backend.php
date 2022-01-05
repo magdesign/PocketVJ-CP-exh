@@ -1378,11 +1378,13 @@ if ($_GET['action'] == 'permissionfixer') {
 
 if ($_GET['action'] == 'reboot') {
 	$outputtext =  "rebooting now!";
+	system ("sudo /var/www/sync/stopall > /dev/null 2>&1");
 	system("sudo reboot");
 }
 
 if ($_GET['action'] == 'shutdown') {
 	$outputtext =  "shutting down";
+	system ("sudo /var/www/sync/stopall > /dev/null 2>&1");
 	system("sudo poweroff");
 }
 

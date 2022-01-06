@@ -1,5 +1,10 @@
 # PocketVJ Exhibition / Control Panel 4.x.x
 
+## CP 4.3.0a 06.01.2022
+
+- resolution change now works without reboot<p/>
+- added stopall command to reboot and poweroff to prevent sd card corruption<p/>
+
 ## CP 4.3.0 04.01.2022
 
 - changed layout in DMX tab, so recording does not show up in the beginning (client feedback)<br />

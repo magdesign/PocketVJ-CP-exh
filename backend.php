@@ -1168,7 +1168,7 @@ if ($_GET['action'] == 'iplan') {
 	$outputtext = wordwrap($preoutputtext, 40, "<br />\n");
 }
 
-//# Set Boot.conf resolution
+//# Set Boot.conf resolution and try to force resolution without reboot
 
 if ($_GET['action'] == 'bootconf') {
 	$outputtext =  "custom boot conf to boot";
@@ -1181,52 +1181,94 @@ if ($_GET['action'] == 'bootconfusb') {
 }
 
 if ($_GET['action'] == 'hdmireset') {
-	$outputtext =  "reset resolution settings";
+	$outputtext =  "reset resolution settings, needs reboot!";
 	system("sudo cp /var/www/sync/defaulthdmi /boot/config.txt");
 }
 
 if ($_GET['action'] == 'hdmi1') {
-	$outputtext =  "forced to use 1024x768";
+	system("sudo /var/www/sync/stopall > /dev/null 2>&1");
 	system("sudo cp /var/www/sync/forcehdmi1 /boot/config.txt");
+	system("sudo tvservice --off");
+	system("sudo tvservice -e 'DMT 16 DVI'");
+	system("sudo chvt 2");
+	system("sudo chvt 1");
+	system("sudo fbset -g 1024 768 1024 768 32");
+	$outputtext =  "forced to use 1024x768";	
 }
 
 if ($_GET['action'] == 'hdmi4') {
-	$outputtext =  "forced to use hdmi 1280x720";
+	system("sudo /var/www/sync/stopall > /dev/null 2>&1");
 	system("sudo cp /var/www/sync/forcehdmi4 /boot/config.txt");
+	system("sudo tvservice --off");
+	system("sudo tvservice -e 'CEA 19 DVI'");
+	system("sudo chvt 2");
+	system("sudo chvt 1");
+	system("sudo fbset -g 1280 720 1280 720 32");
+	$outputtext =  "forced to use hdmi 1280x720";
 }
 
 if ($_GET['action'] == 'hdmi5') {
-	$outputtext =  "forced to 1920x1080";
+	system("sudo /var/www/sync/stopall > /dev/null 2>&1");
 	system("sudo cp /var/www/sync/forcehdmi5 /boot/config.txt");
+	system("sudo tvservice --off");
+	system("sudo tvservice -e 'CEA 31 DVI'");
+	system("sudo chvt 2");
+	system("sudo chvt 1");
+	system("sudo fbset -g 1920 1080 1920 1080 32");
+	$outputtext =  "forced to 1920x1080";
 }
 
 if ($_GET['action'] == 'hdmi6') {
-	$outputtext =  "forced to 1280x800";
+	system("sudo /var/www/sync/stopall > /dev/null 2>&1");
 	system("sudo cp /var/www/sync/forcehdmi6 /boot/config.txt");
+	system("sudo tvservice --off");
+	system("sudo tvservice -e 'DMT 28 DVI'");
+	system("sudo chvt 2");
+	system("sudo chvt 1");
+	system("sudo fbset -g 1280 800 1280 800 32");
+	$outputtext =  "forced to 1280x800";
 }
 
 if ($_GET['action'] == 'forcevga') {
-	$outputtext =  "force 800x600";
+	system("sudo /var/www/sync/stopall > /dev/null 2>&1");
 	system("sudo cp /var/www/sync/forcevga /boot/config.txt");
+	system("sudo tvservice --off");
+	system("sudo tvservice -e 'DMT 9 DVI'");
+	system("sudo chvt 2");
+	system("sudo chvt 1");
+	system("sudo fbset -g 800 600 800 600 32");
+	$outputtext =  "force 800x600";
 }
 
 if ($_GET['action'] == 'force1680') {
-	$outputtext =  "force 1680 x 1050 rgb";
+	system("sudo /var/www/sync/stopall > /dev/null 2>&1");
 	system("sudo cp /var/www/sync/force1680 /boot/config.txt");
+	system("sudo tvservice --off");
+	system("sudo tvservice -e 'DMT 58 DVI'");
+	system("sudo chvt 2");
+	system("sudo chvt 1");
+	system("sudo fbset -g 1680 1050 1680 1050 32");
+	$outputtext =  "force 1680 x 1050 rgb";
 }
 
 if ($_GET['action'] == 'force1200') {
-	$outputtext =  "forced to 1920 x 1200 rgb";
+	system("sudo /var/www/sync/stopall > /dev/null 2>&1");
 	system("sudo cp /var/www/sync/force1200 /boot/config.txt");
+	system("sudo tvservice --off");
+	system("sudo tvservice -e 'DMT 51 DVI'");
+	system("sudo chvt 2");
+	system("sudo chvt 1");
+	system("sudo fbset -g 1920 1200 1920 1200 32");
+	$outputtext =  "forced to 1920 x 1200 rgb";
 }
 
 if ($_GET['action'] == 'analog1') {
-	$outputtext =  "force RCA PAL output";
+	$outputtext =  "force RCA PAL output, needs reboot";
 	system("sudo cp /var/www/sync/analog1 /boot/config.txt");
 }
 
 if ($_GET['action'] == 'analog2') {
-	$outputtext =  "force RCA NTSC output";
+	$outputtext =  "force RCA NTSC output, needs reboot";
 	system("sudo cp /var/www/sync/analog2 /boot/config.txt");
 }
 
@@ -1259,32 +1301,32 @@ if ($_GET['action'] == 'screenoff') {
 
 if ($_GET['action'] == 'rotate0') {
 	system("sudo sed -ri 's/^display_rotate=.+$/display_rotate=0/' /boot/config.txt");
-	$outputtext =  "Display Rotation = Normal";
+	$outputtext =  "Display Rotation = Normal, needs reboot";
 }
 
 if ($_GET['action'] == 'rotate1') {
 	system("sudo sed -ri 's/^display_rotate=.+$/display_rotate=1/' /boot/config.txt");
-	$outputtext =  "Display Rotation = 90°";
+	$outputtext =  "Display Rotation = 90°, needs reboot";
 }
 
 if ($_GET['action'] == 'rotate2') {
 	system("sudo sed -ri 's/^display_rotate=.+$/display_rotate=2/' /boot/config.txt");
-	$outputtext =  "Display Rotation = 180°";
+	$outputtext =  "Display Rotation = 180°, needs reboot";
 }
 
 if ($_GET['action'] == 'rotate3') {
 	system("sudo sed -ri 's/^display_rotate=.+$/display_rotate=3/' /boot/config.txt");
-	$outputtext =  "Display Rotation = 270°";
+	$outputtext =  "Display Rotation = 270°, needs reboot";
 }
 
 if ($_GET['action'] == 'flip1') {
 	system("sudo sed -ri 's/^display_rotate=.+$/display_rotate=0x10000/' /boot/config.txt");
-	$outputtext =  "Display Flip Horizontally";
+	$outputtext =  "Display Flip Horizontally, needs reboot";
 }
 
 if ($_GET['action'] == 'flip2') {
 	system("sudo sed -ri 's/^display_rotate=.+$/display_rotate=0x20000/' /boot/config.txt");
-	$outputtext =  "Display Flip Vertically";
+	$outputtext =  "Display Flip Vertically, needs reboot";
 }
 
 //# Display Info

@@ -20,10 +20,10 @@ INFO
 RESOLUTION
 ************
 
-**Default** => Everytime we boot, we ask the attached device for the resolution
+**Default** => Everytime we boot, we ask the attached device for the biggest possible resolution and use this (this is the default setting)
 
 
-**1920 x 1080** => Force the PocketVJ to always output in this resolution (needs reboot)
+**1920 x 1080** => Force the PocketVJ to always output in this resolution (needs reboot, no reboot needed since CP 4.3.0a)
 
 .. note::
     - Mapper will only work up to 1920 x 1080 resolution and default flip setting

@@ -4,6 +4,7 @@
 
 - resolution change now works without reboot<p/>
 - added stopall command to reboot and poweroff to prevent sd card corruption<p/>
+- fix little error in updateall script to disable logging<p/>
 
 ## CP 4.3.0 04.01.2022
 

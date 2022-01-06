@@ -15,7 +15,7 @@
         echo "files unzipped, going to install..."
     ### OMXPLAYER
 	#Update omxplayer and sync
-	sudo apt-get remove omxplayer
+	sudo apt-get -y remove omxplayer
 	rm -rf /usr/bin/omxplayer /usr/bin/omxplayer.bin /usr/lib/omxplayer
 	rm -f /usr/bin/omxplayer-sync
 	rm -f /usr/bin/dbuscontrol.sh
@@ -23,7 +23,7 @@
 	# install omxplayer dependencies
   	#sudo dpkg -i /var/www/sync/debs/python3-dbus_1.2.0-2+b1_armhf.deb
 	sudo dpkg -i /var/www/sync/debs/python3-dbus_1.2.4-1_armhf.deb
-	sudo dpkg -i /var/www/sync/debs/libssh-4_0.6.3-4+deb8u2_armhf.deb
+	sudo dpkg -i /var/www/sync/debs/libssh-4_armhf.deb
 	#install new omxplayer version:
 	#sudo dpkg -i /var/www/sync/debs/omxplayer_20190607+gitf06235c-1_armhf.deb
 	sudo dpkg -i /var/www/sync/debs/omxplayer_20180910_7f3faf6_stretch_armhf.deb

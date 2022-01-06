@@ -109,11 +109,12 @@
 <li class="toctree-l1"><a class="reference internal" href="13_networksettings.html">NETWORK SETTINGS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="14_systemsettings.html">SYSTEM SETTINGS</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">TROUBLESHOOTING</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#i-dont-get-an-ip-address-from-the-pocketvj">I dont get an IP address from the PocketVJ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#not-able-to-connect-cp-via-browser">Not able to connect CP via browser</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#not-able-to-connect-cp-via-browser-2">Not able to connect CP via browser 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#not-able-to-connect-cp-via-browser-2">Not able to connect CP via browser (2)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#not-able-to-connect-cp-via-browser-and-not-getting-any-ip-from-wifi-connection">Not able to connect CP via browser and not getting any IP from wifi connection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#trouble-connecting-to-wifi-hotspot-vj100-with-a-windows-computer"><strong>Trouble connecting to Wifi Hotspot (vj100) with a Windows Computer</strong></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#movie-plays-but-stutters">Movie plays, but stutters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#i-dont-get-an-ip-address-from-the-pocketvj">I dont get an IP address from the PocketVJ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#movie-is-not-playing">Movie is not playing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#connected-several-pocketvjs-over-a-router">Connected several PocketVJs over a router</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#remote-power-on-projector-does-not-work">Remote “Power On Projector” does not work</a></li>
@@ -198,6 +199,17 @@
 <span id="id1"></span><h1>TROUBLESHOOTING<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h1>
 <p><strong>Get help online:</strong> <a class="reference external" href="https://github.com/magdesign/PocketVJ-CP-exh/issues">https://github.com/magdesign/PocketVJ-CP-exh/issues</a></p>
 <p>There will always be a solution :-)</p>
+<div class="section" id="i-dont-get-an-ip-address-from-the-pocketvj">
+<h2>I dont get an IP address from the PocketVJ<a class="headerlink" href="#i-dont-get-an-ip-address-from-the-pocketvj" title="Permalink to this headline">¶</a></h2>
+<p>=&gt; Be patient, try again.</p>
+<p>If this does not help, read further in this section, it might get a bit complicated…</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Sometimes there are power peaks which can cause that the Wifi signal is not strong enough.
+Known are some issues with Hdmi to VGA adapters with old VGA devices who suck a lot of power.
+Also after plugging in some USB sticks. If there are many wireless devices in the room, change the wifi channel, since most units use channel 6 as standard.</p>
+</div>
+</div>
 <div class="section" id="not-able-to-connect-cp-via-browser">
 <h2>Not able to connect CP via browser<a class="headerlink" href="#not-able-to-connect-cp-via-browser" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
@@ -210,7 +222,7 @@
 <img alt="_images/15_disable_https.png" src="_images/15_disable_https.png" />
 </div>
 <div class="section" id="not-able-to-connect-cp-via-browser-2">
-<h2>Not able to connect CP via browser 2<a class="headerlink" href="#not-able-to-connect-cp-via-browser-2" title="Permalink to this headline">¶</a></h2>
+<h2>Not able to connect CP via browser (2)<a class="headerlink" href="#not-able-to-connect-cp-via-browser-2" title="Permalink to this headline">¶</a></h2>
 <p>There is an edge scenario when the PocketVJ looses power while playing DMX Sequences causing the webserver (lighttpd) not to run anymore.
 To fix this, access it with ssh and do following</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">mkdir</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">log</span><span class="o">/</span><span class="n">lighttpd</span>
@@ -222,6 +234,19 @@ To fix this, access it with ssh and do following</p>
 <dt>To check if the webserver is now running without errors ::</dt><dd><p>sudo service lighttpd status</p>
 </dd>
 </dl>
+</div>
+<div class="section" id="not-able-to-connect-cp-via-browser-and-not-getting-any-ip-from-wifi-connection">
+<h2>Not able to connect CP via browser and not getting any IP from wifi connection<a class="headerlink" href="#not-able-to-connect-cp-via-browser-and-not-getting-any-ip-from-wifi-connection" title="Permalink to this headline">¶</a></h2>
+<p>In rare cases, when you poweroff or reboot the PocketVJ while there are still things playing (especially mapping sync or dmx shows),
+it gets a read/write error on the internal SD card. There is no other way to fix this than opening your PocketVJ, remove the sd card,
+boot a computer with Linux (if you have no Linux computer, download an Ubuntu live Image (<a class="reference external" href="https://ubuntu.com/download/desktop">https://ubuntu.com/download/desktop</a>) and boot into this), insert the SD card,
+open the program called: “Gparted” and click Check &amp; Repair filesystem. After done so, insert the SD card back into PocketVJ and it will run again.
+I know its much, but it might bring your device back to life.</p>
+<img alt="_images/15_troubleshoot_diskfix.png" src="_images/15_troubleshoot_diskfix.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Do not try to fix the SD card with a Windows or OSX computer, this will completely break your system and you need to get warranty replacement card from me</p>
+</div>
 </div>
 <div class="section" id="trouble-connecting-to-wifi-hotspot-vj100-with-a-windows-computer">
 <h2><strong>Trouble connecting to Wifi Hotspot (vj100) with a Windows Computer</strong><a class="headerlink" href="#trouble-connecting-to-wifi-hotspot-vj100-with-a-windows-computer" title="Permalink to this headline">¶</a></h2>
@@ -235,16 +260,6 @@ To fix this, access it with ssh and do following</p>
 <h2>Movie plays, but stutters<a class="headerlink" href="#movie-plays-but-stutters" title="Permalink to this headline">¶</a></h2>
 <p>=&gt; Check if it is really a h.264 compressed movie.
 =&gt; Go to <strong>SYSTEM SETTINGS</strong> click <strong>Powersupply</strong> and check the message.</p>
-</div>
-<div class="section" id="i-dont-get-an-ip-address-from-the-pocketvj">
-<h2>I dont get an IP address from the PocketVJ<a class="headerlink" href="#i-dont-get-an-ip-address-from-the-pocketvj" title="Permalink to this headline">¶</a></h2>
-<p>=&gt; Be patient, try again.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Sometimes there are power peaks which can cause that the Wifi signal is not strong enough.
-Known are some issues with Hdmi to VGA adapters with old VGA devices who suck a lot of power.
-Also after plugging in some USB sticks. If there are many wireless devices in the room, change the wifi channel, since most units use channel 6 as standard.</p>
-</div>
 </div>
 <div class="section" id="movie-is-not-playing">
 <h2>Movie is not playing<a class="headerlink" href="#movie-is-not-playing" title="Permalink to this headline">¶</a></h2>

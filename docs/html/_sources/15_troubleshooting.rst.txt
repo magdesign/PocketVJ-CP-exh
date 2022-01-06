@@ -9,6 +9,20 @@ TROUBLESHOOTING
 There will always be a solution :-)
 
 
+
+I dont get an IP address from the PocketVJ
+******************************************
+=> Be patient, try again.
+
+
+If this does not help, read further in this section, it might get a bit complicated...
+
+.. note::
+    Sometimes there are power peaks which can cause that the Wifi signal is not strong enough.
+    Known are some issues with Hdmi to VGA adapters with old VGA devices who suck a lot of power.
+    Also after plugging in some USB sticks. If there are many wireless devices in the room, change the wifi channel, since most units use channel 6 as standard.
+
+
 Not able to connect CP via browser
 ***********************************
 
@@ -28,8 +42,8 @@ then all you have to do is to remove the  https:// in the addressbar:
 
 
 
-Not able to connect CP via browser 2
-************************************
+Not able to connect CP via browser (2)
+**************************************
 
 There is an edge scenario when the PocketVJ looses power while playing DMX Sequences causing the webserver (lighttpd) not to run anymore.
 To fix this, access it with ssh and do following ::
@@ -41,7 +55,21 @@ To fix this, access it with ssh and do following ::
 To check if the webserver is now running without errors ::
     sudo service lighttpd status
 
- 
+
+
+Not able to connect CP via browser and not getting any IP from wifi connection
+*******************************************************************************
+
+In rare cases, when you poweroff or reboot the PocketVJ while there are still things playing (especially mapping sync or dmx shows),
+it gets a read/write error on the internal SD card. There is no other way to fix this than opening your PocketVJ, remove the sd card,
+boot a computer with Linux (if you have no Linux computer, download an Ubuntu live Image (https://ubuntu.com/download/desktop) and boot into this), insert the SD card, 
+open the program called: "Gparted" and click Check & Repair filesystem. After done so, insert the SD card back into PocketVJ and it will run again.
+I know its much, but it might bring your device back to life.
+
+.. image:: _images/15_troubleshoot_diskfix.png
+
+.. note::
+    Do not try to fix the SD card with a Windows or OSX computer, this will completely break your system and you need to get warranty replacement card from me
 
 
 **Trouble connecting to Wifi Hotspot (vj100) with a Windows Computer**
@@ -68,17 +96,6 @@ Movie plays, but stutters
 => Go to **SYSTEM SETTINGS** click **Powersupply** and check the message.
 
 
-I dont get an IP address from the PocketVJ
-******************************************
-=> Be patient, try again.
-
-
-
-
-.. note::
-    Sometimes there are power peaks which can cause that the Wifi signal is not strong enough.
-    Known are some issues with Hdmi to VGA adapters with old VGA devices who suck a lot of power.
-    Also after plugging in some USB sticks. If there are many wireless devices in the room, change the wifi channel, since most units use channel 6 as standard.
 
 
 Movie is not playing

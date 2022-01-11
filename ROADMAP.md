@@ -10,6 +10,7 @@
 <p/>
 
 ## Next to come:
+- implement gif player: https://github.com/chidea/FBpyGIF<p/>
 - make a cue loop function for dmx, e.g. ola_recorder --playback show01 --duration 30 --start 1000 --stop 10000 [see here](https://docs.openlighting.org/ola/man/man1/ola_recorder.1.html?__cf_chl_managed_tk__=pmd_uykauhsGehEgHY7kTiCowqZB00Kn7FrmfgCjXOfF_J0-1635233352-0-gqNtZGzNAxCjcnBszQh9)<p/>
 - Update Everything => check olad version, if not 0.10.7, update this as well..... <p/>
 - disable swap space, free performance <p/>

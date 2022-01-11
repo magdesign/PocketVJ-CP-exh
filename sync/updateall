@@ -1,18 +1,18 @@
 #! /bin/bash
 
 	#stop everything
-	sudo /var/www/sync/stopall > /dev/null 2>&1
+	#sudo /var/www/sync/stopall > /dev/null 2>&1
 
 	# chmod everything, not sure if this is need when update does not work
-	sudo chmod 755 -R /var/www/
+	# sudo chmod 755 -R /var/www/
 
-	#unpack zip and Update CP, (add variable with if .zip is present)
-	sudo unzip /media/internal/PocketVJ-CP-exh.zip -d /media/internal/
-	sudo cp -r /media/internal/PocketVJ-CP-exh/* /var/www/
-	sudo chmod 755 -R /var/www/
-	sudo rm -rf /media/internal/PocketVJ-CP-exh.zip
-	sudo rm -rf /media/internal/PocketVJ-CP-exh
-        echo "files unzipped, going to install..."
+	# #unpack zip and Update CP, (add variable with if .zip is present)
+	# sudo unzip /media/internal/PocketVJ-CP-exh.zip -d /media/internal/
+	# sudo cp -r /media/internal/PocketVJ-CP-exh/* /var/www/
+	# sudo chmod 755 -R /var/www/
+	# sudo rm -rf /media/internal/PocketVJ-CP-exh.zip
+	# sudo rm -rf /media/internal/PocketVJ-CP-exh
+    echo "files unzipped, going to install..."
     ### OMXPLAYER
 	#Update omxplayer and sync
 	sudo apt-get -y remove omxplayer

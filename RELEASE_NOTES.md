@@ -1,5 +1,11 @@
 # PocketVJ Exhibition / Control Panel 4.x.x
 
+
+## CP 4.3.0b 11.01.2022
+
+- fixed updateall so you dont have to do it 2x, first copying stuff, then executing<br />
+
+
 ## CP 4.3.0a 06.01.2022
 
 - resolution change now works without reboot<p/>

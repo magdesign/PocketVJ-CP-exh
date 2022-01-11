@@ -1481,6 +1481,16 @@ if ($_GET['action'] == 'mapperupdatehdmi') {
 
 if ($_GET['action'] == 'updateall') {
 	//update all script
+	//stop everything
+	system ("sudo /var/www/sync/stopall > /dev/null 2>&1");
+	// chmod everything, not sure if this is need when update does not work
+	system("sudo chmod 755 -R /var/www/");
+	//Update CP
+	system("sudo unzip /media/internal/PocketVJ-CP-exh.zip -d /media/internal/");
+	system("sudo cp -r /media/internal/PocketVJ-CP-exh/* /var/www/");
+	system("sudo chmod 755 -R /var/www/");
+	system("sudo rm -rf /media/internal/PocketVJ-CP-exh.zip");
+	system("sudo rm -rf /media/internal/PocketVJ-CP-exh");
 	$outputtext = shell_exec('sudo /var/www/sync/updateall');
 }
 

@@ -59,7 +59,7 @@
                 <div class="col d-flex justify-content-end">
                     <div class="row">
                         <div class="col">
-                            <p class="text-center" id="version_text" style="font-weight: normal;padding-top: 12px;color: rgb(0,0,0);">CP 4.3.0b<br><a href="https://github.com/magdesign/PocketVJ-CP-exh/issues" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help_issue.svg" style="text-align: right;padding: 8px;max-width: 60%;width: 40px;" data-toggle="tooltip" title="issues"></a><a href="/docs/html/index.html" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help.svg" style="text-align: right;padding: 8px;max-width: 60%;width: 40px;" data-toggle="tooltip" title="read the f**king docs!"></a><br></p>
+                            <p class="text-center" id="version_text" style="font-weight: normal;padding-top: 12px;color: rgb(0,0,0);">CP 4.3.1<br><a href="https://github.com/magdesign/PocketVJ-CP-exh/issues" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help_issue.svg" style="text-align: right;padding: 8px;max-width: 60%;width: 40px;" data-toggle="tooltip" title="issues"></a><a href="/docs/html/index.html" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help.svg" style="text-align: right;padding: 8px;max-width: 60%;width: 40px;" data-toggle="tooltip" title="read the f**king docs!"></a><br></p>
                         </div>
                     </div>
                 </div>
@@ -2207,7 +2207,7 @@ elem2.addEventListener("input", range2Value);
                                     <h2>PROJECTOR IR</h2>
                                     <div class="col colforbutton"><a class="btn btn-danger action" role="button" href="?action=beameronir" data-toggle="tooltip" title="Beamer ON IR">ON</a></div>
                                     <div class="col colforbutton">
-                                        <p>read the user manual for this!<br><br></p>
+                                        <p>read the user manual!<br><br></p>
                                     </div>
                                 </div>
                             </div>
@@ -2217,6 +2217,39 @@ elem2.addEventListener("input", range2Value);
                                     <div class="col colforbutton"><a class="btn btn-danger action" role="button" href="?action=beameroffir" data-toggle="tooltip" title="Beamer OFF IR">OFF</a></div>
                                     <div class="col colforbutton">
                                         <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <h2>&nbsp;</h2>
+                                <div>
+                                    <div class="col colforbutton"></div>
+                                    <div class="col colforbutton"></div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <h3>&nbsp;</h3>
+                                <div>
+                                    <div class="col colforbutton"></div>
+                                    <div class="col colforbutton"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row no-gutters row-cols-2 row-cols-lg-4" style="margin-right: -15px;margin-left: -15px;background: #972c2c;">
+                            <div class="col">
+                                <div>
+                                    <h2>HYPERION LED</h2>
+                                    <div class="col colforbutton"><a class="btn btn-danger action" role="button" href="?action=hyperionenable">enable Hyperion</a></div>
+                                    <div class="col colforbutton"><a class="btn btn-danger action" role="button" data-toggle="tooltip" title="open Hyperion panel" onclick="window.open(`//${window.location.hostname}:8090`)" target="_blank">Open Panel</a></div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div>
+                                    <h3>&nbsp;</h3>
+                                    <div class="col colforbutton"><a class="btn btn-danger action" role="button" href="?action=hyperiondisable">disable Hyperion</a></div>
+                                    <div class="col colforbutton">
+                                        <p></p>
+                                        <p>.</p>
                                     </div>
                                 </div>
                             </div>
@@ -2518,6 +2551,7 @@ elem2.addEventListener("input", range2Value);
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="" href="?action=updateola">Update OLA<br></a></div>
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="install pygame for countdown" href="?action=installpygame">install pyGame<br></a></div>
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="install Bluetooth" href="?action=installbluetooth">install bluetooth<br></a></div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="install Bluetooth" href="?action=installbluetooth">install bluetooth<br></a></div>
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="to fix clock on first generation PVJs" href="?action=fixclock">fix RTC bug<br></a></div>
                                 </div>
                             </div>
@@ -2526,9 +2560,7 @@ elem2.addEventListener("input", range2Value);
                                     <h3>&nbsp;</h3>
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="" href="?action=factoryreset">Factory Reset<br></a></div>
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="delets all content, resets to delivery state" href="?action=rentalreset">Rental Reset<br></a></div>
-                                    <div class="col colforbutton">
-                                        <h3>&nbsp;</h3>
-                                    </div>
+                                    <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="install Bluetooth" href="?action=installhyperion">install Hyperion<br></a></div>
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="remove all Bluetooth drivers (takes a moment!)" href="?action=removebluetooth">remove bluetooth<br></a></div>
                                     <div class="col colforbutton"></div>
                                 </div>
@@ -2690,7 +2722,6 @@ setInterval(run, 3000);
         });
     });
     </script>
-
 
 </body>
 

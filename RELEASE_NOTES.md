@@ -1,6 +1,12 @@
 # PocketVJ Exhibition / Control Panel 4.x.x
 
 
+
+## CP 4.3.1 14.01.2022
+
+- added hyperion (and all debs) for led strip ambient lights<br />
+- fixed an issue  in enable lirc<br />
+
 ## CP 4.3.0b 11.01.2022
 
 - fixed updateall so you dont have to do it 2x, first copying stuff, then executing<br />

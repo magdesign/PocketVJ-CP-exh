@@ -14,7 +14,7 @@ WIFI="$(ifconfig | grep -o wlan0)"
 REMOTE_ACCESS="$(systemctl is-active openvpn.service)"
 POWER="$(sudo /var/www/sync/powersupply)"
 #SCHEDULER="$(sudo -u root crontab -l | grep -o 'no crontab for root' )"
-
+HYPERION="$(systemctl is-active hyperion@root.service)"
 
 #infrared
 if [ "${LIRCD}" = "active" ]; then
@@ -85,6 +85,15 @@ if [ "${REMOTE_ACCESS}" = "active" ]; then
 else
     echo "REMOTE ACCESS = off"
 fi
+
+#hyperion led
+if [ "${HYPERION}" = "active" ]; then
+    echo "HYPERION = on"
+fi
+if [ "${HYPERION}" = "inactive" ]; then
+    echo "HYPERION = off"
+fi
+
 
 #Power
 echo POWER = "${POWER}" 

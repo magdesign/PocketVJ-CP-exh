@@ -1,0 +1,33 @@
+#!/bin/bash
+
+#this installs hyperion and its dependencies
+
+sudo apt-get install -y /var/www/sync/deb/libavahi-core-dev_0.6.32-2_armhf.deb
+sudo apt-get install -y /var/www/sync/deb/libjpeg62-turbo_1%3a1.5.1-2+deb9u1_armhf.deb
+sudo apt-get install -y /var/www/sync/deb/libjpeg62-turbo-dev_1%3a1.5.1-2+deb9u1_armhf.deb
+sudo apt-get install -y /var/www/sync/deb/libjpeg-dev_1%3a1.5.1-2+deb9u1_all.deb
+sudo apt-get install -y /var/www/sync/deb/libqt5concurrent5_5.7.1+dfsg-3+rpi1+deb9u3_armhf.deb
+sudo apt-get install -y /var/www/sync/deb/libqt5core5a_5.7.1+dfsg-3+rpi1+deb9u3_armhf.deb
+sudo apt-get install -y /var/www/sync/deb/libqt5dbus5_5.7.1+dfsg-3+rpi1+deb9u3_armhf.deb
+sudo apt-get install -y /var/www/sync/deb/libqt5gui5_5.7.1+dfsg-3+rpi1+deb9u3_armhf.deb
+sudo apt-get install -y /var/www/sync/deb/libqt5network5_5.7.1+dfsg-3+rpi1+deb9u3_armhf.deb
+sudo apt-get install -y /var/www/sync/deb/libqt5opengl5_5.7.1+dfsg-3+rpi1+deb9u3_armhf.deb
+sudo apt-get install -y /var/www/sync/deb/libqt5opengl5-dev_5.7.1+dfsg-3+rpi1+deb9u3_armhf.deb
+sudo apt-get install -y /var/www/sync/deb/libqt5printsupport5_5.7.1+dfsg-3+rpi1+deb9u3_armhf.deb
+sudo apt-get install -y /var/www/sync/deb/libqt5serialport5-dev_5.7.1~20161021-2_armhf.deb
+sudo apt-get install -y /var/www/sync/deb/libqt5sql5_5.7.1+dfsg-3+rpi1+deb9u3_armhf.deb
+sudo apt-get install -y /var/www/sync/deb/libqt5test5_5.7.1+dfsg-3+rpi1+deb9u3_armhf.deb
+sudo apt-get install -y /var/www/sync/deb/libqt5widgets5_5.7.1+dfsg-3+rpi1+deb9u3_armhf.deb
+sudo apt-get install -y /var/www/sync/deb/libqt5xml5_5.7.1+dfsg-3+rpi1+deb9u3_armhf.deb
+sudo apt-get install -y /var/www/sync/deb/qt5-gtk-platformtheme_5.7.1+dfsg-3+rpi1+deb9u3_armhf.deb
+sudo apt-get install -y /var/www/sync/deb/qt5-qmake_5.7.1+dfsg-3+rpi1+deb9u3_armhf.deb
+sudo apt-get install -y /var/www/sync/deb/qtbase5-dev_5.7.1+dfsg-3+rpi1+deb9u3_armhf.deb
+sudo apt-get install -y /var/www/sync/deb/qtbase5-dev-tools_5.7.1+dfsg-3+rpi1+deb9u3_armhf.deb
+
+
+sudo apt-get install -y /var/www/sync/debs/Hyperion-2.0.12-Linux-armv7l.deb
+
+
+echo Yes | sudo updateHyperionUser -u root
+
+exit 0

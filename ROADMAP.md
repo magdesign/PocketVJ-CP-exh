@@ -22,7 +22,6 @@
 
 - move, rotate, scale images interactive => I do this via dmx/artnet => png gobo player<p/>
 - when leaving VNC mode, presenter is not working correctly, fix this! <p/>
-- function to directly drive LED stripes via [PWM](https://tutorials-raspberrypi.com/connect-control-raspberry-pi-ws2812-rgb-led-strips/) from the expansion board <p/>
 - limit IP input to IP adresses only, no text etc. how do I do that??  <p/>
 - when accessed over the internet, the ola panel is not visible, check how to handle ports with the remote, currently you can ask via mail for another port link..   <p/>
 - playlist feature to play dmx/video01 and afterwards 02 and so on, tricky bit will be to gather the end of the file audio or dmx end counts?...   <p/>
@@ -52,7 +51,6 @@
 - Automount and connect to usb lte modems for remote internet, tricky since each brand is different<p/>
 - Complete authors file, will this ever happen, there are soooo many people involved<p/>
 - read color from video and create dmx fixture for it: https://github.com/MadSciLabs/ofxDmxUtils  https://github.com/pixout/PixView https://github.com/hzeller/rpi-rgb-led-matrix <p/>
-- maybe just convert rgb value to CH1-255,value 0-255, so the reader must convert [float to byte](https://stackoverflow.com/questions/1914115/converting-color-value-from-float-0-1-to-byte-0-255/46575472), reading color in rgb would use 3 dmx channels, r,g,b, then we would need to define a square to read from (which will be our movie later.).
 	[create a pyton script](https://www.openlighting.org/ola/developer-documentation/python-api/) to send 'ola_set_dmx --universe 1 --dmx 0,0,0,0,0,0,0,0,0,0,' create a structure (fixture control) or fork from somewhere..<p/>
 - send video to framebuffer and make the reading there, like a screenshot https://gist.github.com/Darfk/5790622, use mplayer to stream to image sequence mplayer mf://*.jpg<p/>
 - maybe this would also enable to [capture running screen](https://github.com/BoboTiG/python-mss)<p/>

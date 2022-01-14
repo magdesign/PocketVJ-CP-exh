@@ -1329,6 +1329,39 @@ if ($_GET['action'] == 'flip2') {
 	$outputtext =  "Display Flip Vertically, needs reboot";
 }
 
+
+//Hyperion
+
+if ($_GET['action'] == 'hyperionenable') {
+	$outputtext =  "enable hyperion led";
+	system("systemctl start hyperion@root.service");
+	system("systemctl enable hyperion@.service");
+	//enable also in boot/config.txt
+	system("sudo sed -ri 's/^#dtparam=spi=.+$/dtparam=spi=on/' /boot/config.txt");
+	//enable in all resolution scripts
+	system("sudo sed -ri 's/^#dtparam=spi=.+$/dtparam=spi=on/' /var/www/sync/defaulthdmi");
+	system("sudo sed -ri 's/^#dtparam=spi=.+$/dtparam=spi=on/' /var/www/sync/forcehdmi1");
+	system("sudo sed -ri 's/^#dtparam=spi=.+$/dtparam=spi=on/' /var/www/sync/forcehdmi2");
+	system("sudo sed -ri 's/^#dtparam=spi=.+$/dtparam=spi=on/' /var/www/sync/forcehdmi4");
+	system("sudo sed -ri 's/^#dtparam=spi=.+$/dtparam=spi=on/' /var/www/sync/forcehdmi5");
+	system("sudo sed -ri 's/^#dtparam=spi=.+$/dtparam=spi=on/' /var/www/sync/forcehdmi6");
+}
+
+if ($_GET['action'] == 'hyperiondisable') {
+	$outputtext =  "disable hyperion led";
+	system("systemctl stop hyperion@root.service");
+	system("systemctl disable hyperion@.service");
+	//disable also in boot/config.txt
+	system("sudo sed -ri 's/^dtparam=spi=.+$/#dtparam=spi=on/' /boot/config.txt");
+	//disable in all resolution scripts
+	system("sudo sed -ri 's/^dtparam=spi=.+$/#dtparam=spi=on/' /var/www/sync/defaulthdmi");
+	system("sudo sed -ri 's/^dtparam=spi=.+$/#dtparam=spi=on/' /var/www/sync/forcehdmi1");
+	system("sudo sed -ri 's/^dtparam=spi=.+$/#dtparam=spi=on/' /var/www/sync/forcehdmi2");
+	system("sudo sed -ri 's/^dtparam=spi=.+$/#dtparam=spi=on/' /var/www/sync/forcehdmi4");
+	system("sudo sed -ri 's/^dtparam=spi=.+$/#dtparam=spi=on/' /var/www/sync/forcehdmi5");
+	system("sudo sed -ri 's/^dtparam=spi=.+$/#dtparam=spi=on/' /var/www/sync/forcehdmi6");
+}
+
 //# Display Info
 
 if ($_GET['action'] == 'getresolution') {
@@ -1365,6 +1398,9 @@ if ($_GET['action'] == 'diskspace') {
 	$output = shell_exec('df -h --output=size --output=used --output=avail /media');
     $outputtext = "<pre>$output</pre>";
 }
+
+
+
 
 //////////////////
 /// File Handling
@@ -1571,7 +1607,7 @@ if ($_GET['action'] == 'factoryreset') {
 	system ("sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startdmxplaybackonce02b");
 	system ("sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startdmxplaybackonce03b");
 	system ("sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startdmxplaybackonce04b");
-	// Disaable logging
+	// Disable logging
 	system("sudo service rsyslog stop");
     system("sudo systemctl disable rsyslog");
 }
@@ -1737,6 +1773,14 @@ if ($_GET['action'] == 'removebluetooth') {
 	system ("sudo /var/www/sync/stopall > /dev/null 2>&1");
 	system(" sudo apt-get purge -y bluez-firmware bluez");
 	$outputtext = "removed bluetooth";
+}
+
+if ($_GET['action'] == 'installhyperion') {
+	system("sudo /var/www/sync/stopall > /dev/null 2>&1");
+	system("sudo  /var/www/sync/hyperioninstall");
+	//her we must be shure that boot config gets updated
+	//sed the command and cp the default resolution
+	$outputtext = "installed hyperion";
 }
 
 
@@ -2671,6 +2715,21 @@ if ($_GET['action'] == 'servicecheck'){
 	$output = shell_exec('sudo /var/www/sync/servicecheck');
 	$outputtext = "<pre>$output</pre>";
 }
+if ($_GET['action'] == 'startlirc'){
+	$outputtext =  "LIRC/IR daemon enabled";
+	system("sudo systemctl start lircd");
+	system("sudo systemctl enable lircd");
+	system("sudo systemctl enable lircd.socket");
+	system("sudo systemctl enable lircmd.service");
+	system("sudo systemctl enable lircd-setup.service");
+	system("sudo systemctl enable lircd-uinput.service");
+	system("sudo systemctl start irexec.service");
+	system("sudo systemctl enable irexec.service");
+	//enable also in boot/config.txt
+	system("sudo sed -ri 's/^#dtoverlay=gpio-ir,gpio_pin=.+$/dtoverlay=gpio-ir,gpio_pin=18/' /boot/config.txt");
+	system("sudo sed -ri 's/^#dtoverlay=gpio-ir-tx,gpio_pin=.+$/dtoverlay=gpio-ir-tx,gpio_pin=4/' /boot/config.txt");
+	//should be added to alle force resolution scripts...if once someone uses this anyway
+}
 
 if ($_GET['action'] == 'stoplirc'){
 	$outputtext =  "LIRC/IR daemon disabled";
@@ -2682,19 +2741,13 @@ if ($_GET['action'] == 'stoplirc'){
 	system("sudo systemctl disable lircd-uinput.service");
 	system("sudo systemctl stop irexec.service");
 	system("sudo systemctl disable irexec.service");
+	//disable also in boot/config.txt
+	system("sudo sed -ri 's/^dtoverlay=gpio-ir,gpio_pin=.+$/#dtoverlay=gpio-ir,gpio_pin=18/' /boot/config.txt");
+	system("sudo sed -ri 's/^dtoverlay=gpio-ir-tx,gpio_pin=.+$/#dtoverlay=gpio-ir-tx,gpio_pin=4/' /boot/config.txt");
+	//should be added to alle force resolution scripts...
 }
 
-if ($_GET['action'] == 'startlirc'){
-	$outputtext =  "LIRC/IR daemon enabled";
-	system("sudo systemctl start lircd");
-	system("sudo systemctl enable lircd");
-	system("sudo systemctl enable lircd.socket");
-	system("sudo systemctl enable lircmd.service");
-	system("sudo systemctl enable lircd-setup.service");
-	system("sudo systemctl enable lircd-uinput.service");
-	system("sudo systemctl start irexec.service");
-	system("sudo systemctl enable irexec.service");
-}
+
 
 if ($_GET['action'] == 'stopsamba'){
 	$outputtext =  "stop/disable samba";

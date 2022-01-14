@@ -1334,8 +1334,8 @@ if ($_GET['action'] == 'flip2') {
 
 if ($_GET['action'] == 'hyperionenable') {
 	$outputtext =  "enable hyperion led";
-	system("systemctl start hyperion@root.service");
-	system("systemctl enable hyperion@.service");
+	system("sudo systemctl start hyperion@root.service");
+	system("sudo systemctl enable hyperion@.service");
 	//enable also in boot/config.txt
 	system("sudo sed -ri 's/^#dtparam=spi=.+$/dtparam=spi=on/' /boot/config.txt");
 	//enable in all resolution scripts
@@ -1349,8 +1349,8 @@ if ($_GET['action'] == 'hyperionenable') {
 
 if ($_GET['action'] == 'hyperiondisable') {
 	$outputtext =  "disable hyperion led";
-	system("systemctl stop hyperion@root.service");
-	system("systemctl disable hyperion@.service");
+	system("sudo systemctl stop hyperion@root.service");
+	system("sudo systemctl disable hyperion@.service");
 	//disable also in boot/config.txt
 	system("sudo sed -ri 's/^dtparam=spi=.+$/#dtparam=spi=on/' /boot/config.txt");
 	//disable in all resolution scripts

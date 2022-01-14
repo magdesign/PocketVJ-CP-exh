@@ -53,7 +53,8 @@ To fix this, access it with ssh and do following ::
  sudo service lighttpd start
 
 To check if the webserver is now running without errors ::
-    sudo service lighttpd status
+
+ sudo service lighttpd status
 
 
 

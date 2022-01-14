@@ -167,6 +167,7 @@ See video tutorial: https://video.pocketvj.com/AVideo/videoEmbed/46/bluetooth-be
 
 EXPANSION PINS
 **************
+.. _EXPANSION PINS:
 
 .. image:: _images/09_expansion_pins.png
 
@@ -174,4 +175,4 @@ EXPANSION PINS
 .. note::
     MOSFET max. 10A
 
-    PWM0 + PWM1 only usable on special series cases
+    pin12 PWM0 + pin13 PWM1 can only be accessed on PocketVJ Exhibition LED or by drilling a hole by yourself.

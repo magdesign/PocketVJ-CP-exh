@@ -53,6 +53,9 @@ Set the display/gpu to sleep or wakeup.
 PROJECTOR
 **********
 
+.. image:: _images/12_CP_projector.png
+
+
 .. note::  
     - Make sure to connect a PJlink compatible projector via rj45 cable
     - Default ip is: 192.168.2.254
@@ -61,7 +64,11 @@ PROJECTOR
     - Some projectors act weird, this is not my fault, before complaining check if you are able to power them off (off, not on!!) from CP
     - When coming from a CP older than 4.0.3, make sure to hit "Factory Reset" to change to the new projector control system
 
-.. image:: _images/12_CP_projector.png
+
+
+
+
+
 
 see video tutorial: https://video.pocketvj.com/AVideo/video/25/pocketvj-pjlink-a-projector
 
@@ -86,3 +93,48 @@ then add an IR sender as described in IR REMOTE :ref:`irremote` and :ref:`expans
 The trigger ON file is located in ``/var/www/sync/beameronir``
 
 The trigger OFF file is located in ``/var/www/sync/beameroffir``
+
+
+HYPERION
+********
+
+.. image:: _images/12_CP_hyperion.png
+    
+
+Drive WS2812 LED Pixel stripes with the color of the playing video to create an ambient light.
+Install Hyperion as described in :ref:`systemsettings`.
+
+You are able to drive the LED from hidden pin19, pin12, pin13. "PocketVJ Exhibtion LED" models have pin12 and pin13 open.
+See layout on  :ref:`expansion`
+
+Users of older versions can drill a hole into the case, solder a cable in or write me an email for instructions.
+
+Example in use:
+
+
+.. image:: _images/12_hyperion_demo.jpg
+
+
+**Enable Hyperion** => Enables Hyperion and will be active after boot.
+
+**Disable Hyperion** => Disables Hyperion.
+
+**Open Panel** => Open the Hyperion controlpanel.
+
+
+Shows the Hyperion control panel:
+
+make sure to edit the capture hardware setting as following:
+
+.. image:: _images/12_Capture_setting.png
+
+Depending on which pin you drive the LEDs, change the GPIO number and hit save:
+
+.. image:: _images/12_LED_output_setting.png
+
+Cabling the leds:
+
+.. image:: _images/12_LED_cabling01.png
+
+
+

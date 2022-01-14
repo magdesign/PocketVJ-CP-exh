@@ -1,3 +1,4 @@
+.. _systemsettings:
 
 SYSTEM SETTINGS
 ================
@@ -74,7 +75,7 @@ For precise DMX recording/playback make sure to have the latest OLA 0.10.7 insta
 
 If you have PVJ Version 4.0.6 or older, you need to install ``pygame`` to use ``Countdown`` and ``Webcam`` preview and also ``Bluetooth`` for beacon stuff.
 
-
+If you want to drive WS2812 LED stripes, you need to install ``Hyperion``.
 
 
 FACTORY RESET

@@ -10,8 +10,6 @@ see video tutorial: https://video.pocketvj.com/AVideo/video/38/mapping_single_ch
     - since CP 4.0.5 and higher, you are able to remotely map without any mouse or keyboard connected, but you must "Autostart" into "Mapper"
 
     - If you use an IR mouse, you need to use an IR Keyboard to control the mapper, CP will not work. 
-
-    - If you use an IR mouse, you need to use an IR Keyboard to control the mapper, CP will not work.
     
     - Keyboard keys: 1,2,3,4,a,v,b,m,n,l,k,5,7,8,9,0 
 
@@ -19,7 +17,7 @@ see video tutorial: https://video.pocketvj.com/AVideo/video/38/mapping_single_ch
 
     - If the mapped video stutters, decrease the bitrate and resolution or wait until it played a few times.
 
-
+    - If its hard to mape due to lags, simple hit the pause button in CP to get more ressources for precise mapping.
 
 .. image:: _images/08_CP_mapping.png
 
@@ -55,6 +53,7 @@ FUNCTION
 
 SYNC
 *****
+See video tutorial here: https://video.pocketvj.com/AVideo/video/49/mapping-sync
 
 **Set to?** => Check to which mode the mapper is set to
 
@@ -63,6 +62,8 @@ SYNC
 **Receiver** => Set the mapper to be receiver
 
 .. note::
+    after selecting receiver, you need to reload the mapper, this can be simply done with reopening your preset
+
     sync works only with one video file in mapper
 
     no sync for slideshows

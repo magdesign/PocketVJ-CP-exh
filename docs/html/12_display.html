@@ -106,6 +106,7 @@
 <li class="toctree-l1"><a class="reference internal" href="#sleep">SLEEP</a></li>
 <li class="toctree-l1"><a class="reference internal" href="#projector">PROJECTOR</a></li>
 <li class="toctree-l1"><a class="reference internal" href="#projector-ir">PROJECTOR IR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#hyperion">HYPERION</a></li>
 <li class="toctree-l1"><a class="reference internal" href="13_networksettings.html">NETWORK SETTINGS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="14_systemsettings.html">SYSTEM SETTINGS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="15_troubleshooting.html">TROUBLESHOOTING</a></li>
@@ -217,6 +218,7 @@
 </div>
 <div class="section" id="projector">
 <h1>PROJECTOR<a class="headerlink" href="#projector" title="Permalink to this headline">¶</a></h1>
+<img alt="_images/12_CP_projector.png" src="_images/12_CP_projector.png" />
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ul class="simple">
@@ -228,7 +230,6 @@
 <li><p>When coming from a CP older than 4.0.3, make sure to hit “Factory Reset” to change to the new projector control system</p></li>
 </ul>
 </div>
-<img alt="_images/12_CP_projector.png" src="_images/12_CP_projector.png" />
 <p>see video tutorial: <a class="reference external" href="https://video.pocketvj.com/AVideo/video/25/pocketvj-pjlink-a-projector">https://video.pocketvj.com/AVideo/video/25/pocketvj-pjlink-a-projector</a></p>
 <p>If you need a pjlink password, edit:
 <code class="docutils literal notranslate"><span class="pre">/home/pvj/.local/share/pjlink/pjlink.config</span></code> and add a new line containing:
@@ -242,6 +243,27 @@
 then add an IR sender as described in IR REMOTE <a class="reference internal" href="16_irremote.html#irremote"><span class="std std-ref">IR REMOTE LIRC</span></a> and <a class="reference internal" href="09_expansion.html#expansion"><span class="std std-ref">EXPANSION</span></a></p>
 <p>The trigger ON file is located in <code class="docutils literal notranslate"><span class="pre">/var/www/sync/beameronir</span></code></p>
 <p>The trigger OFF file is located in <code class="docutils literal notranslate"><span class="pre">/var/www/sync/beameroffir</span></code></p>
+</div>
+<div class="section" id="hyperion">
+<h1>HYPERION<a class="headerlink" href="#hyperion" title="Permalink to this headline">¶</a></h1>
+<img alt="_images/12_CP_hyperion.png" src="_images/12_CP_hyperion.png" />
+<p>Drive WS2812 LED Pixel stripes with the color of the playing video to create an ambient light.
+Install Hyperion as described in <a class="reference internal" href="14_systemsettings.html#systemsettings"><span class="std std-ref">SYSTEM SETTINGS</span></a>.</p>
+<p>You are able to drive the LED from hidden pin19, pin12, pin13. “PocketVJ Exhibtion LED” models have pin12 and pin13 open.
+See layout on  <a class="reference internal" href="09_expansion.html#expansion"><span class="std std-ref">EXPANSION</span></a></p>
+<p>Users of older versions can drill a hole into the case, solder a cable in or write me an email for instructions.</p>
+<p>Example in use:</p>
+<img alt="_images/12_hyperion_demo.jpg" src="_images/12_hyperion_demo.jpg" />
+<p><strong>Enable Hyperion</strong> =&gt; Enables Hyperion and will be active after boot.</p>
+<p><strong>Disable Hyperion</strong> =&gt; Disables Hyperion.</p>
+<p><strong>Open Panel</strong> =&gt; Open the Hyperion controlpanel.</p>
+<p>Shows the Hyperion control panel:</p>
+<p>make sure to edit the capture hardware setting as following:</p>
+<img alt="_images/12_Capture_setting.png" src="_images/12_Capture_setting.png" />
+<p>Depending on which pin you drive the LEDs, change the GPIO number and hit save:</p>
+<img alt="_images/12_LED_output_setting.png" src="_images/12_LED_output_setting.png" />
+<p>Cabling the leds:</p>
+<img alt="_images/12_LED_cabling01.png" src="_images/12_LED_cabling01.png" />
 </div>
 
 
@@ -258,7 +280,7 @@ then add an IR sender as described in IR REMOTE <a class="reference internal" hr
 
   <div role="contentinfo">
     <p>
-        &#169; Copyright 2021, M.A.Gasser, https://pocketvj.com.
+        &#169; Copyright 2022, M.A.Gasser, https://pocketvj.com.
 
     </p>
   </div>

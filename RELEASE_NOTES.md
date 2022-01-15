@@ -1,6 +1,10 @@
 # PocketVJ Exhibition / Control Panel 4.x.x
 
+## CP 4.3.1a 15.01.2022
 
+- moved rental reset to a script, now getting propper feedback<br />
+- fixed typos in hyperion install<br />
+- added propper service for hyperion daemon<br />
 
 ## CP 4.3.1 14.01.2022
 

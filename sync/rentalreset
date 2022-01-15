@@ -1,0 +1,135 @@
+#! /bin/bash
+
+#reset sync scripts
+sudo cp /var/www/sync/omxplayer-sync /usr/bin/omxplayer-sync
+sudo cp /var/www/sync/omxplayer-sync-old /usr/bin/omxplayer-sync-old
+sudo cp /var/www/sync/omxplayer-sync-wifi /usr/bin/omxplayer-sync-wifi
+# set resolution to auto detect
+sudo cp /var/www/sync/defaulthdmi /boot/config.txt
+#set to boot as video master
+sudo cp /var/www/sync/rc.local.master /etc/rc.local
+#fix dbus control  
+sudo cp /var/www/sync/dbuscontrol.sh /usr/bin/dbuscontrol.sh
+sudo cp /var/www/sync/timer.txt /media/internal/timer.txt
+sudo /var/www/sync/./namefixer > /dev/null 2>&1
+sudo chmod +rx /usr/bin/dbuscontrol.sh
+sudo chmod +x /var/www/sync/launchmapper
+#disable timetable in cron
+sudo crontab -r
+sudo -u root crontab -r
+sudo -u pvj crontab -r
+
+echo "1/6 going to folder structure fix..."
+
+#remove video folder
+rm -rf /media/internal/video/
+#create video folder and copy demo videos in it:
+mkdir /media/internal/video/
+cp /home/pvj/content/01_Testfile_HD.mp4  /media/internal/video/
+cp /home/pvj/content/wifisync.mp4  /media/internal/video/
+#remove images folder
+rm -rf /media/internal/images/
+# create images folder and copy content
+mkdir /media/internal/images/
+cp /home/pvj/content/overlay.png /media/internal/images/
+cp /home/pvj/content/PVJ_IN_box_hd.jpg /media/internal/images/
+#remove pir folder
+rm -rf /media/internal/pir/
+#copy pir folder
+cp -R /home/pvj/content/pir/ /media/internal/
+#Copy demo audio
+mkdir /media/internal/audio/
+cp /home/pvj/content/01_LSdee2.mp3 /media/internal/audio/
+#create rest of folder structure if not already present
+mkdir /media/internal/converter/
+mkdir /media/internal/audio/
+mkdir /media/internal/dmx/
+mkdir /media/internal/mappersets/
+mkdir /media/internal/pdf/
+mkdir /media/internal/presentations/
+mkdir /media/internal/midi/
+
+echo "2/6 going to copy presets...."
+#mapper presets
+sudo rm /media/internal/mappersets/mappersetting1.xml
+cp /home/pvj/content/mappersetting1.xml /media/internal/mappersets/mappersetting1.xml
+cp /home/pvj/content/mappersetting1.xml /home/pvj/openFrameworks/addons/ofxPiMapper/example_basic/bin/data/ofxpimapper.xml
+#remove remote and passwords
+sudo /etc/init.d/openvpn stop
+sudo systemctl stop openvpn
+#disable automatic service on boot
+sudo systemctl disable openvpn
+sudo killall openvpn
+#what is this?:
+sudo ip link delete tun0
+## add command to switch shortcut in index to eXtplorer
+sudo /var/www/sync/set_extplorer
+## remove password protection
+sudo cp /var/www/sync/passwddisable /etc/lighttpd/lighttpd.conf
+sudo service lighttpd restart
+#remove any kind of wifi connection
+sudo cp /var/www/sync/interfaces.static /etc/network/interfaces
+#set the user rights
+sudo chmod 755 -R /var/www
+sudo chmod 777 -R /media
+#Update OSC control in home folder
+sudo cp /var/www/sync/osc_control.js /home/pvj/osc/osc_control.js
+#remove .xsession file
+sudo rm -rf /home/pvj/.xsession
+#remove lost&found files
+rm -rf /media/lost+found/
+echo "3/6 fixing rules..."
+# fix the iptables rules
+sudo cp /var/www/sync/iptables.ipv4.nat /etc/iptables.ipv4.nat
+#copy the artnet conf set to broadcast
+sudo cp /var/www/sync/ola-artnet.conf /var/lib/ola/conf/ola-artnet.conf
+#reset to 192.168.2.* ip range
+sudo /var/www/sync/iprange192
+echo "4/6 stoppping services..."
+#stop OLA and oladeamon
+sudo service olad stop
+#check if this is still relevant ????
+sudo update-rc.d olad disable
+sudo killall -9 /usr/bin/olad
+#Disable camera
+sudo sed -ri 's/^start_x=.+$/start_x=0/' /boot/config.txt
+#Disable webcam
+#not done yet
+#set slidetime to 5 seconds
+sudo sed -ri 's@<SlideDuration>.+</SlideDuration>@<SlideDuration>5</SlideDuration>@' /home/pvj/openFrameworks/addons/ofxPiMapper/example_fbo-sources/bin/data/magslideshow_settings.xml
+# stop buttons
+sudo /var/www/sync/stopbuttons
+#fix the pjlink to new version
+#create folder if not already present
+mkdir /home/pvj/.local/share/pjlink
+#copy standard pjlink config file:
+cp /var/www/sync/pjlink.conf /home/pvj/.local/share/pjlink/pjlink.conf
+#enable wifi and bluetooth
+sudo cp /var/www/sync/raspi-blacklist.empty /etc/modprobe.d/raspi-blacklist.conf
+echo "5/6 stopping lirc..."
+# disable lirc service
+sudo systemctl stop lircd
+sudo systemctl disable lircd
+sudo systemctl disable lircd.socket
+sudo systemctl disable lircmd.service
+sudo systemctl disable lircd-setup.service
+sudo systemctl disable lircd-uinput.service
+sudo systemctl stop irexec.service
+sudo systemctl disable irexec.service
+# disable beacon delay
+sudo /var/www/sync/stopbeacon
+sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startlessonce01b
+sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startlessonce02b
+sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startlessonce03b
+sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startlessonce04b
+sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startdmxplaybackonce01b
+sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startdmxplaybackonce02b
+sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startdmxplaybackonce03b
+sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startdmxplaybackonce04b
+
+# Disable logging
+echo "6/6 disable logging..."
+sudo service rsyslog stop
+sudo systemctl disable rsyslog
+
+echo "Rental reset done .-)"

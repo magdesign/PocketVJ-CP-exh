@@ -1,33 +1,54 @@
 #!/bin/bash
 
 #this installs hyperion and its dependencies
+echo "installing hyperion..."
 
-sudo apt-get install -y /var/www/sync/deb/libavahi-core-dev_0.6.32-2_armhf.deb
-sudo apt-get install -y /var/www/sync/deb/libjpeg62-turbo_1%3a1.5.1-2+deb9u1_armhf.deb
-sudo apt-get install -y /var/www/sync/deb/libjpeg62-turbo-dev_1%3a1.5.1-2+deb9u1_armhf.deb
-sudo apt-get install -y /var/www/sync/deb/libjpeg-dev_1%3a1.5.1-2+deb9u1_all.deb
-sudo apt-get install -y /var/www/sync/deb/libqt5concurrent5_5.7.1+dfsg-3+rpi1+deb9u3_armhf.deb
-sudo apt-get install -y /var/www/sync/deb/libqt5core5a_5.7.1+dfsg-3+rpi1+deb9u3_armhf.deb
-sudo apt-get install -y /var/www/sync/deb/libqt5dbus5_5.7.1+dfsg-3+rpi1+deb9u3_armhf.deb
-sudo apt-get install -y /var/www/sync/deb/libqt5gui5_5.7.1+dfsg-3+rpi1+deb9u3_armhf.deb
-sudo apt-get install -y /var/www/sync/deb/libqt5network5_5.7.1+dfsg-3+rpi1+deb9u3_armhf.deb
-sudo apt-get install -y /var/www/sync/deb/libqt5opengl5_5.7.1+dfsg-3+rpi1+deb9u3_armhf.deb
-sudo apt-get install -y /var/www/sync/deb/libqt5opengl5-dev_5.7.1+dfsg-3+rpi1+deb9u3_armhf.deb
-sudo apt-get install -y /var/www/sync/deb/libqt5printsupport5_5.7.1+dfsg-3+rpi1+deb9u3_armhf.deb
-sudo apt-get install -y /var/www/sync/deb/libqt5serialport5-dev_5.7.1~20161021-2_armhf.deb
-sudo apt-get install -y /var/www/sync/deb/libqt5sql5_5.7.1+dfsg-3+rpi1+deb9u3_armhf.deb
-sudo apt-get install -y /var/www/sync/deb/libqt5test5_5.7.1+dfsg-3+rpi1+deb9u3_armhf.deb
-sudo apt-get install -y /var/www/sync/deb/libqt5widgets5_5.7.1+dfsg-3+rpi1+deb9u3_armhf.deb
-sudo apt-get install -y /var/www/sync/deb/libqt5xml5_5.7.1+dfsg-3+rpi1+deb9u3_armhf.deb
-sudo apt-get install -y /var/www/sync/deb/qt5-gtk-platformtheme_5.7.1+dfsg-3+rpi1+deb9u3_armhf.deb
-sudo apt-get install -y /var/www/sync/deb/qt5-qmake_5.7.1+dfsg-3+rpi1+deb9u3_armhf.deb
-sudo apt-get install -y /var/www/sync/deb/qtbase5-dev_5.7.1+dfsg-3+rpi1+deb9u3_armhf.deb
-sudo apt-get install -y /var/www/sync/deb/qtbase5-dev-tools_5.7.1+dfsg-3+rpi1+deb9u3_armhf.deb
+sudo dpkg -i /var/www/sync/debs/libavahi-core-dev_0.6.32-2_armhf.deb
+sudo dpkg -i /var/www/sync/debs/libjpeg62-turbo_1%3a1.5.1-2+deb9u1_armhf.deb
+sudo dpkg -i /var/www/sync/debs/libjpeg62-turbo-dev_1%3a1.5.1-2+deb9u1_armhf.deb
+sudo dpkg -i /var/www/sync/debs/libjpeg-dev_1%3a1.5.1-2+deb9u1_all.deb
+sudo dpkg -i /var/www/sync/debs/libqt5concurrent5_5.7.1+dfsg-3+rpi1+deb9u3_armhf.deb
+sudo dpkg -i /var/www/sync/debs/libqt5core5a_5.7.1+dfsg-3+rpi1+deb9u3_armhf.deb
+sudo dpkg -i /var/www/sync/debs/libqt5dbus5_5.7.1+dfsg-3+rpi1+deb9u3_armhf.deb
+sudo dpkg -i /var/www/sync/debs/libqt5gui5_5.7.1+dfsg-3+rpi1+deb9u3_armhf.deb
+sudo dpkg -i /var/www/sync/debs/libqt5network5_5.7.1+dfsg-3+rpi1+deb9u3_armhf.deb
+sudo dpkg -i /var/www/sync/debs/libqt5opengl5_5.7.1+dfsg-3+rpi1+deb9u3_armhf.deb
+sudo dpkg -i /var/www/sync/debs/libqt5opengl5-dev_5.7.1+dfsg-3+rpi1+deb9u3_armhf.deb
+sudo dpkg -i /var/www/sync/debs/libqt5printsupport5_5.7.1+dfsg-3+rpi1+deb9u3_armhf.deb
+sudo dpkg -i /var/www/sync/debs/libqt5serialport5-dev_5.7.1~20161021-2_armhf.deb
+sudo dpkg -i /var/www/sync/debs/libqt5sql5_5.7.1+dfsg-3+rpi1+deb9u3_armhf.deb
+sudo dpkg -i /var/www/sync/debs/libqt5test5_5.7.1+dfsg-3+rpi1+deb9u3_armhf.deb
+sudo dpkg -i /var/www/sync/debs/libqt5widgets5_5.7.1+dfsg-3+rpi1+deb9u3_armhf.deb
+sudo dpkg -i /var/www/sync/debs/libqt5xml5_5.7.1+dfsg-3+rpi1+deb9u3_armhf.deb
+sudo dpkg -i /var/www/sync/debs/qt5-gtk-platformtheme_5.7.1+dfsg-3+rpi1+deb9u3_armhf.deb
+sudo dpkg -i /var/www/sync/debs/qt5-qmake_5.7.1+dfsg-3+rpi1+deb9u3_armhf.deb
+sudo dpkg -i /var/www/sync/debs/qtbase5-dev_5.7.1+dfsg-3+rpi1+deb9u3_armhf.deb
+sudo dpkg -i /var/www/sync/debs/qtbase5-dev-tools_5.7.1+dfsg-3+rpi1+deb9u3_armhf.deb
+sudo dpkg -i /var/www/sync/debs/libqt5sql5-sqlite
+
+sudo dpkg -i /var/www/sync/debs/Hyperion-2.0.12-Linux-armv7l.deb
 
 
-sudo apt-get install -y /var/www/sync/debs/Hyperion-2.0.12-Linux-armv7l.deb
+#install python drivers
+python /home/pvj/rpi_ws281x/python/./setup.py build
+python /home/pvj/rpi_ws281x/python/./setup.py install
 
-
+#set to root execution
 echo Yes | sudo updateHyperionUser -u root
 
-exit 0
+#create startup service
+sudo cp /var/www/sync/hyperion.service /lib/systemd/system/hyperion.service
+sudo systemctl daemon-reload
+#enable on boot
+sudo systemctl start hyperion.service
+
+echo "finished installing, going to reboot in 10s"
+
+#set audio to hdmi
+sudo /var/www/sync/setaudio_hdmi
+
+sleep 10
+
+sudo reboot
+
+

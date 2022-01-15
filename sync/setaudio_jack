@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#stopall
+	sudo /var/www/sync/stopall > /dev/null 2>&1
 
 #set all video players to output to local jack device:
 	sudo sed -ri 's/-o [[:graph:]]+/-o local/' /var/www/sync/startmaster &
@@ -123,3 +125,14 @@
 	sudo sed -ri 's/-o [[:graph:]]+/-o local/' /var/www/sync/startmididmxaudioplay01 &
 #set on pir script
 	sudo sed -ri "/^OMXPLAYER = \['omxplayer', '-o',/c\OMXPLAYER = ['omxplayer', '-o', 'local', '--no-osd']" /var/www/sync/startpir1.py &
+#install mapper with jack support
+	
+	sudo rm -r /home/pvj/openFrameworks/addons/ofxPiMapper/
+	sudo unzip /var/www/sync/mapper_all_jack.zip -d /
+	sudo ln -s /media/internal/video /home/pvj/openFrameworks/addons/ofxPiMapper/example_basic/bin/data/sources/videos
+	sudo ln -s /media/internal/images /home/pvj/openFrameworks/addons/ofxPiMapper/example_basic/bin/data/sources/images
+	sudo ln -s /media/internal/video /home/pvj/openFrameworks/addons/ofxPiMapper/example_fbo-sources/bin/data/sources/videos
+	sudo ln -s /media/internal/images /home/pvj/openFrameworks/addons/ofxPiMapper/example_fbo-sources/bin/data/sources/images
+	sudo ln -s /media/internal/video /home/pvj/openFrameworks/addons/ofxPiMapper/example_remote-server/bin/data/sources/videos
+	sudo ln -s /media/internal/images /home/pvj/openFrameworks/addons/ofxPiMapper/example_remote-server/bin/data/sources/images
+

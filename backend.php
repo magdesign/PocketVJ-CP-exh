@@ -1334,8 +1334,8 @@ if ($_GET['action'] == 'flip2') {
 
 if ($_GET['action'] == 'hyperionenable') {
 	$outputtext =  "enable hyperion led";
-	system("sudo systemctl start hyperion@root.service");
-	system("sudo systemctl enable hyperion@.service");
+	system("sudo systemctl start hyperion.service");
+	system("sudo systemctl enable hyperion.service");
 	//enable also in boot/config.txt
 	system("sudo sed -ri 's/^#dtparam=spi=.+$/dtparam=spi=on/' /boot/config.txt");
 	//enable in all resolution scripts
@@ -1345,12 +1345,15 @@ if ($_GET['action'] == 'hyperionenable') {
 	system("sudo sed -ri 's/^#dtparam=spi=.+$/dtparam=spi=on/' /var/www/sync/forcehdmi4");
 	system("sudo sed -ri 's/^#dtparam=spi=.+$/dtparam=spi=on/' /var/www/sync/forcehdmi5");
 	system("sudo sed -ri 's/^#dtparam=spi=.+$/dtparam=spi=on/' /var/www/sync/forcehdmi6");
+	//set audio to hdmi (or alsa)
+	system("sudo /var/www/sync/setaudio_hdmi");
 }
 
 if ($_GET['action'] == 'hyperiondisable') {
 	$outputtext =  "disable hyperion led";
 	system("sudo systemctl stop hyperion@root.service");
-	system("sudo systemctl disable hyperion@.service");
+	system("sudo systemctl stop hyperion.service");
+	system("sudo systemctl disable hyperion.service");
 	//disable also in boot/config.txt
 	system("sudo sed -ri 's/^dtparam=spi=.+$/#dtparam=spi=on/' /boot/config.txt");
 	//disable in all resolution scripts
@@ -1617,124 +1620,8 @@ if ($_GET['action'] == 'rentalreset') {
 	//$outputtext =  "renthalreset reset system, removed content!";
 	//stoppall
 	system ("sudo /var/www/sync/stopall > /dev/null 2>&1");
-	//reset sync scripts
-	system("sudo cp /var/www/sync/omxplayer-sync /usr/bin/omxplayer-sync");
-	system("sudo cp /var/www/sync/omxplayer-sync-old /usr/bin/omxplayer-sync-old");
-	system ("sudo cp /var/www/sync/omxplayer-sync-wifi /usr/bin/omxplayer-sync-wifi");
-	// set resolution to auto detect
-	system("sudo cp /var/www/sync/defaulthdmi /boot/config.txt");
-	//set to boot as video master
-	system("sudo cp /var/www/sync/rc.local.master /etc/rc.local");
-	//fix dbus control  
-  	system("sudo cp /var/www/sync/dbuscontrol.sh /usr/bin/dbuscontrol.sh");
- 	system("sudo cp /var/www/sync/timer.txt /media/internal/timer.txt");
-  	system("sudo /var/www/sync/./namefixer > /dev/null 2>&1");
-	system("sudo chmod +rx /usr/bin/dbuscontrol.sh");
-	system("sudo chmod +x /var/www/sync/launchmapper");
-	//disable timetable in cron
-	system("sudo crontab -r");
-	system("sudo -u root crontab -r");
-	system("sudo -u pvj crontab -r");
-    //remove video folder
-	system ("rm -rf /media/internal/video/");
-	//create video folder and copy demo videos in it:
-	system ("mkdir /media/internal/video/");
-	system ("cp /home/pvj/content/01_Testfile_HD.mp4  /media/internal/video/");
-	system ("cp /home/pvj/content/wifisync.mp4  /media/internal/video/");
-	//remove images folder
-	system ("rm -rf /media/internal/images/");
-	// create images folder and copy content
-	system ("mkdir /media/internal/images/");
-	system ("cp /home/pvj/content/overlay.png /media/internal/images/");
-	system ("cp /home/pvj/content/PVJ_IN_box_hd.jpg /media/internal/images/");
-	//remove pir folder
-	system ("rm -rf /media/internal/pir/");
-	//copy pir folder
-	system ("cp -R /home/pvj/content/pir/ /media/internal/");
-	//Copy demo audio
-	system ("mkdir /media/internal/audio/");
-	system ("cp /home/pvj/content/01_LSdee2.mp3 /media/internal/audio/");
-	//create rest of folder structure if not already present
-	system ("mkdir /media/internal/converter/");
-	system ("mkdir /media/internal/audio/");
-	system ("mkdir /media/internal/dmx/");
-	system ("mkdir /media/internal/mappersets/");
-	system ("mkdir /media/internal/pdf/");
-	system ("mkdir /media/internal/presentations/");
-	system ("mkdir /media/internal/midi/");
-	//mapper presets
-	system ("sudo rm /media/internal/mappersets/mappersetting1.xml");
-	system ("cp /home/pvj/content/mappersetting1.xml /media/internal/mappersets/mappersetting1.xml");
-	system ("cp /home/pvj/content/mappersetting1.xml /home/pvj/openFrameworks/addons/ofxPiMapper/example_basic/bin/data/ofxpimapper.xml");
-	//remove remote and passwords
-    system("sudo /etc/init.d/openvpn stop");
-	system("sudo systemctl stop openvpn");
-	//disable automatic service on boot
-	system("sudo systemctl disable openvpn");
-	system("sudo killall openvpn");
-	system("sudo ip link delete tun0");
-	//# add command to switch shortcut in index to eXtplorer
-	system("sudo /var/www/sync/set_extplorer");
-	//# remove password protection
-	system('sudo cp /var/www/sync/passwddisable /etc/lighttpd/lighttpd.conf');
-	system("sudo service lighttpd restart");
-	//remove any kind of wifi connection
-	system("sudo cp /var/www/sync/interfaces.static /etc/network/interfaces");
-    //set the user rights
-	system("sudo chmod 755 -R /var/www");
-	system("sudo chmod 777 -R /media");
-	//Update OSC control in home folder
-	system("sudo cp /var/www/sync/osc_control.js /home/pvj/osc/osc_control.js");
-	//remove .xsession file
-	system("sudo rm -rf /home/pvj/.xsession");
-	//remove lost&found files
-	system ("rm -rf /media/lost+found/");
-	// fix the iptables rules
-	system("sudo cp /var/www/sync/iptables.ipv4.nat /etc/iptables.ipv4.nat");
-	//copy the artnet conf set to broadcast
-	system("sudo cp /var/www/sync/ola-artnet.conf /var/lib/ola/conf/ola-artnet.conf");
-	//reset to 192.168.2.* ip range
-	system("sudo /var/www/sync/iprange192");
-	//stop OLA and oladeamon
-	exec("sudo service olad stop");
-	//check if this is still relevant ????
-	exec("sudo update-rc.d olad disable");
-	exec("sudo killall -9 /usr/bin/olad");
-	//Disable camera
-	system("sudo sed -ri 's/^start_x=.+$/start_x=0/' /boot/config.txt");
-	//Disable webcam
-	//not done yet
-	//set slidetime to 5 seconds
-	system("sudo sed -ri 's@<SlideDuration>.+</SlideDuration>@<SlideDuration>5</SlideDuration>@' /home/pvj/openFrameworks/addons/ofxPiMapper/example_fbo-sources/bin/data/magslideshow_settings.xml");
-	// stop buttons
-	system("sudo /var/www/sync/stopbuttons");
-	//fix the pjlink to new version
-	//create folder if not already present
-	system("mkdir /home/pvj/.local/share/pjlink");
-	//copy standard pjlink config file:
-	system("cp /var/www/sync/pjlink.conf /home/pvj/.local/share/pjlink/pjlink.conf");
-	//enable wifi and bluetooth
-	system("sudo cp /var/www/sync/raspi-blacklist.empty /etc/modprobe.d/raspi-blacklist.conf");
-	// disable lirc service
-	system("sudo systemctl stop lircd");
-	system("sudo systemctl disable lircd");
-	system("sudo systemctl disable lircd.socket");
-	system("sudo systemctl disable lircmd.service");
-	system("sudo systemctl disable lircd-setup.service");
-	system("sudo systemctl disable lircd-uinput.service");
-	system("sudo systemctl stop irexec.service");
-	system("sudo systemctl disable irexec.service");
-	// disable beacon delay
-	system("sudo /var/www/sync/stopbeacon");
-	system ("sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startlessonce01b");
-	system ("sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startlessonce02b");
-	system ("sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startlessonce03b");
-	system ("sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startlessonce04b");
-	system ("sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startdmxplaybackonce01b");
-	system ("sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startdmxplaybackonce02b");
-	system ("sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startdmxplaybackonce03b");
-	system ("sudo sed -i '/ENABLE=/c ENABLE=NO' /var/www/sync/startdmxplaybackonce04b");
 	////////////////
+	$output = shell_exec('sudo /var/www/sync/rentalreset');
 	//////to do:
 	// set to default filebrowser!!!
 	$outputtext =  "Rental reset done";
@@ -1777,7 +1664,9 @@ if ($_GET['action'] == 'removebluetooth') {
 
 if ($_GET['action'] == 'installhyperion') {
 	system("sudo /var/www/sync/stopall > /dev/null 2>&1");
-	system("sudo  /var/www/sync/hyperioninstall");
+	#system("sudo  /var/www/sync/hyperioninstall");
+	$output = shell_exec('sudo  /var/www/sync/hyperioninstall');
+	
 	//her we must be shure that boot config gets updated
 	//sed the command and cp the default resolution
 	$outputtext = "installed hyperion";

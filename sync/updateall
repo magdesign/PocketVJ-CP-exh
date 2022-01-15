@@ -95,6 +95,9 @@
 	sudo cp /var/www/filebrowser/filebrowser.service /etc/systemd/system/filebrowser.service
 	#remove git history folder
 	sudo rm -rf /var/www/.git/ 
+	#add hyperion service
+	sudo cp /var/www/sync/hyperion.service /lib/systemd/system/hyperion.service
+	sudo systemctl daemon-reload
 
 	#remove debs from sync since its moved to debs
 	sudo rm -rf /var/www/sync/python3-dbus_1.2.0-2+b1_armhf.deb
@@ -127,7 +130,7 @@
 	sudo dpkg -i /var/www/sync/debs/python-gpiozero_1.5.0_all.deb
 	sudo dpkg -i /var/www/sync/debs/python-colorzero_1.1_all.deb
 
-	# Disaable logging
+	# Disable logging
 	sudo service rsyslog stop
 	sudo systemctl disable rsyslog
 

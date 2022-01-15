@@ -5,6 +5,9 @@
 - moved rental reset to a script, now getting propper feedback<br />
 - fixed typos in hyperion install<br />
 - added propper service for hyperion daemon<br />
+- force audio to hdmi when using hyperion<br />
+- set audio to hdmi/jack now also switches on the mapper<br />
+- updated manual<br />
 
 ## CP 4.3.1 14.01.2022
 

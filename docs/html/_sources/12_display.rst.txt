@@ -107,8 +107,6 @@ Install Hyperion as described in :ref:`systemsettings`.
 You are able to drive the LED from hidden pin19, pin12, pin13. "PocketVJ Exhibtion LED" models have pin12 and pin13 open.
 See layout on  :ref:`expansion`
 
-Users of older versions can drill a hole into the case, solder a cable in or write me an email for instructions.
-
 Example in use:
 
 
@@ -142,3 +140,10 @@ Cabling the leds:
     - no audio over jack possible!! only hdmi or alsa.
     - audio will be automatically set to HDMI.
     - if you want to use hyperion together with the mapper, it only works with MapperHDMI
+
+
+Users of older versions can drill a hole into the case, solder a cable in or write me an email for instructions.
+
+.. image:: _images/12_drill_a_hole.jpg
+
+

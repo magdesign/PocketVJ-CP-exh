@@ -1334,6 +1334,9 @@ if ($_GET['action'] == 'flip2') {
 
 if ($_GET['action'] == 'hyperionenable') {
 	$outputtext =  "enable hyperion led";
+	//there is something wrong with the service script, but it works
+	system("sudo cp /var/www/sync/hyperion.service /lib/systemd/system/hyperion.service");
+	system("sudo systemctl daemon-reload");
 	system("sudo systemctl start hyperion.service");
 	system("sudo systemctl enable hyperion.service");
 	//enable also in boot/config.txt
@@ -1351,9 +1354,14 @@ if ($_GET['action'] == 'hyperionenable') {
 
 if ($_GET['action'] == 'hyperiondisable') {
 	$outputtext =  "disable hyperion led";
+	//there is something wrong with the service, but it works like this:
 	system("sudo systemctl stop hyperion@root.service");
 	system("sudo systemctl stop hyperion.service");
 	system("sudo systemctl disable hyperion.service");
+	system("sudo systemctl disable hyperion@.service");
+	system("sudo systemctl stop hyperion.service");
+	system("sudo rm -rf /lib/systemd/system/hyperion.service");
+	system("sudo systemctl daemon-reload");
 	//disable also in boot/config.txt
 	system("sudo sed -ri 's/^dtparam=spi=.+$/#dtparam=spi=on/' /boot/config.txt");
 	//disable in all resolution scripts
@@ -1810,7 +1818,8 @@ if ($_GET['action'] == 'volume_down') {
 }
 
 if ($_GET['action'] == 'hdmi_out') {
-	system("sudo /var/www/sync/setaudio_hdmi");
+	//system("sudo /var/www/sync/setaudio_hdmi");
+	$outputtext = shell_exec("sudo /var/www/sync/setaudio_hdmi");
 	$outputtext =  "Audio set to HDMI";
 }
 

@@ -1333,7 +1333,6 @@ if ($_GET['action'] == 'flip2') {
 //Hyperion
 
 if ($_GET['action'] == 'hyperionenable') {
-	$outputtext =  "enable hyperion led";
 	//there is something wrong with the service script, but it works
 	system("sudo cp /var/www/sync/hyperion.service /lib/systemd/system/hyperion.service");
 	system("sudo systemctl daemon-reload");
@@ -1350,6 +1349,7 @@ if ($_GET['action'] == 'hyperionenable') {
 	system("sudo sed -ri 's/^#dtparam=spi=.+$/dtparam=spi=on/' /var/www/sync/forcehdmi6");
 	//set audio to hdmi (or alsa)
 	system("sudo /var/www/sync/setaudio_hdmi");
+	$outputtext =  "enable hyperion led, reboot!!";
 }
 
 if ($_GET['action'] == 'hyperiondisable') {

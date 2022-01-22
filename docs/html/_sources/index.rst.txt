@@ -5,7 +5,7 @@ PocketVJ Exhibition User Manual
 .. image:: _images/00_PocketVJ_Exhibition.jpg
 
 
-Version 02/2022
+Version 03a/2022
 
 This user manual is published by magdesign without any warranty.
 
@@ -51,6 +51,7 @@ Content
    16_irremote
    17_power
    18_content_creation
+   19_advanced_mapping_tricks
    99_theend
 
 

@@ -2,8 +2,9 @@
 
 ## Currently in the pipeline: 
 <br />
+- add simple paint tool to draw masks with [pygame](https://github.com/MiniGirlGeek/pygame-paintme) or [python](https://gist.github.com/Kaabasane/a4f1fb10d27611bdd6b4ccf6b9206a9b) or [this](https://www.codershubb.com/create-the-simple-paint-app-using-python/) <br />
 - make sure disk will never be overfilled with logs or tmp files <br />
-- play all video files random (modify the PIR script for this) <br />
+- play all video files random (modify the PIR script for this) there is a [sketch](https://github.com/magdesign/PocketVJ-CP-v3/blob/master/sync/randomvideoplayer) <br />
 - add volume setting with store function<p/>
 - move update everything to a seperate script so we can directly update without having to do it 2x<p/>
 - move overlay into a seperate folder, update manual on this<p/>
@@ -43,7 +44,6 @@
 - Add scripts to trigger content based on humidity/temperature <p/>
 - Add Buttons to trigger dmxshow together with videoplayer sync (already works with osc/scheduler, sync might cause a lot of webtraffic) <p/>
 - add wireless-power off to interfaces ? <p/>
-- Integrate this script for more CPU infos in CP: https://gist.github.com/ecampidoglio/5009512#file-cpustatus-sh <p/>
 - play images and videos after each other, depending on filename or with an ofx timeline, do we really need that?  <p/>
 - System alive ping, which sends out an email every 5 minutes to tell that beamer&pocketvj is alive, alarm function (do you really need that?) <p/>
 - AES67 Support, is it possible (https://github.com/dewiweb/ALSA-RAVENNA-AES67-Driver) Edit: Dante USB-dongles are supported <p/>
@@ -52,12 +52,12 @@
 - Complete authors file, will this ever happen, there are soooo many people involved<p/>
 - read color from video and create dmx fixture for it: https://github.com/MadSciLabs/ofxDmxUtils  https://github.com/pixout/PixView https://github.com/hzeller/rpi-rgb-led-matrix <p/>
 	[create a pyton script](https://www.openlighting.org/ola/developer-documentation/python-api/) to send 'ola_set_dmx --universe 1 --dmx 0,0,0,0,0,0,0,0,0,0,' create a structure (fixture control) or fork from somewhere..<p/>
-- send video to framebuffer and make the reading there, like a screenshot https://gist.github.com/Darfk/5790622, use mplayer to stream to image sequence mplayer mf://*.jpg<p/>
 - maybe this would also enable to [capture running screen](https://github.com/BoboTiG/python-mss)<p/>
 - Does ofx and omx play into framebuffer? screenshooters are all tooo slow, already tested<p/>
-
+- Integrate this script for more CPU infos in CP: https://gist.github.com/ecampidoglio/5009512#file-cpustatus-sh <p/>
 - heating beamercases with [stressing the cpu](https://raw.githubusercontent.com/ssvb/cpuburn-arm/master/cpuburn-a53.S)<p/>
 
+- faster vnc: https://lists.gnu.org/archive/html/qemu-devel/2013-01/msg01388.html https://github.com/hanzelpeter/dispmanx_vnc
 
 ## **Tutorials/Manual:**
 

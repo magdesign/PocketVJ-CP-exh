@@ -1,3 +1,6 @@
+
+.. _sharing:
+
 SHARING
 ===========
 

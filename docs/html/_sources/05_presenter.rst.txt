@@ -1,5 +1,7 @@
+.. _presenter:
+
 PRESENTER
-==========
+=========
 
 The section for slideshows, pdf and impress presentations:
 
@@ -9,7 +11,7 @@ The section for slideshows, pdf and impress presentations:
 
 
 CONTROL
-***********
+********
 
 - **Previous** => Manually go to previous
 - **Next** => Manually go to next
@@ -71,4 +73,12 @@ AUDIO
     - must be an mp3 (uncomment in /sync/startaudio script to play .wav)
 
 
+PAINTER
+**********
 
+.. image:: _images/05_painter.png
+
+Make sure you have a mouse connected, 
+then launch the painter. With left mouse buttom pressed you paint black, with right mouse pressed you paint white.
+
+When finished painting your mask, hit "Save as Mask", it will be saved as mask.png everything which was white will be transparent.

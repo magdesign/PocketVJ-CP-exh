@@ -1,5 +1,10 @@
 # PocketVJ Exhibition / Control Panel 4.x.x
 
+
+## CP 4.3.2 23.01.2022
+
+- added simple painter to easy paint masks<br />
+
 ## CP 4.3.1a 15.01.2022
 
 - moved rental reset to a script, now getting propper feedback<br />

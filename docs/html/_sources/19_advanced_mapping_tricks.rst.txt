@@ -24,9 +24,14 @@ When you are mapping with the PocketVJ without a predefined adjustment image and
 
 .. image:: _images/19_pause.png
 
+Masking (1)
+***********
 
-Masking
-*******
+Since CP 4.3.2 there is built in painter to simply paint masks, see :ref:`presenter` Painter.
+
+
+Masking (2)
+***********
 
 For masking just create a plain black image in your imageeditor of choice, or even simpler
 create a screenshot of a black area. Load this image as texture into your mapping and use the 
@@ -34,7 +39,7 @@ create a screenshot of a black area. Load this image as texture into your mappin
 Here as well, you could create a screenshot of the mapping, import this into your imageeditor, draw the mask you need in black,
 save this as .png with alpha transparency and layer this on top of the the mapping to hide all the things which shall be hidden.
 
-Masking (2)
+Masking (3)
 ***********
 
 1.) Set your computer screen resolution the same as the projector has.
@@ -85,6 +90,7 @@ Map with your Mapping tool of choice
 
 There are moments when you really need and advanced mapping tool with bezier curves and grid warp,
 or you just want to remotely map over wifi while you are standing in front of a building.
+(There is a good FOSS tool: https://mapmapteam.github.io)
 
 For this purpose, VNC screen :ref:`sharing` is the right choice 
 

@@ -2426,6 +2426,19 @@ if ($_GET['action'] == 'impressclose') {
 	system("sudo /var/www/sync/impressclose");
 }
 
+//# Painter
+
+if ($_GET['action'] == 'launchpainter') {
+	system("sudo /var/www/sync/stopall");
+	system("sudo /usr/bin/python /var/www/sync/simplepainter.py");
+	$outputtext =  "launched mask painter";
+}
+
+if ($_GET['action'] == 'savemask') {
+	system("sudo /opt/screenshot/./screenshot > /media/internal/images/screenshot.png");
+	system("sudo convert /media/internal/images/screenshot.png -fuzz 20% -transparent white /media/internal/images/mask.png");
+	$outputtext =  "saved as transparent mask.png";
+}
 
 //# Projector Control
 

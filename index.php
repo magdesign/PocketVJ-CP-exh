@@ -59,7 +59,7 @@
                 <div class="col d-flex justify-content-end">
                     <div class="row">
                         <div class="col">
-                            <p class="text-center" id="version_text" style="font-weight: normal;padding-top: 12px;color: rgb(0,0,0);">CP 4.3.1a<br><a href="https://github.com/magdesign/PocketVJ-CP-exh/issues" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help_issue.svg" style="text-align: right;padding: 8px;max-width: 60%;width: 40px;" data-toggle="tooltip" title="issues"></a><a href="/docs/html/index.html" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help.svg" style="text-align: right;padding: 8px;max-width: 60%;width: 40px;" data-toggle="tooltip" title="read the f**king docs!"></a><br></p>
+                            <p class="text-center" id="version_text" style="font-weight: normal;padding-top: 12px;color: rgb(0,0,0);">CP 4.3.2<br><a href="https://github.com/magdesign/PocketVJ-CP-exh/issues" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help_issue.svg" style="text-align: right;padding: 8px;max-width: 60%;width: 40px;" data-toggle="tooltip" title="issues"></a><a href="/docs/html/index.html" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help.svg" style="text-align: right;padding: 8px;max-width: 60%;width: 40px;" data-toggle="tooltip" title="read the f**king docs!"></a><br></p>
                         </div>
                     </div>
                 </div>
@@ -537,6 +537,26 @@
                                 <div>
                                     <div class="col colforbutton"><a class="btn btn-success action" role="button" href="?action=startaudioslave">Play Slave</a></div>
                                     <div class="col colforbutton"><a class="btn btn-danger action" role="button" href="?action=stopaudio">Stop Audio only</a></div>
+                                    <div class="col colforbutton">
+                                        <h3>&nbsp;</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row no-gutters row-cols-1 row-cols-sm-2 row-cols-lg-4" style="margin-right: -15px;margin-left: -15px; background: #08be75;">
+                            <div class="col">
+                                <div>
+                                    <h3>PAINTER</h3>
+                                    <div class="col colforbutton"><a class="btn btn-success action" role="button" href="?action=launchpainter">Launch</a></div>
+                                    <div class="col colforbutton">
+                                        <h3>&nbsp;</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div>
+                                    <h3>MASK</h3>
+                                    <div class="col colforbutton"><a class="btn btn-success action" role="button" href="?action=savemask">Save as mask.png</a></div>
                                     <div class="col colforbutton">
                                         <h3>&nbsp;</h3>
                                     </div>
@@ -2659,7 +2679,6 @@ elem2.addEventListener("input", range2Value);
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 
 
-
 <!-- Sets the "Set Time" button function--> 
  
 <script type="text/javascript">
@@ -2722,7 +2741,7 @@ setInterval(run, 3000);
         });
     });
     </script>
-
+    
 </body>
 
 </html>

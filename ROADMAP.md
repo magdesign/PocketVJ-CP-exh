@@ -2,11 +2,10 @@
 
 ## Currently in the pipeline: 
 <br />
-- add simple paint tool to draw masks with [pygame](https://github.com/MiniGirlGeek/pygame-paintme) or [python](https://gist.github.com/Kaabasane/a4f1fb10d27611bdd6b4ccf6b9206a9b) or [this](https://www.codershubb.com/create-the-simple-paint-app-using-python/) <br />
+
 - make sure disk will never be overfilled with logs or tmp files <br />
 - play all video files random (modify the PIR script for this) there is a [sketch](https://github.com/magdesign/PocketVJ-CP-v3/blob/master/sync/randomvideoplayer) <br />
 - add volume setting with store function<p/>
-- move update everything to a seperate script so we can directly update without having to do it 2x<p/>
 - move overlay into a seperate folder, update manual on this<p/>
 <p/>
 
@@ -61,8 +60,8 @@
 
 ## **Tutorials/Manual:**
 
+- Videotutorial for masking in mapper with black.jpg and also with the new paint mask function<p/>
 - rewrite mapper section since mapping without mouse and over remote is working now!, also write how to manually change numbers in the .xml file to get faster results<p/>
-- Video tutorial for mapper sync<p/>
 - remote mapper with webcam, is this possible?, I guess yes, but need to try<p/>
 - create list of OSC/midi commands for website (without code around it)<p/>
 - Video tutorial for presenter, how to create a simple menu card of a restaurant<p/>

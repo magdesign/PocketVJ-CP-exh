@@ -35,23 +35,43 @@ WHITE = pygame.Color(255, 255, 255)
 
 canvas.fill(WHITE)
 
+
+#define painter thickness
+edding = 15
+
 while True:
 
   for event in pygame.event.get():
     left_pressed, middle_pressed, right_pressed = mouse.get_pressed()
+    if event.type == pygame.MOUSEBUTTONDOWN:
+      if event.button == 4:
+        print ("scroller down, smaller edding")
+        if edding < 3:
+          print ("smaller than 3 pixel, do nothing")
+          #break
+        elif edding > 3:
+          edding -= 1
+        
+      elif event.button == 5:
+        print ("scroller up, bigger edding")
+        edding += 1
     if event.type == QUIT:
       pygame.quit()
       sys.exit()
     elif left_pressed:
-      pygame.draw.circle(canvas, BLACK, (pygame.mouse.get_pos()),15)
+      print ("left pressed, paint black")
+      pygame.draw.circle(canvas, BLACK, (pygame.mouse.get_pos()),edding)
     elif right_pressed:
-       pygame.draw.circle(canvas, WHITE, (pygame.mouse.get_pos()),15) 
-    
+      print ("right pressed, paint white")
+      pygame.draw.circle(canvas, WHITE, (pygame.mouse.get_pos()),edding) 
+
+        
+        
   window.fill(WHITE)
   
   window.blit(canvas, (0, 0))
 
-  pygame.draw.circle(window, BLACK, (pygame.mouse.get_pos()), 15)
+  pygame.draw.circle(window, BLACK, (pygame.mouse.get_pos()), edding)
   pygame.display.update()
 
 

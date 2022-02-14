@@ -105,6 +105,8 @@ If your computer is powerfull enough, you could also use a screenrecorder to rec
 
 Make sure the select the right fps, when your mapping is produced in 25fps, record with 50 or 25fps.
 
+Screen recording with ffmpeg: https://trac.ffmpeg.org/wiki/Capture/Desktop
+
 **this text need to be continued with pictures, coming on request...**
 
 

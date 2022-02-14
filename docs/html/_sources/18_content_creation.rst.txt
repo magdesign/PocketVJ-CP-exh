@@ -1,3 +1,6 @@
+.. _encoding:
+
+
 CREATE CONTENT
 ==============
 
@@ -22,6 +25,9 @@ Under "Video" select:
 Framerate: same as source
 
 
+.. image:: _images/16_framerate.png
+
+.. image:: _images/16_dimensions.png
 
 If you get videos with ending .m4v, disable the check mark in settings:
 

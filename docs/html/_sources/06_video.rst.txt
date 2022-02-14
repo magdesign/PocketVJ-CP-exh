@@ -1,12 +1,14 @@
 
 VIDEO
-===========
+======
 
 The section for all the video and multichannel video stuff:
 
 
 .. image:: _images/06_CP_video.png
 
+
+Use only h.264 encoded videos see: :ref:`encoding`
 
 
 PLAYER
@@ -26,6 +28,7 @@ PLAYER ONCE
     - Do not use empty spaces, special characters and very long filenames.
     - Rename your videos with a short name without any empty spaces or umlauts, you can do this also with the 'Filename-Fixer' function.
     - max. audio bitrate is: 160kbit
+    - use only h264 encoded videos!
 
 
 PLAYER SYNC

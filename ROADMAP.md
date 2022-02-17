@@ -2,7 +2,7 @@
 
 ## Currently in the pipeline: 
 <br />
-- check if mappingconverter.zip is in place and also svg loader, seems to be missing, fix!!!<br />
+
 - make sure disk will never be overfilled with logs or tmp files <br />
 - play all video files random (modify the PIR script for this) there is a [sketch](https://github.com/magdesign/PocketVJ-CP-v3/blob/master/sync/randomvideoplayer) <br />
 - add volume setting with store function<p/>

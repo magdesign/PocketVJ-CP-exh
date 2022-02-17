@@ -1,5 +1,9 @@
 # PocketVJ Exhibition / Control Panel 4.x.x
 
+## CP 4.3.2b unreleased
+
+-powersupply check did not show every state, fixed now!<br />
+
 ## CP 4.3.2a 14.02.2022
 
 - added middle mouse scroll to painter to adjust thickness (this is soo cool!)<br />

@@ -70,7 +70,9 @@
 	sudo rm -rf /home/pvj/raspidmx
 	sudo unzip /var/www/sync/debs/raspidmx.zip -d /
 	#Update mappingconverter
-	sudo rm -rf /home/pvj/openFrameworks/apps/myApps/mapping-converter2
+	#sudo rm -rf /home/pvj/openFrameworks/apps/myApps/mapping-converter2
+    #sudo unzip /var/www/sync/debs/ofxSvgLoader.zip -do /home/pvj/openFrameworks/addons/
+	#sudo mv /home/pvj/openFrameworks/addons/ofxSvgLoader-master/ /home/pvj/openFrameworks/addons/ofxSvgLoader
 	sudo unzip /var/www/sync/mappingconverter.zip -d /home/pvj/openFrameworks/apps/myApps/
 	#Update OSC control in home folder
 	sudo cp /var/www/sync/osc_control.js /home/pvj/osc/osc_control.js

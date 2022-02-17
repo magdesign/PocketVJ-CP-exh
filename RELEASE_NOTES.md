@@ -1,8 +1,10 @@
 # PocketVJ Exhibition / Control Panel 4.x.x
 
-## CP 4.3.2b unreleased
+## CP 4.3.3 unreleased
 
--powersupply check did not show every state, fixed now!<br />
+- powersupply check did not show every state, fixed now!<br />
+- removed mapping converter<br />
+- added save painter as overlay<br />
 
 ## CP 4.3.2a 14.02.2022
 

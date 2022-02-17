@@ -2440,6 +2440,12 @@ if ($_GET['action'] == 'savemask') {
 	$outputtext =  "saved as transparent mask.png";
 }
 
+if ($_GET['action'] == 'saveoverlay') {
+	system("sudo /opt/screenshot/./screenshot > /media/internal/images/screenshot.png");
+	system("sudo convert /media/internal/images/screenshot.png -fuzz 20% -transparent white /media/internal/images/overlay.png");
+	$outputtext =  "saved as transparent overlay.png";
+}
+
 //# Projector Control
 
 if ($_GET['action'] == 'beameron') {

@@ -596,7 +596,7 @@ if ($_GET['action'] == 'startpdfusb') {
 
 if ($_GET['action'] == 'testscreen') {
 	system("sudo /var/www/sync/testscreen &");
-        $outputtext =  "testscreen activated";
+    $outputtext =  "testscreen activated";
 }
 
 if ($_GET['action'] == 'testscreenoff') {
@@ -1752,8 +1752,27 @@ if ($_GET['action'] == 'wifidown') {
 
 if ($_GET['action'] == 'wifitest') {
 	//run it in a script for cleaner code
-	system("sudo /var/www/sync/wifitest");
-	$outputtext =  "test wifi connecting";
+	//system("sudo /var/www/sync/wifitest &");
+	//but this is somehow not working anymore, no idea why
+	$outputtext =  "test wifi connect";
+	system("sudo /var/www/sync/stopall > /dev/null 2>&1");
+	//enable password
+	system("sudo cp /var/www/sync/passwdenable /etc/lighttpd/lighttpd.conf");
+	system("sudo service lighttpd restart");
+	system("sudo systemctl enable openvpn");
+	system("sudo systemctl start openvpn");
+	//Switch to elFInder, is this working?
+	system("sudo /var/www/sync/set_elfinder");
+	system("sudo ifdown wlan0");
+	system("sudo ifconfig eth0 down");
+	system("sudo ifdown lo");
+	system("sleep 3");
+	system("sudo ifup lo");
+	system("sudo ifup -i /var/www/sync/interfaceswifitest -a");
+	//system("sleep 90");
+	//system("sudo /var/www/sync/showip_tty2");
+	system("sudo /usr/bin/python /var/www/sync/showip.py &");
+	system("echo 'connected to wifi'");
 }
 
 if ($_GET['action'] == 'wifipermanent') {
@@ -2552,6 +2571,8 @@ if ($_GET['action'] == 'startscreensharing') {
 	system("sudo /var/www/sync/stopall");
 	// show IP on tty2
 	system("sudo /var/www/sync/./showip_tty > /dev/tty2");
+	// maybe we should add in here the new python solution please test first:
+	//system("sudo /usr/bin/python /var/www/sync/showip.py");
 	system("sudo cp /var/www/sync/vncstartup /home/pvj/.config/lxsession/LXDE/autostart");
 	system("sudo su -s /bin/bash -c startx pvj &");
 }

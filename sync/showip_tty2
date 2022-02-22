@@ -1,9 +1,11 @@
 #!/bin/bash
 
-
+#old method
 sudo /var/www/sync/showip_tty > /dev/tty2
 
+#new method
+#sudo /usr/bin/python /var/www/sync/showip.py &
 
-
+exit
 
 

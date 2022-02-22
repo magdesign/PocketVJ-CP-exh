@@ -34,9 +34,10 @@ sudo /var/www/sync/testscreenoff > /dev/null 2>&1 &
 
 #kill painter
 sudo kill $(pgrep -f '/usr/bin/python /var/www/sync/simplepainter.py') > /dev/null 2>&1 &
+#kill ip display
+sudo kill $(pgrep -f '/usr/bin/python /var/www/sync/showip.py') > /dev/null 2>&1 &
 
 #kill countdown
-
 #sudo kill $(pgrep 'countdown.py') > /dev/null 2>&1 &
 sudo kill $(pgrep -f '/usr/bin/python3 /var/www/sync/countdown.py') > /dev/null 2>&1 &
 

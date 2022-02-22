@@ -1,12 +1,12 @@
 # PocketVJ Exhibition / Control Panel 4.x.x
 
-There is currently a bug in "Test Connection" under "Network"<br />
-WIll be fixed shortly, until then execute from terminal: sudo /var/www/sync/wifitest<br />
 ## CP 4.3.3 unreleased
 
 - powersupply check did not show every state, fixed now!<br />
 - removed mapping converter<br />
 - added save painter as overlay<br />
+- fixed issue on "Test Connection" under "Network"<br />
+- better IP adress on screen display when using "Test Connection"<br />
 
 ## CP 4.3.2a 14.02.2022
 

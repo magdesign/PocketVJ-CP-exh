@@ -1,5 +1,10 @@
 # PocketVJ Exhibition / Control Panel 4.x.x
 
+## CP 4.3.3a unreleased
+
+- better mouse detection for mapping mode<br />
+
+
 ## CP 4.3.3 22.02.2022
 
 - powersupply check did not show every state, fixed now!<br />

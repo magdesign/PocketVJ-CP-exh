@@ -1478,6 +1478,17 @@ console.log('open mappersetting8.xml');
 exec("sudo /var/www/sync/mapperimport8 > /dev/null 2>&1");
 });
 
+receiver.on('/mapperimport9', function () {
+console.log('open mappersetting9.xml');
+exec("sudo /var/www/sync/mapperimport9 > /dev/null 2>&1");
+});
+
+receiver.on('/mapperimport10', function () {
+console.log('open mappersetting10.xml');
+exec("sudo /var/www/sync/mapperimport10 > /dev/null 2>&1");
+});
+
+
 // *  Mapping save setting to preset
 
 receiver.on('/mapperexport1', function () {
@@ -1518,6 +1529,16 @@ exec("sudo /var/www/sync/mapperexport7");
 receiver.on('/mapperexport8', function () {
 console.log('save mappersetting8.xml');
 exec("sudo /var/www/sync/mapperexport8");
+});
+
+receiver.on('/mapperexport9', function () {
+console.log('save mappersetting9.xml');
+exec("sudo /var/www/sync/mapperexport9");
+});
+
+receiver.on('/mapperexport10', function () {
+console.log('save mappersetting10.xml');
+exec("sudo /var/www/sync/mapperexport10");
 });
 
 //# Softedge settings

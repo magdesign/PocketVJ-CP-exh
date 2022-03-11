@@ -1436,7 +1436,89 @@ console.log('Hatch CamFX');
 exec("sudo sed -ri 's/^EFX=.+$/EFX=hatch/' /var/www/sync/camerafeed");
 });
 
-// * add Mapping controls
+// *  Mapping open preset setting
+
+receiver.on('/mapperimport1', function () {
+console.log('open mappersetting1.xml');
+exec("sudo /var/www/sync/mapperimport1 > /dev/null 2>&1");
+});
+
+receiver.on('/mapperimport2', function () {
+console.log('open mappersetting2.xml');
+exec("sudo /var/www/sync/mapperimport2 > /dev/null 2>&1");
+});
+
+receiver.on('/mapperimport3', function () {
+console.log('open mappersetting3.xml');
+exec("sudo /var/www/sync/mapperimport3 > /dev/null 2>&1");
+});
+
+receiver.on('/mapperimport4', function () {
+console.log('open mappersetting4.xml');
+exec("sudo /var/www/sync/mapperimport4 > /dev/null 2>&1");
+});
+
+receiver.on('/mapperimport5', function () {
+console.log('open mappersetting5.xml');
+exec("sudo /var/www/sync/mapperimport5 > /dev/null 2>&1");
+});
+
+receiver.on('/mapperimport6', function () {
+console.log('open mappersetting6.xml');
+exec("sudo /var/www/sync/mapperimport6 > /dev/null 2>&1");
+});
+
+receiver.on('/mapperimport7', function () {
+console.log('open mappersetting7.xml');
+exec("sudo /var/www/sync/mapperimport7 > /dev/null 2>&1");
+});
+
+receiver.on('/mapperimport8', function () {
+console.log('open mappersetting8.xml');
+exec("sudo /var/www/sync/mapperimport8 > /dev/null 2>&1");
+});
+
+// *  Mapping save setting to preset
+
+receiver.on('/mapperexport1', function () {
+console.log('save mappersetting1.xml');
+exec("sudo /var/www/sync/mapperexport1");
+});
+
+receiver.on('/mapperexport2', function () {
+console.log('save mappersetting2.xml');
+exec("sudo /var/www/sync/mapperexport2");
+});
+  
+receiver.on('/mapperexport3', function () {
+console.log('save mappersetting3.xml');
+exec("sudo /var/www/sync/mapperexport3");
+});
+
+receiver.on('/mapperexport4', function () {
+console.log('save mappersetting4.xml');
+exec("sudo /var/www/sync/mapperexport4");
+});
+
+receiver.on('/mapperexport5', function () {
+console.log('save mappersetting5.xml');
+exec("sudo /var/www/sync/mapperexport5");
+});
+
+receiver.on('/mapperexport6', function () {
+console.log('save mappersetting6.xml');
+exec("sudo /var/www/sync/mapperexport6");
+});
+
+receiver.on('/mapperexport7', function () {
+console.log('save mappersetting7.xml');
+exec("sudo /var/www/sync/mapperexport7");
+});
+
+receiver.on('/mapperexport8', function () {
+console.log('save mappersetting8.xml');
+exec("sudo /var/www/sync/mapperexport8");
+});
 
 //# Softedge settings
 

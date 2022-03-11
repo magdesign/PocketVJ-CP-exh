@@ -1,9 +1,11 @@
 # PocketVJ Exhibition / Control Panel 4.x.x
 
-## CP 4.3.3a unreleased
+## CP 4.3.3a 11.03.2022
 
 - better mouse detection for mapping mode<br />
-
+- added mapperpreset 7-10<br />
+- added OSC control to load mapperpreset 1-10<br />
+- added OSC control to save mapperpreset 1-10<br />
 
 ## CP 4.3.3 22.02.2022
 

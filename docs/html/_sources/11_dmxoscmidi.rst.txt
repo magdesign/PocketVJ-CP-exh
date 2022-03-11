@@ -16,7 +16,7 @@ see video tutorial for remote controlling: https://video.pocketvj.com/AVideo/vid
     Keep in mind not to address universe 15, since this universe is reserved for remote controlling the PocketVJ and is excluded for 
     example from dmxblackout or dmx recording functions.
 
-  
+    To Autostart into an OSC / ArtNet / UPD listener mode, select under AUTOSTART => OSC/ARTNET/UDP
  
 OLA
 *****

@@ -8,9 +8,9 @@ In this section you define into which mode the PocketVJ shall start when it powe
 Just click the desired  mode and reboot.
 
 
-If it shall do nothing on boot or listen to the timetable or listen to OSC, select =>
+If it shall do nothing on boot, listen to the Scheduler/Timetable or listen to OSC, select =>
 **Scheduler/OSC**
 
-If it shall do noting but listen to OSC/Artnet ord DMX signals, select => **OSC/ArtNet**
+If it shall do nothing after boot, but listen to OSC/Artnet or DMX signals, select => **OSC/ArtNet/UDP**
 
-If you set an **Autostart/noGPU** the HDMI port will be powered down, usefull for headless installations
+If you set **Autostart/noGPU** the HDMI port will be powered down, usefull for headless installations

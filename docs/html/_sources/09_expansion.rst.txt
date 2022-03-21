@@ -13,7 +13,7 @@ This section holds all functions for the expansion board:
 
 PIR SENSOR
 **********
-see video tutorial: https://video.pocketvj.com/AVideo/video/13/pocketvj-exhibition-pir-sensor
+see video tutorial: https://www.pocketvj.com/pocketvj-exhibition
 
 
 With the PIR Sensor attached, you can create an interactive installation which triggers a random video as soon as the sensor detects motion.
@@ -63,7 +63,7 @@ BUTTONS
 *******
 
 
-see video tutorial: https://video.pocketvj.com/AVideo/video/8/pocketvj-exhibition-button-connecting
+see video tutorial: https://www.pocketvj.com/pocketvj-exhibition
 
 
 
@@ -103,7 +103,7 @@ Attached a DHT11 Temperature/Humidity Sensor as shown in the diagram.
 
 BEACONS
 *******
-See video tutorial: https://video.pocketvj.com/AVideo/videoEmbed/46/bluetooth-beacon-support
+See video tutorial: https://www.pocketvj.com/pocketvj-exhibition
 
 .. image:: _images/09_CP_beacon.png
 

@@ -40,7 +40,6 @@ TOOLS
 - **Filename Fixer** => removes whitespaces, unreadable characters like à è é ö ä ü and shortens the Filename
 - **Clean Hidden** => especially when copying files vie Samba from OSX, you will get som .file files which cause the player to struggle, just click here to get rid of them
 - **Conform Images** => resizes all images to max. 1920 x 1080 and converts them to .jpg
-- **Mapping Converter** => Import mappings made in Mapio or Madmapper, see tutorial here: https://video.pocketvj.com/AVideo/video/17/pocketvj-mapping-converter
 
 
 UPLOAD FILES
@@ -66,8 +65,8 @@ To upload new content, follow this procedure:
 
 
 .. note::
-    - For uploading large files (>400MB) copy from a connected USB stick    https://video.pocketvj.com/AVideo/video/19/pocketvj_usb_connecting
-
+    - For uploading large files (>400MB) copy from a connected USB stick https://www.pocketvj.com/pocketvj-exhibition
+    - 
     - Filezilla for fast uploading via sftp://
 
     - Do not use empty spaces or special characters in your filenames, use `TOOLS`_ =>  **Filename Fixer** 
@@ -100,7 +99,7 @@ LOADING FROM USB TO INTERNAL
 
 Supported file systems are: vFAT, FAT32, exFAT, HFS, NTFS, EXT4
 
-See tutorial: https://video.pocketvj.com/AVideo/video/19/pocketvj_usb_connecting
+See tutorial: https://www.pocketvj.com/pocketvj-exhibition
 
 
 SAMBA
@@ -110,7 +109,7 @@ this will free up some cpu.
 
 If you need it, turn it on and do following:
 
-See tutorial: https://video.pocketvj.com/AVideo/video/32/pocketvj_samba_share
+See tutorial: https://www.pocketvj.com/pocketvj-rtc
 
 
 .. image:: _images/04_samba.png

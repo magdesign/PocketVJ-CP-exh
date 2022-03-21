@@ -1,8 +1,6 @@
 CONTROL PANEL
 ==============
 
-Videotutorial: https://video.pocketvj.com/AVideo/video/2/pocketvj-exhibition-overview
-
 1. Make sure your PocketVJ is powered up and running.
 2. On your computer, phone or tablet, go to the wifi and connect to your PocketVJ's Wifi network. Its named ``vj100`` or something similar starting with ``vj___``.
 
@@ -86,5 +84,5 @@ which are explained on the following pages.
 DIRECT CONNECTING WITH RJ45
 ****************************
 
-see video tutorial: https://video.pocketvj.com/AVideo/video/20/direct-rj45-to-your-pocketvj
+see video tutorial: https://www.pocketvj.com/pocketvj-rtc
 

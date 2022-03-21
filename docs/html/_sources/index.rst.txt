@@ -20,7 +20,7 @@ without the written consent of the owner.
 
 No worries, just ask me politely :-)
 
-If you want to watch tutorials instead: https://video.pocketvj.com/AVideo/
+If you want to watch tutorials instead, visit https://www.pocketvj.com/pocketvj-exhibition
 
 Content
 ========

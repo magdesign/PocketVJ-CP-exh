@@ -1,7 +1,7 @@
 MAPPING
 ===========
 
-see video tutorial: https://video.pocketvj.com/AVideo/video/38/mapping_single_channel
+see video tutorial: https://www.pocketvj.com/pocketvj-exhibition
 
 .. note::
 
@@ -53,7 +53,7 @@ FUNCTION
 
 SYNC
 *****
-See video tutorial here: https://video.pocketvj.com/AVideo/video/49/mapping-sync
+See video tutorial here: https://www.pocketvj.com/pocketvj-exhibition
 
 **Set to?** => Check to which mode the mapper is set to
 

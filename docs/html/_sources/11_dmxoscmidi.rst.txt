@@ -4,9 +4,7 @@ DMX OSC MIDI
 
 This section is for recording and playback DMX, ArtNet, sACN and remote controlling via OSC, Midi, UDP or DMX
 
-see video tutorial for recording/playback: https://video.pocketvj.com/AVideo/video/37/pocketvj-exhibition_dmx_in_out_recording
-
-see video tutorial for remote controlling: https://video.pocketvj.com/AVideo/video/14/pocketvj-exhibition-artnet-dmx-remote-control
+see video tutorial: https://www.pocketvj.com/pocketvj-exhibition
 
 .. note:: 
     Art-Net is able to drive up to 4 universes.
@@ -184,7 +182,7 @@ or sendosc for all platforms: https://github.com/yoggy/sendosc
 MIDI
 *****
 
-see video tutorial: https://video.pocketvj.com/AVideo/video/9/pocketvj-exhibition-midi-control
+see video tutorial: https://www.pocketvj.com/pocketvj-exhibition
 
 List of Midi commands: https://github.com/magdesign/PocketVJ-CP-exh/blob/master/sync/midicontrol.cfg
 

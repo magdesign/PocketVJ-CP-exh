@@ -23,8 +23,7 @@ CHANGE IP
 REMOTE ACCESS
 *************
 
-see video tutorial: 
-https://video.pocketvj.com/AVideo/video/3/pocketvj-exhibition-access-from-everywhere-over-the-internet
+see video tutorial: https://www.pocketvj.com/pocketvj-exhibitiont
 
 
 
@@ -56,7 +55,7 @@ Used to connect to an in house Wifi with internet so you can accesss from anywhe
 
 .. image:: _images/13_CP_connectwifi.png
 
-see video tutorial: https://video.pocketvj.com/AVideo/video/11/pocketvj-exhibition-wifi-connecting
+see video tutorial: https://www.pocketvj.com/pocketvj-exhibition
 
 
 .. note::

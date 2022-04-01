@@ -65,7 +65,9 @@
 - remote mapper with webcam, is this possible?, I guess yes, but need to try<p/>
 - create list of OSC/midi commands for website (without code around it)<p/>
 - Video tutorial for presenter, how to create a simple menu card of a restaurant<p/>
-- Video tutorial for VNC/Linux/remote Mapping/Recording using VNC&hdmi recorder<p/>
+- Video tutorial for VNC/Linux/remote Mapping/Recording using VNC&hdmi recorder or screenrecorder<p/>
+- how to fix a broken sd card tutorial<p/>
+- hyperion led stripes video tutorial<p/>
 
 ### **Pipeline/Provider/Freedom:**
 
@@ -74,4 +76,4 @@
 - shall I stop this project and give up society? meaning freaking out and diving into a nature project somewhere.. <p/>
 
 
-by magdesign 2021
+by magdesign 2022

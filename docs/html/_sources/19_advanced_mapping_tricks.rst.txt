@@ -129,13 +129,6 @@ the Warp tools to rebuild your setup.
 
 
 
-Using Mapio or MadMapper
-************************
-
-With the mentioned two softwares you are able to export an .svg file of your mapped quad, import this into the 
-/internal/converter/ folder of your PocketVJ and use the **Mapping Converter** to create a Mapper preset.
-https://video.pocketvj.com/AVideo/video/17/pocketvj-mapping-converter
-
 
 Never panic
 ***********
@@ -149,8 +142,5 @@ Sometime we used black tape or light baffles or even mirrors... sometime the use
 .. image:: _images/19_UVW_2k.jpg
 
 
-Inspiration
-***********
-https://video.pocketvj.com/AVideo/video/50/pocketvj-mapping-workflow
 
 

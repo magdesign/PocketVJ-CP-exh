@@ -62,7 +62,7 @@ and you want to display this part of screen, use the -clip option:
 TCPSYPHON
 **********
 
-See tutorial: https://video.pocketvj.com/AVideo/video/18/pocketvj_tcpsyphon
+See tutorial: https://www.pocketvj.com/pocketvj-rtc
 
 Very useful if you want to use PocketVJ as a second screen for VJ applications supporting Syphon or Spout.
 

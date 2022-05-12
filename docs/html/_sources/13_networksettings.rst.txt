@@ -1,3 +1,6 @@
+.. _networksettings:
+
+
 
 NETWORK SETTINGS
 ================

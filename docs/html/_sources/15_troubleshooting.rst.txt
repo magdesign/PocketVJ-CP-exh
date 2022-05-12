@@ -1,5 +1,5 @@
 .. _troubleshooting:
-
+s
 
 TROUBLESHOOTING
 ===============
@@ -21,6 +21,12 @@ If this does not help, read further in this section, it might get a bit complica
     Sometimes there are power peaks which can cause that the Wifi signal is not strong enough.
     Known are some issues with Hdmi to VGA adapters with old VGA devices who suck a lot of power.
     Also after plugging in some USB sticks. If there are many wireless devices in the room, change the wifi channel, since most units use channel 6 as standard.
+
+
+Wifi constantly connecting/disconnecting
+****************************************
+
+If wifi connection gets often lost, its a good idea to change the wifi channel to **CH11**. Go to :ref:`networksettings`, select CH11 and reboot.
 
 
 Not able to connect CP via browser
@@ -61,6 +67,10 @@ To check if the webserver is now running without errors ::
 Not able to connect CP via browser and not getting any IP from wifi connection
 *******************************************************************************
 
+.. note::
+    Do not try to fix the SD card with a Windows or OSX computer, this will completely break your system and you need to get warranty replacement card from me
+
+
 In rare cases, when you poweroff or reboot the PocketVJ while there are still things playing (especially mapping sync or dmx shows),
 it gets a read/write error on the internal SD card. There is no other way to fix this than opening your PocketVJ, remove the sd card,
 boot a computer with Linux (if you have no Linux computer, download an Ubuntu live Image (https://ubuntu.com/download/desktop) and boot into this), insert the SD card, 
@@ -69,8 +79,6 @@ I know its much, but it might bring your device back to life.
 
 .. image:: _images/15_troubleshoot_diskfix.png
 
-.. note::
-    Do not try to fix the SD card with a Windows or OSX computer, this will completely break your system and you need to get warranty replacement card from me
 
 
 **Trouble connecting to Wifi Hotspot (vj100) with a Windows Computer**

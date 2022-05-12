@@ -3,6 +3,7 @@
 ## Currently in the pipeline: 
 <br />
 
+- manual image player is a few pixel of vs. the videoplayer, must be pixel prezise in future!  <br />
 - make sure disk will never be overfilled with logs or tmp files <br />
 - play all video files random (modify the PIR script for this) there is a [sketch](https://github.com/magdesign/PocketVJ-CP-v3/blob/master/sync/randomvideoplayer) <br />
 - add volume setting with store function<p/>

@@ -6,7 +6,7 @@ SCHEDULER
 
 
 
-see video tutorial: https://video.pocketvj.com/AVideo/video/10/pocketvj_exhibition_scheduler
+see video tutorial: https://www.pocketvj.com/pocketvj-exhibition
 
 
 CLOCK

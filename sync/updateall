@@ -123,6 +123,8 @@
 	sudo systemctl disable lircd-uinput.service
 	sudo systemctl stop irexec.service
 	sudo systemctl disable irexec.service
+	# set minibeamer as default lirc
+	sudo cp /var/www/sync/remotes/minibeamer.lircd.conf /etc/lirc/lircd.conf
 
 	# install the new GPIO library
 	sudo dpkg -i /var/www/sync/debs/python3-spidev_20170223~145721-1_all.deb

@@ -59,7 +59,7 @@
                 <div class="col d-flex justify-content-end">
                     <div class="row">
                         <div class="col">
-                            <p class="text-center" id="version_text" style="font-weight: normal;padding-top: 12px;color: rgb(0,0,0);">CP 4.3.3a<br><a href="https://github.com/magdesign/PocketVJ-CP-exh/issues" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help_issue.svg" style="text-align: right;padding: 8px;max-width: 60%;width: 40px;" data-toggle="tooltip" title="issues"></a><a href="/docs/html/index.html" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help.svg" style="text-align: right;padding: 8px;max-width: 60%;width: 40px;" data-toggle="tooltip" title="read the f**king docs!"></a><br></p>
+                            <p class="text-center" id="version_text" style="font-weight: normal;padding-top: 12px;color: rgb(0,0,0);">CP 4.3.3b<br><a href="https://github.com/magdesign/PocketVJ-CP-exh/issues" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help_issue.svg" style="text-align: right;padding: 8px;max-width: 60%;width: 40px;" data-toggle="tooltip" title="issues"></a><a href="/docs/html/index.html" style="text-align: right;" target="_blank"><img class="help_logo" src="assets/img/help.svg" style="text-align: right;padding: 8px;max-width: 60%;width: 40px;" data-toggle="tooltip" title="read the f**king docs!"></a><br></p>
                         </div>
                     </div>
                 </div>
@@ -2499,8 +2499,10 @@ elem2.addEventListener("input", range2Value);
                                 </div>
                             </div>
                             <div class="col">
-                                <div><a class="action" href="?action=rentalreset" data-toogle="tooltip" titel="rental reset, attention! deletes everything!" target="_blank"><img id="rentalreset" src="assets/img/danger_icon.svg" style="text-align: right;height: 40px;"></a>
-                                    <div class="col colforbutton"><a class="btn btn-primary action" role="button" id="settingsbutton" data-toggle="tooltip" title="show mem usage" href="?action=getswap">Mem Usage<br></a></div>
+                                <div><a class="action" href="?action=rentalreset" data-toogle="tooltip" titel="rental reset, attention! deletes everything!" target="_blank"></a>
+                                    <div class="col colforbutton">
+                                        <h2>&nbsp;&nbsp;</h2><a class="btn btn-primary action" role="button" id="settingsbutton" data-toggle="tooltip" title="show mem usage" href="?action=getswap">Mem Usage<br></a>
+                                    </div>
                                     <div class="col colforbutton"><a class="btn btn-warning action" role="button" id="settingsbutton" data-toggle="tooltip" title="check if powersupply is good" href="?action=powersupply">Powersupply<br></a></div>
                                     <div class="col colforbutton"></div>
                                 </div>

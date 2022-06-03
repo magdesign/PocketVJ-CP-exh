@@ -1,5 +1,9 @@
 # PocketVJ Exhibition / Control Panel 4.x.x
 
+## CP 4.3.3b 03.06.2022
+ 
+ - removed ugly rental reset sign, since it was more distracting than helpful to users<br />
+
 ## CP 4.3.3a 11.03.2022
 
 - better mouse detection for mapping mode<br />

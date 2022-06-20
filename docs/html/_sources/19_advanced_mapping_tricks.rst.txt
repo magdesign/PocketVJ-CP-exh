@@ -1,3 +1,9 @@
+
+.. _advanced_mapping_tricks:
+
+
+19_advanced_mapping_tricks
+
 ADVANCED MAPPING TRICKS
 =======================
 
@@ -83,6 +89,20 @@ Each corner has a Y and X coordinate, 0-point is on top left.
 
 Save and then reload the mapperpreset in CP under Open Mapperset.
 
+Edit the Raw Coordinates For Texture
+************************************
+
+The Texture Coordinates can also be edited by hand.
+Its similar as described above, but you need to edit the <texCoords> section of the preset:
+
+.. image:: _images/19_texture_coordinates.png
+
+0-point is on top left.
+
+Texture coordinates do not have pixel values, they are handled from 0.000000000 to 1.000000000,
+where 1.000000000 is the full texture.
+
+The example above shows the values for a Texture which is only the left half.
 
 
 Map with your Mapping tool of choice

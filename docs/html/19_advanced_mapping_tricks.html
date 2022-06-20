@@ -122,6 +122,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#masking-2">Masking (2)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#masking-3">Masking (3)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#edit-the-raw-coordinates">Edit the Raw Coordinates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#edit-the-raw-coordinates-for-texture">Edit the Raw Coordinates For Texture</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#map-with-your-mapping-tool-of-choice">Map with your Mapping tool of choice</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#screenshot-and-rebuild-in-vfx-tool">Screenshot and rebuild in VFX tool</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#never-panic">Never panic</a></li>
@@ -195,8 +196,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="advanced-mapping-tricks">
-<h1>ADVANCED MAPPING TRICKS<a class="headerlink" href="#advanced-mapping-tricks" title="Permalink to this headline">¶</a></h1>
+  <p id="advanced-mapping-tricks">19_advanced_mapping_tricks</p>
+<div class="section" id="id1">
+<h1>ADVANCED MAPPING TRICKS<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <p>With over a decade of experience in projection mapping, here some basic tricks in no particular order :-)</p>
 <div class="section" id="create-your-justage-image">
 <h2>Create your Justage Image<a class="headerlink" href="#create-your-justage-image" title="Permalink to this headline">¶</a></h2>
@@ -246,6 +248,16 @@ open the previously saved mappersetting*.xml preset by doubleclicking.</p>
 <p>Now you see the coordinates of surfaces and also the texture coordinates.</p>
 <p>Each corner has a Y and X coordinate, 0-point is on top left.</p>
 <p>Save and then reload the mapperpreset in CP under Open Mapperset.</p>
+</div>
+<div class="section" id="edit-the-raw-coordinates-for-texture">
+<h2>Edit the Raw Coordinates For Texture<a class="headerlink" href="#edit-the-raw-coordinates-for-texture" title="Permalink to this headline">¶</a></h2>
+<p>The Texture Coordinates can also be edited by hand.
+Its similar as described above, but you need to edit the &lt;texCoords&gt; section of the preset:</p>
+<img alt="_images/19_texture_coordinates.png" src="_images/19_texture_coordinates.png" />
+<p>0-point is on top left.</p>
+<p>Texture coordinates do not have pixel values, they are handled from 0.000000000 to 1.000000000,
+where 1.000000000 is the full texture.</p>
+<p>The example above shows the values for a Texture which is only the left half.</p>
 </div>
 <div class="section" id="map-with-your-mapping-tool-of-choice">
 <h2>Map with your Mapping tool of choice<a class="headerlink" href="#map-with-your-mapping-tool-of-choice" title="Permalink to this headline">¶</a></h2>

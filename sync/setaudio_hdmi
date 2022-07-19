@@ -123,8 +123,15 @@
 #set the audio for midi script
 	sudo sed -ri 's/-o [[:graph:]]+/-o hdmi/' /var/www/sync/startmididmxvideoplay01 &
 	sudo sed -ri 's/-o [[:graph:]]+/-o hdmi/' /var/www/sync/startmididmxaudioplay01 &
+# set on random audioplayer and custom scripts
+	sudo sed -ri 's/-o [[:graph:]]+/-o hdmi/' /var/www/sync/randomaudio.py &
+	
 #set on pir 
     sudo sed -ri "/^OMXPLAYER = \['omxplayer', '-o',/c\OMXPLAYER = ['omxplayer', '-o', 'hdmi', '--no-osd']" /var/www/sync/startpir1.py &
+#set randomaudioplayer and custom scripts
+	sudo sed -ri 's/-o [[:graph:]]+/-o hdmi/' /var/www/sync/randomaudio.py &
+
+
 #install mapper with hdmi support
 echo "changed to hdmi but doing mapper..."
 	sudo rm -r /home/pvj/openFrameworks/addons/ofxPiMapper/  > /dev/null 2>&1

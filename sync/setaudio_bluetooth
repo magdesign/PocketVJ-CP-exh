@@ -103,3 +103,6 @@
 #set on pir
     sudo sed -ri "/^OMXPLAYER = \['omxplayer', '-o',/c\OMXPLAYER = ['omxplayer', '-o', 'alsa', '--no-osd']" /var/www/sync/startpir1.py &
 
+# set on random audioplayer and custom scripts
+	sudo sed -ri 's/-o [[:graph:]]+/-o alsa/' /var/www/sync/randomaudio.py &
+

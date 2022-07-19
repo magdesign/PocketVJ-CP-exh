@@ -127,4 +127,5 @@
 	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/startmididmxaudioplay01 &
 #set on pir 
     sudo sed -ri "/^OMXPLAYER = \['omxplayer', '-o',/c\OMXPLAYER = ['omxplayer', '-o', 'both', '--no-osd']" /var/www/sync/startpir1.py &
-
+#set randomaudioplayer and custom scripts
+	sudo sed -ri 's/-o [[:graph:]]+/-o both/' /var/www/sync/randomaudio.py &

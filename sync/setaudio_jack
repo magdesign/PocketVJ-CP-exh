@@ -125,8 +125,11 @@
 	sudo sed -ri 's/-o [[:graph:]]+/-o local/' /var/www/sync/startmididmxaudioplay01 &
 #set on pir script
 	sudo sed -ri "/^OMXPLAYER = \['omxplayer', '-o',/c\OMXPLAYER = ['omxplayer', '-o', 'local', '--no-osd']" /var/www/sync/startpir1.py &
+
+#set on randomaudioplayer and custom scripts
+	sudo sed -ri 's/-o [[:graph:]]+/-o local/' /var/www/sync/randomaudio.py &
+
 #install mapper with jack support
-	
 	sudo rm -r /home/pvj/openFrameworks/addons/ofxPiMapper/  > /dev/null 2>&1
 	sudo unzip /var/www/sync/mapper_all_jack.zip -d /  > /dev/null 2>&1
 	sudo ln -s /media/internal/video /home/pvj/openFrameworks/addons/ofxPiMapper/example_basic/bin/data/sources/videos  > /dev/null 2>&1

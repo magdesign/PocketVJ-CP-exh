@@ -19,6 +19,9 @@ function SubmitBTNFormData() {
                $('#cpbutton1form-10')[0].reset();          
                $('#cpbutton1form-11')[0].reset(); 
                $('#cpbutton1form-12')[0].reset();
+               $('#cpbutton1form-13')[0].reset();
+               $('#cpbutton1form-14')[0].reset();
+               
          });
 }
 

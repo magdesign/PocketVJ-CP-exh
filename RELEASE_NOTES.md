@@ -1,5 +1,11 @@
 # PocketVJ Exhibition / Control Panel 4.x.x
 
+## CP 4.3.4 19.07.2022
+- added randomaudio player to buttons
+- added customfunction1+2 to buttons
+- updated stopall to kill randomaudio player
+- customsfunction1 launches the mapper and kills it after n amount of time
+
 ## CP 4.3.3b 03.06.2022
  
  - removed ugly rental reset sign, since it was more distracting than helpful to users<br />

@@ -1,0 +1,10 @@
+#!/bin/bash
+#LED Blinking 
+/usr/bin/python /var/www/sync/ledblinking.py
+
+#start randomaudiolistener for nmb
+
+/usr/bin/python /var/www/sync/randomaudiotrigger.py &
+
+exit 0
+

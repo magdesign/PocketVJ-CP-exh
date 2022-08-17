@@ -1,5 +1,10 @@
 # PocketVJ Exhibition / Control Panel 4.x.x
 
+## added:
+- rc.local.randomaudio (for autostart into randomaudio gpio listener)
+- randomaudiotrigger.py (listens to gpio3 input to random trigger audios)
+- startrandomaudiotrigger (starts the random audio and defines playtime until listen again)
+
 ## CP 4.3.4 19.07.2022
 - added randomaudio player to buttons
 - added customfunction1+2 to buttons

@@ -5,13 +5,30 @@
 
 TIME=120
 print "will kill after $TIME seconds"
-#kill all running tasks
+
+
+#kill all running tasks, to beginn propper:
 /var/www/sync/stopall &
 
+#also kill all tasks on following slaves (not sure if we need this):
+curl -s http://192.168.1.101/backend.php/?action=stop &
+curl -s http://192.168.1.102/backend.php/?action=stop &
 
 #launch mapper
 /var/www/sync/launchmapper &
 
+#launch mapper also on following slaves:
+curl -s http://192.168.1.101/backend.php/?action=launchmapper &
+curl -s http://192.168.1.102/backend.php/?action=launchmapper &
+
+
+#stop all after given time:
 sleep $TIME
 
+
 /var/www/sync/stopall &
+
+#also on slaves:
+curl -s http://192.168.1.101/backend.php/?action=stop &
+curl -s http://192.168.1.102/backend.php/?action=stop &
+

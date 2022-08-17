@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#start the random audio trigger and tell its running
+python /var/www/sync/randomaudio.py &
+
+sleep 30
+
+sudo kill $(pgrep -f 'python /var/www/sync/randomaudio.py') &
+sudo kill $(pgrep -f '/usr/bin/python /var/www/sync/randomaudio.py') &
+

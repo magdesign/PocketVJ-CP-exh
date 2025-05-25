@@ -1,7 +1,4 @@
-<p align="center">
-<img src="./docs/_images/PVJ_2019.svg" alt="PocketVJ-Logo" width="100%">
-</p>
-
+# Get some PocketVJ Exhibition with discount now, contact me!
 
 # PocketVJ Exhibition CP 4.x
 
@@ -10,11 +7,11 @@
 [![pulls](https://img.shields.io/github/issues-pr-raw/magdesign/PocketVJ-CP-exh.svg?style=flat-square)](https://github.com/magdesign/PocketVJ-CP-exh/pulls)
 
 
- (not compatible with any other PocketVJ Version!!)
+(not compatible with any other PocketVJ Version!!)
 
 ## 📖️ Instructions
 
-See [here](https://video.pocketvj.com/AVideo/video/7/pocketvj-exhibition-update) on how to update your PocketVJ Exhibition.
+See [here](https://magdesign.github.io/pocketvj_website/pocketvj-exhibition.html) on how to update your PocketVJ Exhibition.
 
 ## 📝 Release Notes
 
@@ -25,13 +22,13 @@ See [**Release notes**](RELEASE_NOTES.md)
 See [**Roadmap**](ROADMAP.md)
 
 ## ⁉️ Tutorials
-Watch [**Videos**](https://www.pocketvj.com/pocketvj-exhibition#Tutorials_Exhibition)
+Watch [**Videos**](https://www.pocketvj.com/pocketvj-exhibition](https://magdesign.github.io/pocketvj_website/pocketvj-exhibition.html#Tutorials_Exhibition)
 
 
 or
 
 
-Read [**Manual**](https://www.pocketvj.com/manual/index.html)
+Read [**Manual**](https://magdesign.github.io/PocketVJ-Exhibition-Documentation//html/index.html)
 
 
 ## 📝 Notes

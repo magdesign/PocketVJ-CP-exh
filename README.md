@@ -22,7 +22,7 @@ See [**Release notes**](RELEASE_NOTES.md)
 See [**Roadmap**](ROADMAP.md)
 
 ## ⁉️ Tutorials
-Watch [**Videos**](https://www.pocketvj.com/pocketvj-exhibition](https://magdesign.github.io/pocketvj_website/pocketvj-exhibition.html#Tutorials_Exhibition)
+Watch [**Videos**](https://magdesign.github.io/pocketvj_website/pocketvj-exhibition.html#Tutorials_Exhibition)
 
 
 or
